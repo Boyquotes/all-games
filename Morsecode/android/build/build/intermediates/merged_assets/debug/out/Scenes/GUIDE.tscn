@@ -1,0 +1,1221 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Styles/Label_style.tres" type="StyleBox" id=1]
+
+[node name="GUIDE" type="Node2D"]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_left = -16.0
+margin_top = 129.0
+margin_right = 416.0
+margin_bottom = 752.0
+color = Color( 0.498039, 0.498039, 0.498039, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+margin_top = 138.0
+margin_right = 408.0
+margin_bottom = 736.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer"]
+margin_right = 396.0
+margin_bottom = 2169.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="GridContainer" type="GridContainer" parent="ScrollContainer/VBoxContainer"]
+margin_right = 396.0
+margin_bottom = 2169.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+columns = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="caracteres" type="GridContainer" parent="ScrollContainer/VBoxContainer/GridContainer"]
+margin_right = 196.0
+margin_bottom = 2169.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="ScrollContainer/VBoxContainer/GridContainer/caracteres"]
+margin_right = 196.0
+margin_bottom = 37.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_styles/normal = ExtResource( 1 )
+text = "A/a"
+align = 1
+valign = 1
+
+[node name="Label2" type="Label" parent="ScrollContainer/VBoxContainer/GridContainer/caracteres"]
+margin_top = 41.0
+margin_right = 196.0
+margin_bottom = 78.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_styles/normal = ExtResource( 1 )
+text = "B/b"
+align = 1
+valign = 1
+
+[node name="Label3" type="Label" parent="ScrollContainer/VBoxContainer/GridContainer/caracteres"]
+margin_top = 82.0
+margin_right = 196.0
+margin_bottom = 119.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_styles/normal = ExtResource( 1 )
+text = "C/c"
+align = 1
+valign = 1
+
+[node name="Label4" type="Label" parent="ScrollContainer/VBoxContainer/GridContainer/caracteres"]
+margin_top = 123.0
+margin_right = 196.0
+margin_bottom = 160.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_styles/normal = ExtResource( 1 )
+text = "D/d"
+align = 1
+valign = 1
+
+[node name="Label5" type="Label" parent="ScrollContainer/VBoxContainer/GridContainer/caracteres"]
+margin_top = 164.0
+margin_right = 196.0
+margin_bottom = 201.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_styles/normal = ExtResource( 1 )
+text = "E/e"
+align = 1
+valign = 1
+
+[node name="Label6" type="Label" parent="ScrollContainer/VBoxContainer/GridContainer/caracteres"]
+margin_top = 205.0
+margin_right = 196.0
+margin_bottom = 242.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_styles/normal = ExtResource( 1 )
+text = "F/f"
+align = 1
+valign = 1
+
+[node name="Label7" type="Label" parent="ScrollContainer/VBoxContainer/GridContainer/caracteres"]
+margin_top = 246.0
+margin_right = 196.0
+margin_bottom = 283.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_styles/normal = ExtResource( 1 )
+text = "G/g"
+align = 1
+valign = 1
+
+[node name="Label8" type="Label" parent="ScrollContainer/VBoxContainer/GridContainer/caracteres"]
+margin_top = 287.0
+margin_right = 196.0
+margin_bottom = 324.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_styles/normal = ExtResource( 1 )
+text = "H/h"
+align = 1
+valign = 1
+
+[node name="Label9" type="Label" parent="ScrollContainer/VBoxContainer/GridContainer/caracteres"]
+margin_top = 328.0
+margin_right = 196.0
+margin_bottom = 365.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_styles/normal = ExtResource( 1 )
+text = "I/i"
+align = 1
+valign = 1
+
+[node name="Label10" type="Label" parent="ScrollContainer/VBoxContainer/GridContainer/caracteres"]
+margin_top = 369.0
+margin_right = 196.0
+margin_bottom = 406.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_styles/normal = ExtResource( 1 )
+text = "J/j"
+align = 1
+valign = 1
+
+[node name="Label11" type="Label" parent="ScrollContainer/VBoxContainer/GridContainer/caracteres"]
+margin_top = 410.0
+margin_right = 196.0
+margin_bottom = 447.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_styles/normal = ExtResource( 1 )
+text = "K/k"
+align = 1
+valign = 1
+
+[node name="Label12" type="Label" parent="ScrollContainer/VBoxContainer/GridContainer/caracteres"]
+margin_top = 451.0
+margin_right = 196.0
+margin_bottom = 488.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_styles/normal = ExtResource( 1 )
+text = "L/l"
+align = 1
+valign = 1
+
+[node name="Label13" type="Label" parent="ScrollContainer/VBoxContainer/GridContainer/caracteres"]
+margin_top = 492.0
+margin_right = 196.0
+margin_bottom = 529.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_styles/normal = ExtResource( 1 )
+text = "M/m"
+align = 1
+valign = 1
+
+[node name="Label14" type="Label" parent="ScrollContainer/VBoxContainer/GridContainer/caracteres"]
+margin_top = 533.0
+margin_right = 196.0
+margin_bottom = 570.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_styles/normal = ExtResource( 1 )
+text = "N/n"
+align = 1
+valign = 1
+
+[node name="Label15" type="Label" parent="ScrollContainer/VBoxContainer/GridContainer/caracteres"]
+margin_top = 574.0
+margin_right = 196.0
+margin_bottom = 611.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_styles/normal = ExtResource( 1 )
+text = "O/o"
+align = 1
+valign = 1
+
+[node name="Label16" type="Label" parent="ScrollContainer/VBoxContainer/GridContainer/caracteres"]
+margin_top = 615.0
+margin_right = 196.0
+margin_bottom = 652.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_styles/normal = ExtResource( 1 )
+text = "P/p"
+align = 1
+valign = 1
+
+[node name="Label17" type="Label" parent="ScrollContainer/VBoxContainer/GridContainer/caracteres"]
+margin_top = 656.0
+margin_right = 196.0
+margin_bottom = 693.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_styles/normal = ExtResource( 1 )
+text = "Q/q"
+align = 1
+valign = 1
+
+[node name="Label18" type="Label" parent="ScrollContainer/VBoxContainer/GridContainer/caracteres"]
+margin_top = 697.0
+margin_right = 196.0
+margin_bottom = 734.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_styles/normal = ExtResource( 1 )
+text = "R/r"
+align = 1
+valign = 1
+
+[node name="Label19" type="Label" parent="ScrollContainer/VBoxContainer/GridContainer/caracteres"]
+margin_top = 738.0
+margin_right = 196.0
+margin_bottom = 775.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_styles/normal = ExtResource( 1 )
+text = "S/s"
+align = 1
+valign = 1
+
+[node name="Label20" type="Label" parent="ScrollContainer/VBoxContainer/GridContainer/caracteres"]
+margin_top = 779.0
+margin_right = 196.0
+margin_bottom = 816.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_styles/normal = ExtResource( 1 )
+text = "T/t"
+align = 1
+valign = 1
+
+[node name="Label21" type="Label" parent="ScrollContainer/VBoxContainer/GridContainer/caracteres"]
+margin_top = 820.0
+margin_right = 196.0
+margin_bottom = 857.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_styles/normal = ExtResource( 1 )
+text = "U/u"
+align = 1
+valign = 1
+
+[node name="Label22" type="Label" parent="ScrollContainer/VBoxContainer/GridContainer/caracteres"]
+margin_top = 861.0
+margin_right = 196.0
+margin_bottom = 898.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_styles/normal = ExtResource( 1 )
+text = "V/v"
+align = 1
+valign = 1
+
+[node name="Label23" type="Label" parent="ScrollContainer/VBoxContainer/GridContainer/caracteres"]
+margin_top = 902.0
+margin_right = 196.0
+margin_bottom = 939.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_styles/normal = ExtResource( 1 )
+text = "W/w"
+align = 1
+valign = 1
+
+[node name="Label24" type="Label" parent="ScrollContainer/VBoxContainer/GridContainer/caracteres"]
+margin_top = 943.0
+margin_right = 196.0
+margin_bottom = 980.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_styles/normal = ExtResource( 1 )
+text = "X/x"
+align = 1
+valign = 1
+
+[node name="Label25" type="Label" parent="ScrollContainer/VBoxContainer/GridContainer/caracteres"]
+margin_top = 984.0
+margin_right = 196.0
+margin_bottom = 1021.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_styles/normal = ExtResource( 1 )
+text = "Y/y"
+align = 1
+valign = 1
+
+[node name="Label26" type="Label" parent="ScrollContainer/VBoxContainer/GridContainer/caracteres"]
+margin_top = 1025.0
+margin_right = 196.0
+margin_bottom = 1062.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_styles/normal = ExtResource( 1 )
+text = "Z/z"
+align = 1
+valign = 1
+
+[node name="Label27" type="Label" parent="ScrollContainer/VBoxContainer/GridContainer/caracteres"]
+margin_top = 1066.0
+margin_right = 196.0
+margin_bottom = 1103.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_styles/normal = ExtResource( 1 )
+text = "0"
+align = 1
+valign = 1
+
+[node name="Label28" type="Label" parent="ScrollContainer/VBoxContainer/GridContainer/caracteres"]
+margin_top = 1107.0
+margin_right = 196.0
+margin_bottom = 1144.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_styles/normal = ExtResource( 1 )
+text = "1"
+align = 1
+valign = 1
+
+[node name="Label29" type="Label" parent="ScrollContainer/VBoxContainer/GridContainer/caracteres"]
+margin_top = 1148.0
+margin_right = 196.0
+margin_bottom = 1185.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_styles/normal = ExtResource( 1 )
+text = "2"
+align = 1
+valign = 1
+
+[node name="Label30" type="Label" parent="ScrollContainer/VBoxContainer/GridContainer/caracteres"]
+margin_top = 1189.0
+margin_right = 196.0
+margin_bottom = 1226.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_styles/normal = ExtResource( 1 )
+text = "3"
+align = 1
+valign = 1
+
+[node name="Label31" type="Label" parent="ScrollContainer/VBoxContainer/GridContainer/caracteres"]
+margin_top = 1230.0
+margin_right = 196.0
+margin_bottom = 1267.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_styles/normal = ExtResource( 1 )
+text = "4"
+align = 1
+valign = 1
+
+[node name="Label32" type="Label" parent="ScrollContainer/VBoxContainer/GridContainer/caracteres"]
+margin_top = 1271.0
+margin_right = 196.0
+margin_bottom = 1308.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_styles/normal = ExtResource( 1 )
+text = "5"
+align = 1
+valign = 1
+
+[node name="Label33" type="Label" parent="ScrollContainer/VBoxContainer/GridContainer/caracteres"]
+margin_top = 1312.0
+margin_right = 196.0
+margin_bottom = 1349.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_styles/normal = ExtResource( 1 )
+text = "6"
+align = 1
+valign = 1
+
+[node name="Label34" type="Label" parent="ScrollContainer/VBoxContainer/GridContainer/caracteres"]
+margin_top = 1353.0
+margin_right = 196.0
+margin_bottom = 1390.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_styles/normal = ExtResource( 1 )
+text = "7"
+align = 1
+valign = 1
+
+[node name="Label35" type="Label" parent="ScrollContainer/VBoxContainer/GridContainer/caracteres"]
+margin_top = 1394.0
+margin_right = 196.0
+margin_bottom = 1431.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_styles/normal = ExtResource( 1 )
+text = "8"
+align = 1
+valign = 1
+
+[node name="Label36" type="Label" parent="ScrollContainer/VBoxContainer/GridContainer/caracteres"]
+margin_top = 1435.0
+margin_right = 196.0
+margin_bottom = 1472.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_styles/normal = ExtResource( 1 )
+text = "9"
+align = 1
+valign = 1
+
+[node name="Label37" type="Label" parent="ScrollContainer/VBoxContainer/GridContainer/caracteres"]
+margin_top = 1476.0
+margin_right = 196.0
+margin_bottom = 1513.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_styles/normal = ExtResource( 1 )
+text = "."
+align = 1
+valign = 1
+
+[node name="Label38" type="Label" parent="ScrollContainer/VBoxContainer/GridContainer/caracteres"]
+margin_top = 1517.0
+margin_right = 196.0
+margin_bottom = 1554.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_styles/normal = ExtResource( 1 )
+text = ","
+align = 1
+valign = 1
+
+[node name="Label39" type="Label" parent="ScrollContainer/VBoxContainer/GridContainer/caracteres"]
+margin_top = 1558.0
+margin_right = 196.0
+margin_bottom = 1595.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_styles/normal = ExtResource( 1 )
+text = "?"
+align = 1
+valign = 1
+
+[node name="Label40" type="Label" parent="ScrollContainer/VBoxContainer/GridContainer/caracteres"]
+margin_top = 1599.0
+margin_right = 196.0
+margin_bottom = 1636.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_styles/normal = ExtResource( 1 )
+text = "'"
+align = 1
+valign = 1
+
+[node name="Label41" type="Label" parent="ScrollContainer/VBoxContainer/GridContainer/caracteres"]
+margin_top = 1640.0
+margin_right = 196.0
+margin_bottom = 1677.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_styles/normal = ExtResource( 1 )
+text = "!"
+align = 1
+valign = 1
+
+[node name="Label42" type="Label" parent="ScrollContainer/VBoxContainer/GridContainer/caracteres"]
+margin_top = 1681.0
+margin_right = 196.0
+margin_bottom = 1718.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_styles/normal = ExtResource( 1 )
+text = "/"
+align = 1
+valign = 1
+
+[node name="Label43" type="Label" parent="ScrollContainer/VBoxContainer/GridContainer/caracteres"]
+margin_top = 1722.0
+margin_right = 196.0
+margin_bottom = 1759.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_styles/normal = ExtResource( 1 )
+text = "("
+align = 1
+valign = 1
+
+[node name="Label44" type="Label" parent="ScrollContainer/VBoxContainer/GridContainer/caracteres"]
+margin_top = 1763.0
+margin_right = 196.0
+margin_bottom = 1800.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_styles/normal = ExtResource( 1 )
+text = ")"
+align = 1
+valign = 1
+
+[node name="Label45" type="Label" parent="ScrollContainer/VBoxContainer/GridContainer/caracteres"]
+margin_top = 1804.0
+margin_right = 196.0
+margin_bottom = 1841.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_styles/normal = ExtResource( 1 )
+text = "&"
+align = 1
+valign = 1
+
+[node name="Label46" type="Label" parent="ScrollContainer/VBoxContainer/GridContainer/caracteres"]
+margin_top = 1845.0
+margin_right = 196.0
+margin_bottom = 1882.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_styles/normal = ExtResource( 1 )
+text = ":"
+align = 1
+valign = 1
+
+[node name="Label47" type="Label" parent="ScrollContainer/VBoxContainer/GridContainer/caracteres"]
+margin_top = 1886.0
+margin_right = 196.0
+margin_bottom = 1923.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_styles/normal = ExtResource( 1 )
+text = ";"
+align = 1
+valign = 1
+
+[node name="Label48" type="Label" parent="ScrollContainer/VBoxContainer/GridContainer/caracteres"]
+margin_top = 1927.0
+margin_right = 196.0
+margin_bottom = 1964.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_styles/normal = ExtResource( 1 )
+text = "="
+align = 1
+valign = 1
+
+[node name="Label49" type="Label" parent="ScrollContainer/VBoxContainer/GridContainer/caracteres"]
+margin_top = 1968.0
+margin_right = 196.0
+margin_bottom = 2005.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_styles/normal = ExtResource( 1 )
+text = "-"
+align = 1
+valign = 1
+
+[node name="Label50" type="Label" parent="ScrollContainer/VBoxContainer/GridContainer/caracteres"]
+margin_top = 2009.0
+margin_right = 196.0
+margin_bottom = 2046.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_styles/normal = ExtResource( 1 )
+text = "_"
+align = 1
+valign = 1
+
+[node name="Label51" type="Label" parent="ScrollContainer/VBoxContainer/GridContainer/caracteres"]
+margin_top = 2050.0
+margin_right = 196.0
+margin_bottom = 2087.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_styles/normal = ExtResource( 1 )
+text = "\""
+align = 1
+valign = 1
+
+[node name="Label52" type="Label" parent="ScrollContainer/VBoxContainer/GridContainer/caracteres"]
+margin_top = 2091.0
+margin_right = 196.0
+margin_bottom = 2128.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_styles/normal = ExtResource( 1 )
+text = "$"
+align = 1
+valign = 1
+
+[node name="Label53" type="Label" parent="ScrollContainer/VBoxContainer/GridContainer/caracteres"]
+margin_top = 2132.0
+margin_right = 196.0
+margin_bottom = 2169.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_styles/normal = ExtResource( 1 )
+text = "@"
+align = 1
+valign = 1
+
+[node name="morse" type="GridContainer" parent="ScrollContainer/VBoxContainer/GridContainer"]
+margin_left = 200.0
+margin_right = 396.0
+margin_bottom = 2169.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="ScrollContainer/VBoxContainer/GridContainer/morse"]
+margin_right = 196.0
+margin_bottom = 37.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_styles/normal = ExtResource( 1 )
+text = ".-"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="ScrollContainer/VBoxContainer/GridContainer/morse"]
+margin_top = 41.0
+margin_right = 196.0
+margin_bottom = 78.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_styles/normal = ExtResource( 1 )
+text = "-..."
+align = 1
+valign = 1
+
+[node name="Label3" type="Label" parent="ScrollContainer/VBoxContainer/GridContainer/morse"]
+margin_top = 82.0
+margin_right = 196.0
+margin_bottom = 119.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_styles/normal = ExtResource( 1 )
+text = "-.-."
+align = 1
+valign = 1
+
+[node name="Label4" type="Label" parent="ScrollContainer/VBoxContainer/GridContainer/morse"]
+margin_top = 123.0
+margin_right = 196.0
+margin_bottom = 160.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_styles/normal = ExtResource( 1 )
+text = "-.."
+align = 1
+valign = 1
+
+[node name="Label5" type="Label" parent="ScrollContainer/VBoxContainer/GridContainer/morse"]
+margin_top = 164.0
+margin_right = 196.0
+margin_bottom = 201.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_styles/normal = ExtResource( 1 )
+text = "."
+align = 1
+valign = 1
+
+[node name="Label6" type="Label" parent="ScrollContainer/VBoxContainer/GridContainer/morse"]
+margin_top = 205.0
+margin_right = 196.0
+margin_bottom = 242.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_styles/normal = ExtResource( 1 )
+text = "..-."
+align = 1
+valign = 1
+
+[node name="Label7" type="Label" parent="ScrollContainer/VBoxContainer/GridContainer/morse"]
+margin_top = 246.0
+margin_right = 196.0
+margin_bottom = 283.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_styles/normal = ExtResource( 1 )
+text = "--."
+align = 1
+valign = 1
+
+[node name="Label8" type="Label" parent="ScrollContainer/VBoxContainer/GridContainer/morse"]
+margin_top = 287.0
+margin_right = 196.0
+margin_bottom = 324.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_styles/normal = ExtResource( 1 )
+text = "...."
+align = 1
+valign = 1
+
+[node name="Label9" type="Label" parent="ScrollContainer/VBoxContainer/GridContainer/morse"]
+margin_top = 328.0
+margin_right = 196.0
+margin_bottom = 365.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_styles/normal = ExtResource( 1 )
+text = ".."
+align = 1
+valign = 1
+
+[node name="Label10" type="Label" parent="ScrollContainer/VBoxContainer/GridContainer/morse"]
+margin_top = 369.0
+margin_right = 196.0
+margin_bottom = 406.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_styles/normal = ExtResource( 1 )
+text = ".---"
+align = 1
+valign = 1
+
+[node name="Label11" type="Label" parent="ScrollContainer/VBoxContainer/GridContainer/morse"]
+margin_top = 410.0
+margin_right = 196.0
+margin_bottom = 447.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_styles/normal = ExtResource( 1 )
+text = "-.-"
+align = 1
+valign = 1
+
+[node name="Label12" type="Label" parent="ScrollContainer/VBoxContainer/GridContainer/morse"]
+margin_top = 451.0
+margin_right = 196.0
+margin_bottom = 488.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_styles/normal = ExtResource( 1 )
+text = ".-.."
+align = 1
+valign = 1
+
+[node name="Label13" type="Label" parent="ScrollContainer/VBoxContainer/GridContainer/morse"]
+margin_top = 492.0
+margin_right = 196.0
+margin_bottom = 529.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_styles/normal = ExtResource( 1 )
+text = "--"
+align = 1
+valign = 1
+
+[node name="Label14" type="Label" parent="ScrollContainer/VBoxContainer/GridContainer/morse"]
+margin_top = 533.0
+margin_right = 196.0
+margin_bottom = 570.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_styles/normal = ExtResource( 1 )
+text = "-."
+align = 1
+valign = 1
+
+[node name="Label15" type="Label" parent="ScrollContainer/VBoxContainer/GridContainer/morse"]
+margin_top = 574.0
+margin_right = 196.0
+margin_bottom = 611.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_styles/normal = ExtResource( 1 )
+text = "---"
+align = 1
+valign = 1
+
+[node name="Label16" type="Label" parent="ScrollContainer/VBoxContainer/GridContainer/morse"]
+margin_top = 615.0
+margin_right = 196.0
+margin_bottom = 652.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_styles/normal = ExtResource( 1 )
+text = ".--."
+align = 1
+valign = 1
+
+[node name="Label17" type="Label" parent="ScrollContainer/VBoxContainer/GridContainer/morse"]
+margin_top = 656.0
+margin_right = 196.0
+margin_bottom = 693.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_styles/normal = ExtResource( 1 )
+text = "--.-"
+align = 1
+valign = 1
+
+[node name="Label18" type="Label" parent="ScrollContainer/VBoxContainer/GridContainer/morse"]
+margin_top = 697.0
+margin_right = 196.0
+margin_bottom = 734.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_styles/normal = ExtResource( 1 )
+text = ".-."
+align = 1
+valign = 1
+
+[node name="Label19" type="Label" parent="ScrollContainer/VBoxContainer/GridContainer/morse"]
+margin_top = 738.0
+margin_right = 196.0
+margin_bottom = 775.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_styles/normal = ExtResource( 1 )
+text = "..."
+align = 1
+valign = 1
+
+[node name="Label20" type="Label" parent="ScrollContainer/VBoxContainer/GridContainer/morse"]
+margin_top = 779.0
+margin_right = 196.0
+margin_bottom = 816.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_styles/normal = ExtResource( 1 )
+text = "-"
+align = 1
+valign = 1
+
+[node name="Label21" type="Label" parent="ScrollContainer/VBoxContainer/GridContainer/morse"]
+margin_top = 820.0
+margin_right = 196.0
+margin_bottom = 857.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_styles/normal = ExtResource( 1 )
+text = "..-"
+align = 1
+valign = 1
+
+[node name="Label22" type="Label" parent="ScrollContainer/VBoxContainer/GridContainer/morse"]
+margin_top = 861.0
+margin_right = 196.0
+margin_bottom = 898.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_styles/normal = ExtResource( 1 )
+text = "...-"
+align = 1
+valign = 1
+
+[node name="Label23" type="Label" parent="ScrollContainer/VBoxContainer/GridContainer/morse"]
+margin_top = 902.0
+margin_right = 196.0
+margin_bottom = 939.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_styles/normal = ExtResource( 1 )
+text = ".--"
+align = 1
+valign = 1
+
+[node name="Label24" type="Label" parent="ScrollContainer/VBoxContainer/GridContainer/morse"]
+margin_top = 943.0
+margin_right = 196.0
+margin_bottom = 980.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_styles/normal = ExtResource( 1 )
+text = "-..-"
+align = 1
+valign = 1
+
+[node name="Label25" type="Label" parent="ScrollContainer/VBoxContainer/GridContainer/morse"]
+margin_top = 984.0
+margin_right = 196.0
+margin_bottom = 1021.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_styles/normal = ExtResource( 1 )
+text = "-.--"
+align = 1
+valign = 1
+
+[node name="Label26" type="Label" parent="ScrollContainer/VBoxContainer/GridContainer/morse"]
+margin_top = 1025.0
+margin_right = 196.0
+margin_bottom = 1062.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_styles/normal = ExtResource( 1 )
+text = "-..."
+align = 1
+valign = 1
+
+[node name="Label27" type="Label" parent="ScrollContainer/VBoxContainer/GridContainer/morse"]
+margin_top = 1066.0
+margin_right = 196.0
+margin_bottom = 1103.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_styles/normal = ExtResource( 1 )
+text = "-----"
+align = 1
+valign = 1
+
+[node name="Label28" type="Label" parent="ScrollContainer/VBoxContainer/GridContainer/morse"]
+margin_top = 1107.0
+margin_right = 196.0
+margin_bottom = 1144.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_styles/normal = ExtResource( 1 )
+text = ".----"
+align = 1
+valign = 1
+
+[node name="Label29" type="Label" parent="ScrollContainer/VBoxContainer/GridContainer/morse"]
+margin_top = 1148.0
+margin_right = 196.0
+margin_bottom = 1185.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_styles/normal = ExtResource( 1 )
+text = "..---"
+align = 1
+valign = 1
+
+[node name="Label30" type="Label" parent="ScrollContainer/VBoxContainer/GridContainer/morse"]
+margin_top = 1189.0
+margin_right = 196.0
+margin_bottom = 1226.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_styles/normal = ExtResource( 1 )
+text = "...--"
+align = 1
+valign = 1
+
+[node name="Label31" type="Label" parent="ScrollContainer/VBoxContainer/GridContainer/morse"]
+margin_top = 1230.0
+margin_right = 196.0
+margin_bottom = 1267.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_styles/normal = ExtResource( 1 )
+text = "....-"
+align = 1
+valign = 1
+
+[node name="Label32" type="Label" parent="ScrollContainer/VBoxContainer/GridContainer/morse"]
+margin_top = 1271.0
+margin_right = 196.0
+margin_bottom = 1308.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_styles/normal = ExtResource( 1 )
+text = "....."
+align = 1
+valign = 1
+
+[node name="Label33" type="Label" parent="ScrollContainer/VBoxContainer/GridContainer/morse"]
+margin_top = 1312.0
+margin_right = 196.0
+margin_bottom = 1349.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_styles/normal = ExtResource( 1 )
+text = "-...."
+align = 1
+valign = 1
+
+[node name="Label34" type="Label" parent="ScrollContainer/VBoxContainer/GridContainer/morse"]
+margin_top = 1353.0
+margin_right = 196.0
+margin_bottom = 1390.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_styles/normal = ExtResource( 1 )
+text = "--..."
+align = 1
+valign = 1
+
+[node name="Label35" type="Label" parent="ScrollContainer/VBoxContainer/GridContainer/morse"]
+margin_top = 1394.0
+margin_right = 196.0
+margin_bottom = 1431.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_styles/normal = ExtResource( 1 )
+text = "---.."
+align = 1
+valign = 1
+
+[node name="Label36" type="Label" parent="ScrollContainer/VBoxContainer/GridContainer/morse"]
+margin_top = 1435.0
+margin_right = 196.0
+margin_bottom = 1472.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_styles/normal = ExtResource( 1 )
+text = "----."
+align = 1
+valign = 1
+
+[node name="Label37" type="Label" parent="ScrollContainer/VBoxContainer/GridContainer/morse"]
+margin_top = 1476.0
+margin_right = 196.0
+margin_bottom = 1513.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_styles/normal = ExtResource( 1 )
+text = ".-.-.-"
+align = 1
+valign = 1
+
+[node name="Label38" type="Label" parent="ScrollContainer/VBoxContainer/GridContainer/morse"]
+margin_top = 1517.0
+margin_right = 196.0
+margin_bottom = 1554.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_styles/normal = ExtResource( 1 )
+text = "--..--"
+align = 1
+valign = 1
+
+[node name="Label39" type="Label" parent="ScrollContainer/VBoxContainer/GridContainer/morse"]
+margin_top = 1558.0
+margin_right = 196.0
+margin_bottom = 1595.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_styles/normal = ExtResource( 1 )
+text = "..--.."
+align = 1
+valign = 1
+
+[node name="Label40" type="Label" parent="ScrollContainer/VBoxContainer/GridContainer/morse"]
+margin_top = 1599.0
+margin_right = 196.0
+margin_bottom = 1636.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_styles/normal = ExtResource( 1 )
+text = ".-----."
+align = 1
+valign = 1
+
+[node name="Label41" type="Label" parent="ScrollContainer/VBoxContainer/GridContainer/morse"]
+margin_top = 1640.0
+margin_right = 196.0
+margin_bottom = 1677.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_styles/normal = ExtResource( 1 )
+text = "-.-.--"
+align = 1
+valign = 1
+
+[node name="Label42" type="Label" parent="ScrollContainer/VBoxContainer/GridContainer/morse"]
+margin_top = 1681.0
+margin_right = 196.0
+margin_bottom = 1718.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_styles/normal = ExtResource( 1 )
+text = "-..-."
+align = 1
+valign = 1
+
+[node name="Label43" type="Label" parent="ScrollContainer/VBoxContainer/GridContainer/morse"]
+margin_top = 1722.0
+margin_right = 196.0
+margin_bottom = 1759.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_styles/normal = ExtResource( 1 )
+text = "-.--."
+align = 1
+valign = 1
+
+[node name="Label44" type="Label" parent="ScrollContainer/VBoxContainer/GridContainer/morse"]
+margin_top = 1763.0
+margin_right = 196.0
+margin_bottom = 1800.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_styles/normal = ExtResource( 1 )
+text = "-.--.-"
+align = 1
+valign = 1
+
+[node name="Label45" type="Label" parent="ScrollContainer/VBoxContainer/GridContainer/morse"]
+margin_top = 1804.0
+margin_right = 196.0
+margin_bottom = 1841.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_styles/normal = ExtResource( 1 )
+text = ".-..."
+align = 1
+valign = 1
+
+[node name="Label46" type="Label" parent="ScrollContainer/VBoxContainer/GridContainer/morse"]
+margin_top = 1845.0
+margin_right = 196.0
+margin_bottom = 1882.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_styles/normal = ExtResource( 1 )
+text = "---..."
+align = 1
+valign = 1
+
+[node name="Label47" type="Label" parent="ScrollContainer/VBoxContainer/GridContainer/morse"]
+margin_top = 1886.0
+margin_right = 196.0
+margin_bottom = 1923.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_styles/normal = ExtResource( 1 )
+text = "-.-.-."
+align = 1
+valign = 1
+
+[node name="Label48" type="Label" parent="ScrollContainer/VBoxContainer/GridContainer/morse"]
+margin_top = 1927.0
+margin_right = 196.0
+margin_bottom = 1964.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_styles/normal = ExtResource( 1 )
+text = "-...-"
+align = 1
+valign = 1
+
+[node name="Label49" type="Label" parent="ScrollContainer/VBoxContainer/GridContainer/morse"]
+margin_top = 1968.0
+margin_right = 196.0
+margin_bottom = 2005.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_styles/normal = ExtResource( 1 )
+text = "-....-"
+align = 1
+valign = 1
+
+[node name="Label50" type="Label" parent="ScrollContainer/VBoxContainer/GridContainer/morse"]
+margin_top = 2009.0
+margin_right = 196.0
+margin_bottom = 2046.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_styles/normal = ExtResource( 1 )
+text = "..--.-"
+align = 1
+valign = 1
+
+[node name="Label51" type="Label" parent="ScrollContainer/VBoxContainer/GridContainer/morse"]
+margin_top = 2050.0
+margin_right = 196.0
+margin_bottom = 2087.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_styles/normal = ExtResource( 1 )
+text = ".-..-."
+align = 1
+valign = 1
+
+[node name="Label52" type="Label" parent="ScrollContainer/VBoxContainer/GridContainer/morse"]
+margin_top = 2091.0
+margin_right = 196.0
+margin_bottom = 2128.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_styles/normal = ExtResource( 1 )
+text = "...-..-"
+align = 1
+valign = 1
+
+[node name="Label53" type="Label" parent="ScrollContainer/VBoxContainer/GridContainer/morse"]
+margin_top = 2132.0
+margin_right = 196.0
+margin_bottom = 2169.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_styles/normal = ExtResource( 1 )
+text = ".--.-."
+align = 1
+valign = 1

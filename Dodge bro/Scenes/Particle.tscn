@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Scripts/Particle.gd" type="Script" id=1]
+
+[node name="Particle" type="Node2D"]
+z_index = -1
+script = ExtResource( 1 )
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_left = -6.0
+margin_top = -6.0
+margin_right = 6.0
+margin_bottom = 6.0

@@ -1,0 +1,70 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Images/ICONES_DE_JOGABILIDADE/APENAS-O-SIFRAO.png" type="Texture" id=2]
+[ext_resource path="res://Styles/BUY_BUTTON_NORMAL.tres" type="StyleBox" id=3]
+[ext_resource path="res://Styles/BUY_BUTTON_PRESSED.tres" type="StyleBox" id=4]
+[ext_resource path="res://Styles/BUY_BUTTON_DISABLED.tres" type="StyleBox" id=5]
+[ext_resource path="res://Scripts/UPGRADE.gd" type="Script" id=6]
+
+[node name="UPGRADE" type="GridContainer"]
+margin_right = 360.0
+margin_bottom = 80.0
+size_flags_horizontal = 7
+columns = 4
+script = ExtResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="."]
+margin_right = 80.0
+margin_bottom = 80.0
+rect_min_size = Vector2( 80, 80 )
+size_flags_horizontal = 6
+expand = true
+
+[node name="GridContainer" type="GridContainer" parent="."]
+margin_left = 84.0
+margin_right = 158.0
+margin_bottom = 80.0
+size_flags_horizontal = 7
+columns = 5
+
+[node name="GridContainer2" type="GridContainer" parent="."]
+margin_left = 162.0
+margin_right = 281.0
+margin_bottom = 80.0
+size_flags_horizontal = 7
+columns = 2
+
+[node name="TextureRect" type="TextureRect" parent="GridContainer2"]
+margin_top = 15.0
+margin_right = 40.0
+margin_bottom = 65.0
+rect_min_size = Vector2( 40, 50 )
+size_flags_horizontal = 6
+size_flags_vertical = 6
+texture = ExtResource( 2 )
+expand = true
+
+[node name="Label" type="Label" parent="GridContainer2"]
+margin_left = 44.0
+margin_top = 33.0
+margin_right = 119.0
+margin_bottom = 47.0
+rect_min_size = Vector2( 75, 0 )
+size_flags_horizontal = 7
+align = 1
+valign = 1
+
+[node name="UPGRADE" type="Button" parent="."]
+margin_left = 285.0
+margin_right = 359.0
+margin_bottom = 80.0
+size_flags_horizontal = 7
+custom_styles/pressed = ExtResource( 4 )
+custom_styles/disabled = ExtResource( 5 )
+custom_styles/normal = ExtResource( 3 )
+text = "BUY"
+
+[connection signal="button_up" from="UPGRADE" to="." method="_on_UPGRADE_button_up"]

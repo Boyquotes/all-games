@@ -1,0 +1,57 @@
+{
+	"events": [
+		{
+			"action": "join",
+			"character": "character-1642357363.json",
+			"event_id": "dialogic_002",
+			"mirror": false,
+			"portrait": "",
+			"position": {
+				"0": true,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": false
+			}
+		},
+		{
+			"action": "join",
+			"character": "character-1642357357.json",
+			"event_id": "dialogic_002",
+			"mirror": false,
+			"portrait": "",
+			"position": {
+				"0": false,
+				"1": true,
+				"2": false,
+				"3": false,
+				"4": false
+			}
+		},
+		{
+			"character": "character-1642357363.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Soldier, you will get the message from an aircraft carrier telling our enemies coordinates for an attack, but beware, the aircraft carrier must send a confirmation code at the beginning of the message, the code is \"AVM\", it must also send a confirmation code at the end of the sentence, the code is \"0728\", after translating the message, tell me if it is authentic."
+		},
+		{
+			"character": "character-1642357357.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Ok, Sir!"
+		},
+		{
+			"emit_signal": "start",
+			"event_id": "dialogic_040"
+		},
+		{
+			"event_id": "dialogic_022",
+			"transition_duration": 1
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.3",
+		"file": "timeline-1642444203.json",
+		"name": "C_11"
+	}
+}

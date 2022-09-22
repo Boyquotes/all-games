@@ -1,0 +1,149 @@
+[gd_scene load_steps=11 format=3 uid="uid://3h8u42tmxsq3"]
+
+[ext_resource type="Script" path="res://Scripts/merge_blacksmith.gd" id="1_gkd03"]
+[ext_resource type="Texture2D" uid="uid://ryhlc58btarp" path="res://Images/Merge_blacksmith/Stats_normal.png" id="2_06saf"]
+[ext_resource type="PackedScene" uid="uid://ci3xgsaks7ke0" path="res://Scenes/ore_holder.tscn" id="2_bwjy7"]
+[ext_resource type="Texture2D" uid="uid://de44g2hlfywem" path="res://Images/Merge_blacksmith/Stats_pressed.png" id="3_x787s"]
+[ext_resource type="Texture2D" uid="uid://bcv1223ukey0a" path="res://Images/Merge_blacksmith/Upgrade_normal.png" id="4_vniq4"]
+[ext_resource type="Texture2D" uid="uid://bcqhh4qv1cbpb" path="res://Images/Merge_blacksmith/Upgrade_pressed.png" id="5_lxh6e"]
+[ext_resource type="Texture2D" uid="uid://c325dtntxwvqn" path="res://Images/Merge_blacksmith/Configuracoes_normal.png" id="6_bw8kh"]
+[ext_resource type="Texture2D" uid="uid://cy25eqirckqvo" path="res://Images/Merge_blacksmith/Configuracoes_pressed.png" id="7_e4f4r"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_34ddh"]
+bg_color = Color(0.215686, 0.341176, 0.184314, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_e18i5"]
+bg_color = Color(0.278431, 0.435294, 0.235294, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
+[node name="Merge_blacksmith" type="Node2D"]
+script = ExtResource( "1_gkd03" )
+
+[node name="GridContainer" type="GridContainer" parent="."]
+offset_left = 2.0
+offset_top = 2.0
+offset_right = 410.0
+offset_bottom = 730.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="COSTUMERS" type="GridContainer" parent="GridContainer"]
+offset_right = 408.0
+
+[node name="ITEMS" type="GridContainer" parent="GridContainer"]
+offset_top = 4.0
+offset_right = 408.0
+offset_bottom = 4.0
+size_flags_horizontal = 3
+size_flags_vertical = 0
+
+[node name="ACT" type="GridContainer" parent="GridContainer"]
+offset_top = 8.0
+offset_right = 408.0
+offset_bottom = 660.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+columns = 2
+
+[node name="ORES" type="GridContainer" parent="GridContainer/ACT"]
+offset_right = 202.0
+offset_bottom = 652.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="ScrollContainer" type="ScrollContainer" parent="GridContainer/ACT/ORES"]
+offset_right = 202.0
+offset_bottom = 619.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="GridContainer/ACT/ORES/ScrollContainer"]
+offset_right = 202.0
+offset_bottom = 619.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Ore_holder" parent="GridContainer/ACT/ORES/ScrollContainer/HBoxContainer" instance=ExtResource( "2_bwjy7" )]
+offset_right = 84.0
+offset_bottom = 404.0
+
+[node name="BUY_ORE" type="Button" parent="GridContainer/ACT/ORES"]
+offset_top = 623.0
+offset_right = 202.0
+offset_bottom = 652.0
+theme_override_styles/pressed = SubResource( "StyleBoxFlat_34ddh" )
+theme_override_styles/normal = SubResource( "StyleBoxFlat_e18i5" )
+text = "Buy ore"
+
+[node name="SHAPES" type="GridContainer" parent="GridContainer/ACT"]
+offset_left = 206.0
+offset_right = 408.0
+offset_bottom = 652.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="GridContainer" type="GridContainer" parent="GridContainer/ACT/SHAPES"]
+offset_right = 202.0
+offset_bottom = 619.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="BUY_SHAPE" type="Button" parent="GridContainer/ACT/SHAPES"]
+offset_top = 623.0
+offset_right = 202.0
+offset_bottom = 652.0
+theme_override_styles/pressed = SubResource( "StyleBoxFlat_34ddh" )
+theme_override_styles/normal = SubResource( "StyleBoxFlat_e18i5" )
+text = "Buy shape"
+
+[node name="TOLLBAR" type="GridContainer" parent="GridContainer"]
+offset_top = 664.0
+offset_right = 408.0
+offset_bottom = 728.0
+size_flags_horizontal = 3
+size_flags_vertical = 5
+columns = 3
+
+[node name="STATS" type="TextureButton" parent="GridContainer/TOLLBAR"]
+offset_left = 34.0
+offset_right = 98.0
+offset_bottom = 64.0
+rect_min_size = Vector2(64, 64)
+size_flags_horizontal = 6
+texture_normal = ExtResource( "2_06saf" )
+texture_pressed = ExtResource( "3_x787s" )
+expand = true
+
+[node name="UPGRADES" type="TextureButton" parent="GridContainer/TOLLBAR"]
+offset_left = 171.0
+offset_right = 235.0
+offset_bottom = 64.0
+rect_min_size = Vector2(64, 64)
+size_flags_horizontal = 6
+texture_normal = ExtResource( "4_vniq4" )
+texture_pressed = ExtResource( "5_lxh6e" )
+expand = true
+
+[node name="CONFIGURATIONS" type="TextureButton" parent="GridContainer/TOLLBAR"]
+offset_left = 308.0
+offset_right = 372.0
+offset_bottom = 64.0
+rect_min_size = Vector2(64, 64)
+size_flags_horizontal = 6
+texture_normal = ExtResource( "6_bw8kh" )
+texture_pressed = ExtResource( "7_e4f4r" )
+expand = true

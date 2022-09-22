@@ -1,0 +1,63 @@
+[gd_scene load_steps=3 format=3 uid="uid://ci3xgsaks7ke0"]
+
+[ext_resource type="Script" path="res://Scripts/ore_holder.gd" id="1_gl1op"]
+[ext_resource type="PackedScene" uid="uid://cnc0xrspakgkh" path="res://Scenes/slot.tscn" id="2_t7v8u"]
+
+[node name="Ore_holder" type="GridContainer"]
+offset_right = 40.0
+offset_bottom = 40.0
+rect_min_size = Vector2(84, 404)
+size_flags_horizontal = 0
+size_flags_vertical = 0
+script = ExtResource( "1_gl1op" )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SLOT" parent="." instance=ExtResource( "2_t7v8u" )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 10.0
+offset_right = 74.0
+offset_bottom = 64.0
+
+[node name="SLOT2" parent="." instance=ExtResource( "2_t7v8u" )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 10.0
+offset_top = 68.0
+offset_right = 74.0
+offset_bottom = 132.0
+
+[node name="SLOT3" parent="." instance=ExtResource( "2_t7v8u" )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 10.0
+offset_top = 136.0
+offset_right = 74.0
+offset_bottom = 200.0
+
+[node name="SLOT4" parent="." instance=ExtResource( "2_t7v8u" )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 10.0
+offset_top = 204.0
+offset_right = 74.0
+offset_bottom = 268.0
+
+[node name="SLOT5" parent="." instance=ExtResource( "2_t7v8u" )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 10.0
+offset_top = 272.0
+offset_right = 74.0
+offset_bottom = 336.0
+
+[node name="MAKE" type="TextureButton" parent="."]
+offset_top = 340.0
+offset_right = 84.0
+offset_bottom = 404.0
+rect_min_size = Vector2(64, 64)
+expand = true
+
+[connection signal="button_up" from="MAKE" to="." method="_on_make_button_up"]

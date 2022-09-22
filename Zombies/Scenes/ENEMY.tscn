@@ -1,0 +1,213 @@
+[gd_scene load_steps=37 format=2]
+
+[ext_resource path="res://Images/weapons/ZOMBIE_HAND.png" type="Texture" id=1]
+[ext_resource path="res://Animations/ZOMBIE/IDLE2.png" type="Texture" id=2]
+[ext_resource path="res://Animations/ZOMBIE/RUN2.png" type="Texture" id=3]
+[ext_resource path="res://Animations/ZOMBIE/RUN1.png" type="Texture" id=4]
+[ext_resource path="res://Animations/ZOMBIE/IDLE1.png" type="Texture" id=5]
+[ext_resource path="res://Scripts/ENEMY.gd" type="Script" id=6]
+[ext_resource path="res://Animations/ZOMBIE/HEALTHY/RUN2.png" type="Texture" id=7]
+[ext_resource path="res://Animations/ZOMBIE/HEALTHY/IDLE2.png" type="Texture" id=8]
+[ext_resource path="res://Animations/ZOMBIE/HEALTHY/IDLE1.png" type="Texture" id=9]
+[ext_resource path="res://Animations/ZOMBIE/HEALTHY/RUN1.png" type="Texture" id=10]
+[ext_resource path="res://Animations/ZOMBIE/FAST/IDLE_AND_RUN1.png" type="Texture" id=11]
+[ext_resource path="res://Animations/ZOMBIE/FAST/IDLE_AND_RUN2.png" type="Texture" id=12]
+[ext_resource path="res://Animations/ZOMBIE/STRONG/RUN1.png" type="Texture" id=13]
+[ext_resource path="res://Animations/ZOMBIE/STRONG/RUN2.png" type="Texture" id=14]
+[ext_resource path="res://Animations/ZOMBIE/STRONG/IDLE1.png" type="Texture" id=15]
+[ext_resource path="res://Animations/ZOMBIE/STRONG/IDLE2.png" type="Texture" id=16]
+[ext_resource path="res://Animations/ZOMBIE/RANGER/RUN1.png" type="Texture" id=17]
+[ext_resource path="res://Animations/ZOMBIE/RANGER/RUN2.png" type="Texture" id=18]
+[ext_resource path="res://Animations/ZOMBIE/RANGER/IDLE2.png" type="Texture" id=19]
+[ext_resource path="res://Animations/ZOMBIE/RANGER/IDLE1.png" type="Texture" id=20]
+[ext_resource path="res://Animations/ZOMBIE/BOSS1/IDLE1.png" type="Texture" id=21]
+[ext_resource path="res://Animations/ZOMBIE/BOSS1/RUN1.png" type="Texture" id=22]
+[ext_resource path="res://Animations/ZOMBIE/BOSS1/RUN2.png" type="Texture" id=23]
+[ext_resource path="res://Animations/ZOMBIE/BOSS1/IDLE2.png" type="Texture" id=24]
+[ext_resource path="res://Animations/ZOMBIE/BOSS2/IDLE1.png" type="Texture" id=25]
+[ext_resource path="res://Animations/ZOMBIE/BOSS2/RUN2.png" type="Texture" id=26]
+[ext_resource path="res://Animations/ZOMBIE/BOSS2/IDLE2.png" type="Texture" id=27]
+[ext_resource path="res://Animations/ZOMBIE/BOSS2/RUN1.png" type="Texture" id=28]
+
+[sub_resource type="SpriteFrames" id=3]
+animations = [ {
+"frames": [ ExtResource( 11 ), ExtResource( 12 ) ],
+"loop": true,
+"name": "fast-IDLE",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 17 ), ExtResource( 18 ) ],
+"loop": true,
+"name": "ranger-RUN",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 5 ), ExtResource( 2 ) ],
+"loop": true,
+"name": "commom-IDLE",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 22 ), ExtResource( 23 ) ],
+"loop": true,
+"name": "boss1-RUN",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 28 ), ExtResource( 26 ) ],
+"loop": true,
+"name": "boss2-RUN",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 21 ), ExtResource( 24 ) ],
+"loop": true,
+"name": "boss1-IDLE",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 15 ), ExtResource( 16 ) ],
+"loop": true,
+"name": "strong-IDLE",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 9 ), ExtResource( 8 ) ],
+"loop": true,
+"name": "healthy-IDLE",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 11 ), ExtResource( 12 ) ],
+"loop": true,
+"name": "fast-RUN",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 4 ), ExtResource( 3 ) ],
+"loop": true,
+"name": "commom-RUN",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 20 ), ExtResource( 19 ) ],
+"loop": true,
+"name": "ranger-IDLE",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 10 ), ExtResource( 7 ) ],
+"loop": true,
+"name": "healthy-RUN",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 25 ), ExtResource( 27 ) ],
+"loop": true,
+"name": "boss2-IDLE",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 13 ), ExtResource( 14 ) ],
+"loop": true,
+"name": "strong-RUN",
+"speed": 5.0
+} ]
+
+[sub_resource type="CapsuleShape2D" id=7]
+radius = 4.0
+height = 8.0
+
+[sub_resource type="StyleBoxFlat" id=5]
+bg_color = Color( 0.447059, 0.027451, 0.00784314, 1 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 0, 0, 0, 0 )
+
+[sub_resource type="StyleBoxFlat" id=6]
+bg_color = Color( 0.0901961, 0.0901961, 0.0901961, 1 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 0, 0, 0, 1 )
+
+[sub_resource type="CapsuleShape2D" id=8]
+radius = 7.0
+height = 8.0
+
+[sub_resource type="CapsuleShape2D" id=9]
+radius = 8.0
+height = 8.0
+
+[sub_resource type="CapsuleShape2D" id=11]
+radius = 7.0
+height = 4.0
+
+[sub_resource type="CapsuleShape2D" id=10]
+radius = 6.0
+height = 0.0
+
+[node name="ENEMY" type="KinematicBody2D" groups=["ENEMY"]]
+z_index = 1
+script = ExtResource( 6 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+frames = SubResource( 3 )
+animation = "boss2-RUN"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 7 )
+
+[node name="ARMA" type="Sprite" parent="."]
+position = Vector2( -1, 1 )
+z_index = 1
+texture = ExtResource( 1 )
+
+[node name="POINTER" type="Node2D" parent="ARMA"]
+position = Vector2( 17, 0 )
+
+[node name="GridContainer" type="GridContainer" parent="."]
+visible = false
+margin_left = -16.0
+margin_top = -16.0
+margin_right = 48.0
+margin_bottom = -7.0
+rect_scale = Vector2( 0.5, 0.5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LIFEBAR" type="ProgressBar" parent="."]
+visible = false
+margin_left = -6.0
+margin_top = -11.0
+margin_right = 42.0
+margin_bottom = 9.0
+rect_min_size = Vector2( 0, 20 )
+rect_scale = Vector2( 0.25, 0.125 )
+size_flags_horizontal = 3
+size_flags_vertical = 6
+custom_styles/fg = SubResource( 5 )
+custom_styles/bg = SubResource( 6 )
+value = 100.0
+percent_visible = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="commom" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource( 8 )
+
+[node name="ranger" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource( 8 )
+
+[node name="strong" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource( 8 )
+
+[node name="healthy" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource( 9 )
+
+[node name="boss1" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource( 11 )
+
+[node name="boss2" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource( 11 )
+
+[node name="fast" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource( 10 )
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_Area2D_body_exited"]

@@ -1,0 +1,57 @@
+{
+	"events": [
+		{
+			"action": "join",
+			"character": "character-1642357363.json",
+			"event_id": "dialogic_002",
+			"mirror": false,
+			"portrait": "",
+			"position": {
+				"0": true,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": false
+			}
+		},
+		{
+			"action": "join",
+			"character": "character-1642357357.json",
+			"event_id": "dialogic_002",
+			"mirror": false,
+			"portrait": "",
+			"position": {
+				"0": false,
+				"1": true,
+				"2": false,
+				"3": false,
+				"4": false
+			}
+		},
+		{
+			"character": "character-1642357363.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Soldier, we already verified the authenticity of the nuclear submarine CW 85 and it really is one of our allies"
+		},
+		{
+			"character": "character-1642357363.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "The message you translated said the mortar ship DW 11 was at -20 and 96, but the teams carrying the supplies couldn't find them, maybe you'll get a help message sent by them"
+		},
+		{
+			"emit_signal": "start",
+			"event_id": "dialogic_040"
+		},
+		{
+			"event_id": "dialogic_022",
+			"transition_duration": 1
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.3",
+		"file": "timeline-1642439019.json",
+		"name": "C_7"
+	}
+}

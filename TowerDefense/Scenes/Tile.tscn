@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Scripts/Tile.gd" type="Script" id=1]
+[ext_resource path="res://Tiles/Tileset.png" type="Texture" id=2]
+
+[node name="Tile" type="Sprite" groups=["TILE"]]
+texture = ExtResource( 2 )
+region_enabled = true
+region_rect = Rect2( 48, 0, 16, 16 )
+script = ExtResource( 1 )

@@ -1,0 +1,1463 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Scripts/Adicionar_professor.gd" type="Script" id=1]
+[ext_resource path="res://Scripts/CHECK_BUTTON.gd" type="Script" id=2]
+
+[node name="Adicionar_professor" type="GridContainer" groups=["ADICIONAR_PROFESSOR"]]
+margin_left = 95.0
+margin_top = 69.0
+margin_right = 1029.0
+margin_bottom = 711.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ADICIONAR_PROFESSOR" type="Label" parent="."]
+margin_right = 934.0
+margin_bottom = 14.0
+size_flags_horizontal = 7
+text = "Adicionar professor à base de dados"
+align = 1
+valign = 1
+
+[node name="NOME" type="GridContainer" parent="."]
+margin_top = 18.0
+margin_right = 934.0
+margin_bottom = 42.0
+columns = 2
+
+[node name="LineEdit" type="LineEdit" parent="NOME"]
+margin_right = 906.0
+margin_bottom = 24.0
+size_flags_horizontal = 7
+placeholder_text = "Nome do professor"
+placeholder_alpha = 0.5
+
+[node name="ADD" type="Button" parent="NOME"]
+margin_left = 910.0
+margin_right = 934.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 24, 24 )
+text = "+"
+
+[node name="DIAS" type="TabContainer" parent="."]
+margin_top = 46.0
+margin_right = 934.0
+margin_bottom = 603.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Segunda" type="Tabs" parent="DIAS"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 32.0
+margin_right = -4.0
+margin_bottom = -4.0
+
+[node name="PREFERENCIAS" type="GridContainer" parent="DIAS/Segunda"]
+margin_left = 1.0
+margin_top = 7.0
+margin_right = 921.0
+margin_bottom = 291.0
+columns = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="QUER" type="GridContainer" parent="DIAS/Segunda/PREFERENCIAS"]
+margin_right = 458.0
+margin_bottom = 284.0
+size_flags_horizontal = 3
+
+[node name="PREFERE" type="Label" parent="DIAS/Segunda/PREFERENCIAS/QUER"]
+margin_right = 458.0
+margin_bottom = 14.0
+size_flags_horizontal = 7
+text = "Horários que prefere"
+align = 1
+valign = 1
+
+[node name="HORARIOS_QUE_PREFERE" type="GridContainer" parent="DIAS/Segunda/PREFERENCIAS/QUER"]
+margin_top = 18.0
+margin_right = 458.0
+margin_bottom = 284.0
+
+[node name="SEM_PREFERENCIA_NAO_QUER" type="CheckBox" parent="DIAS/Segunda/PREFERENCIAS/QUER/HORARIOS_QUE_PREFERE"]
+margin_left = 163.0
+margin_right = 295.0
+margin_bottom = 24.0
+size_flags_horizontal = 6
+text = "Sem preferência"
+align = 2
+script = ExtResource( 2 )
+DIA = "segunda"
+TIPO = "sem_preferencia_quer"
+
+[node name="HORARIOS" type="GridContainer" parent="DIAS/Segunda/PREFERENCIAS/QUER/HORARIOS_QUE_PREFERE"]
+margin_top = 28.0
+margin_right = 458.0
+margin_bottom = 238.0
+
+[node name="Label" type="Label" parent="DIAS/Segunda/PREFERENCIAS/QUER/HORARIOS_QUE_PREFERE/HORARIOS"]
+margin_right = 458.0
+margin_bottom = 14.0
+text = "Horários"
+align = 1
+valign = 1
+
+[node name="1" type="CheckBox" parent="DIAS/Segunda/PREFERENCIAS/QUER/HORARIOS_QUE_PREFERE/HORARIOS"]
+margin_left = 168.0
+margin_top = 18.0
+margin_right = 290.0
+margin_bottom = 42.0
+rect_min_size = Vector2( 122, 0 )
+size_flags_horizontal = 6
+text = "7:00 às 7:45"
+align = 1
+
+[node name="2" type="CheckBox" parent="DIAS/Segunda/PREFERENCIAS/QUER/HORARIOS_QUE_PREFERE/HORARIOS"]
+margin_left = 168.0
+margin_top = 46.0
+margin_right = 290.0
+margin_bottom = 70.0
+rect_min_size = Vector2( 122, 0 )
+size_flags_horizontal = 6
+text = "7:45 às 8:30"
+align = 1
+
+[node name="3" type="CheckBox" parent="DIAS/Segunda/PREFERENCIAS/QUER/HORARIOS_QUE_PREFERE/HORARIOS"]
+margin_left = 168.0
+margin_top = 74.0
+margin_right = 290.0
+margin_bottom = 98.0
+rect_min_size = Vector2( 122, 0 )
+size_flags_horizontal = 6
+text = "8:30 às 9:15"
+align = 1
+
+[node name="4" type="CheckBox" parent="DIAS/Segunda/PREFERENCIAS/QUER/HORARIOS_QUE_PREFERE/HORARIOS"]
+margin_left = 168.0
+margin_top = 102.0
+margin_right = 290.0
+margin_bottom = 126.0
+rect_min_size = Vector2( 122, 0 )
+size_flags_horizontal = 6
+text = "9:15 às 10:00"
+align = 1
+
+[node name="5" type="CheckBox" parent="DIAS/Segunda/PREFERENCIAS/QUER/HORARIOS_QUE_PREFERE/HORARIOS"]
+margin_left = 168.0
+margin_top = 130.0
+margin_right = 290.0
+margin_bottom = 154.0
+rect_min_size = Vector2( 122, 0 )
+size_flags_horizontal = 6
+text = "10:20 às 11:05"
+align = 1
+
+[node name="6" type="CheckBox" parent="DIAS/Segunda/PREFERENCIAS/QUER/HORARIOS_QUE_PREFERE/HORARIOS"]
+margin_left = 168.0
+margin_top = 158.0
+margin_right = 290.0
+margin_bottom = 182.0
+rect_min_size = Vector2( 122, 0 )
+size_flags_horizontal = 6
+text = "11:05 às 11:50"
+align = 1
+
+[node name="7" type="CheckBox" parent="DIAS/Segunda/PREFERENCIAS/QUER/HORARIOS_QUE_PREFERE/HORARIOS"]
+margin_left = 168.0
+margin_top = 186.0
+margin_right = 290.0
+margin_bottom = 210.0
+rect_min_size = Vector2( 122, 0 )
+size_flags_horizontal = 6
+text = "11:50 às 12:35"
+align = 1
+
+[node name="MOTIVO_SIM_NAO" type="CheckBox" parent="DIAS/Segunda/PREFERENCIAS/QUER/HORARIOS_QUE_PREFERE"]
+margin_left = 193.0
+margin_top = 242.0
+margin_right = 265.0
+margin_bottom = 266.0
+size_flags_horizontal = 6
+text = "Motivo"
+script = ExtResource( 2 )
+DIA = "segunda"
+TIPO = "motivo_quer"
+
+[node name="TextEdit" type="TextEdit" parent="DIAS/Segunda/PREFERENCIAS/QUER/HORARIOS_QUE_PREFERE"]
+visible = false
+margin_top = 56.0
+margin_right = 252.0
+margin_bottom = 206.0
+rect_min_size = Vector2( 0, 150 )
+
+[node name="NAO_QUER" type="GridContainer" parent="DIAS/Segunda/PREFERENCIAS"]
+margin_left = 462.0
+margin_right = 920.0
+margin_bottom = 284.0
+size_flags_horizontal = 3
+
+[node name="NAO_PREFERE" type="Label" parent="DIAS/Segunda/PREFERENCIAS/NAO_QUER"]
+margin_right = 458.0
+margin_bottom = 14.0
+size_flags_horizontal = 7
+text = "Horários que não prefere"
+align = 1
+valign = 1
+
+[node name="HORARIOS_QUE_NAO_PREFERE" type="GridContainer" parent="DIAS/Segunda/PREFERENCIAS/NAO_QUER"]
+margin_top = 18.0
+margin_right = 458.0
+margin_bottom = 284.0
+
+[node name="SEM_PREFERENCIA_NAO_QUER" type="CheckBox" parent="DIAS/Segunda/PREFERENCIAS/NAO_QUER/HORARIOS_QUE_NAO_PREFERE"]
+margin_left = 163.0
+margin_right = 295.0
+margin_bottom = 24.0
+size_flags_horizontal = 6
+text = "Sem preferência"
+script = ExtResource( 2 )
+DIA = "segunda"
+TIPO = "sem_preferencia_nao_quer"
+
+[node name="HORARIOS" type="GridContainer" parent="DIAS/Segunda/PREFERENCIAS/NAO_QUER/HORARIOS_QUE_NAO_PREFERE"]
+margin_top = 28.0
+margin_right = 458.0
+margin_bottom = 238.0
+
+[node name="Label" type="Label" parent="DIAS/Segunda/PREFERENCIAS/NAO_QUER/HORARIOS_QUE_NAO_PREFERE/HORARIOS"]
+margin_right = 458.0
+margin_bottom = 14.0
+text = "Horários"
+align = 1
+valign = 1
+
+[node name="1" type="CheckBox" parent="DIAS/Segunda/PREFERENCIAS/NAO_QUER/HORARIOS_QUE_NAO_PREFERE/HORARIOS"]
+margin_left = 168.0
+margin_top = 18.0
+margin_right = 290.0
+margin_bottom = 42.0
+rect_min_size = Vector2( 122, 0 )
+size_flags_horizontal = 6
+text = "7:00 às 7:45"
+align = 1
+
+[node name="2" type="CheckBox" parent="DIAS/Segunda/PREFERENCIAS/NAO_QUER/HORARIOS_QUE_NAO_PREFERE/HORARIOS"]
+margin_left = 168.0
+margin_top = 46.0
+margin_right = 290.0
+margin_bottom = 70.0
+rect_min_size = Vector2( 122, 0 )
+size_flags_horizontal = 6
+text = "7:45 às 8:30"
+align = 1
+
+[node name="3" type="CheckBox" parent="DIAS/Segunda/PREFERENCIAS/NAO_QUER/HORARIOS_QUE_NAO_PREFERE/HORARIOS"]
+margin_left = 168.0
+margin_top = 74.0
+margin_right = 290.0
+margin_bottom = 98.0
+rect_min_size = Vector2( 122, 0 )
+size_flags_horizontal = 6
+text = "8:30 às 9:15"
+align = 1
+
+[node name="4" type="CheckBox" parent="DIAS/Segunda/PREFERENCIAS/NAO_QUER/HORARIOS_QUE_NAO_PREFERE/HORARIOS"]
+margin_left = 168.0
+margin_top = 102.0
+margin_right = 290.0
+margin_bottom = 126.0
+rect_min_size = Vector2( 122, 0 )
+size_flags_horizontal = 6
+text = "9:15 às 10:00"
+align = 1
+
+[node name="5" type="CheckBox" parent="DIAS/Segunda/PREFERENCIAS/NAO_QUER/HORARIOS_QUE_NAO_PREFERE/HORARIOS"]
+margin_left = 168.0
+margin_top = 130.0
+margin_right = 290.0
+margin_bottom = 154.0
+rect_min_size = Vector2( 122, 0 )
+size_flags_horizontal = 6
+text = "10:20 às 11:05"
+align = 1
+
+[node name="6" type="CheckBox" parent="DIAS/Segunda/PREFERENCIAS/NAO_QUER/HORARIOS_QUE_NAO_PREFERE/HORARIOS"]
+margin_left = 168.0
+margin_top = 158.0
+margin_right = 290.0
+margin_bottom = 182.0
+rect_min_size = Vector2( 122, 0 )
+size_flags_horizontal = 6
+text = "11:05 às 11:50"
+align = 1
+
+[node name="7" type="CheckBox" parent="DIAS/Segunda/PREFERENCIAS/NAO_QUER/HORARIOS_QUE_NAO_PREFERE/HORARIOS"]
+margin_left = 168.0
+margin_top = 186.0
+margin_right = 290.0
+margin_bottom = 210.0
+rect_min_size = Vector2( 122, 0 )
+size_flags_horizontal = 6
+text = "11:50 às 12:35"
+align = 1
+
+[node name="MOTIVO_SIM_NAO" type="CheckBox" parent="DIAS/Segunda/PREFERENCIAS/NAO_QUER/HORARIOS_QUE_NAO_PREFERE"]
+margin_left = 193.0
+margin_top = 242.0
+margin_right = 265.0
+margin_bottom = 266.0
+size_flags_horizontal = 6
+text = "Motivo"
+script = ExtResource( 2 )
+DIA = "segunda"
+TIPO = "motivo_nao_quer"
+
+[node name="TextEdit" type="TextEdit" parent="DIAS/Segunda/PREFERENCIAS/NAO_QUER/HORARIOS_QUE_NAO_PREFERE"]
+visible = false
+margin_top = 270.0
+margin_right = 458.0
+margin_bottom = 420.0
+rect_min_size = Vector2( 0, 150 )
+
+[node name="Terça" type="Tabs" parent="DIAS"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 32.0
+margin_right = -4.0
+margin_bottom = -4.0
+
+[node name="PREFERENCIAS" type="GridContainer" parent="DIAS/Terça"]
+margin_left = 1.0
+margin_top = 7.0
+margin_right = 921.0
+margin_bottom = 291.0
+columns = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="QUER" type="GridContainer" parent="DIAS/Terça/PREFERENCIAS"]
+margin_right = 458.0
+margin_bottom = 284.0
+size_flags_horizontal = 3
+
+[node name="PREFERE" type="Label" parent="DIAS/Terça/PREFERENCIAS/QUER"]
+margin_right = 458.0
+margin_bottom = 14.0
+size_flags_horizontal = 7
+text = "Horários que prefere"
+align = 1
+valign = 1
+
+[node name="HORARIOS_QUE_PREFERE" type="GridContainer" parent="DIAS/Terça/PREFERENCIAS/QUER"]
+margin_top = 18.0
+margin_right = 458.0
+margin_bottom = 284.0
+
+[node name="SEM_PREFERENCIA_NAO_QUER" type="CheckBox" parent="DIAS/Terça/PREFERENCIAS/QUER/HORARIOS_QUE_PREFERE"]
+margin_left = 163.0
+margin_right = 295.0
+margin_bottom = 24.0
+size_flags_horizontal = 6
+text = "Sem preferência"
+align = 2
+script = ExtResource( 2 )
+DIA = "terca"
+TIPO = "sem_preferencia_quer"
+
+[node name="HORARIOS" type="GridContainer" parent="DIAS/Terça/PREFERENCIAS/QUER/HORARIOS_QUE_PREFERE"]
+margin_top = 28.0
+margin_right = 458.0
+margin_bottom = 238.0
+
+[node name="Label" type="Label" parent="DIAS/Terça/PREFERENCIAS/QUER/HORARIOS_QUE_PREFERE/HORARIOS"]
+margin_right = 458.0
+margin_bottom = 14.0
+text = "Horários"
+align = 1
+valign = 1
+
+[node name="1" type="CheckBox" parent="DIAS/Terça/PREFERENCIAS/QUER/HORARIOS_QUE_PREFERE/HORARIOS"]
+margin_left = 168.0
+margin_top = 18.0
+margin_right = 290.0
+margin_bottom = 42.0
+rect_min_size = Vector2( 122, 0 )
+size_flags_horizontal = 6
+text = "7:00 às 7:45"
+align = 1
+
+[node name="2" type="CheckBox" parent="DIAS/Terça/PREFERENCIAS/QUER/HORARIOS_QUE_PREFERE/HORARIOS"]
+margin_left = 168.0
+margin_top = 46.0
+margin_right = 290.0
+margin_bottom = 70.0
+rect_min_size = Vector2( 122, 0 )
+size_flags_horizontal = 6
+text = "7:45 às 8:30"
+align = 1
+
+[node name="3" type="CheckBox" parent="DIAS/Terça/PREFERENCIAS/QUER/HORARIOS_QUE_PREFERE/HORARIOS"]
+margin_left = 168.0
+margin_top = 74.0
+margin_right = 290.0
+margin_bottom = 98.0
+rect_min_size = Vector2( 122, 0 )
+size_flags_horizontal = 6
+text = "8:30 às 9:15"
+align = 1
+
+[node name="4" type="CheckBox" parent="DIAS/Terça/PREFERENCIAS/QUER/HORARIOS_QUE_PREFERE/HORARIOS"]
+margin_left = 168.0
+margin_top = 102.0
+margin_right = 290.0
+margin_bottom = 126.0
+rect_min_size = Vector2( 122, 0 )
+size_flags_horizontal = 6
+text = "9:15 às 10:00"
+align = 1
+
+[node name="5" type="CheckBox" parent="DIAS/Terça/PREFERENCIAS/QUER/HORARIOS_QUE_PREFERE/HORARIOS"]
+margin_left = 168.0
+margin_top = 130.0
+margin_right = 290.0
+margin_bottom = 154.0
+rect_min_size = Vector2( 122, 0 )
+size_flags_horizontal = 6
+text = "10:20 às 11:05"
+align = 1
+
+[node name="6" type="CheckBox" parent="DIAS/Terça/PREFERENCIAS/QUER/HORARIOS_QUE_PREFERE/HORARIOS"]
+margin_left = 168.0
+margin_top = 158.0
+margin_right = 290.0
+margin_bottom = 182.0
+rect_min_size = Vector2( 122, 0 )
+size_flags_horizontal = 6
+text = "11:05 às 11:50"
+align = 1
+
+[node name="7" type="CheckBox" parent="DIAS/Terça/PREFERENCIAS/QUER/HORARIOS_QUE_PREFERE/HORARIOS"]
+margin_left = 168.0
+margin_top = 186.0
+margin_right = 290.0
+margin_bottom = 210.0
+rect_min_size = Vector2( 122, 0 )
+size_flags_horizontal = 6
+text = "11:50 às 12:35"
+align = 1
+
+[node name="MOTIVO_SIM_NAO" type="CheckBox" parent="DIAS/Terça/PREFERENCIAS/QUER/HORARIOS_QUE_PREFERE"]
+margin_left = 193.0
+margin_top = 242.0
+margin_right = 265.0
+margin_bottom = 266.0
+size_flags_horizontal = 6
+text = "Motivo"
+script = ExtResource( 2 )
+DIA = "terca"
+TIPO = "motivo_quer"
+
+[node name="TextEdit" type="TextEdit" parent="DIAS/Terça/PREFERENCIAS/QUER/HORARIOS_QUE_PREFERE"]
+visible = false
+margin_top = 56.0
+margin_right = 252.0
+margin_bottom = 206.0
+rect_min_size = Vector2( 0, 150 )
+
+[node name="NAO_QUER" type="GridContainer" parent="DIAS/Terça/PREFERENCIAS"]
+margin_left = 462.0
+margin_right = 920.0
+margin_bottom = 284.0
+size_flags_horizontal = 3
+
+[node name="NAO_PREFERE" type="Label" parent="DIAS/Terça/PREFERENCIAS/NAO_QUER"]
+margin_right = 458.0
+margin_bottom = 14.0
+size_flags_horizontal = 7
+text = "Horários que não prefere"
+align = 1
+valign = 1
+
+[node name="HORARIOS_QUE_NAO_PREFERE" type="GridContainer" parent="DIAS/Terça/PREFERENCIAS/NAO_QUER"]
+margin_top = 18.0
+margin_right = 458.0
+margin_bottom = 284.0
+
+[node name="SEM_PREFERENCIA_NAO_QUER" type="CheckBox" parent="DIAS/Terça/PREFERENCIAS/NAO_QUER/HORARIOS_QUE_NAO_PREFERE"]
+margin_left = 163.0
+margin_right = 295.0
+margin_bottom = 24.0
+size_flags_horizontal = 6
+text = "Sem preferência"
+script = ExtResource( 2 )
+DIA = "terca"
+TIPO = "sem_preferencia_nao_quer"
+
+[node name="HORARIOS" type="GridContainer" parent="DIAS/Terça/PREFERENCIAS/NAO_QUER/HORARIOS_QUE_NAO_PREFERE"]
+margin_top = 28.0
+margin_right = 458.0
+margin_bottom = 238.0
+
+[node name="Label" type="Label" parent="DIAS/Terça/PREFERENCIAS/NAO_QUER/HORARIOS_QUE_NAO_PREFERE/HORARIOS"]
+margin_right = 458.0
+margin_bottom = 14.0
+text = "Horários"
+align = 1
+valign = 1
+
+[node name="1" type="CheckBox" parent="DIAS/Terça/PREFERENCIAS/NAO_QUER/HORARIOS_QUE_NAO_PREFERE/HORARIOS"]
+margin_left = 168.0
+margin_top = 18.0
+margin_right = 290.0
+margin_bottom = 42.0
+rect_min_size = Vector2( 122, 0 )
+size_flags_horizontal = 6
+text = "7:00 às 7:45"
+align = 1
+
+[node name="2" type="CheckBox" parent="DIAS/Terça/PREFERENCIAS/NAO_QUER/HORARIOS_QUE_NAO_PREFERE/HORARIOS"]
+margin_left = 168.0
+margin_top = 46.0
+margin_right = 290.0
+margin_bottom = 70.0
+rect_min_size = Vector2( 122, 0 )
+size_flags_horizontal = 6
+text = "7:45 às 8:30"
+align = 1
+
+[node name="3" type="CheckBox" parent="DIAS/Terça/PREFERENCIAS/NAO_QUER/HORARIOS_QUE_NAO_PREFERE/HORARIOS"]
+margin_left = 168.0
+margin_top = 74.0
+margin_right = 290.0
+margin_bottom = 98.0
+rect_min_size = Vector2( 122, 0 )
+size_flags_horizontal = 6
+text = "8:30 às 9:15"
+align = 1
+
+[node name="4" type="CheckBox" parent="DIAS/Terça/PREFERENCIAS/NAO_QUER/HORARIOS_QUE_NAO_PREFERE/HORARIOS"]
+margin_left = 168.0
+margin_top = 102.0
+margin_right = 290.0
+margin_bottom = 126.0
+rect_min_size = Vector2( 122, 0 )
+size_flags_horizontal = 6
+text = "9:15 às 10:00"
+align = 1
+
+[node name="5" type="CheckBox" parent="DIAS/Terça/PREFERENCIAS/NAO_QUER/HORARIOS_QUE_NAO_PREFERE/HORARIOS"]
+margin_left = 168.0
+margin_top = 130.0
+margin_right = 290.0
+margin_bottom = 154.0
+rect_min_size = Vector2( 122, 0 )
+size_flags_horizontal = 6
+text = "10:20 às 11:05"
+align = 1
+
+[node name="6" type="CheckBox" parent="DIAS/Terça/PREFERENCIAS/NAO_QUER/HORARIOS_QUE_NAO_PREFERE/HORARIOS"]
+margin_left = 168.0
+margin_top = 158.0
+margin_right = 290.0
+margin_bottom = 182.0
+rect_min_size = Vector2( 122, 0 )
+size_flags_horizontal = 6
+text = "11:05 às 11:50"
+align = 1
+
+[node name="7" type="CheckBox" parent="DIAS/Terça/PREFERENCIAS/NAO_QUER/HORARIOS_QUE_NAO_PREFERE/HORARIOS"]
+margin_left = 168.0
+margin_top = 186.0
+margin_right = 290.0
+margin_bottom = 210.0
+rect_min_size = Vector2( 122, 0 )
+size_flags_horizontal = 6
+text = "11:50 às 12:35"
+align = 1
+
+[node name="MOTIVO_SIM_NAO" type="CheckBox" parent="DIAS/Terça/PREFERENCIAS/NAO_QUER/HORARIOS_QUE_NAO_PREFERE"]
+margin_left = 193.0
+margin_top = 242.0
+margin_right = 265.0
+margin_bottom = 266.0
+size_flags_horizontal = 6
+text = "Motivo"
+script = ExtResource( 2 )
+DIA = "terca"
+TIPO = "motivo_nao_quer"
+
+[node name="TextEdit" type="TextEdit" parent="DIAS/Terça/PREFERENCIAS/NAO_QUER/HORARIOS_QUE_NAO_PREFERE"]
+visible = false
+margin_top = 270.0
+margin_right = 458.0
+margin_bottom = 420.0
+rect_min_size = Vector2( 0, 150 )
+
+[node name="Quarta" type="Tabs" parent="DIAS"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 32.0
+margin_right = -4.0
+margin_bottom = -4.0
+
+[node name="PREFERENCIAS" type="GridContainer" parent="DIAS/Quarta"]
+margin_left = 1.0
+margin_top = 7.0
+margin_right = 921.0
+margin_bottom = 291.0
+columns = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="QUER" type="GridContainer" parent="DIAS/Quarta/PREFERENCIAS"]
+margin_right = 458.0
+margin_bottom = 284.0
+size_flags_horizontal = 3
+
+[node name="PREFERE" type="Label" parent="DIAS/Quarta/PREFERENCIAS/QUER"]
+margin_right = 458.0
+margin_bottom = 14.0
+size_flags_horizontal = 7
+text = "Horários que prefere"
+align = 1
+valign = 1
+
+[node name="HORARIOS_QUE_PREFERE" type="GridContainer" parent="DIAS/Quarta/PREFERENCIAS/QUER"]
+margin_top = 18.0
+margin_right = 458.0
+margin_bottom = 284.0
+
+[node name="SEM_PREFERENCIA_NAO_QUER" type="CheckBox" parent="DIAS/Quarta/PREFERENCIAS/QUER/HORARIOS_QUE_PREFERE"]
+margin_left = 163.0
+margin_right = 295.0
+margin_bottom = 24.0
+size_flags_horizontal = 6
+text = "Sem preferência"
+align = 2
+script = ExtResource( 2 )
+DIA = "quarta"
+TIPO = "sem_preferencia_quer"
+
+[node name="HORARIOS" type="GridContainer" parent="DIAS/Quarta/PREFERENCIAS/QUER/HORARIOS_QUE_PREFERE"]
+margin_top = 28.0
+margin_right = 458.0
+margin_bottom = 238.0
+
+[node name="Label" type="Label" parent="DIAS/Quarta/PREFERENCIAS/QUER/HORARIOS_QUE_PREFERE/HORARIOS"]
+margin_right = 458.0
+margin_bottom = 14.0
+text = "Horários"
+align = 1
+valign = 1
+
+[node name="1" type="CheckBox" parent="DIAS/Quarta/PREFERENCIAS/QUER/HORARIOS_QUE_PREFERE/HORARIOS"]
+margin_left = 168.0
+margin_top = 18.0
+margin_right = 290.0
+margin_bottom = 42.0
+rect_min_size = Vector2( 122, 0 )
+size_flags_horizontal = 6
+text = "7:00 às 7:45"
+align = 1
+
+[node name="2" type="CheckBox" parent="DIAS/Quarta/PREFERENCIAS/QUER/HORARIOS_QUE_PREFERE/HORARIOS"]
+margin_left = 168.0
+margin_top = 46.0
+margin_right = 290.0
+margin_bottom = 70.0
+rect_min_size = Vector2( 122, 0 )
+size_flags_horizontal = 6
+text = "7:45 às 8:30"
+align = 1
+
+[node name="3" type="CheckBox" parent="DIAS/Quarta/PREFERENCIAS/QUER/HORARIOS_QUE_PREFERE/HORARIOS"]
+margin_left = 168.0
+margin_top = 74.0
+margin_right = 290.0
+margin_bottom = 98.0
+rect_min_size = Vector2( 122, 0 )
+size_flags_horizontal = 6
+text = "8:30 às 9:15"
+align = 1
+
+[node name="4" type="CheckBox" parent="DIAS/Quarta/PREFERENCIAS/QUER/HORARIOS_QUE_PREFERE/HORARIOS"]
+margin_left = 168.0
+margin_top = 102.0
+margin_right = 290.0
+margin_bottom = 126.0
+rect_min_size = Vector2( 122, 0 )
+size_flags_horizontal = 6
+text = "9:15 às 10:00"
+align = 1
+
+[node name="5" type="CheckBox" parent="DIAS/Quarta/PREFERENCIAS/QUER/HORARIOS_QUE_PREFERE/HORARIOS"]
+margin_left = 168.0
+margin_top = 130.0
+margin_right = 290.0
+margin_bottom = 154.0
+rect_min_size = Vector2( 122, 0 )
+size_flags_horizontal = 6
+text = "10:20 às 11:05"
+align = 1
+
+[node name="6" type="CheckBox" parent="DIAS/Quarta/PREFERENCIAS/QUER/HORARIOS_QUE_PREFERE/HORARIOS"]
+margin_left = 168.0
+margin_top = 158.0
+margin_right = 290.0
+margin_bottom = 182.0
+rect_min_size = Vector2( 122, 0 )
+size_flags_horizontal = 6
+text = "11:05 às 11:50"
+align = 1
+
+[node name="7" type="CheckBox" parent="DIAS/Quarta/PREFERENCIAS/QUER/HORARIOS_QUE_PREFERE/HORARIOS"]
+margin_left = 168.0
+margin_top = 186.0
+margin_right = 290.0
+margin_bottom = 210.0
+rect_min_size = Vector2( 122, 0 )
+size_flags_horizontal = 6
+text = "11:50 às 12:35"
+align = 1
+
+[node name="MOTIVO_SIM_NAO" type="CheckBox" parent="DIAS/Quarta/PREFERENCIAS/QUER/HORARIOS_QUE_PREFERE"]
+margin_left = 193.0
+margin_top = 242.0
+margin_right = 265.0
+margin_bottom = 266.0
+size_flags_horizontal = 6
+text = "Motivo"
+script = ExtResource( 2 )
+DIA = "quarta"
+TIPO = "motivo_quer"
+
+[node name="TextEdit" type="TextEdit" parent="DIAS/Quarta/PREFERENCIAS/QUER/HORARIOS_QUE_PREFERE"]
+visible = false
+margin_top = 56.0
+margin_right = 252.0
+margin_bottom = 206.0
+rect_min_size = Vector2( 0, 150 )
+
+[node name="NAO_QUER" type="GridContainer" parent="DIAS/Quarta/PREFERENCIAS"]
+margin_left = 462.0
+margin_right = 920.0
+margin_bottom = 284.0
+size_flags_horizontal = 3
+
+[node name="NAO_PREFERE" type="Label" parent="DIAS/Quarta/PREFERENCIAS/NAO_QUER"]
+margin_right = 458.0
+margin_bottom = 14.0
+size_flags_horizontal = 7
+text = "Horários que não prefere"
+align = 1
+valign = 1
+
+[node name="HORARIOS_QUE_NAO_PREFERE" type="GridContainer" parent="DIAS/Quarta/PREFERENCIAS/NAO_QUER"]
+margin_top = 18.0
+margin_right = 458.0
+margin_bottom = 284.0
+
+[node name="SEM_PREFERENCIA_NAO_QUER" type="CheckBox" parent="DIAS/Quarta/PREFERENCIAS/NAO_QUER/HORARIOS_QUE_NAO_PREFERE"]
+margin_left = 163.0
+margin_right = 295.0
+margin_bottom = 24.0
+size_flags_horizontal = 6
+text = "Sem preferência"
+script = ExtResource( 2 )
+DIA = "quarta"
+TIPO = "sem_preferencia_nao_quer"
+
+[node name="HORARIOS" type="GridContainer" parent="DIAS/Quarta/PREFERENCIAS/NAO_QUER/HORARIOS_QUE_NAO_PREFERE"]
+margin_top = 28.0
+margin_right = 458.0
+margin_bottom = 238.0
+
+[node name="Label" type="Label" parent="DIAS/Quarta/PREFERENCIAS/NAO_QUER/HORARIOS_QUE_NAO_PREFERE/HORARIOS"]
+margin_right = 458.0
+margin_bottom = 14.0
+text = "Horários"
+align = 1
+valign = 1
+
+[node name="1" type="CheckBox" parent="DIAS/Quarta/PREFERENCIAS/NAO_QUER/HORARIOS_QUE_NAO_PREFERE/HORARIOS"]
+margin_left = 168.0
+margin_top = 18.0
+margin_right = 290.0
+margin_bottom = 42.0
+rect_min_size = Vector2( 122, 0 )
+size_flags_horizontal = 6
+text = "7:00 às 7:45"
+align = 1
+
+[node name="2" type="CheckBox" parent="DIAS/Quarta/PREFERENCIAS/NAO_QUER/HORARIOS_QUE_NAO_PREFERE/HORARIOS"]
+margin_left = 168.0
+margin_top = 46.0
+margin_right = 290.0
+margin_bottom = 70.0
+rect_min_size = Vector2( 122, 0 )
+size_flags_horizontal = 6
+text = "7:45 às 8:30"
+align = 1
+
+[node name="3" type="CheckBox" parent="DIAS/Quarta/PREFERENCIAS/NAO_QUER/HORARIOS_QUE_NAO_PREFERE/HORARIOS"]
+margin_left = 168.0
+margin_top = 74.0
+margin_right = 290.0
+margin_bottom = 98.0
+rect_min_size = Vector2( 122, 0 )
+size_flags_horizontal = 6
+text = "8:30 às 9:15"
+align = 1
+
+[node name="4" type="CheckBox" parent="DIAS/Quarta/PREFERENCIAS/NAO_QUER/HORARIOS_QUE_NAO_PREFERE/HORARIOS"]
+margin_left = 168.0
+margin_top = 102.0
+margin_right = 290.0
+margin_bottom = 126.0
+rect_min_size = Vector2( 122, 0 )
+size_flags_horizontal = 6
+text = "9:15 às 10:00"
+align = 1
+
+[node name="5" type="CheckBox" parent="DIAS/Quarta/PREFERENCIAS/NAO_QUER/HORARIOS_QUE_NAO_PREFERE/HORARIOS"]
+margin_left = 168.0
+margin_top = 130.0
+margin_right = 290.0
+margin_bottom = 154.0
+rect_min_size = Vector2( 122, 0 )
+size_flags_horizontal = 6
+text = "10:20 às 11:05"
+align = 1
+
+[node name="6" type="CheckBox" parent="DIAS/Quarta/PREFERENCIAS/NAO_QUER/HORARIOS_QUE_NAO_PREFERE/HORARIOS"]
+margin_left = 168.0
+margin_top = 158.0
+margin_right = 290.0
+margin_bottom = 182.0
+rect_min_size = Vector2( 122, 0 )
+size_flags_horizontal = 6
+text = "11:05 às 11:50"
+align = 1
+
+[node name="7" type="CheckBox" parent="DIAS/Quarta/PREFERENCIAS/NAO_QUER/HORARIOS_QUE_NAO_PREFERE/HORARIOS"]
+margin_left = 168.0
+margin_top = 186.0
+margin_right = 290.0
+margin_bottom = 210.0
+rect_min_size = Vector2( 122, 0 )
+size_flags_horizontal = 6
+text = "11:50 às 12:35"
+align = 1
+
+[node name="MOTIVO_SIM_NAO" type="CheckBox" parent="DIAS/Quarta/PREFERENCIAS/NAO_QUER/HORARIOS_QUE_NAO_PREFERE"]
+margin_left = 193.0
+margin_top = 242.0
+margin_right = 265.0
+margin_bottom = 266.0
+size_flags_horizontal = 6
+text = "Motivo"
+script = ExtResource( 2 )
+DIA = "quarta"
+TIPO = "motivo_nao_quer"
+
+[node name="TextEdit" type="TextEdit" parent="DIAS/Quarta/PREFERENCIAS/NAO_QUER/HORARIOS_QUE_NAO_PREFERE"]
+visible = false
+margin_top = 270.0
+margin_right = 458.0
+margin_bottom = 420.0
+rect_min_size = Vector2( 0, 150 )
+
+[node name="Quinta" type="Tabs" parent="DIAS"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 32.0
+margin_right = -4.0
+margin_bottom = -4.0
+
+[node name="PREFERENCIAS" type="GridContainer" parent="DIAS/Quinta"]
+margin_left = 1.0
+margin_top = 7.0
+margin_right = 921.0
+margin_bottom = 291.0
+columns = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="QUER" type="GridContainer" parent="DIAS/Quinta/PREFERENCIAS"]
+margin_right = 458.0
+margin_bottom = 284.0
+size_flags_horizontal = 3
+
+[node name="PREFERE" type="Label" parent="DIAS/Quinta/PREFERENCIAS/QUER"]
+margin_right = 458.0
+margin_bottom = 14.0
+size_flags_horizontal = 7
+text = "Horários que prefere"
+align = 1
+valign = 1
+
+[node name="HORARIOS_QUE_PREFERE" type="GridContainer" parent="DIAS/Quinta/PREFERENCIAS/QUER"]
+margin_top = 18.0
+margin_right = 458.0
+margin_bottom = 284.0
+
+[node name="SEM_PREFERENCIA_NAO_QUER" type="CheckBox" parent="DIAS/Quinta/PREFERENCIAS/QUER/HORARIOS_QUE_PREFERE"]
+margin_left = 163.0
+margin_right = 295.0
+margin_bottom = 24.0
+size_flags_horizontal = 6
+text = "Sem preferência"
+align = 2
+script = ExtResource( 2 )
+DIA = "quinta"
+TIPO = "sem_preferencia_quer"
+
+[node name="HORARIOS" type="GridContainer" parent="DIAS/Quinta/PREFERENCIAS/QUER/HORARIOS_QUE_PREFERE"]
+margin_top = 28.0
+margin_right = 458.0
+margin_bottom = 238.0
+
+[node name="Label" type="Label" parent="DIAS/Quinta/PREFERENCIAS/QUER/HORARIOS_QUE_PREFERE/HORARIOS"]
+margin_right = 458.0
+margin_bottom = 14.0
+text = "Horários"
+align = 1
+valign = 1
+
+[node name="1" type="CheckBox" parent="DIAS/Quinta/PREFERENCIAS/QUER/HORARIOS_QUE_PREFERE/HORARIOS"]
+margin_left = 168.0
+margin_top = 18.0
+margin_right = 290.0
+margin_bottom = 42.0
+rect_min_size = Vector2( 122, 0 )
+size_flags_horizontal = 6
+text = "7:00 às 7:45"
+align = 1
+
+[node name="2" type="CheckBox" parent="DIAS/Quinta/PREFERENCIAS/QUER/HORARIOS_QUE_PREFERE/HORARIOS"]
+margin_left = 168.0
+margin_top = 46.0
+margin_right = 290.0
+margin_bottom = 70.0
+rect_min_size = Vector2( 122, 0 )
+size_flags_horizontal = 6
+text = "7:45 às 8:30"
+align = 1
+
+[node name="3" type="CheckBox" parent="DIAS/Quinta/PREFERENCIAS/QUER/HORARIOS_QUE_PREFERE/HORARIOS"]
+margin_left = 168.0
+margin_top = 74.0
+margin_right = 290.0
+margin_bottom = 98.0
+rect_min_size = Vector2( 122, 0 )
+size_flags_horizontal = 6
+text = "8:30 às 9:15"
+align = 1
+
+[node name="4" type="CheckBox" parent="DIAS/Quinta/PREFERENCIAS/QUER/HORARIOS_QUE_PREFERE/HORARIOS"]
+margin_left = 168.0
+margin_top = 102.0
+margin_right = 290.0
+margin_bottom = 126.0
+rect_min_size = Vector2( 122, 0 )
+size_flags_horizontal = 6
+text = "9:15 às 10:00"
+align = 1
+
+[node name="5" type="CheckBox" parent="DIAS/Quinta/PREFERENCIAS/QUER/HORARIOS_QUE_PREFERE/HORARIOS"]
+margin_left = 168.0
+margin_top = 130.0
+margin_right = 290.0
+margin_bottom = 154.0
+rect_min_size = Vector2( 122, 0 )
+size_flags_horizontal = 6
+text = "10:20 às 11:05"
+align = 1
+
+[node name="6" type="CheckBox" parent="DIAS/Quinta/PREFERENCIAS/QUER/HORARIOS_QUE_PREFERE/HORARIOS"]
+margin_left = 168.0
+margin_top = 158.0
+margin_right = 290.0
+margin_bottom = 182.0
+rect_min_size = Vector2( 122, 0 )
+size_flags_horizontal = 6
+text = "11:05 às 11:50"
+align = 1
+
+[node name="7" type="CheckBox" parent="DIAS/Quinta/PREFERENCIAS/QUER/HORARIOS_QUE_PREFERE/HORARIOS"]
+margin_left = 168.0
+margin_top = 186.0
+margin_right = 290.0
+margin_bottom = 210.0
+rect_min_size = Vector2( 122, 0 )
+size_flags_horizontal = 6
+text = "11:50 às 12:35"
+align = 1
+
+[node name="MOTIVO_SIM_NAO" type="CheckBox" parent="DIAS/Quinta/PREFERENCIAS/QUER/HORARIOS_QUE_PREFERE"]
+margin_left = 193.0
+margin_top = 242.0
+margin_right = 265.0
+margin_bottom = 266.0
+size_flags_horizontal = 6
+text = "Motivo"
+script = ExtResource( 2 )
+DIA = "quinta"
+TIPO = "motivo_quer"
+
+[node name="TextEdit" type="TextEdit" parent="DIAS/Quinta/PREFERENCIAS/QUER/HORARIOS_QUE_PREFERE"]
+visible = false
+margin_top = 56.0
+margin_right = 252.0
+margin_bottom = 206.0
+rect_min_size = Vector2( 0, 150 )
+
+[node name="NAO_QUER" type="GridContainer" parent="DIAS/Quinta/PREFERENCIAS"]
+margin_left = 462.0
+margin_right = 920.0
+margin_bottom = 284.0
+size_flags_horizontal = 3
+
+[node name="NAO_PREFERE" type="Label" parent="DIAS/Quinta/PREFERENCIAS/NAO_QUER"]
+margin_right = 458.0
+margin_bottom = 14.0
+size_flags_horizontal = 7
+text = "Horários que não prefere"
+align = 1
+valign = 1
+
+[node name="HORARIOS_QUE_NAO_PREFERE" type="GridContainer" parent="DIAS/Quinta/PREFERENCIAS/NAO_QUER"]
+margin_top = 18.0
+margin_right = 458.0
+margin_bottom = 284.0
+
+[node name="SEM_PREFERENCIA_NAO_QUER" type="CheckBox" parent="DIAS/Quinta/PREFERENCIAS/NAO_QUER/HORARIOS_QUE_NAO_PREFERE"]
+margin_left = 163.0
+margin_right = 295.0
+margin_bottom = 24.0
+size_flags_horizontal = 6
+text = "Sem preferência"
+script = ExtResource( 2 )
+DIA = "quinta"
+TIPO = "sem_preferencia_nao_quer"
+
+[node name="HORARIOS" type="GridContainer" parent="DIAS/Quinta/PREFERENCIAS/NAO_QUER/HORARIOS_QUE_NAO_PREFERE"]
+margin_top = 28.0
+margin_right = 458.0
+margin_bottom = 238.0
+
+[node name="Label" type="Label" parent="DIAS/Quinta/PREFERENCIAS/NAO_QUER/HORARIOS_QUE_NAO_PREFERE/HORARIOS"]
+margin_right = 458.0
+margin_bottom = 14.0
+text = "Horários"
+align = 1
+valign = 1
+
+[node name="1" type="CheckBox" parent="DIAS/Quinta/PREFERENCIAS/NAO_QUER/HORARIOS_QUE_NAO_PREFERE/HORARIOS"]
+margin_left = 168.0
+margin_top = 18.0
+margin_right = 290.0
+margin_bottom = 42.0
+rect_min_size = Vector2( 122, 0 )
+size_flags_horizontal = 6
+text = "7:00 às 7:45"
+align = 1
+
+[node name="2" type="CheckBox" parent="DIAS/Quinta/PREFERENCIAS/NAO_QUER/HORARIOS_QUE_NAO_PREFERE/HORARIOS"]
+margin_left = 168.0
+margin_top = 46.0
+margin_right = 290.0
+margin_bottom = 70.0
+rect_min_size = Vector2( 122, 0 )
+size_flags_horizontal = 6
+text = "7:45 às 8:30"
+align = 1
+
+[node name="3" type="CheckBox" parent="DIAS/Quinta/PREFERENCIAS/NAO_QUER/HORARIOS_QUE_NAO_PREFERE/HORARIOS"]
+margin_left = 168.0
+margin_top = 74.0
+margin_right = 290.0
+margin_bottom = 98.0
+rect_min_size = Vector2( 122, 0 )
+size_flags_horizontal = 6
+text = "8:30 às 9:15"
+align = 1
+
+[node name="4" type="CheckBox" parent="DIAS/Quinta/PREFERENCIAS/NAO_QUER/HORARIOS_QUE_NAO_PREFERE/HORARIOS"]
+margin_left = 168.0
+margin_top = 102.0
+margin_right = 290.0
+margin_bottom = 126.0
+rect_min_size = Vector2( 122, 0 )
+size_flags_horizontal = 6
+text = "9:15 às 10:00"
+align = 1
+
+[node name="5" type="CheckBox" parent="DIAS/Quinta/PREFERENCIAS/NAO_QUER/HORARIOS_QUE_NAO_PREFERE/HORARIOS"]
+margin_left = 168.0
+margin_top = 130.0
+margin_right = 290.0
+margin_bottom = 154.0
+rect_min_size = Vector2( 122, 0 )
+size_flags_horizontal = 6
+text = "10:20 às 11:05"
+align = 1
+
+[node name="6" type="CheckBox" parent="DIAS/Quinta/PREFERENCIAS/NAO_QUER/HORARIOS_QUE_NAO_PREFERE/HORARIOS"]
+margin_left = 168.0
+margin_top = 158.0
+margin_right = 290.0
+margin_bottom = 182.0
+rect_min_size = Vector2( 122, 0 )
+size_flags_horizontal = 6
+text = "11:05 às 11:50"
+align = 1
+
+[node name="7" type="CheckBox" parent="DIAS/Quinta/PREFERENCIAS/NAO_QUER/HORARIOS_QUE_NAO_PREFERE/HORARIOS"]
+margin_left = 168.0
+margin_top = 186.0
+margin_right = 290.0
+margin_bottom = 210.0
+rect_min_size = Vector2( 122, 0 )
+size_flags_horizontal = 6
+text = "11:50 às 12:35"
+align = 1
+
+[node name="MOTIVO_SIM_NAO" type="CheckBox" parent="DIAS/Quinta/PREFERENCIAS/NAO_QUER/HORARIOS_QUE_NAO_PREFERE"]
+margin_left = 193.0
+margin_top = 242.0
+margin_right = 265.0
+margin_bottom = 266.0
+size_flags_horizontal = 6
+text = "Motivo"
+script = ExtResource( 2 )
+DIA = "quinta"
+TIPO = "motivo_nao_quer"
+
+[node name="TextEdit" type="TextEdit" parent="DIAS/Quinta/PREFERENCIAS/NAO_QUER/HORARIOS_QUE_NAO_PREFERE"]
+visible = false
+margin_top = 270.0
+margin_right = 458.0
+margin_bottom = 420.0
+rect_min_size = Vector2( 0, 150 )
+
+[node name="Sexta" type="Tabs" parent="DIAS"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 32.0
+margin_right = -4.0
+margin_bottom = -4.0
+
+[node name="PREFERENCIAS" type="GridContainer" parent="DIAS/Sexta"]
+margin_left = 1.0
+margin_top = 7.0
+margin_right = 921.0
+margin_bottom = 291.0
+columns = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="QUER" type="GridContainer" parent="DIAS/Sexta/PREFERENCIAS"]
+margin_right = 458.0
+margin_bottom = 284.0
+size_flags_horizontal = 3
+
+[node name="PREFERE" type="Label" parent="DIAS/Sexta/PREFERENCIAS/QUER"]
+margin_right = 458.0
+margin_bottom = 14.0
+size_flags_horizontal = 7
+text = "Horários que prefere"
+align = 1
+valign = 1
+
+[node name="HORARIOS_QUE_PREFERE" type="GridContainer" parent="DIAS/Sexta/PREFERENCIAS/QUER"]
+margin_top = 18.0
+margin_right = 458.0
+margin_bottom = 284.0
+
+[node name="SEM_PREFERENCIA_NAO_QUER" type="CheckBox" parent="DIAS/Sexta/PREFERENCIAS/QUER/HORARIOS_QUE_PREFERE"]
+margin_left = 163.0
+margin_right = 295.0
+margin_bottom = 24.0
+size_flags_horizontal = 6
+text = "Sem preferência"
+align = 2
+script = ExtResource( 2 )
+DIA = "sexta"
+TIPO = "sem_preferencia_quer"
+
+[node name="HORARIOS" type="GridContainer" parent="DIAS/Sexta/PREFERENCIAS/QUER/HORARIOS_QUE_PREFERE"]
+margin_top = 28.0
+margin_right = 458.0
+margin_bottom = 238.0
+
+[node name="Label" type="Label" parent="DIAS/Sexta/PREFERENCIAS/QUER/HORARIOS_QUE_PREFERE/HORARIOS"]
+margin_right = 458.0
+margin_bottom = 14.0
+text = "Horários"
+align = 1
+valign = 1
+
+[node name="1" type="CheckBox" parent="DIAS/Sexta/PREFERENCIAS/QUER/HORARIOS_QUE_PREFERE/HORARIOS"]
+margin_left = 168.0
+margin_top = 18.0
+margin_right = 290.0
+margin_bottom = 42.0
+rect_min_size = Vector2( 122, 0 )
+size_flags_horizontal = 6
+text = "7:00 às 7:45"
+align = 1
+
+[node name="2" type="CheckBox" parent="DIAS/Sexta/PREFERENCIAS/QUER/HORARIOS_QUE_PREFERE/HORARIOS"]
+margin_left = 168.0
+margin_top = 46.0
+margin_right = 290.0
+margin_bottom = 70.0
+rect_min_size = Vector2( 122, 0 )
+size_flags_horizontal = 6
+text = "7:45 às 8:30"
+align = 1
+
+[node name="3" type="CheckBox" parent="DIAS/Sexta/PREFERENCIAS/QUER/HORARIOS_QUE_PREFERE/HORARIOS"]
+margin_left = 168.0
+margin_top = 74.0
+margin_right = 290.0
+margin_bottom = 98.0
+rect_min_size = Vector2( 122, 0 )
+size_flags_horizontal = 6
+text = "8:30 às 9:15"
+align = 1
+
+[node name="4" type="CheckBox" parent="DIAS/Sexta/PREFERENCIAS/QUER/HORARIOS_QUE_PREFERE/HORARIOS"]
+margin_left = 168.0
+margin_top = 102.0
+margin_right = 290.0
+margin_bottom = 126.0
+rect_min_size = Vector2( 122, 0 )
+size_flags_horizontal = 6
+text = "9:15 às 10:00"
+align = 1
+
+[node name="5" type="CheckBox" parent="DIAS/Sexta/PREFERENCIAS/QUER/HORARIOS_QUE_PREFERE/HORARIOS"]
+margin_left = 168.0
+margin_top = 130.0
+margin_right = 290.0
+margin_bottom = 154.0
+rect_min_size = Vector2( 122, 0 )
+size_flags_horizontal = 6
+text = "10:20 às 11:05"
+align = 1
+
+[node name="6" type="CheckBox" parent="DIAS/Sexta/PREFERENCIAS/QUER/HORARIOS_QUE_PREFERE/HORARIOS"]
+margin_left = 168.0
+margin_top = 158.0
+margin_right = 290.0
+margin_bottom = 182.0
+rect_min_size = Vector2( 122, 0 )
+size_flags_horizontal = 6
+text = "11:05 às 11:50"
+align = 1
+
+[node name="7" type="CheckBox" parent="DIAS/Sexta/PREFERENCIAS/QUER/HORARIOS_QUE_PREFERE/HORARIOS"]
+margin_left = 168.0
+margin_top = 186.0
+margin_right = 290.0
+margin_bottom = 210.0
+rect_min_size = Vector2( 122, 0 )
+size_flags_horizontal = 6
+text = "11:50 às 12:35"
+align = 1
+
+[node name="MOTIVO_SIM_NAO" type="CheckBox" parent="DIAS/Sexta/PREFERENCIAS/QUER/HORARIOS_QUE_PREFERE"]
+margin_left = 193.0
+margin_top = 242.0
+margin_right = 265.0
+margin_bottom = 266.0
+size_flags_horizontal = 6
+text = "Motivo"
+script = ExtResource( 2 )
+DIA = "sexta"
+TIPO = "motivo_quer"
+
+[node name="TextEdit" type="TextEdit" parent="DIAS/Sexta/PREFERENCIAS/QUER/HORARIOS_QUE_PREFERE"]
+visible = false
+margin_top = 56.0
+margin_right = 252.0
+margin_bottom = 206.0
+rect_min_size = Vector2( 0, 150 )
+
+[node name="NAO_QUER" type="GridContainer" parent="DIAS/Sexta/PREFERENCIAS"]
+margin_left = 462.0
+margin_right = 920.0
+margin_bottom = 284.0
+size_flags_horizontal = 3
+
+[node name="NAO_PREFERE" type="Label" parent="DIAS/Sexta/PREFERENCIAS/NAO_QUER"]
+margin_right = 458.0
+margin_bottom = 14.0
+size_flags_horizontal = 7
+text = "Horários que não prefere"
+align = 1
+valign = 1
+
+[node name="HORARIOS_QUE_NAO_PREFERE" type="GridContainer" parent="DIAS/Sexta/PREFERENCIAS/NAO_QUER"]
+margin_top = 18.0
+margin_right = 458.0
+margin_bottom = 284.0
+
+[node name="SEM_PREFERENCIA_NAO_QUER" type="CheckBox" parent="DIAS/Sexta/PREFERENCIAS/NAO_QUER/HORARIOS_QUE_NAO_PREFERE"]
+margin_left = 163.0
+margin_right = 295.0
+margin_bottom = 24.0
+size_flags_horizontal = 6
+text = "Sem preferência"
+script = ExtResource( 2 )
+DIA = "sexta"
+TIPO = "sem_preferencia_nao_quer"
+
+[node name="HORARIOS" type="GridContainer" parent="DIAS/Sexta/PREFERENCIAS/NAO_QUER/HORARIOS_QUE_NAO_PREFERE"]
+margin_top = 28.0
+margin_right = 458.0
+margin_bottom = 238.0
+
+[node name="Label" type="Label" parent="DIAS/Sexta/PREFERENCIAS/NAO_QUER/HORARIOS_QUE_NAO_PREFERE/HORARIOS"]
+margin_right = 458.0
+margin_bottom = 14.0
+text = "Horários"
+align = 1
+valign = 1
+
+[node name="1" type="CheckBox" parent="DIAS/Sexta/PREFERENCIAS/NAO_QUER/HORARIOS_QUE_NAO_PREFERE/HORARIOS"]
+margin_left = 168.0
+margin_top = 18.0
+margin_right = 290.0
+margin_bottom = 42.0
+rect_min_size = Vector2( 122, 0 )
+size_flags_horizontal = 6
+text = "7:00 às 7:45"
+align = 1
+
+[node name="2" type="CheckBox" parent="DIAS/Sexta/PREFERENCIAS/NAO_QUER/HORARIOS_QUE_NAO_PREFERE/HORARIOS"]
+margin_left = 168.0
+margin_top = 46.0
+margin_right = 290.0
+margin_bottom = 70.0
+rect_min_size = Vector2( 122, 0 )
+size_flags_horizontal = 6
+text = "7:45 às 8:30"
+align = 1
+
+[node name="3" type="CheckBox" parent="DIAS/Sexta/PREFERENCIAS/NAO_QUER/HORARIOS_QUE_NAO_PREFERE/HORARIOS"]
+margin_left = 168.0
+margin_top = 74.0
+margin_right = 290.0
+margin_bottom = 98.0
+rect_min_size = Vector2( 122, 0 )
+size_flags_horizontal = 6
+text = "8:30 às 9:15"
+align = 1
+
+[node name="4" type="CheckBox" parent="DIAS/Sexta/PREFERENCIAS/NAO_QUER/HORARIOS_QUE_NAO_PREFERE/HORARIOS"]
+margin_left = 168.0
+margin_top = 102.0
+margin_right = 290.0
+margin_bottom = 126.0
+rect_min_size = Vector2( 122, 0 )
+size_flags_horizontal = 6
+text = "9:15 às 10:00"
+align = 1
+
+[node name="5" type="CheckBox" parent="DIAS/Sexta/PREFERENCIAS/NAO_QUER/HORARIOS_QUE_NAO_PREFERE/HORARIOS"]
+margin_left = 168.0
+margin_top = 130.0
+margin_right = 290.0
+margin_bottom = 154.0
+rect_min_size = Vector2( 122, 0 )
+size_flags_horizontal = 6
+text = "10:20 às 11:05"
+align = 1
+
+[node name="6" type="CheckBox" parent="DIAS/Sexta/PREFERENCIAS/NAO_QUER/HORARIOS_QUE_NAO_PREFERE/HORARIOS"]
+margin_left = 168.0
+margin_top = 158.0
+margin_right = 290.0
+margin_bottom = 182.0
+rect_min_size = Vector2( 122, 0 )
+size_flags_horizontal = 6
+text = "11:05 às 11:50"
+align = 1
+
+[node name="7" type="CheckBox" parent="DIAS/Sexta/PREFERENCIAS/NAO_QUER/HORARIOS_QUE_NAO_PREFERE/HORARIOS"]
+margin_left = 168.0
+margin_top = 186.0
+margin_right = 290.0
+margin_bottom = 210.0
+rect_min_size = Vector2( 122, 0 )
+size_flags_horizontal = 6
+text = "11:50 às 12:35"
+align = 1
+
+[node name="MOTIVO_SIM_NAO" type="CheckBox" parent="DIAS/Sexta/PREFERENCIAS/NAO_QUER/HORARIOS_QUE_NAO_PREFERE"]
+margin_left = 193.0
+margin_top = 242.0
+margin_right = 265.0
+margin_bottom = 266.0
+size_flags_horizontal = 6
+text = "Motivo"
+script = ExtResource( 2 )
+DIA = "sexta"
+TIPO = "motivo_nao_quer"
+
+[node name="TextEdit" type="TextEdit" parent="DIAS/Sexta/PREFERENCIAS/NAO_QUER/HORARIOS_QUE_NAO_PREFERE"]
+visible = false
+margin_top = 270.0
+margin_right = 458.0
+margin_bottom = 420.0
+rect_min_size = Vector2( 0, 150 )
+
+[node name="SAVE" type="Button" parent="."]
+margin_left = 432.0
+margin_top = 607.0
+margin_right = 502.0
+margin_bottom = 642.0
+rect_min_size = Vector2( 70, 35 )
+size_flags_horizontal = 6
+text = "Salvar"
+
+[connection signal="toggled" from="DIAS/Segunda/PREFERENCIAS/QUER/HORARIOS_QUE_PREFERE/SEM_PREFERENCIA_NAO_QUER" to="DIAS/Segunda/PREFERENCIAS/QUER/HORARIOS_QUE_PREFERE/SEM_PREFERENCIA_NAO_QUER" method="_on_SEM_PREFERENCIA_NAO_QUER_toggled"]
+[connection signal="toggled" from="DIAS/Segunda/PREFERENCIAS/QUER/HORARIOS_QUE_PREFERE/MOTIVO_SIM_NAO" to="DIAS/Segunda/PREFERENCIAS/QUER/HORARIOS_QUE_PREFERE/MOTIVO_SIM_NAO" method="_on_MOTIVO_SIM_NAO_toggled"]
+[connection signal="toggled" from="DIAS/Segunda/PREFERENCIAS/NAO_QUER/HORARIOS_QUE_NAO_PREFERE/SEM_PREFERENCIA_NAO_QUER" to="DIAS/Segunda/PREFERENCIAS/NAO_QUER/HORARIOS_QUE_NAO_PREFERE/SEM_PREFERENCIA_NAO_QUER" method="_on_SEM_PREFERENCIA_NAO_QUER_toggled"]
+[connection signal="toggled" from="DIAS/Segunda/PREFERENCIAS/NAO_QUER/HORARIOS_QUE_NAO_PREFERE/MOTIVO_SIM_NAO" to="DIAS/Segunda/PREFERENCIAS/NAO_QUER/HORARIOS_QUE_NAO_PREFERE/MOTIVO_SIM_NAO" method="_on_MOTIVO_SIM_NAO_toggled"]
+[connection signal="toggled" from="DIAS/Terça/PREFERENCIAS/QUER/HORARIOS_QUE_PREFERE/SEM_PREFERENCIA_NAO_QUER" to="DIAS/Terça/PREFERENCIAS/QUER/HORARIOS_QUE_PREFERE/SEM_PREFERENCIA_NAO_QUER" method="_on_SEM_PREFERENCIA_NAO_QUER_toggled"]
+[connection signal="toggled" from="DIAS/Terça/PREFERENCIAS/QUER/HORARIOS_QUE_PREFERE/MOTIVO_SIM_NAO" to="DIAS/Terça/PREFERENCIAS/QUER/HORARIOS_QUE_PREFERE/MOTIVO_SIM_NAO" method="_on_MOTIVO_SIM_NAO_toggled"]
+[connection signal="toggled" from="DIAS/Terça/PREFERENCIAS/NAO_QUER/HORARIOS_QUE_NAO_PREFERE/SEM_PREFERENCIA_NAO_QUER" to="DIAS/Terça/PREFERENCIAS/NAO_QUER/HORARIOS_QUE_NAO_PREFERE/SEM_PREFERENCIA_NAO_QUER" method="_on_SEM_PREFERENCIA_NAO_QUER_toggled"]
+[connection signal="toggled" from="DIAS/Terça/PREFERENCIAS/NAO_QUER/HORARIOS_QUE_NAO_PREFERE/MOTIVO_SIM_NAO" to="DIAS/Terça/PREFERENCIAS/NAO_QUER/HORARIOS_QUE_NAO_PREFERE/MOTIVO_SIM_NAO" method="_on_MOTIVO_SIM_NAO_toggled"]
+[connection signal="toggled" from="DIAS/Quarta/PREFERENCIAS/QUER/HORARIOS_QUE_PREFERE/SEM_PREFERENCIA_NAO_QUER" to="DIAS/Quarta/PREFERENCIAS/QUER/HORARIOS_QUE_PREFERE/SEM_PREFERENCIA_NAO_QUER" method="_on_SEM_PREFERENCIA_NAO_QUER_toggled"]
+[connection signal="toggled" from="DIAS/Quarta/PREFERENCIAS/QUER/HORARIOS_QUE_PREFERE/MOTIVO_SIM_NAO" to="DIAS/Quarta/PREFERENCIAS/QUER/HORARIOS_QUE_PREFERE/MOTIVO_SIM_NAO" method="_on_MOTIVO_SIM_NAO_toggled"]
+[connection signal="toggled" from="DIAS/Quarta/PREFERENCIAS/NAO_QUER/HORARIOS_QUE_NAO_PREFERE/SEM_PREFERENCIA_NAO_QUER" to="DIAS/Quarta/PREFERENCIAS/NAO_QUER/HORARIOS_QUE_NAO_PREFERE/SEM_PREFERENCIA_NAO_QUER" method="_on_SEM_PREFERENCIA_NAO_QUER_toggled"]
+[connection signal="toggled" from="DIAS/Quarta/PREFERENCIAS/NAO_QUER/HORARIOS_QUE_NAO_PREFERE/MOTIVO_SIM_NAO" to="DIAS/Quarta/PREFERENCIAS/NAO_QUER/HORARIOS_QUE_NAO_PREFERE/MOTIVO_SIM_NAO" method="_on_MOTIVO_SIM_NAO_toggled"]
+[connection signal="toggled" from="DIAS/Quinta/PREFERENCIAS/QUER/HORARIOS_QUE_PREFERE/SEM_PREFERENCIA_NAO_QUER" to="DIAS/Quinta/PREFERENCIAS/QUER/HORARIOS_QUE_PREFERE/SEM_PREFERENCIA_NAO_QUER" method="_on_SEM_PREFERENCIA_NAO_QUER_toggled"]
+[connection signal="toggled" from="DIAS/Quinta/PREFERENCIAS/QUER/HORARIOS_QUE_PREFERE/MOTIVO_SIM_NAO" to="DIAS/Quinta/PREFERENCIAS/QUER/HORARIOS_QUE_PREFERE/MOTIVO_SIM_NAO" method="_on_MOTIVO_SIM_NAO_toggled"]
+[connection signal="toggled" from="DIAS/Quinta/PREFERENCIAS/NAO_QUER/HORARIOS_QUE_NAO_PREFERE/SEM_PREFERENCIA_NAO_QUER" to="DIAS/Quinta/PREFERENCIAS/NAO_QUER/HORARIOS_QUE_NAO_PREFERE/SEM_PREFERENCIA_NAO_QUER" method="_on_SEM_PREFERENCIA_NAO_QUER_toggled"]
+[connection signal="toggled" from="DIAS/Quinta/PREFERENCIAS/NAO_QUER/HORARIOS_QUE_NAO_PREFERE/MOTIVO_SIM_NAO" to="DIAS/Quinta/PREFERENCIAS/NAO_QUER/HORARIOS_QUE_NAO_PREFERE/MOTIVO_SIM_NAO" method="_on_MOTIVO_SIM_NAO_toggled"]
+[connection signal="toggled" from="DIAS/Sexta/PREFERENCIAS/QUER/HORARIOS_QUE_PREFERE/SEM_PREFERENCIA_NAO_QUER" to="DIAS/Sexta/PREFERENCIAS/QUER/HORARIOS_QUE_PREFERE/SEM_PREFERENCIA_NAO_QUER" method="_on_SEM_PREFERENCIA_NAO_QUER_toggled"]
+[connection signal="toggled" from="DIAS/Sexta/PREFERENCIAS/QUER/HORARIOS_QUE_PREFERE/MOTIVO_SIM_NAO" to="DIAS/Sexta/PREFERENCIAS/QUER/HORARIOS_QUE_PREFERE/MOTIVO_SIM_NAO" method="_on_MOTIVO_SIM_NAO_toggled"]
+[connection signal="toggled" from="DIAS/Sexta/PREFERENCIAS/NAO_QUER/HORARIOS_QUE_NAO_PREFERE/SEM_PREFERENCIA_NAO_QUER" to="DIAS/Sexta/PREFERENCIAS/NAO_QUER/HORARIOS_QUE_NAO_PREFERE/SEM_PREFERENCIA_NAO_QUER" method="_on_SEM_PREFERENCIA_NAO_QUER_toggled"]
+[connection signal="toggled" from="DIAS/Sexta/PREFERENCIAS/NAO_QUER/HORARIOS_QUE_NAO_PREFERE/MOTIVO_SIM_NAO" to="DIAS/Sexta/PREFERENCIAS/NAO_QUER/HORARIOS_QUE_NAO_PREFERE/MOTIVO_SIM_NAO" method="_on_MOTIVO_SIM_NAO_toggled"]

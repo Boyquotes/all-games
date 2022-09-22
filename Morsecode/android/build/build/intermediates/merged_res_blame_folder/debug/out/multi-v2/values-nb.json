@@ -1,0 +1,77 @@
+{
+    "logs": [
+        {
+            "outputFile": "C:\\Users\\nicol\\OneDrive\\Morsecode\\android\\build\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-nb\\values-nb.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\nicol\\OneDrive\\Morsecode\\android\\build\\res\\values-nb\\godot_project_name_string.xml",
+                    "from": {
+                        "startLines": "3",
+                        "startColumns": "1",
+                        "startOffsets": "112",
+                        "endColumns": "60",
+                        "endOffsets": "171"
+                    },
+                    "to": {
+                        "startLines": "3",
+                        "startColumns": "4",
+                        "startOffsets": "294",
+                        "endColumns": "63",
+                        "endOffsets": "353"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\nicol\\.gradle\\caches\\transforms-3\\7bfbf15f82fbddddc312ca658b61dde9\\transformed\\jetified-play-services-basement-17.6.0\\res\\values-nb\\values.xml",
+                    "from": {
+                        "startLines": "4",
+                        "startColumns": "0",
+                        "startOffsets": "247",
+                        "endColumns": "188",
+                        "endOffsets": "435"
+                    },
+                    "to": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "105",
+                        "endColumns": "188",
+                        "endOffsets": "289"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\nicol\\.gradle\\caches\\transforms-3\\c5eaa7d939abb2d757f863a6b5340cdd\\transformed\\core-1.2.0\\res\\values-nb\\values-nb.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    },
+                    "to": {
+                        "startLines": "18",
+                        "startColumns": "4",
+                        "startOffsets": "1760",
+                        "endColumns": "100",
+                        "endOffsets": "1856"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\nicol\\.gradle\\caches\\transforms-3\\0d60ebcb83b6415d6f37d06f9109a91d\\transformed\\jetified-play-services-ads-20.2.0\\res\\values-nb\\values.xml",
+                    "from": {
+                        "startLines": "4,5,6,7,8,9,10,11,12,13,14,15,16,17",
+                        "startColumns": "0,0,0,0,0,0,0,0,0,0,0,0,0,0",
+                        "startOffsets": "199,305,430,510,646,732,869,985,1053,1160,1223,1286,1369,1476",
+                        "endColumns": "105,124,79,135,85,136,115,67,106,62,62,82,106,68",
+                        "endOffsets": "304,429,509,645,731,868,984,1052,1159,1222,1285,1368,1475,1544"
+                    },
+                    "to": {
+                        "startLines": "4,5,6,7,8,9,10,11,12,13,14,15,16,17",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "358,468,597,681,821,911,1052,1172,1244,1355,1422,1489,1576,1687",
+                        "endColumns": "109,128,83,139,89,140,119,71,110,66,66,86,110,72",
+                        "endOffsets": "463,592,676,816,906,1047,1167,1239,1350,1417,1484,1571,1682,1755"
+                    }
+                }
+            ]
+        }
+    ]
+}

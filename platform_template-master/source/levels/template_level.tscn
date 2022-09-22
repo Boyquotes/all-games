@@ -1,0 +1,229 @@
+[gd_scene load_steps=13 format=2]
+
+[ext_resource path="res://objects/ladder/ladder.tscn" type="PackedScene" id=1]
+[ext_resource path="res://objects/pass_through_platform/pass_through_platform.tscn" type="PackedScene" id=2]
+[ext_resource path="res://actors/template/template_actor.tscn" type="PackedScene" id=3]
+[ext_resource path="res://juiceness/shake_camera/rigged_camera/camera_rig.tscn" type="PackedScene" id=4]
+[ext_resource path="res://juiceness/shake_camera/shake_camera.tscn" type="PackedScene" id=5]
+
+[sub_resource type="GDScript" id=1]
+script/source = "extends VBoxContainer
+
+func _process(delta):
+	$spam.text = str(int($spam/timer.time_left))"
+
+[sub_resource type="GDScript" id=2]
+script/source = "extends HBoxContainer
+
+var coins = 0
+
+func _ready():
+	var t = \"x: {amount}\"
+	$amount.text = t.format({\"amount\":coins})
+func add_coin():
+	coins += 1
+	var t = \"x: {amount}\"
+	$amount.text = t.format({\"amount\":coins})
+	"
+
+[sub_resource type="GDScript" id=3]
+script/source = "extends HBoxContainer
+
+var score = 0
+
+func _ready():
+	var t = \"score: {amount}\"
+	$amount.text = t.format({\"amount\":score})
+
+func increase_score(amount):
+	score += amount
+	var t = \"score: {amount}\"
+	$amount.text = t.format({\"amount\":score})"
+
+[sub_resource type="GDScript" id=4]
+script/source = "extends Node2D
+
+export (NodePath) var coins_interface
+export (NodePath) var score_interface
+func _ready():
+	for c in get_children():
+		c.connect(\"tree_exited\", get_node(coins_interface), \"add_coin\")
+		c.connect(\"tree_exited\", get_node(score_interface),
+			 \"increase_score\", [100])"
+
+[sub_resource type="GDScript" id=5]
+script/source = "extends Node2D
+export (NodePath) var score_interface
+
+const SCORE = preload(\"res://juiceness/pop_score/pop_label.tscn\")
+
+func _ready():
+	for c in get_children():
+		c.connect(\"tree_exited\", get_node(score_interface),
+			\"increase_score\", [500])
+		c.connect(\"tree_exited\", self, \"child_died\", [c])
+
+func child_died(child):
+	var s = SCORE.instance()
+	s.position = child.position
+	s.get_node(\"label\").text = str(int(500))
+	add_child(s)"
+
+[sub_resource type="PhysicsMaterial" id=6]
+friction = 0.0
+
+[sub_resource type="PhysicsMaterial" id=7]
+friction = 0.0
+
+[node name="template_level" type="Node2D"]
+
+[node name="interface" type="CanvasLayer" parent="."]
+pause_mode = 2
+editor/display_folded = true
+
+[node name="control" type="Control" parent="interface"]
+pause_mode = 1
+visible = false
+margin_right = 72.0
+margin_bottom = 40.0
+
+[node name="time" type="VBoxContainer" parent="interface/control"]
+editor/display_folded = true
+margin_left = 488.0
+margin_top = 8.0
+margin_right = 528.0
+margin_bottom = 50.0
+custom_constants/separation = 14
+script = SubResource( 1 )
+
+[node name="title" type="Label" parent="interface/control/time"]
+margin_right = 40.0
+margin_bottom = 14.0
+text = "Time:"
+
+[node name="spam" type="Label" parent="interface/control/time"]
+margin_top = 28.0
+margin_right = 40.0
+margin_bottom = 42.0
+text = "{time}"
+
+[node name="timer" type="Timer" parent="interface/control/time/spam"]
+wait_time = 120.0
+one_shot = true
+autostart = true
+
+[node name="coins" type="HBoxContainer" parent="interface/control"]
+margin_left = 656.0
+margin_right = 750.0
+margin_bottom = 42.0
+script = SubResource( 2 )
+
+[node name="coin" type="TextureRect" parent="interface/control/coins"]
+margin_right = 16.0
+margin_bottom = 42.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+stretch_mode = 4
+
+[node name="amount" type="Label" parent="interface/control/coins"]
+margin_left = 20.0
+margin_right = 94.0
+margin_bottom = 42.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "x: {amount}"
+valign = 1
+
+[node name="score" type="HBoxContainer" parent="interface/control"]
+editor/display_folded = true
+margin_left = 872.0
+margin_right = 974.0
+margin_bottom = 42.0
+script = SubResource( 3 )
+
+[node name="amount" type="Label" parent="interface/control/score"]
+margin_right = 102.0
+margin_bottom = 42.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "score: {amount}"
+valign = 1
+
+[node name="coins" type="Node2D" parent="."]
+script = SubResource( 4 )
+coins_interface = NodePath("../interface/control/coins")
+score_interface = NodePath("../interface/control/score")
+
+[node name="enemies" type="Node2D" parent="."]
+z_index = -1
+script = SubResource( 5 )
+score_interface = NodePath("../interface/control/score")
+
+[node name="wall_left" type="StaticBody2D" parent="."]
+editor/display_folded = true
+position = Vector2( -8, 16 )
+physics_material_override = SubResource( 6 )
+
+[node name="shape" type="CollisionPolygon2D" parent="wall_left"]
+polygon = PoolVector2Array( 8, -8, 8, 504, -24, 504, -24, -8 )
+
+[node name="shape2" type="CollisionPolygon2D" parent="wall_left"]
+position = Vector2( -212, 4 )
+polygon = PoolVector2Array( 8, -8, 8, 504, -24, 504, -24, -8 )
+
+[node name="wall_right" type="StaticBody2D" parent="."]
+editor/display_folded = true
+position = Vector2( 1930, 20 )
+physics_material_override = SubResource( 7 )
+
+[node name="shape" type="CollisionPolygon2D" parent="wall_right"]
+polygon = PoolVector2Array( 8, -8, 8, 504, -24, 504, -24, -8 )
+
+[node name="tile_map" type="TileMap" parent="."]
+format = 1
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="floor" type="StaticBody2D" parent="."]
+
+[node name="shape" type="CollisionPolygon2D" parent="floor"]
+polygon = PoolVector2Array( 0, 520, 1904, 520, 1904, 592, 0, 592 )
+
+[node name="background_music" type="AudioStreamPlayer" parent="."]
+bus = "music"
+
+[node name="slope" type="StaticBody2D" parent="."]
+editor/display_folded = true
+
+[node name="shape" type="CollisionPolygon2D" parent="slope"]
+position = Vector2( -50, 0 )
+polygon = PoolVector2Array( 400, 520, 560, 460, 810, 460, 810, 520 )
+
+[node name="shape2" type="CollisionPolygon2D" parent="slope"]
+position = Vector2( 1780, 390 )
+polygon = PoolVector2Array( 128, 4, 0, 132, 128, 132 )
+
+[node name="ladder" parent="." instance=ExtResource( 1 )]
+position = Vector2( 1077.6, 168 )
+
+[node name="ladder2" parent="." instance=ExtResource( 1 )]
+position = Vector2( 1248, -184 )
+
+[node name="pass_through_platform" parent="." instance=ExtResource( 2 )]
+position = Vector2( 824, -56 )
+
+[node name="pass_through_platform2" parent="." instance=ExtResource( 2 )]
+position = Vector2( 976, -184 )
+
+[node name="pass_through_platform3" parent="." instance=ExtResource( 2 )]
+position = Vector2( 1112, 168 )
+
+[node name="template_actor" parent="." instance=ExtResource( 3 )]
+position = Vector2( 576, 96 )
+
+[node name="camera_rig" parent="template_actor" instance=ExtResource( 4 )]
+remote_path = NodePath("../../shake_camera")
+
+[node name="shake_camera" parent="." instance=ExtResource( 5 )]
+position = Vector2( 576, 96 )

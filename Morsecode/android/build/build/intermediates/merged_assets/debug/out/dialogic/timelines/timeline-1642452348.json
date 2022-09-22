@@ -1,0 +1,57 @@
+{
+	"events": [
+		{
+			"action": "join",
+			"character": "character-1642357363.json",
+			"event_id": "dialogic_002",
+			"mirror": false,
+			"portrait": "",
+			"position": {
+				"0": true,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": false
+			}
+		},
+		{
+			"action": "join",
+			"character": "character-1642357357.json",
+			"event_id": "dialogic_002",
+			"mirror": false,
+			"portrait": "",
+			"position": {
+				"0": false,
+				"1": true,
+				"2": false,
+				"3": false,
+				"4": false
+			}
+		},
+		{
+			"character": "character-1642357363.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Soldier, the Hypersonic Missile Ship has made contact and I think we are nearing the end of the war"
+		},
+		{
+			"character": "character-1642357363.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "If you receive confirmation that the war is over, let me know"
+		},
+		{
+			"emit_signal": "start",
+			"event_id": "dialogic_040"
+		},
+		{
+			"event_id": "dialogic_022",
+			"transition_duration": 1
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.3",
+		"file": "timeline-1642452348.json",
+		"name": "C_15"
+	}
+}

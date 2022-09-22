@@ -1,0 +1,117 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Scripts/Menu.gd" type="Script" id=1]
+[ext_resource path="res://Audios/Musics/xDeviruchi - Mysterious Dungeon.wav" type="AudioStream" id=2]
+[ext_resource path="res://Scenes/Volume.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scenes/Tutorial.tscn" type="PackedScene" id=4]
+
+[sub_resource type="Animation" id=1]
+resource_name = "Run"
+length = 1.5
+loop = true
+tracks/0/type = "bezier"
+tracks/0/path = NodePath("SD:rect_position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PoolRealArray( 64, -0.25, 0, 0.25, 0, 40, -0.25, 0, 0.25, 0, 56, -0.25, 0, 0.25, 0, 80, -0.25, 0, 0.25, 0, 32, -0.25, 0, 0.25, 0, 64, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.3, 0.6, 0.9, 1.2, 1.5 )
+}
+tracks/1/type = "bezier"
+tracks/1/path = NodePath("SD:rect_position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"points": PoolRealArray( 112, -0.25, 0, 0.25, 0, 136, -0.25, 0, 0.25, 0, 96, -0.25, 0, 0.25, 0, 128, -0.25, 0, 0.25, 0, 88, -0.25, 0, 0.25, 0, 112, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.3, 0.6, 0.9, 1.2, 1.5 )
+}
+tracks/2/type = "bezier"
+tracks/2/path = NodePath("Play:rect_scale:x")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"points": PoolRealArray( 3, -0.25, 0, 0.25, 0, 3.5, -0.25, 0, 0.25, 0, 3, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.7, 1.5 )
+}
+tracks/3/type = "bezier"
+tracks/3/path = NodePath("Play:rect_scale:y")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"points": PoolRealArray( 3, -0.25, 0, 0.25, 0, 3.5, -0.25, 0, 0.25, 0, 3, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.7, 1.5 )
+}
+
+[node name="Main" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="BG" type="ColorRect" parent="."]
+margin_right = 600.0
+margin_bottom = 760.0
+color = Color( 0, 0, 0, 1 )
+
+[node name="Audio" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 2 )
+autoplay = true
+
+[node name="Play" type="Button" parent="."]
+margin_left = 216.0
+margin_top = 656.0
+margin_right = 396.0
+margin_bottom = 678.0
+rect_scale = Vector2( 3, 3 )
+rect_pivot_offset = Vector2( 90, 11 )
+text = "Press any key to start"
+flat = true
+
+[node name="SD" type="Label" parent="."]
+margin_left = 64.0
+margin_top = 112.0
+margin_right = 162.0
+margin_bottom = 128.0
+rect_scale = Vector2( 5, 5 )
+text = "Sprint Dungeon"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+autoplay = "Run"
+anims/Run = SubResource( 1 )
+
+[node name="Infos" type="Label" parent="."]
+margin_left = 312.0
+margin_top = 240.0
+margin_right = 410.0
+margin_bottom = 294.0
+rect_scale = Vector2( 2.5, 2.5 )
+text = "Tutorial: T
+Up volume: D
+Down volume: A"
+valign = 1
+
+[node name="Infos2" type="Label" parent="."]
+margin_left = 40.0
+margin_top = 272.0
+margin_right = 166.0
+margin_bottom = 402.0
+rect_scale = Vector2( 2.5, 2.5 )
+text = "Defend: Q
+Magic: W
+Attack: E
+Left: Left Arrow
+Right: Right Arrow
+Forward: Up Arrow
+Repeat audio: R"
+valign = 1
+
+[node name="Volume" parent="." instance=ExtResource( 3 )]
+
+[node name="Tutorial" parent="." instance=ExtResource( 4 )]
+
+[connection signal="button_up" from="Play" to="." method="_on_Play_button_up"]

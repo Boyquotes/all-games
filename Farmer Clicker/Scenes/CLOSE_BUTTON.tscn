@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Scripts/CLOSE_BUTTON.gd" type="Script" id=1]
+[ext_resource path="res://Images/ICONES_DE_JOGABILIDADE/X.png" type="Texture" id=2]
+[ext_resource path="res://Images/ICONES_DE_JOGABILIDADE/X-PRESSED.png" type="Texture" id=3]
+
+[node name="CLOSE_BUTTON" type="TextureButton"]
+rect_min_size = Vector2( 20, 20 )
+texture_normal = ExtResource( 2 )
+texture_pressed = ExtResource( 3 )
+expand = true
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="button_up" from="." to="." method="_on_CLOSE_BUTTON_button_up"]

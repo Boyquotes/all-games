@@ -1,0 +1,34 @@
+[gd_scene load_steps=2 format=3 uid="uid://ccp5ww5377jw4"]
+
+[ext_resource type="Texture2D" uid="uid://dntuno3wyvuoa" path="res://Images/SLOT.png" id="1_fckvf"]
+
+[node name="Item_getter" type="Control"]
+anchor_right = 0.05
+anchor_bottom = 0.122
+offset_bottom = 0.159996
+rect_min_size = Vector2(64, 88)
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 0.727
+offset_bottom = 0.0239944
+rect_min_size = Vector2(64, 64)
+texture = ExtResource( "1_fckvf" )
+ignore_texture_size = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="."]
+offset_top = 64.0
+offset_right = 64.0
+offset_bottom = 90.0
+text = "qtd"
+horizontal_alignment = 1
+vertical_alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}

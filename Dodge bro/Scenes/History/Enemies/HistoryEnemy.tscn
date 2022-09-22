@@ -1,0 +1,46 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Scripts/Turret.gd" type="Script" id=1]
+[ext_resource path="res://Images/ENEMIES/ENEMY_0.png" type="Texture" id=2]
+[ext_resource path="res://Scenes/Modules/Visibility_module.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scenes/History/Modules/MoveModule.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scenes/Enemies_projectiles/EnemyProjectile.tscn" type="PackedScene" id=5]
+
+[node name="HistoryEnemy" type="KinematicBody2D" groups=["ENEMY", "Enemy"]]
+script = ExtResource( 1 )
+CAN_MOVE = true
+BULLET_TYPE = ExtResource( 5 )
+
+[node name="Sprite" type="Sprite" parent="."]
+texture = ExtResource( 2 )
+
+[node name="Area2D" type="Area2D" parent="Sprite"]
+input_pickable = false
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Sprite/Area2D"]
+polygon = PoolVector2Array( -32, -1, -24, -12, -20, -27, 9, -30, 20, -16, 32, -7, 32, 7, 20, 16, 9, 30, -20, 27, -24, 12, -32, 1 )
+
+[node name="PARTICLES_HANDLER" type="Node2D" parent="Sprite"]
+position = Vector2( -36, 0 )
+
+[node name="PARTICLES_POINT" type="Node2D" parent="Sprite/PARTICLES_HANDLER"]
+
+[node name="Gun" type="Sprite" parent="Sprite"]
+
+[node name="POINT" type="Position2D" parent="Sprite/Gun"]
+position = Vector2( 38, 0 )
+
+[node name="Timer" type="Timer" parent="."]
+autostart = true
+
+[node name="Visibility_module" parent="." instance=ExtResource( 3 )]
+position = Vector2( -1.90735e-06, -1.90735e-06 )
+scale = Vector2( 3.2, 3.2 )
+
+[node name="MoveModule" parent="." instance=ExtResource( 4 )]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PoolVector2Array( -32, -1, -24, -12, -20, -27, 9, -30, 20, -16, 32, -7, 32, 7, 20, 16, 9, 30, -20, 27, -24, 12, -32, 1 )
+
+[connection signal="area_entered" from="Sprite/Area2D" to="." method="_on_Area2D_area_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

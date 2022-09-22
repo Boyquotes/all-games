@@ -1,0 +1,63 @@
+{
+	"events": [
+		{
+			"action": "join",
+			"character": "character-1642357363.json",
+			"event_id": "dialogic_002",
+			"mirror": false,
+			"portrait": "",
+			"position": {
+				"0": true,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": false
+			}
+		},
+		{
+			"action": "join",
+			"character": "character-1642357357.json",
+			"event_id": "dialogic_002",
+			"mirror": false,
+			"portrait": "",
+			"position": {
+				"0": false,
+				"1": true,
+				"2": false,
+				"3": false,
+				"4": false
+			}
+		},
+		{
+			"character": "character-1642357363.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "We, the American Marines, we are here on a mission, to find and rescue our allies who are scattered across the hostile area and you soldier, has been chosen to perform a very important task. Listen and translate the messages sent by our allies, so that the extraction team rescues our allies from this terrible war"
+		},
+		{
+			"character": "character-1642357363.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Our allies send messages in morse code, you were chosen because you already have knowledge of morse code, so do your best to help our country and our allies"
+		},
+		{
+			"character": "character-1642357357.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "I will do my best!"
+		},
+		{
+			"emit_signal": "start",
+			"event_id": "dialogic_040"
+		},
+		{
+			"event_id": "dialogic_022",
+			"transition_duration": 1
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.3",
+		"file": "timeline-1642357384.json",
+		"name": "C_1"
+	}
+}

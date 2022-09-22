@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/NiceMusic.mp3-71f9ada682dafb4ac30e63116fa25cda.mp3str"
+
+[deps]
+
+source_file="res://Mp3/Musics/NiceMusic.mp3"
+dest_files=[ "res://.import/NiceMusic.mp3-71f9ada682dafb4ac30e63116fa25cda.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

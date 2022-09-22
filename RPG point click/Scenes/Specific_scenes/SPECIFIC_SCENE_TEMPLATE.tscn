@@ -1,0 +1,207 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Scripts/SPECIFIC_SCENE_TEMPLATE.gd" type="Script" id=1]
+[ext_resource path="res://icon.png" type="Texture" id=2]
+
+[node name="SPECIFIC_SCENE_TEMPLATE" type="GridContainer"]
+margin_left = 296.0
+margin_right = 992.0
+margin_bottom = 720.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource( 1 )
+
+[node name="VIEW" type="GridContainer" parent="."]
+margin_right = 696.0
+margin_bottom = 566.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="BG" type="TextureRect" parent="VIEW"]
+margin_right = 696.0
+margin_bottom = 512.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource( 2 )
+expand = true
+stretch_mode = 6
+
+[node name="TEXT" type="Label" parent="VIEW"]
+margin_top = 516.0
+margin_right = 696.0
+margin_bottom = 566.0
+rect_min_size = Vector2( 0, 50 )
+text = "There are many ways there"
+align = 1
+valign = 1
+
+[node name="ACT" type="GridContainer" parent="."]
+margin_top = 570.0
+margin_right = 696.0
+margin_bottom = 720.0
+rect_min_size = Vector2( 0, 150 )
+size_flags_horizontal = 3
+size_flags_vertical = 0
+
+[node name="DECISION" type="GridContainer" parent="ACT"]
+visible = false
+margin_right = 696.0
+margin_bottom = 122.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+columns = 3
+
+[node name="LEFT" type="Button" parent="ACT/DECISION"]
+margin_top = 36.0
+margin_right = 229.0
+margin_bottom = 86.0
+rect_min_size = Vector2( 0, 50 )
+size_flags_horizontal = 3
+size_flags_vertical = 6
+text = "LEFT"
+
+[node name="MIDDLE" type="Button" parent="ACT/DECISION"]
+margin_left = 233.0
+margin_top = 36.0
+margin_right = 462.0
+margin_bottom = 86.0
+rect_min_size = Vector2( 0, 50 )
+size_flags_horizontal = 3
+size_flags_vertical = 6
+text = "MIDDLE"
+
+[node name="RIGHT" type="Button" parent="ACT/DECISION"]
+margin_left = 466.0
+margin_top = 36.0
+margin_right = 695.0
+margin_bottom = 86.0
+rect_min_size = Vector2( 0, 50 )
+size_flags_horizontal = 3
+size_flags_vertical = 6
+text = "RIGHT"
+
+[node name="BATTLE" type="GridContainer" parent="ACT"]
+visible = false
+margin_right = 696.0
+margin_bottom = 50.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Button" type="Button" parent="ACT/BATTLE"]
+margin_right = 696.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 0, 50 )
+size_flags_horizontal = 3
+size_flags_vertical = 6
+
+[node name="LOOT" type="GridContainer" parent="ACT"]
+margin_right = 696.0
+margin_bottom = 118.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+columns = 2
+
+[node name="Button" type="Button" parent="ACT/LOOT"]
+margin_top = 34.0
+margin_right = 346.0
+margin_bottom = 84.0
+rect_min_size = Vector2( 0, 50 )
+size_flags_horizontal = 3
+size_flags_vertical = 6
+
+[node name="Button2" type="Button" parent="ACT/LOOT"]
+margin_left = 350.0
+margin_top = 34.0
+margin_right = 696.0
+margin_bottom = 84.0
+rect_min_size = Vector2( 0, 50 )
+size_flags_horizontal = 3
+size_flags_vertical = 6
+
+[node name="SHRINE" type="GridContainer" parent="ACT"]
+visible = false
+margin_right = 696.0
+margin_bottom = 122.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Button" type="Button" parent="ACT/SHRINE"]
+margin_top = 36.0
+margin_right = 696.0
+margin_bottom = 86.0
+rect_min_size = Vector2( 0, 50 )
+size_flags_horizontal = 3
+size_flags_vertical = 6
+
+[node name="SHOP" type="GridContainer" parent="ACT"]
+visible = false
+margin_top = 54.0
+margin_right = 696.0
+margin_bottom = 104.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Button" type="Button" parent="ACT/SHOP"]
+margin_right = 696.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 0, 50 )
+size_flags_horizontal = 3
+size_flags_vertical = 6
+
+[node name="WEAPON_SHOP" type="GridContainer" parent="ACT"]
+visible = false
+margin_right = 696.0
+margin_bottom = 50.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Button" type="Button" parent="ACT/WEAPON_SHOP"]
+margin_right = 696.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 0, 50 )
+size_flags_horizontal = 3
+size_flags_vertical = 6
+
+[node name="ARMOR_SHOP" type="GridContainer" parent="ACT"]
+visible = false
+margin_right = 696.0
+margin_bottom = 50.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Button" type="Button" parent="ACT/ARMOR_SHOP"]
+margin_right = 696.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 0, 50 )
+size_flags_horizontal = 3
+size_flags_vertical = 6
+
+[node name="ACCESSORIES_SHOP" type="GridContainer" parent="ACT"]
+visible = false
+margin_top = 54.0
+margin_right = 696.0
+margin_bottom = 104.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Button" type="Button" parent="ACT/ACCESSORIES_SHOP"]
+margin_right = 696.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 0, 50 )
+size_flags_horizontal = 3
+size_flags_vertical = 6
+
+[node name="CONSUMABLES_SHOP" type="GridContainer" parent="ACT"]
+visible = false
+margin_right = 696.0
+margin_bottom = 122.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Button" type="Button" parent="ACT/CONSUMABLES_SHOP"]
+margin_top = 36.0
+margin_right = 696.0
+margin_bottom = 86.0
+rect_min_size = Vector2( 0, 50 )
+size_flags_horizontal = 3
+size_flags_vertical = 6

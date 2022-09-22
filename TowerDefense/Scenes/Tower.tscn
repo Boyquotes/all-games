@@ -1,0 +1,63 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://Scripts/Tower.gd" type="Script" id=1]
+[ext_resource path="res://Images/Tower/Tower_hover.png" type="Texture" id=2]
+[ext_resource path="res://Images/Tower/Tower_normal.png" type="Texture" id=3]
+[ext_resource path="res://Images/Tower/Tower_pressed.png" type="Texture" id=4]
+[ext_resource path="res://Images/Tower/TowerBase.png" type="Texture" id=5]
+[ext_resource path="res://Images/Tower/Radius.png" type="Texture" id=6]
+[ext_resource path="res://Images/Tower/Gun/Basic.png" type="Texture" id=7]
+
+[sub_resource type="CircleShape2D" id=1]
+radius = 32.0
+
+[node name="Tower" type="Node2D" groups=["TOWER"]]
+script = ExtResource( 1 )
+
+[node name="RANGE" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RANGE"]
+shape = SubResource( 1 )
+
+[node name="Handler" type="Node2D" parent="."]
+visible = false
+z_index = -1
+
+[node name="Radius" type="TextureRect" parent="Handler"]
+margin_left = -64.0
+margin_top = -64.0
+margin_right = 64.0
+margin_bottom = 64.0
+rect_pivot_offset = Vector2( 64, 64 )
+texture = ExtResource( 6 )
+
+[node name="Button" type="TextureButton" parent="."]
+margin_left = -8.0
+margin_top = -8.0
+margin_right = 8.0
+margin_bottom = 8.0
+focus_mode = 0
+enabled_focus_mode = 0
+texture_normal = ExtResource( 3 )
+texture_pressed = ExtResource( 4 )
+texture_hover = ExtResource( 2 )
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.5
+
+[node name="Base" type="Sprite" parent="."]
+texture = ExtResource( 5 )
+region_rect = Rect2( 24, 24, 16, 16 )
+
+[node name="Gun" type="Sprite" parent="."]
+texture = ExtResource( 7 )
+region_rect = Rect2( 24, 24, 16, 16 )
+
+[node name="TIP" type="Position2D" parent="Gun"]
+position = Vector2( 8, 0 )
+
+[connection signal="area_entered" from="RANGE" to="." method="_on_RANGE_area_entered"]
+[connection signal="area_exited" from="RANGE" to="." method="_on_RANGE_area_exited"]
+[connection signal="button_down" from="Button" to="." method="_on_Button_button_down"]
+[connection signal="button_up" from="Button" to="." method="_on_Button_button_up"]
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

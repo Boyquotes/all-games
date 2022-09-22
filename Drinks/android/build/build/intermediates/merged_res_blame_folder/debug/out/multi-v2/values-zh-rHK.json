@@ -1,0 +1,77 @@
+{
+    "logs": [
+        {
+            "outputFile": "C:\\Users\\nicol\\OneDrive\\Drinks\\android\\build\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-zh-rHK\\values-zh-rHK.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\nicol\\.gradle\\caches\\transforms-3\\0d60ebcb83b6415d6f37d06f9109a91d\\transformed\\jetified-play-services-ads-20.2.0\\res\\values-zh-rHK\\values.xml",
+                    "from": {
+                        "startLines": "4,5,6,7,8,9,10,11,12,13,14,15,16,17",
+                        "startColumns": "0,0,0,0,0,0,0,0,0,0,0,0,0,0",
+                        "startOffsets": "203,292,386,466,567,651,753,839,900,973,1033,1093,1157,1227",
+                        "endColumns": "88,93,79,100,83,101,85,60,72,59,59,63,69,61",
+                        "endOffsets": "291,385,465,566,650,752,838,899,972,1032,1092,1156,1226,1288"
+                    },
+                    "to": {
+                        "startLines": "4,5,6,7,8,9,10,11,12,13,14,15,16,17",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "339,432,530,614,719,807,913,1003,1068,1145,1209,1273,1341,1415",
+                        "endColumns": "92,97,83,104,87,105,89,64,76,63,63,67,73,65",
+                        "endOffsets": "427,525,609,714,802,908,998,1063,1140,1204,1268,1336,1410,1476"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\nicol\\OneDrive\\Drinks\\android\\build\\res\\values-zh-rHK\\godot_project_name_string.xml",
+                    "from": {
+                        "startLines": "3",
+                        "startColumns": "1",
+                        "startOffsets": "112",
+                        "endColumns": "63",
+                        "endOffsets": "174"
+                    },
+                    "to": {
+                        "startLines": "3",
+                        "startColumns": "4",
+                        "startOffsets": "272",
+                        "endColumns": "66",
+                        "endOffsets": "334"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\nicol\\.gradle\\caches\\transforms-3\\c5eaa7d939abb2d757f863a6b5340cdd\\transformed\\core-1.2.0\\res\\values-zh-rHK\\values-zh-rHK.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    },
+                    "to": {
+                        "startLines": "18",
+                        "startColumns": "4",
+                        "startOffsets": "1481",
+                        "endColumns": "100",
+                        "endOffsets": "1577"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\nicol\\.gradle\\caches\\transforms-3\\7bfbf15f82fbddddc312ca658b61dde9\\transformed\\jetified-play-services-basement-17.6.0\\res\\values-zh-rHK\\values.xml",
+                    "from": {
+                        "startLines": "4",
+                        "startColumns": "0",
+                        "startOffsets": "251",
+                        "endColumns": "166",
+                        "endOffsets": "417"
+                    },
+                    "to": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "105",
+                        "endColumns": "166",
+                        "endOffsets": "267"
+                    }
+                }
+            ]
+        }
+    ]
+}

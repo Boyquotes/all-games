@@ -1,0 +1,761 @@
+[gd_scene load_steps=4 format=3 uid="uid://v3t6imbfuwbq"]
+
+[ext_resource type="Script" path="res://Scripts/test_area.gd" id="1_qdcgj"]
+[ext_resource type="PackedScene" uid="uid://cnc0xrspakgkh" path="res://Scenes/slot.tscn" id="2_tktq0"]
+[ext_resource type="PackedScene" uid="uid://ccp5ww5377jw4" path="res://Scenes/item_getter.tscn" id="3_otson"]
+
+[node name="Test_area" type="Node2D"]
+script = ExtResource( "1_qdcgj" )
+
+[node name="MAIN" type="GridContainer" parent="."]
+offset_right = 1280.0
+offset_bottom = 720.0
+columns = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ACT" type="GridContainer" parent="MAIN"]
+offset_right = 916.0
+offset_bottom = 720.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="COSTUMERS" type="GridContainer" parent="MAIN/ACT"]
+offset_right = 916.0
+offset_bottom = 200.0
+rect_min_size = Vector2(0, 200)
+size_flags_horizontal = 3
+
+[node name="WORK" type="GridContainer" parent="MAIN/ACT"]
+offset_left = 52.0
+offset_top = 260.0
+offset_right = 864.0
+offset_bottom = 664.0
+size_flags_horizontal = 6
+size_flags_vertical = 6
+columns = 12
+
+[node name="SLOT" parent="MAIN/ACT/WORK" instance=ExtResource( "2_tktq0" )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_right = 64.0
+offset_bottom = 64.0
+
+[node name="SLOT2" parent="MAIN/ACT/WORK" instance=ExtResource( "2_tktq0" )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 68.0
+offset_right = 132.0
+offset_bottom = 64.0
+
+[node name="SLOT3" parent="MAIN/ACT/WORK" instance=ExtResource( "2_tktq0" )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 136.0
+offset_right = 200.0
+offset_bottom = 64.0
+
+[node name="SLOT4" parent="MAIN/ACT/WORK" instance=ExtResource( "2_tktq0" )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 204.0
+offset_right = 268.0
+offset_bottom = 64.0
+
+[node name="SLOT5" parent="MAIN/ACT/WORK" instance=ExtResource( "2_tktq0" )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 272.0
+offset_right = 336.0
+offset_bottom = 64.0
+
+[node name="SLOT6" parent="MAIN/ACT/WORK" instance=ExtResource( "2_tktq0" )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 340.0
+offset_right = 404.0
+offset_bottom = 64.0
+
+[node name="SLOT7" parent="MAIN/ACT/WORK" instance=ExtResource( "2_tktq0" )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 408.0
+offset_right = 472.0
+offset_bottom = 64.0
+
+[node name="SLOT8" parent="MAIN/ACT/WORK" instance=ExtResource( "2_tktq0" )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 476.0
+offset_right = 540.0
+offset_bottom = 64.0
+
+[node name="SLOT9" parent="MAIN/ACT/WORK" instance=ExtResource( "2_tktq0" )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 544.0
+offset_right = 608.0
+offset_bottom = 64.0
+
+[node name="SLOT10" parent="MAIN/ACT/WORK" instance=ExtResource( "2_tktq0" )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 612.0
+offset_right = 676.0
+offset_bottom = 64.0
+
+[node name="SLOT11" parent="MAIN/ACT/WORK" instance=ExtResource( "2_tktq0" )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 680.0
+offset_right = 744.0
+offset_bottom = 64.0
+
+[node name="SLOT12" parent="MAIN/ACT/WORK" instance=ExtResource( "2_tktq0" )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 748.0
+offset_right = 812.0
+offset_bottom = 64.0
+
+[node name="SLOT13" parent="MAIN/ACT/WORK" instance=ExtResource( "2_tktq0" )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_top = 68.0
+offset_right = 64.0
+offset_bottom = 132.0
+
+[node name="SLOT14" parent="MAIN/ACT/WORK" instance=ExtResource( "2_tktq0" )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 68.0
+offset_top = 68.0
+offset_right = 132.0
+offset_bottom = 132.0
+
+[node name="SLOT15" parent="MAIN/ACT/WORK" instance=ExtResource( "2_tktq0" )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 136.0
+offset_top = 68.0
+offset_right = 200.0
+offset_bottom = 132.0
+
+[node name="SLOT16" parent="MAIN/ACT/WORK" instance=ExtResource( "2_tktq0" )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 204.0
+offset_top = 68.0
+offset_right = 268.0
+offset_bottom = 132.0
+
+[node name="SLOT17" parent="MAIN/ACT/WORK" instance=ExtResource( "2_tktq0" )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 272.0
+offset_top = 68.0
+offset_right = 336.0
+offset_bottom = 132.0
+
+[node name="SLOT18" parent="MAIN/ACT/WORK" instance=ExtResource( "2_tktq0" )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 340.0
+offset_top = 68.0
+offset_right = 404.0
+offset_bottom = 132.0
+
+[node name="SLOT19" parent="MAIN/ACT/WORK" instance=ExtResource( "2_tktq0" )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 408.0
+offset_top = 68.0
+offset_right = 472.0
+offset_bottom = 132.0
+
+[node name="SLOT20" parent="MAIN/ACT/WORK" instance=ExtResource( "2_tktq0" )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 476.0
+offset_top = 68.0
+offset_right = 540.0
+offset_bottom = 132.0
+
+[node name="SLOT21" parent="MAIN/ACT/WORK" instance=ExtResource( "2_tktq0" )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 544.0
+offset_top = 68.0
+offset_right = 608.0
+offset_bottom = 132.0
+
+[node name="SLOT22" parent="MAIN/ACT/WORK" instance=ExtResource( "2_tktq0" )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 612.0
+offset_top = 68.0
+offset_right = 676.0
+offset_bottom = 132.0
+
+[node name="SLOT23" parent="MAIN/ACT/WORK" instance=ExtResource( "2_tktq0" )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 680.0
+offset_top = 68.0
+offset_right = 744.0
+offset_bottom = 132.0
+
+[node name="SLOT24" parent="MAIN/ACT/WORK" instance=ExtResource( "2_tktq0" )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 748.0
+offset_top = 68.0
+offset_right = 812.0
+offset_bottom = 132.0
+
+[node name="SLOT25" parent="MAIN/ACT/WORK" instance=ExtResource( "2_tktq0" )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_top = 136.0
+offset_right = 64.0
+offset_bottom = 200.0
+
+[node name="SLOT26" parent="MAIN/ACT/WORK" instance=ExtResource( "2_tktq0" )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 68.0
+offset_top = 136.0
+offset_right = 132.0
+offset_bottom = 200.0
+
+[node name="SLOT27" parent="MAIN/ACT/WORK" instance=ExtResource( "2_tktq0" )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 136.0
+offset_top = 136.0
+offset_right = 200.0
+offset_bottom = 200.0
+
+[node name="SLOT28" parent="MAIN/ACT/WORK" instance=ExtResource( "2_tktq0" )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 204.0
+offset_top = 136.0
+offset_right = 268.0
+offset_bottom = 200.0
+
+[node name="SLOT29" parent="MAIN/ACT/WORK" instance=ExtResource( "2_tktq0" )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 272.0
+offset_top = 136.0
+offset_right = 336.0
+offset_bottom = 200.0
+
+[node name="SLOT30" parent="MAIN/ACT/WORK" instance=ExtResource( "2_tktq0" )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 340.0
+offset_top = 136.0
+offset_right = 404.0
+offset_bottom = 200.0
+
+[node name="SLOT31" parent="MAIN/ACT/WORK" instance=ExtResource( "2_tktq0" )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 408.0
+offset_top = 136.0
+offset_right = 472.0
+offset_bottom = 200.0
+
+[node name="SLOT32" parent="MAIN/ACT/WORK" instance=ExtResource( "2_tktq0" )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 476.0
+offset_top = 136.0
+offset_right = 540.0
+offset_bottom = 200.0
+
+[node name="SLOT33" parent="MAIN/ACT/WORK" instance=ExtResource( "2_tktq0" )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 544.0
+offset_top = 136.0
+offset_right = 608.0
+offset_bottom = 200.0
+
+[node name="SLOT34" parent="MAIN/ACT/WORK" instance=ExtResource( "2_tktq0" )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 612.0
+offset_top = 136.0
+offset_right = 676.0
+offset_bottom = 200.0
+
+[node name="SLOT35" parent="MAIN/ACT/WORK" instance=ExtResource( "2_tktq0" )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 680.0
+offset_top = 136.0
+offset_right = 744.0
+offset_bottom = 200.0
+
+[node name="SLOT36" parent="MAIN/ACT/WORK" instance=ExtResource( "2_tktq0" )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 748.0
+offset_top = 136.0
+offset_right = 812.0
+offset_bottom = 200.0
+
+[node name="SLOT37" parent="MAIN/ACT/WORK" instance=ExtResource( "2_tktq0" )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_top = 204.0
+offset_right = 64.0
+offset_bottom = 268.0
+
+[node name="SLOT38" parent="MAIN/ACT/WORK" instance=ExtResource( "2_tktq0" )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 68.0
+offset_top = 204.0
+offset_right = 132.0
+offset_bottom = 268.0
+
+[node name="SLOT39" parent="MAIN/ACT/WORK" instance=ExtResource( "2_tktq0" )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 136.0
+offset_top = 204.0
+offset_right = 200.0
+offset_bottom = 268.0
+
+[node name="SLOT40" parent="MAIN/ACT/WORK" instance=ExtResource( "2_tktq0" )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 204.0
+offset_top = 204.0
+offset_right = 268.0
+offset_bottom = 268.0
+
+[node name="SLOT41" parent="MAIN/ACT/WORK" instance=ExtResource( "2_tktq0" )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 272.0
+offset_top = 204.0
+offset_right = 336.0
+offset_bottom = 268.0
+
+[node name="SLOT42" parent="MAIN/ACT/WORK" instance=ExtResource( "2_tktq0" )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 340.0
+offset_top = 204.0
+offset_right = 404.0
+offset_bottom = 268.0
+
+[node name="SLOT43" parent="MAIN/ACT/WORK" instance=ExtResource( "2_tktq0" )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 408.0
+offset_top = 204.0
+offset_right = 472.0
+offset_bottom = 268.0
+
+[node name="SLOT44" parent="MAIN/ACT/WORK" instance=ExtResource( "2_tktq0" )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 476.0
+offset_top = 204.0
+offset_right = 540.0
+offset_bottom = 268.0
+
+[node name="SLOT45" parent="MAIN/ACT/WORK" instance=ExtResource( "2_tktq0" )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 544.0
+offset_top = 204.0
+offset_right = 608.0
+offset_bottom = 268.0
+
+[node name="SLOT46" parent="MAIN/ACT/WORK" instance=ExtResource( "2_tktq0" )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 612.0
+offset_top = 204.0
+offset_right = 676.0
+offset_bottom = 268.0
+
+[node name="SLOT47" parent="MAIN/ACT/WORK" instance=ExtResource( "2_tktq0" )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 680.0
+offset_top = 204.0
+offset_right = 744.0
+offset_bottom = 268.0
+
+[node name="SLOT48" parent="MAIN/ACT/WORK" instance=ExtResource( "2_tktq0" )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 748.0
+offset_top = 204.0
+offset_right = 812.0
+offset_bottom = 268.0
+
+[node name="SLOT49" parent="MAIN/ACT/WORK" instance=ExtResource( "2_tktq0" )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_top = 272.0
+offset_right = 64.0
+offset_bottom = 336.0
+
+[node name="SLOT50" parent="MAIN/ACT/WORK" instance=ExtResource( "2_tktq0" )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 68.0
+offset_top = 272.0
+offset_right = 132.0
+offset_bottom = 336.0
+
+[node name="SLOT51" parent="MAIN/ACT/WORK" instance=ExtResource( "2_tktq0" )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 136.0
+offset_top = 272.0
+offset_right = 200.0
+offset_bottom = 336.0
+
+[node name="SLOT52" parent="MAIN/ACT/WORK" instance=ExtResource( "2_tktq0" )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 204.0
+offset_top = 272.0
+offset_right = 268.0
+offset_bottom = 336.0
+
+[node name="SLOT53" parent="MAIN/ACT/WORK" instance=ExtResource( "2_tktq0" )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 272.0
+offset_top = 272.0
+offset_right = 336.0
+offset_bottom = 336.0
+
+[node name="SLOT54" parent="MAIN/ACT/WORK" instance=ExtResource( "2_tktq0" )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 340.0
+offset_top = 272.0
+offset_right = 404.0
+offset_bottom = 336.0
+
+[node name="SLOT55" parent="MAIN/ACT/WORK" instance=ExtResource( "2_tktq0" )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 408.0
+offset_top = 272.0
+offset_right = 472.0
+offset_bottom = 336.0
+
+[node name="SLOT56" parent="MAIN/ACT/WORK" instance=ExtResource( "2_tktq0" )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 476.0
+offset_top = 272.0
+offset_right = 540.0
+offset_bottom = 336.0
+
+[node name="SLOT57" parent="MAIN/ACT/WORK" instance=ExtResource( "2_tktq0" )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 544.0
+offset_top = 272.0
+offset_right = 608.0
+offset_bottom = 336.0
+
+[node name="SLOT58" parent="MAIN/ACT/WORK" instance=ExtResource( "2_tktq0" )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 612.0
+offset_top = 272.0
+offset_right = 676.0
+offset_bottom = 336.0
+
+[node name="SLOT59" parent="MAIN/ACT/WORK" instance=ExtResource( "2_tktq0" )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 680.0
+offset_top = 272.0
+offset_right = 744.0
+offset_bottom = 336.0
+
+[node name="SLOT60" parent="MAIN/ACT/WORK" instance=ExtResource( "2_tktq0" )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 748.0
+offset_top = 272.0
+offset_right = 812.0
+offset_bottom = 336.0
+
+[node name="SLOT61" parent="MAIN/ACT/WORK" instance=ExtResource( "2_tktq0" )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_top = 340.0
+offset_right = 64.0
+offset_bottom = 404.0
+
+[node name="SLOT62" parent="MAIN/ACT/WORK" instance=ExtResource( "2_tktq0" )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 68.0
+offset_top = 340.0
+offset_right = 132.0
+offset_bottom = 404.0
+
+[node name="SLOT63" parent="MAIN/ACT/WORK" instance=ExtResource( "2_tktq0" )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 136.0
+offset_top = 340.0
+offset_right = 200.0
+offset_bottom = 404.0
+
+[node name="SLOT64" parent="MAIN/ACT/WORK" instance=ExtResource( "2_tktq0" )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 204.0
+offset_top = 340.0
+offset_right = 268.0
+offset_bottom = 404.0
+
+[node name="SLOT65" parent="MAIN/ACT/WORK" instance=ExtResource( "2_tktq0" )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 272.0
+offset_top = 340.0
+offset_right = 336.0
+offset_bottom = 404.0
+
+[node name="SLOT66" parent="MAIN/ACT/WORK" instance=ExtResource( "2_tktq0" )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 340.0
+offset_top = 340.0
+offset_right = 404.0
+offset_bottom = 404.0
+
+[node name="SLOT67" parent="MAIN/ACT/WORK" instance=ExtResource( "2_tktq0" )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 408.0
+offset_top = 340.0
+offset_right = 472.0
+offset_bottom = 404.0
+
+[node name="SLOT68" parent="MAIN/ACT/WORK" instance=ExtResource( "2_tktq0" )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 476.0
+offset_top = 340.0
+offset_right = 540.0
+offset_bottom = 404.0
+
+[node name="SLOT69" parent="MAIN/ACT/WORK" instance=ExtResource( "2_tktq0" )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 544.0
+offset_top = 340.0
+offset_right = 608.0
+offset_bottom = 404.0
+
+[node name="SLOT70" parent="MAIN/ACT/WORK" instance=ExtResource( "2_tktq0" )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 612.0
+offset_top = 340.0
+offset_right = 676.0
+offset_bottom = 404.0
+
+[node name="SLOT71" parent="MAIN/ACT/WORK" instance=ExtResource( "2_tktq0" )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 680.0
+offset_top = 340.0
+offset_right = 744.0
+offset_bottom = 404.0
+
+[node name="SLOT72" parent="MAIN/ACT/WORK" instance=ExtResource( "2_tktq0" )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 748.0
+offset_top = 340.0
+offset_right = 812.0
+offset_bottom = 404.0
+
+[node name="INV" type="GridContainer" parent="MAIN"]
+offset_left = 920.0
+offset_right = 1280.0
+offset_bottom = 720.0
+rect_min_size = Vector2(360, 0)
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="MAIN/INV"]
+offset_left = 132.0
+offset_right = 228.0
+offset_bottom = 26.0
+size_flags_horizontal = 6
+text = "SHOP NAME"
+
+[node name="Label3" type="Label" parent="MAIN/INV"]
+offset_left = 135.0
+offset_top = 30.0
+offset_right = 224.0
+offset_bottom = 56.0
+size_flags_horizontal = 6
+text = "SHOP ICON"
+
+[node name="Label2" type="Label" parent="MAIN/INV"]
+offset_left = 150.0
+offset_top = 60.0
+offset_right = 209.0
+offset_bottom = 86.0
+size_flags_horizontal = 6
+text = "MONEY
+"
+
+[node name="INV" type="ScrollContainer" parent="MAIN/INV"]
+offset_top = 90.0
+offset_right = 360.0
+offset_bottom = 720.0
+rect_pivot_offset = Vector2(-503, 134)
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="V" type="VBoxContainer" parent="MAIN/INV/INV"]
+offset_right = 360.0
+offset_bottom = 630.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="G" type="GridContainer" parent="MAIN/INV/INV/V"]
+offset_left = 12.0
+offset_top = 179.0
+offset_right = 348.0
+offset_bottom = 451.0
+size_flags_horizontal = 6
+size_flags_vertical = 6
+columns = 5
+
+[node name="Item_getter" parent="MAIN/INV/INV/V/G" instance=ExtResource( "3_otson" )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_right = 64.0
+offset_bottom = 88.0
+
+[node name="Item_getter2" parent="MAIN/INV/INV/V/G" instance=ExtResource( "3_otson" )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 68.0
+offset_right = 132.0
+offset_bottom = 88.0
+
+[node name="Item_getter3" parent="MAIN/INV/INV/V/G" instance=ExtResource( "3_otson" )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 136.0
+offset_right = 200.0
+offset_bottom = 88.0
+
+[node name="Item_getter4" parent="MAIN/INV/INV/V/G" instance=ExtResource( "3_otson" )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 204.0
+offset_right = 268.0
+offset_bottom = 88.0
+
+[node name="Item_getter5" parent="MAIN/INV/INV/V/G" instance=ExtResource( "3_otson" )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 272.0
+offset_right = 336.0
+offset_bottom = 88.0
+
+[node name="Item_getter6" parent="MAIN/INV/INV/V/G" instance=ExtResource( "3_otson" )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_top = 92.0
+offset_right = 64.0
+offset_bottom = 180.0
+
+[node name="Item_getter7" parent="MAIN/INV/INV/V/G" instance=ExtResource( "3_otson" )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 68.0
+offset_top = 92.0
+offset_right = 132.0
+offset_bottom = 180.0
+
+[node name="Item_getter8" parent="MAIN/INV/INV/V/G" instance=ExtResource( "3_otson" )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 136.0
+offset_top = 92.0
+offset_right = 200.0
+offset_bottom = 180.0
+
+[node name="Item_getter9" parent="MAIN/INV/INV/V/G" instance=ExtResource( "3_otson" )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 204.0
+offset_top = 92.0
+offset_right = 268.0
+offset_bottom = 180.0
+
+[node name="Item_getter10" parent="MAIN/INV/INV/V/G" instance=ExtResource( "3_otson" )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 272.0
+offset_top = 92.0
+offset_right = 336.0
+offset_bottom = 180.0
+
+[node name="Item_getter11" parent="MAIN/INV/INV/V/G" instance=ExtResource( "3_otson" )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_top = 184.0
+offset_right = 64.0
+offset_bottom = 272.0
+
+[node name="Item_getter12" parent="MAIN/INV/INV/V/G" instance=ExtResource( "3_otson" )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 68.0
+offset_top = 184.0
+offset_right = 132.0
+offset_bottom = 272.0
+
+[node name="Item_getter13" parent="MAIN/INV/INV/V/G" instance=ExtResource( "3_otson" )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 136.0
+offset_top = 184.0
+offset_right = 200.0
+offset_bottom = 272.0
+
+[node name="Item_getter14" parent="MAIN/INV/INV/V/G" instance=ExtResource( "3_otson" )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 204.0
+offset_top = 184.0
+offset_right = 268.0
+offset_bottom = 272.0
+
+[node name="Item_getter15" parent="MAIN/INV/INV/V/G" instance=ExtResource( "3_otson" )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 272.0
+offset_top = 184.0
+offset_right = 336.0
+offset_bottom = 272.0

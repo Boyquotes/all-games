@@ -1,0 +1,236 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://Scenes/History/InterestellarInfos.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scenes/Interestellar.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scenes/History/Enemies/Turret.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scenes/History/BaseHistoryScene.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scenes/History/Enemies/HistoryEnemy.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Scenes/History/Enemies/Rounder.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Scenes/History/Enemies/EnemiesGenerator.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Scenes/History/Traps/LazerTrap.tscn" type="PackedScene" id=8]
+
+[node name="0-0" type="Node2D"]
+
+[node name="BaseHistoryScenes" type="Node2D" parent="."]
+
+[node name="BaseHistoryScene" parent="BaseHistoryScenes" instance=ExtResource( 4 )]
+position = Vector2( 672, 384 )
+
+[node name="BaseHistoryScene16" parent="BaseHistoryScenes" instance=ExtResource( 4 )]
+position = Vector2( 11424, 384 )
+DOWN = true
+RIGHT = true
+
+[node name="BaseHistoryScene14" parent="BaseHistoryScenes" instance=ExtResource( 4 )]
+position = Vector2( 8736, 384 )
+UP = true
+DOWN = true
+
+[node name="BaseHistoryScene5" parent="BaseHistoryScenes" instance=ExtResource( 4 )]
+position = Vector2( -672, -384 )
+UP = true
+DOWN = true
+LEFT = true
+
+[node name="BaseHistoryScene9" parent="BaseHistoryScenes" instance=ExtResource( 4 )]
+position = Vector2( 4704, 384 )
+UP = true
+DOWN = true
+
+[node name="BaseHistoryScene10" parent="BaseHistoryScenes" instance=ExtResource( 4 )]
+position = Vector2( 6048, 384 )
+UP = true
+DOWN = true
+
+[node name="BaseHistoryScene8" parent="BaseHistoryScenes" instance=ExtResource( 4 )]
+position = Vector2( -672, 384 )
+UP = true
+DOWN = true
+LEFT = true
+
+[node name="BaseHistoryScene12" parent="BaseHistoryScenes" instance=ExtResource( 4 )]
+position = Vector2( 3360, 384 )
+UP = true
+DOWN = true
+
+[node name="BaseHistoryScene3" parent="BaseHistoryScenes" instance=ExtResource( 4 )]
+position = Vector2( 2016, -384 )
+UP = true
+RIGHT = true
+LEFT = true
+
+[node name="BaseHistoryScene4" parent="BaseHistoryScenes" instance=ExtResource( 4 )]
+position = Vector2( 672, 1152 )
+DOWN = true
+RIGHT = true
+LEFT = true
+
+[node name="BaseHistoryScene2" parent="BaseHistoryScenes" instance=ExtResource( 4 )]
+position = Vector2( 2016, 384 )
+
+[node name="BaseHistoryScene13" parent="BaseHistoryScenes" instance=ExtResource( 4 )]
+position = Vector2( 7392, 384 )
+UP = true
+DOWN = true
+
+[node name="BaseHistoryScene6" parent="BaseHistoryScenes" instance=ExtResource( 4 )]
+position = Vector2( 2016, 1152 )
+DOWN = true
+RIGHT = true
+LEFT = true
+
+[node name="BaseHistoryScene11" parent="BaseHistoryScenes" instance=ExtResource( 4 )]
+position = Vector2( 10080, 384 )
+UP = true
+DOWN = true
+
+[node name="BaseHistoryScene7" parent="BaseHistoryScenes" instance=ExtResource( 4 )]
+position = Vector2( 672, -384 )
+UP = true
+RIGHT = true
+LEFT = true
+
+[node name="BaseHistoryScene15" parent="BaseHistoryScenes" instance=ExtResource( 4 )]
+position = Vector2( 11424, -384 )
+UP = true
+RIGHT = true
+LEFT = true
+
+[node name="Unchange" type="Node2D" parent="."]
+
+[node name="Player" parent="Unchange" instance=ExtResource( 2 )]
+position = Vector2( 408, 384 )
+
+[node name="InterestellarInfos" parent="Unchange" instance=ExtResource( 1 )]
+position = Vector2( 680, 384 )
+
+[node name="Enemies" type="Node2D" parent="."]
+
+[node name="Turret" parent="Enemies" instance=ExtResource( 3 )]
+position = Vector2( 2112, 288 )
+
+[node name="Turret2" parent="Enemies" instance=ExtResource( 3 )]
+position = Vector2( 1920, 288 )
+
+[node name="Turret5" parent="Enemies" instance=ExtResource( 3 )]
+position = Vector2( -688, -384 )
+
+[node name="Turret3" parent="Enemies" instance=ExtResource( 3 )]
+position = Vector2( 1920, 480 )
+
+[node name="Turret9" parent="Enemies" instance=ExtResource( 3 )]
+position = Vector2( 10088, 296 )
+
+[node name="Turret10" parent="Enemies" instance=ExtResource( 3 )]
+position = Vector2( 10088, 488 )
+
+[node name="Turret6" parent="Enemies" instance=ExtResource( 3 )]
+position = Vector2( 360, -400 )
+SHOOT_DIR = "opposite"
+
+[node name="Turret7" parent="Enemies" instance=ExtResource( 3 )]
+position = Vector2( 688, -408 )
+BULLET_DELAY = 0.2
+SHOOT_DIR = "clockwise"
+
+[node name="Turret11" parent="Enemies" instance=ExtResource( 3 )]
+position = Vector2( 11424, 384 )
+BULLET_DELAY = 0.2
+SHOOT_DIR = "clockwise"
+
+[node name="Turret12" parent="Enemies" instance=ExtResource( 3 )]
+position = Vector2( 8728, 392 )
+BULLET_DELAY = 0.2
+SHOOT_DIR = "counterclockwise"
+
+[node name="Turret8" parent="Enemies" instance=ExtResource( 3 )]
+position = Vector2( 1008, -408 )
+BULLET_DELAY = 0.2
+SHOOT_DIR = "counterclockwise"
+
+[node name="Turret4" parent="Enemies" instance=ExtResource( 3 )]
+position = Vector2( 2112, 480 )
+
+[node name="HistoryEnemy" parent="Enemies" instance=ExtResource( 5 )]
+position = Vector2( 1744, -536 )
+
+[node name="HistoryEnemy4" parent="Enemies" instance=ExtResource( 5 )]
+position = Vector2( -1128, -560 )
+
+[node name="HistoryEnemy5" parent="Enemies" instance=ExtResource( 5 )]
+position = Vector2( 5016, 400 )
+
+[node name="HistoryEnemy8" parent="Enemies" instance=ExtResource( 5 )]
+position = Vector2( 6392, 376 )
+
+[node name="HistoryEnemy6" parent="Enemies" instance=ExtResource( 5 )]
+position = Vector2( 4408, 432 )
+
+[node name="HistoryEnemy7" parent="Enemies" instance=ExtResource( 5 )]
+position = Vector2( 5728, 368 )
+
+[node name="HistoryEnemy10" parent="Enemies" instance=ExtResource( 5 )]
+position = Vector2( 3656, 376 )
+
+[node name="HistoryEnemy11" parent="Enemies" instance=ExtResource( 5 )]
+position = Vector2( 3024, 392 )
+
+[node name="HistoryEnemy3" parent="Enemies" instance=ExtResource( 5 )]
+position = Vector2( 2088, -440 )
+
+[node name="HistoryEnemy9" parent="Enemies" instance=ExtResource( 5 )]
+position = Vector2( 10080, 400 )
+
+[node name="HistoryEnemy2" parent="Enemies" instance=ExtResource( 5 )]
+position = Vector2( 2376, -504 )
+
+[node name="Rounder" parent="Enemies" instance=ExtResource( 6 )]
+position = Vector2( 336, 1152 )
+
+[node name="Rounder6" parent="Enemies" instance=ExtResource( 6 )]
+position = Vector2( 11424, 384 )
+
+[node name="Rounder5" parent="Enemies" instance=ExtResource( 6 )]
+position = Vector2( 7384, 392 )
+
+[node name="Rounder4" parent="Enemies" instance=ExtResource( 6 )]
+position = Vector2( 6040, 448 )
+
+[node name="Rounder3" parent="Enemies" instance=ExtResource( 6 )]
+position = Vector2( -680, -384 )
+
+[node name="Rounder2" parent="Enemies" instance=ExtResource( 6 )]
+position = Vector2( 984, 1160 )
+
+[node name="EnemiesGenerator2" parent="Enemies" instance=ExtResource( 7 )]
+position = Vector2( 2024, 1184 )
+
+[node name="Traps" type="Node2D" parent="."]
+
+[node name="LazerTrap" parent="Traps" instance=ExtResource( 8 )]
+position = Vector2( -328, 0 )
+
+[node name="LazerTrap4" parent="Traps" instance=ExtResource( 8 )]
+position = Vector2( 3360, 0 )
+
+[node name="LazerTrap5" parent="Traps" instance=ExtResource( 8 )]
+position = Vector2( 7088, 0 )
+
+[node name="LazerTrap6" parent="Traps" instance=ExtResource( 8 )]
+position = Vector2( 7672, 0 )
+
+[node name="LazerTrap7" parent="Traps" instance=ExtResource( 8 )]
+position = Vector2( 8424, 0 )
+
+[node name="LazerTrap8" parent="Traps" instance=ExtResource( 8 )]
+position = Vector2( 9008, 0 )
+
+[node name="LazerTrap2" parent="Traps" instance=ExtResource( 8 )]
+position = Vector2( -824, 0 )
+
+[node name="LazerTrap3" parent="Traps" instance=ExtResource( 8 )]
+position = Vector2( -1160, 0 )
+
+[node name="LazerTrap9" parent="Traps" instance=ExtResource( 8 )]
+position = Vector2( 10744, -384 )
+VERTICAL = false

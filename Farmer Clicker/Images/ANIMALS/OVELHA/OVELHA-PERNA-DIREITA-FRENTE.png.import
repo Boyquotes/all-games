@@ -1,0 +1,35 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path="res://.import/OVELHA-PERNA-DIREITA-FRENTE.png-a4a6e2de6f0cc21ac6007820a5380c18.stex"
+metadata={
+"vram_texture": false
+}
+
+[deps]
+
+source_file="res://Images/ANIMALS/OVELHA/OVELHA-PERNA-DIREITA-FRENTE.png"
+dest_files=[ "res://.import/OVELHA-PERNA-DIREITA-FRENTE.png-a4a6e2de6f0cc21ac6007820a5380c18.stex" ]
+
+[params]
+
+compress/mode=0
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/bptc_ldr=0
+compress/normal_map=0
+flags/repeat=0
+flags/filter=true
+flags/mipmaps=false
+flags/anisotropic=false
+flags/srgb=2
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+process/invert_color=false
+process/normal_map_invert_y=false
+stream=false
+size_limit=0
+detect_3d=false
+svg/scale=1.0

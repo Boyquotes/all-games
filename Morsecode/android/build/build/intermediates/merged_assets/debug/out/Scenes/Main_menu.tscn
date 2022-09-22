@@ -1,0 +1,602 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://Scripts/Main_menu.gd" type="Script" id=1]
+[ext_resource path="res://Styles/Button_disabled.tres" type="StyleBox" id=2]
+[ext_resource path="res://Styles/Button.tres" type="StyleBox" id=3]
+[ext_resource path="res://Styles/Button_hover.tres" type="StyleBox" id=4]
+[ext_resource path="res://Styles/Button_pressed.tres" type="StyleBox" id=5]
+[ext_resource path="res://Styles/Label_style.tres" type="StyleBox" id=6]
+[ext_resource path="res://Sounds/Dot_0.wav" type="AudioStream" id=7]
+[ext_resource path="res://addons/admob/test/Example.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Images/STAR.png" type="Texture" id=9]
+
+[node name="Main_menu" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="Example" parent="." instance=ExtResource( 8 )]
+visible = false
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_left = -12.0
+margin_top = -15.0
+margin_right = 420.0
+margin_bottom = 788.0
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="GridContainer" type="GridContainer" parent="."]
+margin_left = 78.0
+margin_top = 338.0
+margin_right = 335.0
+margin_bottom = 631.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button4" type="Button" parent="GridContainer"]
+margin_right = 257.0
+margin_bottom = 70.0
+focus_mode = 0
+size_flags_horizontal = 7
+size_flags_vertical = 3
+custom_styles/hover = ExtResource( 4 )
+custom_styles/pressed = ExtResource( 5 )
+custom_styles/focus = ExtResource( 3 )
+custom_styles/disabled = ExtResource( 2 )
+custom_styles/normal = ExtResource( 3 )
+enabled_focus_mode = 0
+text = "Tutorial"
+
+[node name="Button2" type="Button" parent="GridContainer"]
+margin_top = 74.0
+margin_right = 257.0
+margin_bottom = 144.0
+focus_mode = 0
+size_flags_horizontal = 7
+size_flags_vertical = 3
+custom_styles/hover = ExtResource( 4 )
+custom_styles/pressed = ExtResource( 5 )
+custom_styles/focus = ExtResource( 3 )
+custom_styles/disabled = ExtResource( 2 )
+custom_styles/normal = ExtResource( 3 )
+enabled_focus_mode = 0
+text = "Challenges"
+
+[node name="Button" type="Button" parent="GridContainer"]
+margin_top = 148.0
+margin_right = 257.0
+margin_bottom = 218.0
+focus_mode = 0
+size_flags_horizontal = 7
+size_flags_vertical = 3
+custom_styles/hover = ExtResource( 4 )
+custom_styles/pressed = ExtResource( 5 )
+custom_styles/focus = ExtResource( 3 )
+custom_styles/disabled = ExtResource( 2 )
+custom_styles/normal = ExtResource( 3 )
+enabled_focus_mode = 0
+text = "Translator"
+
+[node name="Button3" type="Button" parent="GridContainer"]
+margin_top = 222.0
+margin_right = 257.0
+margin_bottom = 292.0
+focus_mode = 0
+size_flags_horizontal = 7
+size_flags_vertical = 3
+custom_styles/hover = ExtResource( 4 )
+custom_styles/pressed = ExtResource( 5 )
+custom_styles/focus = ExtResource( 3 )
+custom_styles/disabled = ExtResource( 2 )
+custom_styles/normal = ExtResource( 3 )
+enabled_focus_mode = 0
+text = "Configurations"
+
+[node name="GridContainer2" type="GridContainer" parent="."]
+visible = false
+margin_left = 78.0
+margin_top = 338.0
+margin_right = 335.0
+margin_bottom = 631.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Traducao" type="Button" parent="GridContainer2"]
+margin_right = 257.0
+margin_bottom = 70.0
+focus_mode = 0
+size_flags_horizontal = 7
+size_flags_vertical = 3
+custom_styles/hover = ExtResource( 4 )
+custom_styles/pressed = ExtResource( 5 )
+custom_styles/focus = ExtResource( 3 )
+custom_styles/disabled = ExtResource( 2 )
+custom_styles/normal = ExtResource( 3 )
+enabled_focus_mode = 0
+text = "Translate challenge"
+
+[node name="escrita" type="Button" parent="GridContainer2"]
+margin_top = 74.0
+margin_right = 257.0
+margin_bottom = 144.0
+focus_mode = 0
+size_flags_horizontal = 7
+size_flags_vertical = 3
+custom_styles/hover = ExtResource( 4 )
+custom_styles/pressed = ExtResource( 5 )
+custom_styles/focus = ExtResource( 3 )
+custom_styles/disabled = ExtResource( 2 )
+custom_styles/normal = ExtResource( 3 )
+enabled_focus_mode = 0
+text = "Writing challenge"
+
+[node name="dialogo" type="Button" parent="GridContainer2"]
+margin_top = 148.0
+margin_right = 257.0
+margin_bottom = 218.0
+size_flags_horizontal = 7
+size_flags_vertical = 3
+custom_styles/hover = ExtResource( 4 )
+custom_styles/pressed = ExtResource( 5 )
+custom_styles/focus = ExtResource( 3 )
+custom_styles/disabled = ExtResource( 2 )
+custom_styles/normal = ExtResource( 3 )
+disabled = true
+enabled_focus_mode = 0
+text = "Story challenge"
+
+[node name="Return" type="Button" parent="GridContainer2"]
+margin_top = 222.0
+margin_right = 257.0
+margin_bottom = 292.0
+focus_mode = 0
+size_flags_horizontal = 7
+size_flags_vertical = 3
+custom_styles/hover = ExtResource( 4 )
+custom_styles/pressed = ExtResource( 5 )
+custom_styles/focus = ExtResource( 3 )
+custom_styles/disabled = ExtResource( 2 )
+custom_styles/normal = ExtResource( 3 )
+enabled_focus_mode = 0
+text = "Return"
+
+[node name="Label" type="Label" parent="."]
+margin_left = 6.0
+margin_top = 693.0
+margin_right = 95.0
+margin_bottom = 730.0
+custom_styles/normal = ExtResource( 6 )
+text = " v1.0.0 "
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RATE_THE_APP" type="Button" parent="."]
+margin_left = 178.0
+margin_top = 671.0
+margin_right = 407.0
+margin_bottom = 728.0
+focus_mode = 0
+custom_styles/hover = ExtResource( 4 )
+custom_styles/pressed = ExtResource( 5 )
+custom_styles/focus = ExtResource( 3 )
+custom_styles/disabled = ExtResource( 2 )
+custom_styles/normal = ExtResource( 3 )
+disabled = true
+enabled_focus_mode = 0
+text = " Rate the app "
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="."]
+margin_left = 73.0
+margin_top = 115.0
+margin_right = 207.0
+margin_bottom = 192.0
+rect_scale = Vector2( 2, 2 )
+text = "   MORSE   
+PRO"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label3" type="Label" parent="."]
+margin_left = 101.0
+margin_top = 238.0
+margin_right = 313.0
+margin_bottom = 315.0
+text = "Learn morse code"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Configurations" type="Node2D" parent="."]
+
+[node name="GridContainer2" type="GridContainer" parent="Configurations"]
+visible = false
+margin_left = 80.0
+margin_top = 327.0
+margin_right = 335.0
+margin_bottom = 646.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Configurations" type="Label" parent="Configurations/GridContainer2"]
+margin_right = 255.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 0, 50 )
+custom_styles/normal = ExtResource( 6 )
+text = "Configurations"
+align = 1
+valign = 1
+
+[node name="Effects" type="Label" parent="Configurations/GridContainer2"]
+margin_top = 54.0
+margin_right = 255.0
+margin_bottom = 91.0
+text = "Effects volume"
+align = 1
+valign = 1
+
+[node name="Effects_volume" type="GridContainer" parent="Configurations/GridContainer2"]
+margin_top = 95.0
+margin_right = 255.0
+margin_bottom = 137.0
+size_flags_horizontal = 3
+columns = 3
+
+[node name="minus" type="Button" parent="Configurations/GridContainer2/Effects_volume"]
+margin_right = 82.0
+margin_bottom = 42.0
+focus_mode = 0
+size_flags_horizontal = 7
+size_flags_vertical = 3
+custom_styles/hover = ExtResource( 4 )
+custom_styles/pressed = ExtResource( 5 )
+custom_styles/focus = ExtResource( 3 )
+custom_styles/disabled = ExtResource( 2 )
+custom_styles/normal = ExtResource( 3 )
+enabled_focus_mode = 0
+text = "-"
+
+[node name="Label" type="Label" parent="Configurations/GridContainer2/Effects_volume"]
+margin_left = 86.0
+margin_right = 168.0
+margin_bottom = 42.0
+size_flags_horizontal = 3
+size_flags_vertical = 5
+text = "0"
+align = 1
+valign = 1
+
+[node name="plus" type="Button" parent="Configurations/GridContainer2/Effects_volume"]
+margin_left = 172.0
+margin_right = 254.0
+margin_bottom = 42.0
+focus_mode = 0
+size_flags_horizontal = 7
+size_flags_vertical = 3
+custom_styles/hover = ExtResource( 4 )
+custom_styles/pressed = ExtResource( 5 )
+custom_styles/focus = ExtResource( 3 )
+custom_styles/disabled = ExtResource( 2 )
+custom_styles/normal = ExtResource( 3 )
+enabled_focus_mode = 0
+text = "+"
+
+[node name="GridContainer" type="GridContainer" parent="Configurations/GridContainer2"]
+margin_top = 141.0
+margin_right = 255.0
+margin_bottom = 186.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+columns = 2
+
+[node name="Label" type="Label" parent="Configurations/GridContainer2/GridContainer"]
+margin_right = 191.0
+margin_bottom = 45.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_styles/normal = ExtResource( 6 )
+text = "Music"
+align = 1
+valign = 1
+
+[node name="Music" type="CheckBox" parent="Configurations/GridContainer2/GridContainer"]
+margin_left = 195.0
+margin_right = 255.0
+margin_bottom = 45.0
+size_flags_vertical = 3
+pressed = true
+text = "on"
+
+[node name="Music_volume2" type="Label" parent="Configurations/GridContainer2"]
+margin_top = 190.0
+margin_right = 255.0
+margin_bottom = 227.0
+text = "Music volume"
+align = 1
+valign = 1
+
+[node name="Music_volume" type="GridContainer" parent="Configurations/GridContainer2"]
+margin_top = 231.0
+margin_right = 255.0
+margin_bottom = 273.0
+size_flags_horizontal = 3
+columns = 3
+
+[node name="minus_music" type="Button" parent="Configurations/GridContainer2/Music_volume"]
+margin_right = 82.0
+margin_bottom = 42.0
+focus_mode = 0
+size_flags_horizontal = 7
+size_flags_vertical = 3
+custom_styles/hover = ExtResource( 4 )
+custom_styles/pressed = ExtResource( 5 )
+custom_styles/focus = ExtResource( 3 )
+custom_styles/disabled = ExtResource( 2 )
+custom_styles/normal = ExtResource( 3 )
+enabled_focus_mode = 0
+text = "-"
+
+[node name="Label" type="Label" parent="Configurations/GridContainer2/Music_volume"]
+margin_left = 86.0
+margin_right = 168.0
+margin_bottom = 42.0
+size_flags_horizontal = 3
+size_flags_vertical = 5
+text = "0"
+align = 1
+valign = 1
+
+[node name="plus_music" type="Button" parent="Configurations/GridContainer2/Music_volume"]
+margin_left = 172.0
+margin_right = 254.0
+margin_bottom = 42.0
+focus_mode = 0
+size_flags_horizontal = 7
+size_flags_vertical = 3
+custom_styles/hover = ExtResource( 4 )
+custom_styles/pressed = ExtResource( 5 )
+custom_styles/focus = ExtResource( 3 )
+custom_styles/disabled = ExtResource( 2 )
+custom_styles/normal = ExtResource( 3 )
+enabled_focus_mode = 0
+text = "+"
+
+[node name="Return" type="Button" parent="Configurations/GridContainer2"]
+margin_top = 277.0
+margin_right = 255.0
+margin_bottom = 319.0
+focus_mode = 0
+size_flags_horizontal = 7
+size_flags_vertical = 3
+custom_styles/hover = ExtResource( 4 )
+custom_styles/pressed = ExtResource( 5 )
+custom_styles/focus = ExtResource( 3 )
+custom_styles/disabled = ExtResource( 2 )
+custom_styles/normal = ExtResource( 3 )
+enabled_focus_mode = 0
+text = "Return"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 7 )
+pitch_scale = 0.8
+bus = "Effects"
+
+[node name="asdasd" type="Button" parent="."]
+visible = false
+margin_left = 19.0
+margin_top = 60.0
+margin_right = 82.0
+margin_bottom = 113.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="STARS" type="GridContainer" parent="."]
+visible = false
+margin_left = 118.0
+margin_top = 500.0
+margin_right = 304.0
+margin_bottom = 540.0
+columns = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="STARS"]
+margin_top = 1.0
+margin_right = 48.0
+margin_bottom = 38.0
+text = "150"
+
+[node name="TextureRect" type="TextureRect" parent="STARS"]
+margin_left = 52.0
+margin_right = 92.0
+margin_bottom = 40.0
+texture = ExtResource( 9 )
+
+[node name="Label2" type="Label" parent="STARS"]
+margin_left = 96.0
+margin_top = 1.0
+margin_right = 202.0
+margin_bottom = 38.0
+text = "Required"
+
+[node name="YOURS_STARS" type="GridContainer" parent="."]
+visible = false
+margin_left = 73.0
+margin_top = 290.0
+margin_right = 340.0
+margin_bottom = 371.0
+columns = 4
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="YOU_HAVE" type="Label" parent="YOURS_STARS"]
+margin_top = 4.0
+margin_right = 138.0
+margin_bottom = 41.0
+text = "You have:   "
+
+[node name="Label" type="Label" parent="YOURS_STARS"]
+margin_left = 142.0
+margin_top = 4.0
+margin_right = 174.0
+margin_bottom = 41.0
+size_flags_horizontal = 6
+text = "50"
+
+[node name="TextureRect" type="TextureRect" parent="YOURS_STARS"]
+margin_left = 178.0
+margin_right = 218.0
+margin_bottom = 45.0
+size_flags_horizontal = 6
+texture = ExtResource( 9 )
+
+[node name="AD" type="Button" parent="YOURS_STARS"]
+margin_left = 222.0
+margin_right = 267.0
+margin_bottom = 45.0
+rect_min_size = Vector2( 45, 45 )
+custom_styles/hover = ExtResource( 4 )
+custom_styles/pressed = ExtResource( 5 )
+custom_styles/focus = ExtResource( 3 )
+custom_styles/disabled = ExtResource( 2 )
+custom_styles/normal = ExtResource( 3 )
+text = "+"
+
+[node name="Congrats" type="Node2D" parent="."]
+visible = false
+
+[node name="ColorRect" type="ColorRect" parent="Congrats"]
+margin_left = -83.0
+margin_top = -40.0
+margin_right = 511.0
+margin_bottom = 838.0
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="GridContainer" type="GridContainer" parent="Congrats"]
+margin_left = 18.0
+margin_top = 184.0
+margin_right = 396.0
+margin_bottom = 561.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Congrats/GridContainer"]
+margin_right = 378.0
+margin_bottom = 318.0
+size_flags_horizontal = 3
+size_flags_vertical = 7
+custom_styles/normal = ExtResource( 6 )
+text = "Congrats, you have concluded the "
+align = 1
+valign = 1
+autowrap = true
+clip_text = true
+
+[node name="THANKS_CONGRATS" type="Button" parent="Congrats/GridContainer"]
+margin_top = 322.0
+margin_right = 378.0
+margin_bottom = 377.0
+rect_min_size = Vector2( 0, 55 )
+focus_mode = 0
+size_flags_horizontal = 5
+custom_styles/hover = ExtResource( 4 )
+custom_styles/pressed = ExtResource( 5 )
+custom_styles/focus = ExtResource( 3 )
+custom_styles/disabled = ExtResource( 2 )
+custom_styles/normal = ExtResource( 3 )
+enabled_focus_mode = 0
+text = "OK!"
+
+[node name="Verify_internet_connection" type="Node2D" parent="."]
+visible = false
+
+[node name="ColorRect" type="ColorRect" parent="Verify_internet_connection"]
+margin_left = -83.0
+margin_top = -40.0
+margin_right = 511.0
+margin_bottom = 767.0
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Verify_internet_connection"]
+margin_left = 18.0
+margin_top = 636.0
+margin_right = 396.0
+margin_bottom = 705.0
+size_flags_horizontal = 3
+size_flags_vertical = 7
+custom_styles/normal = ExtResource( 6 )
+text = "Cheking internet connection"
+align = 1
+valign = 1
+autowrap = true
+clip_text = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="Verify_internet_connection"]
+margin_left = 73.0
+margin_top = 115.0
+margin_right = 207.0
+margin_bottom = 192.0
+rect_scale = Vector2( 2, 2 )
+text = "   MORSE   
+PRO"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label3" type="Label" parent="Verify_internet_connection"]
+margin_left = 101.0
+margin_top = 238.0
+margin_right = 313.0
+margin_bottom = 315.0
+text = "Learn morse code"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="button_up" from="GridContainer/Button4" to="." method="_on_Button4_button_up"]
+[connection signal="button_up" from="GridContainer/Button2" to="." method="_on_Button2_button_up"]
+[connection signal="button_up" from="GridContainer/Button" to="." method="_on_Button_button_up"]
+[connection signal="button_up" from="GridContainer/Button3" to="." method="_on_Button3_button_up"]
+[connection signal="button_up" from="GridContainer2/Traducao" to="." method="_on_Traducao_button_up"]
+[connection signal="button_up" from="GridContainer2/escrita" to="." method="_on_escrita_button_up"]
+[connection signal="button_up" from="GridContainer2/dialogo" to="." method="_on_dialogo_button_up"]
+[connection signal="button_up" from="GridContainer2/Return" to="." method="_on_Return_button_up"]
+[connection signal="button_up" from="RATE_THE_APP" to="." method="_on_RATE_THE_APP_button_up"]
+[connection signal="button_up" from="Configurations/GridContainer2/Effects_volume/minus" to="." method="_on_minus_button_up"]
+[connection signal="button_up" from="Configurations/GridContainer2/Effects_volume/plus" to="." method="_on_plus_button_up"]
+[connection signal="toggled" from="Configurations/GridContainer2/GridContainer/Music" to="." method="_on_Music_toggled"]
+[connection signal="button_up" from="Configurations/GridContainer2/Music_volume/minus_music" to="." method="_on_minus_music_button_up"]
+[connection signal="button_up" from="Configurations/GridContainer2/Music_volume/plus_music" to="." method="_on_plus_music_button_up"]
+[connection signal="button_up" from="Configurations/GridContainer2/Return" to="." method="_on_Return_button_up"]
+[connection signal="button_up" from="asdasd" to="." method="_on_asdasd_button_up"]
+[connection signal="button_up" from="YOURS_STARS/AD" to="." method="_on_AD_button_up"]
+[connection signal="button_up" from="Congrats/GridContainer/THANKS_CONGRATS" to="." method="_on_THANKS_CONGRATS_button_up"]

@@ -1,0 +1,502 @@
+[gd_scene load_steps=18 format=2]
+
+[ext_resource path="res://Scripts/Player.gd" type="Script" id=1]
+[ext_resource path="res://Images/PLAYER/PLAYER.png" type="Texture" id=2]
+[ext_resource path="res://Images/Others/Autofire.png" type="Texture" id=3]
+[ext_resource path="res://Scenes/Options.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Images/PLAYER/Gun.png" type="Texture" id=5]
+
+[sub_resource type="StyleBoxFlat" id=3]
+bg_color = Color( 0.52549, 0.270588, 0.901961, 1 )
+
+[sub_resource type="StyleBoxFlat" id=2]
+bg_color = Color( 0.235294, 0.235294, 0.235294, 1 )
+border_color = Color( 0.0823529, 0.0823529, 0.0823529, 1 )
+
+[sub_resource type="StyleBoxFlat" id=8]
+bg_color = Color( 0.270588, 0.270588, 0.270588, 1 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 0.0941176, 0.0941176, 0.0941176, 1 )
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id=9]
+bg_color = Color( 0.12549, 0.12549, 0.12549, 1 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 0.0588235, 0.0588235, 0.0588235, 1 )
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id=10]
+bg_color = Color( 0.188235, 0.188235, 0.188235, 1 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 0.0666667, 0.0666667, 0.0666667, 1 )
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="CircleShape2D" id=12]
+radius = 26.0
+
+[sub_resource type="CircleShape2D" id=11]
+radius = 350.0
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0.207843, 0.807843, 0.823529, 1 )
+border_color = Color( 0.8, 0.8, 0.8, 0 )
+
+[sub_resource type="StyleBoxFlat" id=4]
+bg_color = Color( 0.635294, 0.266667, 0.0431373, 1 )
+
+[sub_resource type="Animation" id=5]
+resource_name = "Item_added"
+length = 1.8
+tracks/0/type = "value"
+tracks/0/path = NodePath("Camera2D/Item_added_info:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ true, false, true, false, true, false, true, false, true, false, true ]
+}
+tracks/1/type = "bezier"
+tracks/1/path = NodePath("Camera2D/Item_added_info:modulate:a")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 1, 1.8 )
+}
+
+[sub_resource type="Animation" id=7]
+resource_name = "Power_up_gotten"
+length = 1.8
+tracks/0/type = "value"
+tracks/0/path = NodePath("Camera2D/Power_up_gotten:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ true, false, true, false, true, false, true, false, true, false, true ]
+}
+tracks/1/type = "bezier"
+tracks/1/path = NodePath("Camera2D/Power_up_gotten:modulate:a")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 1, 1.8 )
+}
+
+[sub_resource type="Animation" id=6]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("Camera2D/Item_added_info:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ true ]
+}
+tracks/1/type = "bezier"
+tracks/1/path = NodePath("Camera2D/Item_added_info:modulate:r")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/2/type = "bezier"
+tracks/2/path = NodePath("Camera2D/Item_added_info:modulate:g")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/3/type = "bezier"
+tracks/3/path = NodePath("Camera2D/Item_added_info:modulate:b")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/4/type = "bezier"
+tracks/4/path = NodePath("Camera2D/Item_added_info:modulate:a")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Camera2D/Power_up_gotten:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ true ]
+}
+tracks/6/type = "bezier"
+tracks/6/path = NodePath("Camera2D/Power_up_gotten:modulate:a")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+
+[node name="Player" type="KinematicBody2D" groups=["PLAYER"]]
+collision_layer = 5
+collision_mask = 5
+script = ExtResource( 1 )
+
+[node name="Camera2D" type="Camera2D" parent="."]
+current = true
+
+[node name="EXP" type="ProgressBar" parent="Camera2D"]
+margin_left = -640.0
+margin_top = 360.0
+margin_right = 640.0
+margin_bottom = 376.0
+custom_styles/fg = SubResource( 3 )
+custom_styles/bg = SubResource( 2 )
+percent_visible = false
+
+[node name="ESC" type="Node2D" parent="Camera2D"]
+visible = false
+z_index = 100
+
+[node name="Options" parent="Camera2D/ESC" instance=ExtResource( 4 )]
+visible = false
+position = Vector2( -704, -360 )
+
+[node name="RESUME" type="Button" parent="Camera2D/ESC"]
+pause_mode = 2
+visible = false
+margin_left = -360.0
+margin_top = -321.0
+margin_right = -180.0
+margin_bottom = -271.0
+rect_min_size = Vector2( 70, 0 )
+rect_scale = Vector2( 4, 4 )
+focus_mode = 0
+size_flags_horizontal = 6
+custom_styles/hover = SubResource( 8 )
+custom_styles/pressed = SubResource( 9 )
+custom_styles/normal = SubResource( 10 )
+enabled_focus_mode = 0
+text = "RESUME"
+
+[node name="Options" type="Button" parent="Camera2D/ESC/RESUME"]
+pause_mode = 2
+margin_left = 20.0
+margin_top = 118.0
+margin_right = 160.0
+margin_bottom = 144.0
+rect_min_size = Vector2( 70, 0 )
+focus_mode = 0
+size_flags_horizontal = 6
+custom_styles/hover = SubResource( 8 )
+custom_styles/pressed = SubResource( 9 )
+custom_styles/normal = SubResource( 10 )
+toggle_mode = true
+enabled_focus_mode = 0
+text = "Configurations"
+
+[node name="INFOS" type="ScrollContainer" parent="Camera2D/ESC"]
+margin_left = -632.0
+margin_top = -344.0
+margin_right = -520.0
+margin_bottom = 344.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Camera2D/ESC/INFOS"]
+margin_right = 112.0
+margin_bottom = 688.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="GridContainer" type="GridContainer" parent="Camera2D/ESC/INFOS/VBoxContainer"]
+margin_right = 112.0
+margin_bottom = 688.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="UPGRADE_AREA" type="ScrollContainer" parent="Camera2D/ESC"]
+pause_mode = 2
+visible = false
+margin_left = -512.0
+margin_top = -320.0
+margin_right = 512.0
+margin_bottom = 320.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Camera2D/ESC/UPGRADE_AREA"]
+pause_mode = 2
+margin_right = 1024.0
+margin_bottom = 640.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="GridContainer" type="GridContainer" parent="Camera2D/ESC/UPGRADE_AREA/HBoxContainer"]
+pause_mode = 2
+margin_right = 1024.0
+margin_bottom = 640.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+columns = 3
+
+[node name="Label" type="Label" parent="Camera2D/ESC"]
+visible = false
+margin_left = -704.0
+margin_top = -336.0
+margin_right = -563.0
+margin_bottom = -320.0
+rect_scale = Vector2( 10, 10 )
+size_flags_horizontal = 6
+size_flags_vertical = 2
+text = "You died"
+align = 1
+valign = 1
+
+[node name="GridContainer" type="GridContainer" parent="Camera2D/ESC"]
+visible = false
+margin_left = -704.0
+margin_top = -120.0
+margin_right = -352.0
+margin_bottom = -28.0
+rect_scale = Vector2( 4, 4 )
+
+[node name="GoToMainMenu" type="Button" parent="Camera2D/ESC/GridContainer"]
+pause_mode = 2
+margin_left = 141.0
+margin_right = 211.0
+margin_bottom = 20.0
+rect_min_size = Vector2( 70, 0 )
+focus_mode = 0
+size_flags_horizontal = 6
+custom_styles/hover = SubResource( 8 )
+custom_styles/pressed = SubResource( 9 )
+custom_styles/normal = SubResource( 10 )
+enabled_focus_mode = 0
+text = "Main menu"
+
+[node name="TEMPO" type="Label" parent="Camera2D"]
+margin_left = -128.0
+margin_top = -358.0
+margin_bottom = -338.0
+rect_scale = Vector2( 2, 2 )
+text = "00:00:00"
+align = 1
+valign = 1
+
+[node name="Item_added_info" type="GridContainer" parent="Camera2D"]
+modulate = Color( 1, 1, 1, 0 )
+margin_left = -625.0
+margin_top = 240.0
+margin_right = -551.0
+margin_bottom = 340.0
+
+[node name="Label" type="Label" parent="Camera2D/Item_added_info"]
+margin_right = 74.0
+margin_bottom = 16.0
+size_flags_horizontal = 3
+size_flags_vertical = 7
+text = "Item added"
+align = 1
+valign = 1
+
+[node name="NUMS" type="Label" parent="Camera2D/Item_added_info"]
+margin_top = 20.0
+margin_right = 74.0
+margin_bottom = 36.0
+size_flags_horizontal = 3
+size_flags_vertical = 7
+text = "0/10"
+align = 1
+valign = 1
+
+[node name="TextureRect" type="TextureRect" parent="Camera2D/Item_added_info"]
+margin_left = 5.0
+margin_top = 40.0
+margin_right = 69.0
+margin_bottom = 104.0
+rect_min_size = Vector2( 64, 64 )
+size_flags_horizontal = 4
+size_flags_vertical = 4
+expand = true
+
+[node name="Power_up_gotten" type="GridContainer" parent="Camera2D"]
+modulate = Color( 1, 1, 1, 0 )
+margin_left = 557.0
+margin_top = 243.0
+margin_right = 631.0
+margin_bottom = 343.0
+
+[node name="Label" type="Label" parent="Camera2D/Power_up_gotten"]
+margin_right = 74.0
+margin_bottom = 16.0
+size_flags_horizontal = 3
+size_flags_vertical = 7
+text = "POWER UP"
+align = 1
+valign = 1
+
+[node name="NUMS" type="Label" parent="Camera2D/Power_up_gotten"]
+margin_top = 20.0
+margin_right = 74.0
+margin_bottom = 36.0
+size_flags_horizontal = 3
+size_flags_vertical = 7
+text = "SPEED"
+align = 1
+valign = 1
+
+[node name="TextureRect" type="TextureRect" parent="Camera2D/Power_up_gotten"]
+margin_left = 5.0
+margin_top = 40.0
+margin_right = 69.0
+margin_bottom = 104.0
+rect_min_size = Vector2( 64, 64 )
+size_flags_horizontal = 4
+size_flags_vertical = 4
+expand = true
+
+[node name="Autofire" type="Sprite" parent="Camera2D"]
+visible = false
+position = Vector2( -656, 344 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 3 )
+
+[node name="Sprite" type="Sprite" parent="."]
+texture = ExtResource( 2 )
+
+[node name="Special_weapon" type="Sprite" parent="Sprite"]
+
+[node name="Area2D" type="Area2D" parent="Sprite"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite/Area2D"]
+shape = SubResource( 12 )
+
+[node name="PARTICLES_POINT" type="Node2D" parent="Sprite"]
+
+[node name="Organize" type="Area2D" parent="Sprite"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite/Organize"]
+shape = SubResource( 11 )
+
+[node name="Gun" type="Sprite" parent="Sprite"]
+texture = ExtResource( 5 )
+offset = Vector2( 14, 0 )
+
+[node name="POINT" type="Position2D" parent="Sprite/Gun"]
+position = Vector2( 37, 0 )
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 2.0
+autostart = true
+
+[node name="StrongerEnemy" type="Timer" parent="."]
+wait_time = 20.0
+autostart = true
+
+[node name="Progress" type="ProgressBar" parent="."]
+visible = false
+margin_left = -16.0
+margin_top = 32.0
+margin_right = 16.0
+margin_bottom = 35.0
+custom_styles/fg = SubResource( 1 )
+custom_styles/bg = SubResource( 2 )
+value = 100.0
+percent_visible = false
+
+[node name="SPECIAL_BULLET" type="ProgressBar" parent="."]
+visible = false
+margin_left = -16.0
+margin_top = 28.0
+margin_right = 16.0
+margin_bottom = 31.0
+custom_styles/fg = SubResource( 4 )
+custom_styles/bg = SubResource( 2 )
+percent_visible = false
+
+[node name="CLOCK" type="Timer" parent="."]
+autostart = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/Item_added = SubResource( 5 )
+anims/Power_up_gotten = SubResource( 7 )
+anims/RESET = SubResource( 6 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+
+[node name="Regen" type="Timer" parent="."]
+autostart = true
+
+[node name="DASH" type="Timer" parent="."]
+
+[node name="COLLISION" type="CollisionShape2D" parent="."]
+shape = SubResource( 12 )
+
+[node name="VoidStar" type="Timer" parent="."]
+wait_time = 0.1
+autostart = true
+
+[connection signal="button_up" from="Camera2D/ESC/RESUME" to="." method="_on_RESUME_button_up"]
+[connection signal="toggled" from="Camera2D/ESC/RESUME/Options" to="." method="_on_Options_toggled"]
+[connection signal="button_up" from="Camera2D/ESC/GridContainer/GoToMainMenu" to="." method="_on_GoToMainMenu_button_up"]
+[connection signal="area_entered" from="Sprite/Area2D" to="." method="_on_Area2D_area_entered"]
+[connection signal="area_exited" from="Sprite/Area2D" to="." method="_on_Area2D_area_exited"]
+[connection signal="area_entered" from="Sprite/Organize" to="." method="_on_Organize_area_entered"]
+[connection signal="area_exited" from="Sprite/Organize" to="." method="_on_Organize_area_exited"]
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
+[connection signal="timeout" from="StrongerEnemy" to="." method="_on_StrongerEnemy_timeout"]
+[connection signal="timeout" from="CLOCK" to="." method="_on_CLOCK_timeout"]
+[connection signal="timeout" from="Regen" to="." method="_on_Regen_timeout"]
+[connection signal="timeout" from="DASH" to="." method="_on_DASH_timeout"]
+[connection signal="timeout" from="VoidStar" to="." method="_on_VoidStar_timeout"]

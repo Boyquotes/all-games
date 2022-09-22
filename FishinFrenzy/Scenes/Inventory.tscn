@@ -1,0 +1,2488 @@
+[gd_scene format=2]
+
+[node name="Inventory" type="GridContainer"]
+margin_right = 600.0
+margin_bottom = 600.0
+
+[node name="Label" type="Label" parent="."]
+margin_right = 600.0
+margin_bottom = 100.0
+rect_min_size = Vector2( 0, 100 )
+size_flags_horizontal = 7
+text = "Player Infos"
+align = 1
+valign = 1
+
+[node name="Button" type="Button" parent="Label"]
+margin_left = 512.0
+margin_top = 24.0
+margin_right = 582.0
+margin_bottom = 64.0
+text = "GO"
+
+[node name="GridContainer" type="GridContainer" parent="."]
+margin_top = 104.0
+margin_right = 600.0
+margin_bottom = 600.0
+size_flags_horizontal = 7
+size_flags_vertical = 7
+columns = 2
+
+[node name="Label3" type="Label" parent="GridContainer"]
+margin_right = 298.0
+margin_bottom = 496.0
+size_flags_horizontal = 7
+size_flags_vertical = 7
+text = "Rod, Line, Hook and Bait textures"
+align = 1
+valign = 1
+
+[node name="Selector" type="TabContainer" parent="GridContainer"]
+margin_left = 302.0
+margin_right = 600.0
+margin_bottom = 496.0
+size_flags_horizontal = 7
+size_flags_vertical = 7
+
+[node name="Rods" type="Tabs" parent="GridContainer/Selector"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 34.0
+margin_right = -4.0
+margin_bottom = -4.0
+
+[node name="Items" type="ScrollContainer" parent="GridContainer/Selector/Rods"]
+margin_left = 6.0
+margin_top = -2.0
+margin_right = 286.0
+margin_bottom = 454.0
+size_flags_horizontal = 7
+size_flags_vertical = 7
+
+[node name="VBoxContainer" type="VBoxContainer" parent="GridContainer/Selector/Rods/Items"]
+margin_right = 268.0
+margin_bottom = 1016.0
+size_flags_horizontal = 7
+size_flags_vertical = 7
+
+[node name="Items" type="GridContainer" parent="GridContainer/Selector/Rods/Items/VBoxContainer"]
+margin_right = 268.0
+margin_bottom = 1016.0
+size_flags_horizontal = 7
+size_flags_vertical = 7
+columns = 4
+
+[node name="item" type="ColorRect" parent="GridContainer/Selector/Rods/Items/VBoxContainer/Items"]
+margin_right = 64.0
+margin_bottom = 64.0
+rect_min_size = Vector2( 64, 64 )
+size_flags_horizontal = 6
+size_flags_vertical = 6
+color = Color( 0.611765, 0.372549, 0, 1 )
+
+[node name="item2" type="ColorRect" parent="GridContainer/Selector/Rods/Items/VBoxContainer/Items"]
+margin_left = 68.0
+margin_right = 132.0
+margin_bottom = 64.0
+rect_min_size = Vector2( 64, 64 )
+size_flags_horizontal = 6
+size_flags_vertical = 6
+color = Color( 0.611765, 0.372549, 0, 1 )
+
+[node name="item3" type="ColorRect" parent="GridContainer/Selector/Rods/Items/VBoxContainer/Items"]
+margin_left = 136.0
+margin_right = 200.0
+margin_bottom = 64.0
+rect_min_size = Vector2( 64, 64 )
+size_flags_horizontal = 6
+size_flags_vertical = 6
+color = Color( 0.611765, 0.372549, 0, 1 )
+
+[node name="item4" type="ColorRect" parent="GridContainer/Selector/Rods/Items/VBoxContainer/Items"]
+margin_left = 204.0
+margin_right = 268.0
+margin_bottom = 64.0
+rect_min_size = Vector2( 64, 64 )
+size_flags_horizontal = 6
+size_flags_vertical = 6
+color = Color( 0.611765, 0.372549, 0, 1 )
+
+[node name="item5" type="ColorRect" parent="GridContainer/Selector/Rods/Items/VBoxContainer/Items"]
+margin_top = 68.0
+margin_right = 64.0
+margin_bottom = 132.0
+rect_min_size = Vector2( 64, 64 )
+size_flags_horizontal = 6
+size_flags_vertical = 6
+color = Color( 0.611765, 0.372549, 0, 1 )
+
+[node name="item6" type="ColorRect" parent="GridContainer/Selector/Rods/Items/VBoxContainer/Items"]
+margin_left = 68.0
+margin_top = 68.0
+margin_right = 132.0
+margin_bottom = 132.0
+rect_min_size = Vector2( 64, 64 )
+size_flags_horizontal = 6
+size_flags_vertical = 6
+color = Color( 0.611765, 0.372549, 0, 1 )
+
+[node name="item7" type="ColorRect" parent="GridContainer/Selector/Rods/Items/VBoxContainer/Items"]
+margin_left = 136.0
+margin_top = 68.0
+margin_right = 200.0
+margin_bottom = 132.0
+rect_min_size = Vector2( 64, 64 )
+size_flags_horizontal = 6
+size_flags_vertical = 6
+color = Color( 0.611765, 0.372549, 0, 1 )
+
+[node name="item8" type="ColorRect" parent="GridContainer/Selector/Rods/Items/VBoxContainer/Items"]
+margin_left = 204.0
+margin_top = 68.0
+margin_right = 268.0
+margin_bottom = 132.0
+rect_min_size = Vector2( 64, 64 )
+size_flags_horizontal = 6
+size_flags_vertical = 6
+color = Color( 0.611765, 0.372549, 0, 1 )
+
+[node name="item9" type="ColorRect" parent="GridContainer/Selector/Rods/Items/VBoxContainer/Items"]
+margin_top = 136.0
+margin_right = 64.0
+margin_bottom = 200.0
+rect_min_size = Vector2( 64, 64 )
+size_flags_horizontal = 6
+size_flags_vertical = 6
+color = Color( 0.611765, 0.372549, 0, 1 )
+
+[node name="item10" type="ColorRect" parent="GridContainer/Selector/Rods/Items/VBoxContainer/Items"]
+margin_left = 68.0
+margin_top = 136.0
+margin_right = 132.0
+margin_bottom = 200.0
+rect_min_size = Vector2( 64, 64 )
+size_flags_horizontal = 6
+size_flags_vertical = 6
+color = Color( 0.611765, 0.372549, 0, 1 )
+
+[node name="item11" type="ColorRect" parent="GridContainer/Selector/Rods/Items/VBoxContainer/Items"]
+margin_left = 136.0
+margin_top = 136.0
+margin_right = 200.0
+margin_bottom = 200.0
+rect_min_size = Vector2( 64, 64 )
+size_flags_horizontal = 6
+size_flags_vertical = 6
+color = Color( 0.611765, 0.372549, 0, 1 )
+
+[node name="item12" type="ColorRect" parent="GridContainer/Selector/Rods/Items/VBoxContainer/Items"]
+margin_left = 204.0
+margin_top = 136.0
+margin_right = 268.0
+margin_bottom = 200.0
+rect_min_size = Vector2( 64, 64 )
+size_flags_horizontal = 6
+size_flags_vertical = 6
+color = Color( 0.611765, 0.372549, 0, 1 )
+
+[node name="item13" type="ColorRect" parent="GridContainer/Selector/Rods/Items/VBoxContainer/Items"]
+margin_top = 204.0
+margin_right = 64.0
+margin_bottom = 268.0
+rect_min_size = Vector2( 64, 64 )
+size_flags_horizontal = 6
+size_flags_vertical = 6
+color = Color( 0.611765, 0.372549, 0, 1 )
+
+[node name="item14" type="ColorRect" parent="GridContainer/Selector/Rods/Items/VBoxContainer/Items"]
+margin_left = 68.0
+margin_top = 204.0
+margin_right = 132.0
+margin_bottom = 268.0
+rect_min_size = Vector2( 64, 64 )
+size_flags_horizontal = 6
+size_flags_vertical = 6
+color = Color( 0.611765, 0.372549, 0, 1 )
+
+[node name="item15" type="ColorRect" parent="GridContainer/Selector/Rods/Items/VBoxContainer/Items"]
+margin_left = 136.0
+margin_top = 204.0
+margin_right = 200.0
+margin_bottom = 268.0
+rect_min_size = Vector2( 64, 64 )
+size_flags_horizontal = 6
+size_flags_vertical = 6
+color = Color( 0.611765, 0.372549, 0, 1 )
+
+[node name="item16" type="ColorRect" parent="GridContainer/Selector/Rods/Items/VBoxContainer/Items"]
+margin_left = 204.0
+margin_top = 204.0
+margin_right = 268.0
+margin_bottom = 268.0
+rect_min_size = Vector2( 64, 64 )
+size_flags_horizontal = 6
+size_flags_vertical = 6
+color = Color( 0.611765, 0.372549, 0, 1 )
+
+[node name="item17" type="ColorRect" parent="GridContainer/Selector/Rods/Items/VBoxContainer/Items"]
+margin_top = 272.0
+margin_right = 64.0
+margin_bottom = 336.0
+rect_min_size = Vector2( 64, 64 )
+size_flags_horizontal = 6
+size_flags_vertical = 6
+color = Color( 0.611765, 0.372549, 0, 1 )
+
+[node name="item18" type="ColorRect" parent="GridContainer/Selector/Rods/Items/VBoxContainer/Items"]
+margin_left = 68.0
+margin_top = 272.0
+margin_right = 132.0
+margin_bottom = 336.0
+rect_min_size = Vector2( 64, 64 )
+size_flags_horizontal = 6
+size_flags_vertical = 6
+color = Color( 0.611765, 0.372549, 0, 1 )
+
+[node name="item19" type="ColorRect" parent="GridContainer/Selector/Rods/Items/VBoxContainer/Items"]
+margin_left = 136.0
+margin_top = 272.0
+margin_right = 200.0
+margin_bottom = 336.0
+rect_min_size = Vector2( 64, 64 )
+size_flags_horizontal = 6
+size_flags_vertical = 6
+color = Color( 0.611765, 0.372549, 0, 1 )
+
+[node name="item20" type="ColorRect" parent="GridContainer/Selector/Rods/Items/VBoxContainer/Items"]
+margin_left = 204.0
+margin_top = 272.0
+margin_right = 268.0
+margin_bottom = 336.0
+rect_min_size = Vector2( 64, 64 )
+size_flags_horizontal = 6
+size_flags_vertical = 6
+color = Color( 0.611765, 0.372549, 0, 1 )
+
+[node name="item21" type="ColorRect" parent="GridContainer/Selector/Rods/Items/VBoxContainer/Items"]
+margin_top = 340.0
+margin_right = 64.0
+margin_bottom = 404.0
+rect_min_size = Vector2( 64, 64 )
+size_flags_horizontal = 6
+size_flags_vertical = 6
+color = Color( 0.611765, 0.372549, 0, 1 )
+
+[node name="item22" type="ColorRect" parent="GridContainer/Selector/Rods/Items/VBoxContainer/Items"]
+margin_left = 68.0
+margin_top = 340.0
+margin_right = 132.0
+margin_bottom = 404.0
+rect_min_size = Vector2( 64, 64 )
+size_flags_horizontal = 6
+size_flags_vertical = 6
+color = Color( 0.611765, 0.372549, 0, 1 )
+
+[node name="item23" type="ColorRect" parent="GridContainer/Selector/Rods/Items/VBoxContainer/Items"]
+margin_left = 136.0
+margin_top = 340.0
+margin_right = 200.0
+margin_bottom = 404.0
+rect_min_size = Vector2( 64, 64 )
+size_flags_horizontal = 6
+size_flags_vertical = 6
+color = Color( 0.611765, 0.372549, 0, 1 )
+
+[node name="item24" type="ColorRect" parent="GridContainer/Selector/Rods/Items/VBoxContainer/Items"]
+margin_left = 204.0
+margin_top = 340.0
+margin_right = 268.0
+margin_bottom = 404.0
+rect_min_size = Vector2( 64, 64 )
+size_flags_horizontal = 6
+size_flags_vertical = 6
+color = Color( 0.611765, 0.372549, 0, 1 )
+
+[node name="item25" type="ColorRect" parent="GridContainer/Selector/Rods/Items/VBoxContainer/Items"]
+margin_top = 408.0
+margin_right = 64.0
+margin_bottom = 472.0
+rect_min_size = Vector2( 64, 64 )
+size_flags_horizontal = 6
+size_flags_vertical = 6
+color = Color( 0.611765, 0.372549, 0, 1 )
+
+[node name="item26" type="ColorRect" parent="GridContainer/Selector/Rods/Items/VBoxContainer/Items"]
+margin_left = 68.0
+margin_top = 408.0
+margin_right = 132.0
+margin_bottom = 472.0
+rect_min_size = Vector2( 64, 64 )
+size_flags_horizontal = 6
+size_flags_vertical = 6
+color = Color( 0.611765, 0.372549, 0, 1 )
+
+[node name="item27" type="ColorRect" parent="GridContainer/Selector/Rods/Items/VBoxContainer/Items"]
+margin_left = 136.0
+margin_top = 408.0
+margin_right = 200.0
+margin_bottom = 472.0
+rect_min_size = Vector2( 64, 64 )
+size_flags_horizontal = 6
+size_flags_vertical = 6
+color = Color( 0.611765, 0.372549, 0, 1 )
+
+[node name="item28" type="ColorRect" parent="GridContainer/Selector/Rods/Items/VBoxContainer/Items"]
+margin_left = 204.0
+margin_top = 408.0
+margin_right = 268.0
+margin_bottom = 472.0
+rect_min_size = Vector2( 64, 64 )
+size_flags_horizontal = 6
+size_flags_vertical = 6
+color = Color( 0.611765, 0.372549, 0, 1 )
+
+[node name="item29" type="ColorRect" parent="GridContainer/Selector/Rods/Items/VBoxContainer/Items"]
+margin_top = 476.0
+margin_right = 64.0
+margin_bottom = 540.0
+rect_min_size = Vector2( 64, 64 )
+size_flags_horizontal = 6
+size_flags_vertical = 6
+color = Color( 0.611765, 0.372549, 0, 1 )
+
+[node name="item30" type="ColorRect" parent="GridContainer/Selector/Rods/Items/VBoxContainer/Items"]
+margin_left = 68.0
+margin_top = 476.0
+margin_right = 132.0
+margin_bottom = 540.0
+rect_min_size = Vector2( 64, 64 )
+size_flags_horizontal = 6
+size_flags_vertical = 6
+color = Color( 0.611765, 0.372549, 0, 1 )
+
+[node name="item31" type="ColorRect" parent="GridContainer/Selector/Rods/Items/VBoxContainer/Items"]
+margin_left = 136.0
+margin_top = 476.0
+margin_right = 200.0
+margin_bottom = 540.0
+rect_min_size = Vector2( 64, 64 )
+size_flags_horizontal = 6
+size_flags_vertical = 6
+color = Color( 0.611765, 0.372549, 0, 1 )
+
+[node name="item32" type="ColorRect" parent="GridContainer/Selector/Rods/Items/VBoxContainer/Items"]
+margin_left = 204.0
+margin_top = 476.0
+margin_right = 268.0
+margin_bottom = 540.0
+rect_min_size = Vector2( 64, 64 )
+size_flags_horizontal = 6
+size_flags_vertical = 6
+color = Color( 0.611765, 0.372549, 0, 1 )
+
+[node name="item33" type="ColorRect" parent="GridContainer/Selector/Rods/Items/VBoxContainer/Items"]
+margin_top = 544.0
+margin_right = 64.0
+margin_bottom = 608.0
+rect_min_size = Vector2( 64, 64 )
+size_flags_horizontal = 6
+size_flags_vertical = 6
+color = Color( 0.611765, 0.372549, 0, 1 )
+
+[node name="item34" type="ColorRect" parent="GridContainer/Selector/Rods/Items/VBoxContainer/Items"]
+margin_left = 68.0
+margin_top = 544.0
+margin_right = 132.0
+margin_bottom = 608.0
+rect_min_size = Vector2( 64, 64 )
+size_flags_horizontal = 6
+size_flags_vertical = 6
+color = Color( 0.611765, 0.372549, 0, 1 )
+
+[node name="item35" type="ColorRect" parent="GridContainer/Selector/Rods/Items/VBoxContainer/Items"]
+margin_left = 136.0
+margin_top = 544.0
+margin_right = 200.0
+margin_bottom = 608.0
+rect_min_size = Vector2( 64, 64 )
+size_flags_horizontal = 6
+size_flags_vertical = 6
+color = Color( 0.611765, 0.372549, 0, 1 )
+
+[node name="item36" type="ColorRect" parent="GridContainer/Selector/Rods/Items/VBoxContainer/Items"]
+margin_left = 204.0
+margin_top = 544.0
+margin_right = 268.0
+margin_bottom = 608.0
+rect_min_size = Vector2( 64, 64 )
+size_flags_horizontal = 6
+size_flags_vertical = 6
+color = Color( 0.611765, 0.372549, 0, 1 )
+
+[node name="item37" type="ColorRect" parent="GridContainer/Selector/Rods/Items/VBoxContainer/Items"]
+margin_top = 612.0
+margin_right = 64.0
+margin_bottom = 676.0
+rect_min_size = Vector2( 64, 64 )
+size_flags_horizontal = 6
+size_flags_vertical = 6
+color = Color( 0.611765, 0.372549, 0, 1 )
+
+[node name="item38" type="ColorRect" parent="GridContainer/Selector/Rods/Items/VBoxContainer/Items"]
+margin_left = 68.0
+margin_top = 612.0
+margin_right = 132.0
+margin_bottom = 676.0
+rect_min_size = Vector2( 64, 64 )
+size_flags_horizontal = 6
+size_flags_vertical = 6
+color = Color( 0.611765, 0.372549, 0, 1 )
+
+[node name="item39" type="ColorRect" parent="GridContainer/Selector/Rods/Items/VBoxContainer/Items"]
+margin_left = 136.0
+margin_top = 612.0
+margin_right = 200.0
+margin_bottom = 676.0
+rect_min_size = Vector2( 64, 64 )
+size_flags_horizontal = 6
+size_flags_vertical = 6
+color = Color( 0.611765, 0.372549, 0, 1 )
+
+[node name="item40" type="ColorRect" parent="GridContainer/Selector/Rods/Items/VBoxContainer/Items"]
+margin_left = 204.0
+margin_top = 612.0
+margin_right = 268.0
+margin_bottom = 676.0
+rect_min_size = Vector2( 64, 64 )
+size_flags_horizontal = 6
+size_flags_vertical = 6
+color = Color( 0.611765, 0.372549, 0, 1 )
+
+[node name="item41" type="ColorRect" parent="GridContainer/Selector/Rods/Items/VBoxContainer/Items"]
+margin_top = 680.0
+margin_right = 64.0
+margin_bottom = 744.0
+rect_min_size = Vector2( 64, 64 )
+size_flags_horizontal = 6
+size_flags_vertical = 6
+color = Color( 0.611765, 0.372549, 0, 1 )
+
+[node name="item42" type="ColorRect" parent="GridContainer/Selector/Rods/Items/VBoxContainer/Items"]
+margin_left = 68.0
+margin_top = 680.0
+margin_right = 132.0
+margin_bottom = 744.0
+rect_min_size = Vector2( 64, 64 )
+size_flags_horizontal = 6
+size_flags_vertical = 6
+color = Color( 0.611765, 0.372549, 0, 1 )
+
+[node name="item43" type="ColorRect" parent="GridContainer/Selector/Rods/Items/VBoxContainer/Items"]
+margin_left = 136.0
+margin_top = 680.0
+margin_right = 200.0
+margin_bottom = 744.0
+rect_min_size = Vector2( 64, 64 )
+size_flags_horizontal = 6
+size_flags_vertical = 6
+color = Color( 0.611765, 0.372549, 0, 1 )
+
+[node name="item44" type="ColorRect" parent="GridContainer/Selector/Rods/Items/VBoxContainer/Items"]
+margin_left = 204.0
+margin_top = 680.0
+margin_right = 268.0
+margin_bottom = 744.0
+rect_min_size = Vector2( 64, 64 )
+size_flags_horizontal = 6
+size_flags_vertical = 6
+color = Color( 0.611765, 0.372549, 0, 1 )
+
+[node name="item45" type="ColorRect" parent="GridContainer/Selector/Rods/Items/VBoxContainer/Items"]
+margin_top = 748.0
+margin_right = 64.0
+margin_bottom = 812.0
+rect_min_size = Vector2( 64, 64 )
+size_flags_horizontal = 6
+size_flags_vertical = 6
+color = Color( 0.611765, 0.372549, 0, 1 )
+
+[node name="item46" type="ColorRect" parent="GridContainer/Selector/Rods/Items/VBoxContainer/Items"]
+margin_left = 68.0
+margin_top = 748.0
+margin_right = 132.0
+margin_bottom = 812.0
+rect_min_size = Vector2( 64, 64 )
+size_flags_horizontal = 6
+size_flags_vertical = 6
+color = Color( 0.611765, 0.372549, 0, 1 )
+
+[node name="item47" type="ColorRect" parent="GridContainer/Selector/Rods/Items/VBoxContainer/Items"]
+margin_left = 136.0
+margin_top = 748.0
+margin_right = 200.0
+margin_bottom = 812.0
+rect_min_size = Vector2( 64, 64 )
+size_flags_horizontal = 6
+size_flags_vertical = 6
+color = Color( 0.611765, 0.372549, 0, 1 )
+
+[node name="item48" type="ColorRect" parent="GridContainer/Selector/Rods/Items/VBoxContainer/Items"]
+margin_left = 204.0
+margin_top = 748.0
+margin_right = 268.0
+margin_bottom = 812.0
+rect_min_size = Vector2( 64, 64 )
+size_flags_horizontal = 6
+size_flags_vertical = 6
+color = Color( 0.611765, 0.372549, 0, 1 )
+
+[node name="item49" type="ColorRect" parent="GridContainer/Selector/Rods/Items/VBoxContainer/Items"]
+margin_top = 816.0
+margin_right = 64.0
+margin_bottom = 880.0
+rect_min_size = Vector2( 64, 64 )
+size_flags_horizontal = 6
+size_flags_vertical = 6
+color = Color( 0.611765, 0.372549, 0, 1 )
+
+[node name="item50" type="ColorRect" parent="GridContainer/Selector/Rods/Items/VBoxContainer/Items"]
+margin_left = 68.0
+margin_top = 816.0
+margin_right = 132.0
+margin_bottom = 880.0
+rect_min_size = Vector2( 64, 64 )
+size_flags_horizontal = 6
+size_flags_vertical = 6
+color = Color( 0.611765, 0.372549, 0, 1 )
+
+[node name="item51" type="ColorRect" parent="GridContainer/Selector/Rods/Items/VBoxContainer/Items"]
+margin_left = 136.0
+margin_top = 816.0
+margin_right = 200.0
+margin_bottom = 880.0
+rect_min_size = Vector2( 64, 64 )
+size_flags_horizontal = 6
+size_flags_vertical = 6
+color = Color( 0.611765, 0.372549, 0, 1 )
+
+[node name="item52" type="ColorRect" parent="GridContainer/Selector/Rods/Items/VBoxContainer/Items"]
+margin_left = 204.0
+margin_top = 816.0
+margin_right = 268.0
+margin_bottom = 880.0
+rect_min_size = Vector2( 64, 64 )
+size_flags_horizontal = 6
+size_flags_vertical = 6
+color = Color( 0.611765, 0.372549, 0, 1 )
+
+[node name="item53" type="ColorRect" parent="GridContainer/Selector/Rods/Items/VBoxContainer/Items"]
+margin_top = 884.0
+margin_right = 64.0
+margin_bottom = 948.0
+rect_min_size = Vector2( 64, 64 )
+size_flags_horizontal = 6
+size_flags_vertical = 6
+color = Color( 0.611765, 0.372549, 0, 1 )
+
+[node name="item54" type="ColorRect" parent="GridContainer/Selector/Rods/Items/VBoxContainer/Items"]
+margin_left = 68.0
+margin_top = 884.0
+margin_right = 132.0
+margin_bottom = 948.0
+rect_min_size = Vector2( 64, 64 )
+size_flags_horizontal = 6
+size_flags_vertical = 6
+color = Color( 0.611765, 0.372549, 0, 1 )
+
+[node name="item55" type="ColorRect" parent="GridContainer/Selector/Rods/Items/VBoxContainer/Items"]
+margin_left = 136.0
+margin_top = 884.0
+margin_right = 200.0
+margin_bottom = 948.0
+rect_min_size = Vector2( 64, 64 )
+size_flags_horizontal = 6
+size_flags_vertical = 6
+color = Color( 0.611765, 0.372549, 0, 1 )
+
+[node name="item56" type="ColorRect" parent="GridContainer/Selector/Rods/Items/VBoxContainer/Items"]
+margin_left = 204.0
+margin_top = 884.0
+margin_right = 268.0
+margin_bottom = 948.0
+rect_min_size = Vector2( 64, 64 )
+size_flags_horizontal = 6
+size_flags_vertical = 6
+color = Color( 0.611765, 0.372549, 0, 1 )
+
+[node name="item57" type="ColorRect" parent="GridContainer/Selector/Rods/Items/VBoxContainer/Items"]
+margin_top = 952.0
+margin_right = 64.0
+margin_bottom = 1016.0
+rect_min_size = Vector2( 64, 64 )
+size_flags_horizontal = 6
+size_flags_vertical = 6
+color = Color( 0.611765, 0.372549, 0, 1 )
+
+[node name="item58" type="ColorRect" parent="GridContainer/Selector/Rods/Items/VBoxContainer/Items"]
+margin_left = 68.0
+margin_top = 952.0
+margin_right = 132.0
+margin_bottom = 1016.0
+rect_min_size = Vector2( 64, 64 )
+size_flags_horizontal = 6
+size_flags_vertical = 6
+color = Color( 0.611765, 0.372549, 0, 1 )
+
+[node name="item59" type="ColorRect" parent="GridContainer/Selector/Rods/Items/VBoxContainer/Items"]
+margin_left = 136.0
+margin_top = 952.0
+margin_right = 200.0
+margin_bottom = 1016.0
+rect_min_size = Vector2( 64, 64 )
+size_flags_horizontal = 6
+size_flags_vertical = 6
+color = Color( 0.611765, 0.372549, 0, 1 )
+
+[node name="item60" type="ColorRect" parent="GridContainer/Selector/Rods/Items/VBoxContainer/Items"]
+margin_left = 204.0
+margin_top = 952.0
+margin_right = 268.0
+margin_bottom = 1016.0
+rect_min_size = Vector2( 64, 64 )
+size_flags_horizontal = 6
+size_flags_vertical = 6
+color = Color( 0.611765, 0.372549, 0, 1 )
+
+[node name="Lines" type="Tabs" parent="GridContainer/Selector"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 34.0
+margin_right = -4.0
+margin_bottom = -4.0
+
+[node name="Items" type="ScrollContainer" parent="GridContainer/Selector/Lines"]
+margin_left = 6.0
+margin_top = -2.0
+margin_right = 286.0
+margin_bottom = 454.0
+size_flags_horizontal = 7
+size_flags_vertical = 7
+
+[node name="VBoxContainer" type="VBoxContainer" parent="GridContainer/Selector/Lines/Items"]
+margin_right = 280.0
+margin_bottom = 1016.0
+size_flags_horizontal = 7
+size_flags_vertical = 7
+
+[node name="Items" type="GridContainer" parent="GridContainer/Selector/Lines/Items/VBoxContainer"]
+margin_right = 268.0
+margin_bottom = 1016.0
+size_flags_horizontal = 7
+size_flags_vertical = 7
+columns = 4
+
+[node name="item" type="ColorRect" parent="GridContainer/Selector/Lines/Items/VBoxContainer/Items"]
+margin_right = 64.0
+margin_bottom = 64.0
+rect_min_size = Vector2( 64, 64 )
+size_flags_horizontal = 6
+size_flags_vertical = 6
+color = Color( 0.611765, 0.372549, 0, 1 )
+
+[node name="item2" type="ColorRect" parent="GridContainer/Selector/Lines/Items/VBoxContainer/Items"]
+margin_left = 68.0
+margin_right = 132.0
+margin_bottom = 64.0
+rect_min_size = Vector2( 64, 64 )
+size_flags_horizontal = 6
+size_flags_vertical = 6
+color = Color( 0.611765, 0.372549, 0, 1 )
+
+[node name="item3" type="ColorRect" parent="GridContainer/Selector/Lines/Items/VBoxContainer/Items"]
+margin_left = 136.0
+margin_right = 200.0
+margin_bottom = 64.0
+rect_min_size = Vector2( 64, 64 )
+size_flags_horizontal = 6
+size_flags_vertical = 6
+color = Color( 0.611765, 0.372549, 0, 1 )
+
+[node name="item4" type="ColorRect" parent="GridContainer/Selector/Lines/Items/VBoxContainer/Items"]
+margin_left = 204.0
+margin_right = 268.0
+margin_bottom = 64.0
+rect_min_size = Vector2( 64, 64 )
+size_flags_horizontal = 6
+size_flags_vertical = 6
+color = Color( 0.611765, 0.372549, 0, 1 )
+
+[node name="item5" type="ColorRect" parent="GridContainer/Selector/Lines/Items/VBoxContainer/Items"]
+margin_top = 68.0
+margin_right = 64.0
+margin_bottom = 132.0
+rect_min_size = Vector2( 64, 64 )
+size_flags_horizontal = 6
+size_flags_vertical = 6
+color = Color( 0.611765, 0.372549, 0, 1 )
+
+[node name="item6" type="ColorRect" parent="GridContainer/Selector/Lines/Items/VBoxContainer/Items"]
+margin_left = 68.0
+margin_top = 68.0
+margin_right = 132.0
+margin_bottom = 132.0
+rect_min_size = Vector2( 64, 64 )
+size_flags_horizontal = 6
+size_flags_vertical = 6
+color = Color( 0.611765, 0.372549, 0, 1 )
+
+[node name="item7" type="ColorRect" parent="GridContainer/Selector/Lines/Items/VBoxContainer/Items"]
+margin_left = 136.0
+margin_top = 68.0
+margin_right = 200.0
+margin_bottom = 132.0
+rect_min_size = Vector2( 64, 64 )
+size_flags_horizontal = 6
+size_flags_vertical = 6
+color = Color( 0.611765, 0.372549, 0, 1 )
+
+[node name="item8" type="ColorRect" parent="GridContainer/Selector/Lines/Items/VBoxContainer/Items"]
+margin_left = 204.0
+margin_top = 68.0
+margin_right = 268.0
+margin_bottom = 132.0
+rect_min_size = Vector2( 64, 64 )
+size_flags_horizontal = 6
+size_flags_vertical = 6
+color = Color( 0.611765, 0.372549, 0, 1 )
+
+[node name="item9" type="ColorRect" parent="GridContainer/Selector/Lines/Items/VBoxContainer/Items"]
+margin_top = 136.0
+margin_right = 64.0
+margin_bottom = 200.0
+rect_min_size = Vector2( 64, 64 )
+size_flags_horizontal = 6
+size_flags_vertical = 6
+color = Color( 0.611765, 0.372549, 0, 1 )
+
+[node name="item10" type="ColorRect" parent="GridContainer/Selector/Lines/Items/VBoxContainer/Items"]
+margin_left = 68.0
+margin_top = 136.0
+margin_right = 132.0
+margin_bottom = 200.0
+rect_min_size = Vector2( 64, 64 )
+size_flags_horizontal = 6
+size_flags_vertical = 6
+color = Color( 0.611765, 0.372549, 0, 1 )
+
+[node name="item11" type="ColorRect" parent="GridContainer/Selector/Lines/Items/VBoxContainer/Items"]
+margin_left = 136.0
+margin_top = 136.0
+margin_right = 200.0
+margin_bottom = 200.0
+rect_min_size = Vector2( 64, 64 )
+size_flags_horizontal = 6
+size_flags_vertical = 6
+color = Color( 0.611765, 0.372549, 0, 1 )
+
+[node name="item12" type="ColorRect" parent="GridContainer/Selector/Lines/Items/VBoxContainer/Items"]
+margin_left = 204.0
+margin_top = 136.0
+margin_right = 268.0
+margin_bottom = 200.0
+rect_min_size = Vector2( 64, 64 )
+size_flags_horizontal = 6
+size_flags_vertical = 6
+color = Color( 0.611765, 0.372549, 0, 1 )
+
+[node name="item13" type="ColorRect" parent="GridContainer/Selector/Lines/Items/VBoxContainer/Items"]
+margin_top = 204.0
+margin_right = 64.0
+margin_bottom = 268.0
+rect_min_size = Vector2( 64, 64 )
+size_flags_horizontal = 6
+size_flags_vertical = 6
+color = Color( 0.611765, 0.372549, 0, 1 )
+
+[node name="item14" type="ColorRect" parent="GridContainer/Selector/Lines/Items/VBoxContainer/Items"]
+margin_left = 68.0
+margin_top = 204.0
+margin_right = 132.0
+margin_bottom = 268.0
+rect_min_size = Vector2( 64, 64 )
+size_flags_horizontal = 6
+size_flags_vertical = 6
+color = Color( 0.611765, 0.372549, 0, 1 )
+
+[node name="item15" type="ColorRect" parent="GridContainer/Selector/Lines/Items/VBoxContainer/Items"]
+margin_left = 136.0
+margin_top = 204.0
+margin_right = 200.0
+margin_bottom = 268.0
+rect_min_size = Vector2( 64, 64 )
+size_flags_horizontal = 6
+size_flags_vertical = 6
+color = Color( 0.611765, 0.372549, 0, 1 )
+
+[node name="item16" type="ColorRect" parent="GridContainer/Selector/Lines/Items/VBoxContainer/Items"]
+margin_left = 204.0
+margin_top = 204.0
+margin_right = 268.0
+margin_bottom = 268.0
+rect_min_size = Vector2( 64, 64 )
+size_flags_horizontal = 6
+size_flags_vertical = 6
+color = Color( 0.611765, 0.372549, 0, 1 )
+
+[node name="item17" type="ColorRect" parent="GridContainer/Selector/Lines/Items/VBoxContainer/Items"]
+margin_top = 272.0
+margin_right = 64.0
+margin_bottom = 336.0
+rect_min_size = Vector2( 64, 64 )
+size_flags_horizontal = 6
+size_flags_vertical = 6
+color = Color( 0.611765, 0.372549, 0, 1 )
+
+[node name="item18" type="ColorRect" parent="GridContainer/Selector/Lines/Items/VBoxContainer/Items"]
+margin_left = 68.0
+margin_top = 272.0
+margin_right = 132.0
+margin_bottom = 336.0
+rect_min_size = Vector2( 64, 64 )
+size_flags_horizontal = 6
+size_flags_vertical = 6
+color = Color( 0.611765, 0.372549, 0, 1 )
+
+[node name="item19" type="ColorRect" parent="GridContainer/Selector/Lines/Items/VBoxContainer/Items"]
+margin_left = 136.0
+margin_top = 272.0
+margin_right = 200.0
+margin_bottom = 336.0
+rect_min_size = Vector2( 64, 64 )
+size_flags_horizontal = 6
+size_flags_vertical = 6
+color = Color( 0.611765, 0.372549, 0, 1 )
+
+[node name="item20" type="ColorRect" parent="GridContainer/Selector/Lines/Items/VBoxContainer/Items"]
+margin_left = 204.0
+margin_top = 272.0
+margin_right = 268.0
+margin_bottom = 336.0
+rect_min_size = Vector2( 64, 64 )
+size_flags_horizontal = 6
+size_flags_vertical = 6
+color = Color( 0.611765, 0.372549, 0, 1 )
+
+[node name="item21" type="ColorRect" parent="GridContainer/Selector/Lines/Items/VBoxContainer/Items"]
+margin_top = 340.0
+margin_right = 64.0
+margin_bottom = 404.0
+rect_min_size = Vector2( 64, 64 )
+size_flags_horizontal = 6
+size_flags_vertical = 6
+color = Color( 0.611765, 0.372549, 0, 1 )
+
+[node name="item22" type="ColorRect" parent="GridContainer/Selector/Lines/Items/VBoxContainer/Items"]
+margin_left = 68.0
+margin_top = 340.0
+margin_right = 132.0
+margin_bottom = 404.0
+rect_min_size = Vector2( 64, 64 )
+size_flags_horizontal = 6
+size_flags_vertical = 6
+color = Color( 0.611765, 0.372549, 0, 1 )
+
+[node name="item23" type="ColorRect" parent="GridContainer/Selector/Lines/Items/VBoxContainer/Items"]
+margin_left = 136.0
+margin_top = 340.0
+margin_right = 200.0
+margin_bottom = 404.0
+rect_min_size = Vector2( 64, 64 )
+size_flags_horizontal = 6
+size_flags_vertical = 6
+color = Color( 0.611765, 0.372549, 0, 1 )
+
+[node name="item24" type="ColorRect" parent="GridContainer/Selector/Lines/Items/VBoxContainer/Items"]
+margin_left = 204.0
+margin_top = 340.0
+margin_right = 268.0
+margin_bottom = 404.0
+rect_min_size = Vector2( 64, 64 )
+size_flags_horizontal = 6
+size_flags_vertical = 6
+color = Color( 0.611765, 0.372549, 0, 1 )
+
+[node name="item25" type="ColorRect" parent="GridContainer/Selector/Lines/Items/VBoxContainer/Items"]
+margin_top = 408.0
+margin_right = 64.0
+margin_bottom = 472.0
+rect_min_size = Vector2( 64, 64 )
+size_flags_horizontal = 6
+size_flags_vertical = 6
+color = Color( 0.611765, 0.372549, 0, 1 )
+
+[node name="item26" type="ColorRect" parent="GridContainer/Selector/Lines/Items/VBoxContainer/Items"]
+margin_left = 68.0
+margin_top = 408.0
+margin_right = 132.0
+margin_bottom = 472.0
+rect_min_size = Vector2( 64, 64 )
+size_flags_horizontal = 6
+size_flags_vertical = 6
+color = Color( 0.611765, 0.372549, 0, 1 )
+
+[node name="item27" type="ColorRect" parent="GridContainer/Selector/Lines/Items/VBoxContainer/Items"]
+margin_left = 136.0
+margin_top = 408.0
+margin_right = 200.0
+margin_bottom = 472.0
+rect_min_size = Vector2( 64, 64 )
+size_flags_horizontal = 6
+size_flags_vertical = 6
+color = Color( 0.611765, 0.372549, 0, 1 )
+
+[node name="item28" type="ColorRect" parent="GridContainer/Selector/Lines/Items/VBoxContainer/Items"]
+margin_left = 204.0
+margin_top = 408.0
+margin_right = 268.0
+margin_bottom = 472.0
+rect_min_size = Vector2( 64, 64 )
+size_flags_horizontal = 6
+size_flags_vertical = 6
+color = Color( 0.611765, 0.372549, 0, 1 )
+
+[node name="item29" type="ColorRect" parent="GridContainer/Selector/Lines/Items/VBoxContainer/Items"]
+margin_top = 476.0
+margin_right = 64.0
+margin_bottom = 540.0
+rect_min_size = Vector2( 64, 64 )
+size_flags_horizontal = 6
+size_flags_vertical = 6
+color = Color( 0.611765, 0.372549, 0, 1 )
+
+[node name="item30" type="ColorRect" parent="GridContainer/Selector/Lines/Items/VBoxContainer/Items"]
+margin_left = 68.0
+margin_top = 476.0
+margin_right = 132.0
+margin_bottom = 540.0
+rect_min_size = Vector2( 64, 64 )
+size_flags_horizontal = 6
+size_flags_vertical = 6
+color = Color( 0.611765, 0.372549, 0, 1 )
+
+[node name="item31" type="ColorRect" parent="GridContainer/Selector/Lines/Items/VBoxContainer/Items"]
+margin_left = 136.0
+margin_top = 476.0
+margin_right = 200.0
+margin_bottom = 540.0
+rect_min_size = Vector2( 64, 64 )
+size_flags_horizontal = 6
+size_flags_vertical = 6
+color = Color( 0.611765, 0.372549, 0, 1 )
+
+[node name="item32" type="ColorRect" parent="GridContainer/Selector/Lines/Items/VBoxContainer/Items"]
+margin_left = 204.0
+margin_top = 476.0
+margin_right = 268.0
+margin_bottom = 540.0
+rect_min_size = Vector2( 64, 64 )
+size_flags_horizontal = 6
+size_flags_vertical = 6
+color = Color( 0.611765, 0.372549, 0, 1 )
+
+[node name="item33" type="ColorRect" parent="GridContainer/Selector/Lines/Items/VBoxContainer/Items"]
+margin_top = 544.0
+margin_right = 64.0
+margin_bottom = 608.0
+rect_min_size = Vector2( 64, 64 )
+size_flags_horizontal = 6
+size_flags_vertical = 6
+color = Color( 0.611765, 0.372549, 0, 1 )
+
+[node name="item34" type="ColorRect" parent="GridContainer/Selector/Lines/Items/VBoxContainer/Items"]
+margin_left = 68.0
+margin_top = 544.0
+margin_right = 132.0
+margin_bottom = 608.0
+rect_min_size = Vector2( 64, 64 )
+size_flags_horizontal = 6
+size_flags_vertical = 6
+color = Color( 0.611765, 0.372549, 0, 1 )
+
+[node name="item35" type="ColorRect" parent="GridContainer/Selector/Lines/Items/VBoxContainer/Items"]
+margin_left = 136.0
+margin_top = 544.0
+margin_right = 200.0
+margin_bottom = 608.0
+rect_min_size = Vector2( 64, 64 )
+size_flags_horizontal = 6
+size_flags_vertical = 6
+color = Color( 0.611765, 0.372549, 0, 1 )
+
+[node name="item36" type="ColorRect" parent="GridContainer/Selector/Lines/Items/VBoxContainer/Items"]
+margin_left = 204.0
+margin_top = 544.0
+margin_right = 268.0
+margin_bottom = 608.0
+rect_min_size = Vector2( 64, 64 )
+size_flags_horizontal = 6
+size_flags_vertical = 6
+color = Color( 0.611765, 0.372549, 0, 1 )
+
+[node name="item37" type="ColorRect" parent="GridContainer/Selector/Lines/Items/VBoxContainer/Items"]
+margin_top = 612.0
+margin_right = 64.0
+margin_bottom = 676.0
+rect_min_size = Vector2( 64, 64 )
+size_flags_horizontal = 6
+size_flags_vertical = 6
+color = Color( 0.611765, 0.372549, 0, 1 )
+
+[node name="item38" type="ColorRect" parent="GridContainer/Selector/Lines/Items/VBoxContainer/Items"]
+margin_left = 68.0
+margin_top = 612.0
+margin_right = 132.0
+margin_bottom = 676.0
+rect_min_size = Vector2( 64, 64 )
+size_flags_horizontal = 6
+size_flags_vertical = 6
+color = Color( 0.611765, 0.372549, 0, 1 )
+
+[node name="item39" type="ColorRect" parent="GridContainer/Selector/Lines/Items/VBoxContainer/Items"]
+margin_left = 136.0
+margin_top = 612.0
+margin_right = 200.0
+margin_bottom = 676.0
+rect_min_size = Vector2( 64, 64 )
+size_flags_horizontal = 6
+size_flags_vertical = 6
+color = Color( 0.611765, 0.372549, 0, 1 )
+
+[node name="item40" type="ColorRect" parent="GridContainer/Selector/Lines/Items/VBoxContainer/Items"]
+margin_left = 204.0
+margin_top = 612.0
+margin_right = 268.0
+margin_bottom = 676.0
+rect_min_size = Vector2( 64, 64 )
+size_flags_horizontal = 6
+size_flags_vertical = 6
+color = Color( 0.611765, 0.372549, 0, 1 )
+
+[node name="item41" type="ColorRect" parent="GridContainer/Selector/Lines/Items/VBoxContainer/Items"]
+margin_top = 680.0
+margin_right = 64.0
+margin_bottom = 744.0
+rect_min_size = Vector2( 64, 64 )
+size_flags_horizontal = 6
+size_flags_vertical = 6
+color = Color( 0.611765, 0.372549, 0, 1 )
+
+[node name="item42" type="ColorRect" parent="GridContainer/Selector/Lines/Items/VBoxContainer/Items"]
+margin_left = 68.0
+margin_top = 680.0
+margin_right = 132.0
+margin_bottom = 744.0
+rect_min_size = Vector2( 64, 64 )
+size_flags_horizontal = 6
+size_flags_vertical = 6
+color = Color( 0.611765, 0.372549, 0, 1 )
+
+[node name="item43" type="ColorRect" parent="GridContainer/Selector/Lines/Items/VBoxContainer/Items"]
+margin_left = 136.0
+margin_top = 680.0
+margin_right = 200.0
+margin_bottom = 744.0
+rect_min_size = Vector2( 64, 64 )
+size_flags_horizontal = 6
+size_flags_vertical = 6
+color = Color( 0.611765, 0.372549, 0, 1 )
+
+[node name="item44" type="ColorRect" parent="GridContainer/Selector/Lines/Items/VBoxContainer/Items"]
+margin_left = 204.0
+margin_top = 680.0
+margin_right = 268.0
+margin_bottom = 744.0
+rect_min_size = Vector2( 64, 64 )
+size_flags_horizontal = 6
+size_flags_vertical = 6
+color = Color( 0.611765, 0.372549, 0, 1 )
+
+[node name="item45" type="ColorRect" parent="GridContainer/Selector/Lines/Items/VBoxContainer/Items"]
+margin_top = 748.0
+margin_right = 64.0
+margin_bottom = 812.0
+rect_min_size = Vector2( 64, 64 )
+size_flags_horizontal = 6
+size_flags_vertical = 6
+color = Color( 0.611765, 0.372549, 0, 1 )
+
+[node name="item46" type="ColorRect" parent="GridContainer/Selector/Lines/Items/VBoxContainer/Items"]
+margin_left = 68.0
+margin_top = 748.0
+margin_right = 132.0
+margin_bottom = 812.0
+rect_min_size = Vector2( 64, 64 )
+size_flags_horizontal = 6
+size_flags_vertical = 6
+color = Color( 0.611765, 0.372549, 0, 1 )
+
+[node name="item47" type="ColorRect" parent="GridContainer/Selector/Lines/Items/VBoxContainer/Items"]
+margin_left = 136.0
+margin_top = 748.0
+margin_right = 200.0
+margin_bottom = 812.0
+rect_min_size = Vector2( 64, 64 )
+size_flags_horizontal = 6
+size_flags_vertical = 6
+color = Color( 0.611765, 0.372549, 0, 1 )
+
+[node name="item48" type="ColorRect" parent="GridContainer/Selector/Lines/Items/VBoxContainer/Items"]
+margin_left = 204.0
+margin_top = 748.0
+margin_right = 268.0
+margin_bottom = 812.0
+rect_min_size = Vector2( 64, 64 )
+size_flags_horizontal = 6
+size_flags_vertical = 6
+color = Color( 0.611765, 0.372549, 0, 1 )
+
+[node name="item49" type="ColorRect" parent="GridContainer/Selector/Lines/Items/VBoxContainer/Items"]
+margin_top = 816.0
+margin_right = 64.0
+margin_bottom = 880.0
+rect_min_size = Vector2( 64, 64 )
+size_flags_horizontal = 6
+size_flags_vertical = 6
+color = Color( 0.611765, 0.372549, 0, 1 )
+
+[node name="item50" type="ColorRect" parent="GridContainer/Selector/Lines/Items/VBoxContainer/Items"]
+margin_left = 68.0
+margin_top = 816.0
+margin_right = 132.0
+margin_bottom = 880.0
+rect_min_size = Vector2( 64, 64 )
+size_flags_horizontal = 6
+size_flags_vertical = 6
+color = Color( 0.611765, 0.372549, 0, 1 )
+
+[node name="item51" type="ColorRect" parent="GridContainer/Selector/Lines/Items/VBoxContainer/Items"]
+margin_left = 136.0
+margin_top = 816.0
+margin_right = 200.0
+margin_bottom = 880.0
+rect_min_size = Vector2( 64, 64 )
+size_flags_horizontal = 6
+size_flags_vertical = 6
+color = Color( 0.611765, 0.372549, 0, 1 )
+
+[node name="item52" type="ColorRect" parent="GridContainer/Selector/Lines/Items/VBoxContainer/Items"]
+margin_left = 204.0
+margin_top = 816.0
+margin_right = 268.0
+margin_bottom = 880.0
+rect_min_size = Vector2( 64, 64 )
+size_flags_horizontal = 6
+size_flags_vertical = 6
+color = Color( 0.611765, 0.372549, 0, 1 )
+
+[node name="item53" type="ColorRect" parent="GridContainer/Selector/Lines/Items/VBoxContainer/Items"]
+margin_top = 884.0
+margin_right = 64.0
+margin_bottom = 948.0
+rect_min_size = Vector2( 64, 64 )
+size_flags_horizontal = 6
+size_flags_vertical = 6
+color = Color( 0.611765, 0.372549, 0, 1 )
+
+[node name="item54" type="ColorRect" parent="GridContainer/Selector/Lines/Items/VBoxContainer/Items"]
+margin_left = 68.0
+margin_top = 884.0
+margin_right = 132.0
+margin_bottom = 948.0
+rect_min_size = Vector2( 64, 64 )
+size_flags_horizontal = 6
+size_flags_vertical = 6
+color = Color( 0.611765, 0.372549, 0, 1 )
+
+[node name="item55" type="ColorRect" parent="GridContainer/Selector/Lines/Items/VBoxContainer/Items"]
+margin_left = 136.0
+margin_top = 884.0
+margin_right = 200.0
+margin_bottom = 948.0
+rect_min_size = Vector2( 64, 64 )
+size_flags_horizontal = 6
+size_flags_vertical = 6
+color = Color( 0.611765, 0.372549, 0, 1 )
+
+[node name="item56" type="ColorRect" parent="GridContainer/Selector/Lines/Items/VBoxContainer/Items"]
+margin_left = 204.0
+margin_top = 884.0
+margin_right = 268.0
+margin_bottom = 948.0
+rect_min_size = Vector2( 64, 64 )
+size_flags_horizontal = 6
+size_flags_vertical = 6
+color = Color( 0.611765, 0.372549, 0, 1 )
+
+[node name="item57" type="ColorRect" parent="GridContainer/Selector/Lines/Items/VBoxContainer/Items"]
+margin_top = 952.0
+margin_right = 64.0
+margin_bottom = 1016.0
+rect_min_size = Vector2( 64, 64 )
+size_flags_horizontal = 6
+size_flags_vertical = 6
+color = Color( 0.611765, 0.372549, 0, 1 )
+
+[node name="item58" type="ColorRect" parent="GridContainer/Selector/Lines/Items/VBoxContainer/Items"]
+margin_left = 68.0
+margin_top = 952.0
+margin_right = 132.0
+margin_bottom = 1016.0
+rect_min_size = Vector2( 64, 64 )
+size_flags_horizontal = 6
+size_flags_vertical = 6
+color = Color( 0.611765, 0.372549, 0, 1 )
+
+[node name="item59" type="ColorRect" parent="GridContainer/Selector/Lines/Items/VBoxContainer/Items"]
+margin_left = 136.0
+margin_top = 952.0
+margin_right = 200.0
+margin_bottom = 1016.0
+rect_min_size = Vector2( 64, 64 )
+size_flags_horizontal = 6
+size_flags_vertical = 6
+color = Color( 0.611765, 0.372549, 0, 1 )
+
+[node name="item60" type="ColorRect" parent="GridContainer/Selector/Lines/Items/VBoxContainer/Items"]
+margin_left = 204.0
+margin_top = 952.0
+margin_right = 268.0
+margin_bottom = 1016.0
+rect_min_size = Vector2( 64, 64 )
+size_flags_horizontal = 6
+size_flags_vertical = 6
+color = Color( 0.611765, 0.372549, 0, 1 )
+
+[node name="Hooks" type="Tabs" parent="GridContainer/Selector"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 34.0
+margin_right = -4.0
+margin_bottom = -4.0
+
+[node name="Items" type="ScrollContainer" parent="GridContainer/Selector/Hooks"]
+margin_left = 6.0
+margin_top = -2.0
+margin_right = 286.0
+margin_bottom = 454.0
+size_flags_horizontal = 7
+size_flags_vertical = 7
+
+[node name="VBoxContainer" type="VBoxContainer" parent="GridContainer/Selector/Hooks/Items"]
+margin_right = 280.0
+margin_bottom = 1016.0
+size_flags_horizontal = 7
+size_flags_vertical = 7
+
+[node name="Items" type="GridContainer" parent="GridContainer/Selector/Hooks/Items/VBoxContainer"]
+margin_right = 268.0
+margin_bottom = 1016.0
+size_flags_horizontal = 7
+size_flags_vertical = 7
+columns = 4
+
+[node name="item" type="ColorRect" parent="GridContainer/Selector/Hooks/Items/VBoxContainer/Items"]
+margin_right = 64.0
+margin_bottom = 64.0
+rect_min_size = Vector2( 64, 64 )
+size_flags_horizontal = 6
+size_flags_vertical = 6
+color = Color( 0.611765, 0.372549, 0, 1 )
+
+[node name="item2" type="ColorRect" parent="GridContainer/Selector/Hooks/Items/VBoxContainer/Items"]
+margin_left = 68.0
+margin_right = 132.0
+margin_bottom = 64.0
+rect_min_size = Vector2( 64, 64 )
+size_flags_horizontal = 6
+size_flags_vertical = 6
+color = Color( 0.611765, 0.372549, 0, 1 )
+
+[node name="item3" type="ColorRect" parent="GridContainer/Selector/Hooks/Items/VBoxContainer/Items"]
+margin_left = 136.0
+margin_right = 200.0
+margin_bottom = 64.0
+rect_min_size = Vector2( 64, 64 )
+size_flags_horizontal = 6
+size_flags_vertical = 6
+color = Color( 0.611765, 0.372549, 0, 1 )
+
+[node name="item4" type="ColorRect" parent="GridContainer/Selector/Hooks/Items/VBoxContainer/Items"]
+margin_left = 204.0
+margin_right = 268.0
+margin_bottom = 64.0
+rect_min_size = Vector2( 64, 64 )
+size_flags_horizontal = 6
+size_flags_vertical = 6
+color = Color( 0.611765, 0.372549, 0, 1 )
+
+[node name="item5" type="ColorRect" parent="GridContainer/Selector/Hooks/Items/VBoxContainer/Items"]
+margin_top = 68.0
+margin_right = 64.0
+margin_bottom = 132.0
+rect_min_size = Vector2( 64, 64 )
+size_flags_horizontal = 6
+size_flags_vertical = 6
+color = Color( 0.611765, 0.372549, 0, 1 )
+
+[node name="item6" type="ColorRect" parent="GridContainer/Selector/Hooks/Items/VBoxContainer/Items"]
+margin_left = 68.0
+margin_top = 68.0
+margin_right = 132.0
+margin_bottom = 132.0
+rect_min_size = Vector2( 64, 64 )
+size_flags_horizontal = 6
+size_flags_vertical = 6
+color = Color( 0.611765, 0.372549, 0, 1 )
+
+[node name="item7" type="ColorRect" parent="GridContainer/Selector/Hooks/Items/VBoxContainer/Items"]
+margin_left = 136.0
+margin_top = 68.0
+margin_right = 200.0
+margin_bottom = 132.0
+rect_min_size = Vector2( 64, 64 )
+size_flags_horizontal = 6
+size_flags_vertical = 6
+color = Color( 0.611765, 0.372549, 0, 1 )
+
+[node name="item8" type="ColorRect" parent="GridContainer/Selector/Hooks/Items/VBoxContainer/Items"]
+margin_left = 204.0
+margin_top = 68.0
+margin_right = 268.0
+margin_bottom = 132.0
+rect_min_size = Vector2( 64, 64 )
+size_flags_horizontal = 6
+size_flags_vertical = 6
+color = Color( 0.611765, 0.372549, 0, 1 )
+
+[node name="item9" type="ColorRect" parent="GridContainer/Selector/Hooks/Items/VBoxContainer/Items"]
+margin_top = 136.0
+margin_right = 64.0
+margin_bottom = 200.0
+rect_min_size = Vector2( 64, 64 )
+size_flags_horizontal = 6
+size_flags_vertical = 6
+color = Color( 0.611765, 0.372549, 0, 1 )
+
+[node name="item10" type="ColorRect" parent="GridContainer/Selector/Hooks/Items/VBoxContainer/Items"]
+margin_left = 68.0
+margin_top = 136.0
+margin_right = 132.0
+margin_bottom = 200.0
+rect_min_size = Vector2( 64, 64 )
+size_flags_horizontal = 6
+size_flags_vertical = 6
+color = Color( 0.611765, 0.372549, 0, 1 )
+
+[node name="item11" type="ColorRect" parent="GridContainer/Selector/Hooks/Items/VBoxContainer/Items"]
+margin_left = 136.0
+margin_top = 136.0
+margin_right = 200.0
+margin_bottom = 200.0
+rect_min_size = Vector2( 64, 64 )
+size_flags_horizontal = 6
+size_flags_vertical = 6
+color = Color( 0.611765, 0.372549, 0, 1 )
+
+[node name="item12" type="ColorRect" parent="GridContainer/Selector/Hooks/Items/VBoxContainer/Items"]
+margin_left = 204.0
+margin_top = 136.0
+margin_right = 268.0
+margin_bottom = 200.0
+rect_min_size = Vector2( 64, 64 )
+size_flags_horizontal = 6
+size_flags_vertical = 6
+color = Color( 0.611765, 0.372549, 0, 1 )
+
+[node name="item13" type="ColorRect" parent="GridContainer/Selector/Hooks/Items/VBoxContainer/Items"]
+margin_top = 204.0
+margin_right = 64.0
+margin_bottom = 268.0
+rect_min_size = Vector2( 64, 64 )
+size_flags_horizontal = 6
+size_flags_vertical = 6
+color = Color( 0.611765, 0.372549, 0, 1 )
+
+[node name="item14" type="ColorRect" parent="GridContainer/Selector/Hooks/Items/VBoxContainer/Items"]
+margin_left = 68.0
+margin_top = 204.0
+margin_right = 132.0
+margin_bottom = 268.0
+rect_min_size = Vector2( 64, 64 )
+size_flags_horizontal = 6
+size_flags_vertical = 6
+color = Color( 0.611765, 0.372549, 0, 1 )
+
+[node name="item15" type="ColorRect" parent="GridContainer/Selector/Hooks/Items/VBoxContainer/Items"]
+margin_left = 136.0
+margin_top = 204.0
+margin_right = 200.0
+margin_bottom = 268.0
+rect_min_size = Vector2( 64, 64 )
+size_flags_horizontal = 6
+size_flags_vertical = 6
+color = Color( 0.611765, 0.372549, 0, 1 )
+
+[node name="item16" type="ColorRect" parent="GridContainer/Selector/Hooks/Items/VBoxContainer/Items"]
+margin_left = 204.0
+margin_top = 204.0
+margin_right = 268.0
+margin_bottom = 268.0
+rect_min_size = Vector2( 64, 64 )
+size_flags_horizontal = 6
+size_flags_vertical = 6
+color = Color( 0.611765, 0.372549, 0, 1 )
+
+[node name="item17" type="ColorRect" parent="GridContainer/Selector/Hooks/Items/VBoxContainer/Items"]
+margin_top = 272.0
+margin_right = 64.0
+margin_bottom = 336.0
+rect_min_size = Vector2( 64, 64 )
+size_flags_horizontal = 6
+size_flags_vertical = 6
+color = Color( 0.611765, 0.372549, 0, 1 )
+
+[node name="item18" type="ColorRect" parent="GridContainer/Selector/Hooks/Items/VBoxContainer/Items"]
+margin_left = 68.0
+margin_top = 272.0
+margin_right = 132.0
+margin_bottom = 336.0
+rect_min_size = Vector2( 64, 64 )
+size_flags_horizontal = 6
+size_flags_vertical = 6
+color = Color( 0.611765, 0.372549, 0, 1 )
+
+[node name="item19" type="ColorRect" parent="GridContainer/Selector/Hooks/Items/VBoxContainer/Items"]
+margin_left = 136.0
+margin_top = 272.0
+margin_right = 200.0
+margin_bottom = 336.0
+rect_min_size = Vector2( 64, 64 )
+size_flags_horizontal = 6
+size_flags_vertical = 6
+color = Color( 0.611765, 0.372549, 0, 1 )
+
+[node name="item20" type="ColorRect" parent="GridContainer/Selector/Hooks/Items/VBoxContainer/Items"]
+margin_left = 204.0
+margin_top = 272.0
+margin_right = 268.0
+margin_bottom = 336.0
+rect_min_size = Vector2( 64, 64 )
+size_flags_horizontal = 6
+size_flags_vertical = 6
+color = Color( 0.611765, 0.372549, 0, 1 )
+
+[node name="item21" type="ColorRect" parent="GridContainer/Selector/Hooks/Items/VBoxContainer/Items"]
+margin_top = 340.0
+margin_right = 64.0
+margin_bottom = 404.0
+rect_min_size = Vector2( 64, 64 )
+size_flags_horizontal = 6
+size_flags_vertical = 6
+color = Color( 0.611765, 0.372549, 0, 1 )
+
+[node name="item22" type="ColorRect" parent="GridContainer/Selector/Hooks/Items/VBoxContainer/Items"]
+margin_left = 68.0
+margin_top = 340.0
+margin_right = 132.0
+margin_bottom = 404.0
+rect_min_size = Vector2( 64, 64 )
+size_flags_horizontal = 6
+size_flags_vertical = 6
+color = Color( 0.611765, 0.372549, 0, 1 )
+
+[node name="item23" type="ColorRect" parent="GridContainer/Selector/Hooks/Items/VBoxContainer/Items"]
+margin_left = 136.0
+margin_top = 340.0
+margin_right = 200.0
+margin_bottom = 404.0
+rect_min_size = Vector2( 64, 64 )
+size_flags_horizontal = 6
+size_flags_vertical = 6
+color = Color( 0.611765, 0.372549, 0, 1 )
+
+[node name="item24" type="ColorRect" parent="GridContainer/Selector/Hooks/Items/VBoxContainer/Items"]
+margin_left = 204.0
+margin_top = 340.0
+margin_right = 268.0
+margin_bottom = 404.0
+rect_min_size = Vector2( 64, 64 )
+size_flags_horizontal = 6
+size_flags_vertical = 6
+color = Color( 0.611765, 0.372549, 0, 1 )
+
+[node name="item25" type="ColorRect" parent="GridContainer/Selector/Hooks/Items/VBoxContainer/Items"]
+margin_top = 408.0
+margin_right = 64.0
+margin_bottom = 472.0
+rect_min_size = Vector2( 64, 64 )
+size_flags_horizontal = 6
+size_flags_vertical = 6
+color = Color( 0.611765, 0.372549, 0, 1 )
+
+[node name="item26" type="ColorRect" parent="GridContainer/Selector/Hooks/Items/VBoxContainer/Items"]
+margin_left = 68.0
+margin_top = 408.0
+margin_right = 132.0
+margin_bottom = 472.0
+rect_min_size = Vector2( 64, 64 )
+size_flags_horizontal = 6
+size_flags_vertical = 6
+color = Color( 0.611765, 0.372549, 0, 1 )
+
+[node name="item27" type="ColorRect" parent="GridContainer/Selector/Hooks/Items/VBoxContainer/Items"]
+margin_left = 136.0
+margin_top = 408.0
+margin_right = 200.0
+margin_bottom = 472.0
+rect_min_size = Vector2( 64, 64 )
+size_flags_horizontal = 6
+size_flags_vertical = 6
+color = Color( 0.611765, 0.372549, 0, 1 )
+
+[node name="item28" type="ColorRect" parent="GridContainer/Selector/Hooks/Items/VBoxContainer/Items"]
+margin_left = 204.0
+margin_top = 408.0
+margin_right = 268.0
+margin_bottom = 472.0
+rect_min_size = Vector2( 64, 64 )
+size_flags_horizontal = 6
+size_flags_vertical = 6
+color = Color( 0.611765, 0.372549, 0, 1 )
+
+[node name="item29" type="ColorRect" parent="GridContainer/Selector/Hooks/Items/VBoxContainer/Items"]
+margin_top = 476.0
+margin_right = 64.0
+margin_bottom = 540.0
+rect_min_size = Vector2( 64, 64 )
+size_flags_horizontal = 6
+size_flags_vertical = 6
+color = Color( 0.611765, 0.372549, 0, 1 )
+
+[node name="item30" type="ColorRect" parent="GridContainer/Selector/Hooks/Items/VBoxContainer/Items"]
+margin_left = 68.0
+margin_top = 476.0
+margin_right = 132.0
+margin_bottom = 540.0
+rect_min_size = Vector2( 64, 64 )
+size_flags_horizontal = 6
+size_flags_vertical = 6
+color = Color( 0.611765, 0.372549, 0, 1 )
+
+[node name="item31" type="ColorRect" parent="GridContainer/Selector/Hooks/Items/VBoxContainer/Items"]
+margin_left = 136.0
+margin_top = 476.0
+margin_right = 200.0
+margin_bottom = 540.0
+rect_min_size = Vector2( 64, 64 )
+size_flags_horizontal = 6
+size_flags_vertical = 6
+color = Color( 0.611765, 0.372549, 0, 1 )
+
+[node name="item32" type="ColorRect" parent="GridContainer/Selector/Hooks/Items/VBoxContainer/Items"]
+margin_left = 204.0
+margin_top = 476.0
+margin_right = 268.0
+margin_bottom = 540.0
+rect_min_size = Vector2( 64, 64 )
+size_flags_horizontal = 6
+size_flags_vertical = 6
+color = Color( 0.611765, 0.372549, 0, 1 )
+
+[node name="item33" type="ColorRect" parent="GridContainer/Selector/Hooks/Items/VBoxContainer/Items"]
+margin_top = 544.0
+margin_right = 64.0
+margin_bottom = 608.0
+rect_min_size = Vector2( 64, 64 )
+size_flags_horizontal = 6
+size_flags_vertical = 6
+color = Color( 0.611765, 0.372549, 0, 1 )
+
+[node name="item34" type="ColorRect" parent="GridContainer/Selector/Hooks/Items/VBoxContainer/Items"]
+margin_left = 68.0
+margin_top = 544.0
+margin_right = 132.0
+margin_bottom = 608.0
+rect_min_size = Vector2( 64, 64 )
+size_flags_horizontal = 6
+size_flags_vertical = 6
+color = Color( 0.611765, 0.372549, 0, 1 )
+
+[node name="item35" type="ColorRect" parent="GridContainer/Selector/Hooks/Items/VBoxContainer/Items"]
+margin_left = 136.0
+margin_top = 544.0
+margin_right = 200.0
+margin_bottom = 608.0
+rect_min_size = Vector2( 64, 64 )
+size_flags_horizontal = 6
+size_flags_vertical = 6
+color = Color( 0.611765, 0.372549, 0, 1 )
+
+[node name="item36" type="ColorRect" parent="GridContainer/Selector/Hooks/Items/VBoxContainer/Items"]
+margin_left = 204.0
+margin_top = 544.0
+margin_right = 268.0
+margin_bottom = 608.0
+rect_min_size = Vector2( 64, 64 )
+size_flags_horizontal = 6
+size_flags_vertical = 6
+color = Color( 0.611765, 0.372549, 0, 1 )
+
+[node name="item37" type="ColorRect" parent="GridContainer/Selector/Hooks/Items/VBoxContainer/Items"]
+margin_top = 612.0
+margin_right = 64.0
+margin_bottom = 676.0
+rect_min_size = Vector2( 64, 64 )
+size_flags_horizontal = 6
+size_flags_vertical = 6
+color = Color( 0.611765, 0.372549, 0, 1 )
+
+[node name="item38" type="ColorRect" parent="GridContainer/Selector/Hooks/Items/VBoxContainer/Items"]
+margin_left = 68.0
+margin_top = 612.0
+margin_right = 132.0
+margin_bottom = 676.0
+rect_min_size = Vector2( 64, 64 )
+size_flags_horizontal = 6
+size_flags_vertical = 6
+color = Color( 0.611765, 0.372549, 0, 1 )
+
+[node name="item39" type="ColorRect" parent="GridContainer/Selector/Hooks/Items/VBoxContainer/Items"]
+margin_left = 136.0
+margin_top = 612.0
+margin_right = 200.0
+margin_bottom = 676.0
+rect_min_size = Vector2( 64, 64 )
+size_flags_horizontal = 6
+size_flags_vertical = 6
+color = Color( 0.611765, 0.372549, 0, 1 )
+
+[node name="item40" type="ColorRect" parent="GridContainer/Selector/Hooks/Items/VBoxContainer/Items"]
+margin_left = 204.0
+margin_top = 612.0
+margin_right = 268.0
+margin_bottom = 676.0
+rect_min_size = Vector2( 64, 64 )
+size_flags_horizontal = 6
+size_flags_vertical = 6
+color = Color( 0.611765, 0.372549, 0, 1 )
+
+[node name="item41" type="ColorRect" parent="GridContainer/Selector/Hooks/Items/VBoxContainer/Items"]
+margin_top = 680.0
+margin_right = 64.0
+margin_bottom = 744.0
+rect_min_size = Vector2( 64, 64 )
+size_flags_horizontal = 6
+size_flags_vertical = 6
+color = Color( 0.611765, 0.372549, 0, 1 )
+
+[node name="item42" type="ColorRect" parent="GridContainer/Selector/Hooks/Items/VBoxContainer/Items"]
+margin_left = 68.0
+margin_top = 680.0
+margin_right = 132.0
+margin_bottom = 744.0
+rect_min_size = Vector2( 64, 64 )
+size_flags_horizontal = 6
+size_flags_vertical = 6
+color = Color( 0.611765, 0.372549, 0, 1 )
+
+[node name="item43" type="ColorRect" parent="GridContainer/Selector/Hooks/Items/VBoxContainer/Items"]
+margin_left = 136.0
+margin_top = 680.0
+margin_right = 200.0
+margin_bottom = 744.0
+rect_min_size = Vector2( 64, 64 )
+size_flags_horizontal = 6
+size_flags_vertical = 6
+color = Color( 0.611765, 0.372549, 0, 1 )
+
+[node name="item44" type="ColorRect" parent="GridContainer/Selector/Hooks/Items/VBoxContainer/Items"]
+margin_left = 204.0
+margin_top = 680.0
+margin_right = 268.0
+margin_bottom = 744.0
+rect_min_size = Vector2( 64, 64 )
+size_flags_horizontal = 6
+size_flags_vertical = 6
+color = Color( 0.611765, 0.372549, 0, 1 )
+
+[node name="item45" type="ColorRect" parent="GridContainer/Selector/Hooks/Items/VBoxContainer/Items"]
+margin_top = 748.0
+margin_right = 64.0
+margin_bottom = 812.0
+rect_min_size = Vector2( 64, 64 )
+size_flags_horizontal = 6
+size_flags_vertical = 6
+color = Color( 0.611765, 0.372549, 0, 1 )
+
+[node name="item46" type="ColorRect" parent="GridContainer/Selector/Hooks/Items/VBoxContainer/Items"]
+margin_left = 68.0
+margin_top = 748.0
+margin_right = 132.0
+margin_bottom = 812.0
+rect_min_size = Vector2( 64, 64 )
+size_flags_horizontal = 6
+size_flags_vertical = 6
+color = Color( 0.611765, 0.372549, 0, 1 )
+
+[node name="item47" type="ColorRect" parent="GridContainer/Selector/Hooks/Items/VBoxContainer/Items"]
+margin_left = 136.0
+margin_top = 748.0
+margin_right = 200.0
+margin_bottom = 812.0
+rect_min_size = Vector2( 64, 64 )
+size_flags_horizontal = 6
+size_flags_vertical = 6
+color = Color( 0.611765, 0.372549, 0, 1 )
+
+[node name="item48" type="ColorRect" parent="GridContainer/Selector/Hooks/Items/VBoxContainer/Items"]
+margin_left = 204.0
+margin_top = 748.0
+margin_right = 268.0
+margin_bottom = 812.0
+rect_min_size = Vector2( 64, 64 )
+size_flags_horizontal = 6
+size_flags_vertical = 6
+color = Color( 0.611765, 0.372549, 0, 1 )
+
+[node name="item49" type="ColorRect" parent="GridContainer/Selector/Hooks/Items/VBoxContainer/Items"]
+margin_top = 816.0
+margin_right = 64.0
+margin_bottom = 880.0
+rect_min_size = Vector2( 64, 64 )
+size_flags_horizontal = 6
+size_flags_vertical = 6
+color = Color( 0.611765, 0.372549, 0, 1 )
+
+[node name="item50" type="ColorRect" parent="GridContainer/Selector/Hooks/Items/VBoxContainer/Items"]
+margin_left = 68.0
+margin_top = 816.0
+margin_right = 132.0
+margin_bottom = 880.0
+rect_min_size = Vector2( 64, 64 )
+size_flags_horizontal = 6
+size_flags_vertical = 6
+color = Color( 0.611765, 0.372549, 0, 1 )
+
+[node name="item51" type="ColorRect" parent="GridContainer/Selector/Hooks/Items/VBoxContainer/Items"]
+margin_left = 136.0
+margin_top = 816.0
+margin_right = 200.0
+margin_bottom = 880.0
+rect_min_size = Vector2( 64, 64 )
+size_flags_horizontal = 6
+size_flags_vertical = 6
+color = Color( 0.611765, 0.372549, 0, 1 )
+
+[node name="item52" type="ColorRect" parent="GridContainer/Selector/Hooks/Items/VBoxContainer/Items"]
+margin_left = 204.0
+margin_top = 816.0
+margin_right = 268.0
+margin_bottom = 880.0
+rect_min_size = Vector2( 64, 64 )
+size_flags_horizontal = 6
+size_flags_vertical = 6
+color = Color( 0.611765, 0.372549, 0, 1 )
+
+[node name="item53" type="ColorRect" parent="GridContainer/Selector/Hooks/Items/VBoxContainer/Items"]
+margin_top = 884.0
+margin_right = 64.0
+margin_bottom = 948.0
+rect_min_size = Vector2( 64, 64 )
+size_flags_horizontal = 6
+size_flags_vertical = 6
+color = Color( 0.611765, 0.372549, 0, 1 )
+
+[node name="item54" type="ColorRect" parent="GridContainer/Selector/Hooks/Items/VBoxContainer/Items"]
+margin_left = 68.0
+margin_top = 884.0
+margin_right = 132.0
+margin_bottom = 948.0
+rect_min_size = Vector2( 64, 64 )
+size_flags_horizontal = 6
+size_flags_vertical = 6
+color = Color( 0.611765, 0.372549, 0, 1 )
+
+[node name="item55" type="ColorRect" parent="GridContainer/Selector/Hooks/Items/VBoxContainer/Items"]
+margin_left = 136.0
+margin_top = 884.0
+margin_right = 200.0
+margin_bottom = 948.0
+rect_min_size = Vector2( 64, 64 )
+size_flags_horizontal = 6
+size_flags_vertical = 6
+color = Color( 0.611765, 0.372549, 0, 1 )
+
+[node name="item56" type="ColorRect" parent="GridContainer/Selector/Hooks/Items/VBoxContainer/Items"]
+margin_left = 204.0
+margin_top = 884.0
+margin_right = 268.0
+margin_bottom = 948.0
+rect_min_size = Vector2( 64, 64 )
+size_flags_horizontal = 6
+size_flags_vertical = 6
+color = Color( 0.611765, 0.372549, 0, 1 )
+
+[node name="item57" type="ColorRect" parent="GridContainer/Selector/Hooks/Items/VBoxContainer/Items"]
+margin_top = 952.0
+margin_right = 64.0
+margin_bottom = 1016.0
+rect_min_size = Vector2( 64, 64 )
+size_flags_horizontal = 6
+size_flags_vertical = 6
+color = Color( 0.611765, 0.372549, 0, 1 )
+
+[node name="item58" type="ColorRect" parent="GridContainer/Selector/Hooks/Items/VBoxContainer/Items"]
+margin_left = 68.0
+margin_top = 952.0
+margin_right = 132.0
+margin_bottom = 1016.0
+rect_min_size = Vector2( 64, 64 )
+size_flags_horizontal = 6
+size_flags_vertical = 6
+color = Color( 0.611765, 0.372549, 0, 1 )
+
+[node name="item59" type="ColorRect" parent="GridContainer/Selector/Hooks/Items/VBoxContainer/Items"]
+margin_left = 136.0
+margin_top = 952.0
+margin_right = 200.0
+margin_bottom = 1016.0
+rect_min_size = Vector2( 64, 64 )
+size_flags_horizontal = 6
+size_flags_vertical = 6
+color = Color( 0.611765, 0.372549, 0, 1 )
+
+[node name="item60" type="ColorRect" parent="GridContainer/Selector/Hooks/Items/VBoxContainer/Items"]
+margin_left = 204.0
+margin_top = 952.0
+margin_right = 268.0
+margin_bottom = 1016.0
+rect_min_size = Vector2( 64, 64 )
+size_flags_horizontal = 6
+size_flags_vertical = 6
+color = Color( 0.611765, 0.372549, 0, 1 )
+
+[node name="Baits" type="Tabs" parent="GridContainer/Selector"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 34.0
+margin_right = -4.0
+margin_bottom = -4.0
+
+[node name="Items" type="ScrollContainer" parent="GridContainer/Selector/Baits"]
+margin_left = 6.0
+margin_top = -2.0
+margin_right = 286.0
+margin_bottom = 454.0
+size_flags_horizontal = 7
+size_flags_vertical = 7
+
+[node name="VBoxContainer" type="VBoxContainer" parent="GridContainer/Selector/Baits/Items"]
+margin_right = 280.0
+margin_bottom = 1016.0
+size_flags_horizontal = 7
+size_flags_vertical = 7
+
+[node name="Items" type="GridContainer" parent="GridContainer/Selector/Baits/Items/VBoxContainer"]
+margin_right = 268.0
+margin_bottom = 1016.0
+size_flags_horizontal = 7
+size_flags_vertical = 7
+columns = 4
+
+[node name="item" type="ColorRect" parent="GridContainer/Selector/Baits/Items/VBoxContainer/Items"]
+margin_right = 64.0
+margin_bottom = 64.0
+rect_min_size = Vector2( 64, 64 )
+size_flags_horizontal = 6
+size_flags_vertical = 6
+color = Color( 0.611765, 0.372549, 0, 1 )
+
+[node name="item2" type="ColorRect" parent="GridContainer/Selector/Baits/Items/VBoxContainer/Items"]
+margin_left = 68.0
+margin_right = 132.0
+margin_bottom = 64.0
+rect_min_size = Vector2( 64, 64 )
+size_flags_horizontal = 6
+size_flags_vertical = 6
+color = Color( 0.611765, 0.372549, 0, 1 )
+
+[node name="item3" type="ColorRect" parent="GridContainer/Selector/Baits/Items/VBoxContainer/Items"]
+margin_left = 136.0
+margin_right = 200.0
+margin_bottom = 64.0
+rect_min_size = Vector2( 64, 64 )
+size_flags_horizontal = 6
+size_flags_vertical = 6
+color = Color( 0.611765, 0.372549, 0, 1 )
+
+[node name="item4" type="ColorRect" parent="GridContainer/Selector/Baits/Items/VBoxContainer/Items"]
+margin_left = 204.0
+margin_right = 268.0
+margin_bottom = 64.0
+rect_min_size = Vector2( 64, 64 )
+size_flags_horizontal = 6
+size_flags_vertical = 6
+color = Color( 0.611765, 0.372549, 0, 1 )
+
+[node name="item5" type="ColorRect" parent="GridContainer/Selector/Baits/Items/VBoxContainer/Items"]
+margin_top = 68.0
+margin_right = 64.0
+margin_bottom = 132.0
+rect_min_size = Vector2( 64, 64 )
+size_flags_horizontal = 6
+size_flags_vertical = 6
+color = Color( 0.611765, 0.372549, 0, 1 )
+
+[node name="item6" type="ColorRect" parent="GridContainer/Selector/Baits/Items/VBoxContainer/Items"]
+margin_left = 68.0
+margin_top = 68.0
+margin_right = 132.0
+margin_bottom = 132.0
+rect_min_size = Vector2( 64, 64 )
+size_flags_horizontal = 6
+size_flags_vertical = 6
+color = Color( 0.611765, 0.372549, 0, 1 )
+
+[node name="item7" type="ColorRect" parent="GridContainer/Selector/Baits/Items/VBoxContainer/Items"]
+margin_left = 136.0
+margin_top = 68.0
+margin_right = 200.0
+margin_bottom = 132.0
+rect_min_size = Vector2( 64, 64 )
+size_flags_horizontal = 6
+size_flags_vertical = 6
+color = Color( 0.611765, 0.372549, 0, 1 )
+
+[node name="item8" type="ColorRect" parent="GridContainer/Selector/Baits/Items/VBoxContainer/Items"]
+margin_left = 204.0
+margin_top = 68.0
+margin_right = 268.0
+margin_bottom = 132.0
+rect_min_size = Vector2( 64, 64 )
+size_flags_horizontal = 6
+size_flags_vertical = 6
+color = Color( 0.611765, 0.372549, 0, 1 )
+
+[node name="item9" type="ColorRect" parent="GridContainer/Selector/Baits/Items/VBoxContainer/Items"]
+margin_top = 136.0
+margin_right = 64.0
+margin_bottom = 200.0
+rect_min_size = Vector2( 64, 64 )
+size_flags_horizontal = 6
+size_flags_vertical = 6
+color = Color( 0.611765, 0.372549, 0, 1 )
+
+[node name="item10" type="ColorRect" parent="GridContainer/Selector/Baits/Items/VBoxContainer/Items"]
+margin_left = 68.0
+margin_top = 136.0
+margin_right = 132.0
+margin_bottom = 200.0
+rect_min_size = Vector2( 64, 64 )
+size_flags_horizontal = 6
+size_flags_vertical = 6
+color = Color( 0.611765, 0.372549, 0, 1 )
+
+[node name="item11" type="ColorRect" parent="GridContainer/Selector/Baits/Items/VBoxContainer/Items"]
+margin_left = 136.0
+margin_top = 136.0
+margin_right = 200.0
+margin_bottom = 200.0
+rect_min_size = Vector2( 64, 64 )
+size_flags_horizontal = 6
+size_flags_vertical = 6
+color = Color( 0.611765, 0.372549, 0, 1 )
+
+[node name="item12" type="ColorRect" parent="GridContainer/Selector/Baits/Items/VBoxContainer/Items"]
+margin_left = 204.0
+margin_top = 136.0
+margin_right = 268.0
+margin_bottom = 200.0
+rect_min_size = Vector2( 64, 64 )
+size_flags_horizontal = 6
+size_flags_vertical = 6
+color = Color( 0.611765, 0.372549, 0, 1 )
+
+[node name="item13" type="ColorRect" parent="GridContainer/Selector/Baits/Items/VBoxContainer/Items"]
+margin_top = 204.0
+margin_right = 64.0
+margin_bottom = 268.0
+rect_min_size = Vector2( 64, 64 )
+size_flags_horizontal = 6
+size_flags_vertical = 6
+color = Color( 0.611765, 0.372549, 0, 1 )
+
+[node name="item14" type="ColorRect" parent="GridContainer/Selector/Baits/Items/VBoxContainer/Items"]
+margin_left = 68.0
+margin_top = 204.0
+margin_right = 132.0
+margin_bottom = 268.0
+rect_min_size = Vector2( 64, 64 )
+size_flags_horizontal = 6
+size_flags_vertical = 6
+color = Color( 0.611765, 0.372549, 0, 1 )
+
+[node name="item15" type="ColorRect" parent="GridContainer/Selector/Baits/Items/VBoxContainer/Items"]
+margin_left = 136.0
+margin_top = 204.0
+margin_right = 200.0
+margin_bottom = 268.0
+rect_min_size = Vector2( 64, 64 )
+size_flags_horizontal = 6
+size_flags_vertical = 6
+color = Color( 0.611765, 0.372549, 0, 1 )
+
+[node name="item16" type="ColorRect" parent="GridContainer/Selector/Baits/Items/VBoxContainer/Items"]
+margin_left = 204.0
+margin_top = 204.0
+margin_right = 268.0
+margin_bottom = 268.0
+rect_min_size = Vector2( 64, 64 )
+size_flags_horizontal = 6
+size_flags_vertical = 6
+color = Color( 0.611765, 0.372549, 0, 1 )
+
+[node name="item17" type="ColorRect" parent="GridContainer/Selector/Baits/Items/VBoxContainer/Items"]
+margin_top = 272.0
+margin_right = 64.0
+margin_bottom = 336.0
+rect_min_size = Vector2( 64, 64 )
+size_flags_horizontal = 6
+size_flags_vertical = 6
+color = Color( 0.611765, 0.372549, 0, 1 )
+
+[node name="item18" type="ColorRect" parent="GridContainer/Selector/Baits/Items/VBoxContainer/Items"]
+margin_left = 68.0
+margin_top = 272.0
+margin_right = 132.0
+margin_bottom = 336.0
+rect_min_size = Vector2( 64, 64 )
+size_flags_horizontal = 6
+size_flags_vertical = 6
+color = Color( 0.611765, 0.372549, 0, 1 )
+
+[node name="item19" type="ColorRect" parent="GridContainer/Selector/Baits/Items/VBoxContainer/Items"]
+margin_left = 136.0
+margin_top = 272.0
+margin_right = 200.0
+margin_bottom = 336.0
+rect_min_size = Vector2( 64, 64 )
+size_flags_horizontal = 6
+size_flags_vertical = 6
+color = Color( 0.611765, 0.372549, 0, 1 )
+
+[node name="item20" type="ColorRect" parent="GridContainer/Selector/Baits/Items/VBoxContainer/Items"]
+margin_left = 204.0
+margin_top = 272.0
+margin_right = 268.0
+margin_bottom = 336.0
+rect_min_size = Vector2( 64, 64 )
+size_flags_horizontal = 6
+size_flags_vertical = 6
+color = Color( 0.611765, 0.372549, 0, 1 )
+
+[node name="item21" type="ColorRect" parent="GridContainer/Selector/Baits/Items/VBoxContainer/Items"]
+margin_top = 340.0
+margin_right = 64.0
+margin_bottom = 404.0
+rect_min_size = Vector2( 64, 64 )
+size_flags_horizontal = 6
+size_flags_vertical = 6
+color = Color( 0.611765, 0.372549, 0, 1 )
+
+[node name="item22" type="ColorRect" parent="GridContainer/Selector/Baits/Items/VBoxContainer/Items"]
+margin_left = 68.0
+margin_top = 340.0
+margin_right = 132.0
+margin_bottom = 404.0
+rect_min_size = Vector2( 64, 64 )
+size_flags_horizontal = 6
+size_flags_vertical = 6
+color = Color( 0.611765, 0.372549, 0, 1 )
+
+[node name="item23" type="ColorRect" parent="GridContainer/Selector/Baits/Items/VBoxContainer/Items"]
+margin_left = 136.0
+margin_top = 340.0
+margin_right = 200.0
+margin_bottom = 404.0
+rect_min_size = Vector2( 64, 64 )
+size_flags_horizontal = 6
+size_flags_vertical = 6
+color = Color( 0.611765, 0.372549, 0, 1 )
+
+[node name="item24" type="ColorRect" parent="GridContainer/Selector/Baits/Items/VBoxContainer/Items"]
+margin_left = 204.0
+margin_top = 340.0
+margin_right = 268.0
+margin_bottom = 404.0
+rect_min_size = Vector2( 64, 64 )
+size_flags_horizontal = 6
+size_flags_vertical = 6
+color = Color( 0.611765, 0.372549, 0, 1 )
+
+[node name="item25" type="ColorRect" parent="GridContainer/Selector/Baits/Items/VBoxContainer/Items"]
+margin_top = 408.0
+margin_right = 64.0
+margin_bottom = 472.0
+rect_min_size = Vector2( 64, 64 )
+size_flags_horizontal = 6
+size_flags_vertical = 6
+color = Color( 0.611765, 0.372549, 0, 1 )
+
+[node name="item26" type="ColorRect" parent="GridContainer/Selector/Baits/Items/VBoxContainer/Items"]
+margin_left = 68.0
+margin_top = 408.0
+margin_right = 132.0
+margin_bottom = 472.0
+rect_min_size = Vector2( 64, 64 )
+size_flags_horizontal = 6
+size_flags_vertical = 6
+color = Color( 0.611765, 0.372549, 0, 1 )
+
+[node name="item27" type="ColorRect" parent="GridContainer/Selector/Baits/Items/VBoxContainer/Items"]
+margin_left = 136.0
+margin_top = 408.0
+margin_right = 200.0
+margin_bottom = 472.0
+rect_min_size = Vector2( 64, 64 )
+size_flags_horizontal = 6
+size_flags_vertical = 6
+color = Color( 0.611765, 0.372549, 0, 1 )
+
+[node name="item28" type="ColorRect" parent="GridContainer/Selector/Baits/Items/VBoxContainer/Items"]
+margin_left = 204.0
+margin_top = 408.0
+margin_right = 268.0
+margin_bottom = 472.0
+rect_min_size = Vector2( 64, 64 )
+size_flags_horizontal = 6
+size_flags_vertical = 6
+color = Color( 0.611765, 0.372549, 0, 1 )
+
+[node name="item29" type="ColorRect" parent="GridContainer/Selector/Baits/Items/VBoxContainer/Items"]
+margin_top = 476.0
+margin_right = 64.0
+margin_bottom = 540.0
+rect_min_size = Vector2( 64, 64 )
+size_flags_horizontal = 6
+size_flags_vertical = 6
+color = Color( 0.611765, 0.372549, 0, 1 )
+
+[node name="item30" type="ColorRect" parent="GridContainer/Selector/Baits/Items/VBoxContainer/Items"]
+margin_left = 68.0
+margin_top = 476.0
+margin_right = 132.0
+margin_bottom = 540.0
+rect_min_size = Vector2( 64, 64 )
+size_flags_horizontal = 6
+size_flags_vertical = 6
+color = Color( 0.611765, 0.372549, 0, 1 )
+
+[node name="item31" type="ColorRect" parent="GridContainer/Selector/Baits/Items/VBoxContainer/Items"]
+margin_left = 136.0
+margin_top = 476.0
+margin_right = 200.0
+margin_bottom = 540.0
+rect_min_size = Vector2( 64, 64 )
+size_flags_horizontal = 6
+size_flags_vertical = 6
+color = Color( 0.611765, 0.372549, 0, 1 )
+
+[node name="item32" type="ColorRect" parent="GridContainer/Selector/Baits/Items/VBoxContainer/Items"]
+margin_left = 204.0
+margin_top = 476.0
+margin_right = 268.0
+margin_bottom = 540.0
+rect_min_size = Vector2( 64, 64 )
+size_flags_horizontal = 6
+size_flags_vertical = 6
+color = Color( 0.611765, 0.372549, 0, 1 )
+
+[node name="item33" type="ColorRect" parent="GridContainer/Selector/Baits/Items/VBoxContainer/Items"]
+margin_top = 544.0
+margin_right = 64.0
+margin_bottom = 608.0
+rect_min_size = Vector2( 64, 64 )
+size_flags_horizontal = 6
+size_flags_vertical = 6
+color = Color( 0.611765, 0.372549, 0, 1 )
+
+[node name="item34" type="ColorRect" parent="GridContainer/Selector/Baits/Items/VBoxContainer/Items"]
+margin_left = 68.0
+margin_top = 544.0
+margin_right = 132.0
+margin_bottom = 608.0
+rect_min_size = Vector2( 64, 64 )
+size_flags_horizontal = 6
+size_flags_vertical = 6
+color = Color( 0.611765, 0.372549, 0, 1 )
+
+[node name="item35" type="ColorRect" parent="GridContainer/Selector/Baits/Items/VBoxContainer/Items"]
+margin_left = 136.0
+margin_top = 544.0
+margin_right = 200.0
+margin_bottom = 608.0
+rect_min_size = Vector2( 64, 64 )
+size_flags_horizontal = 6
+size_flags_vertical = 6
+color = Color( 0.611765, 0.372549, 0, 1 )
+
+[node name="item36" type="ColorRect" parent="GridContainer/Selector/Baits/Items/VBoxContainer/Items"]
+margin_left = 204.0
+margin_top = 544.0
+margin_right = 268.0
+margin_bottom = 608.0
+rect_min_size = Vector2( 64, 64 )
+size_flags_horizontal = 6
+size_flags_vertical = 6
+color = Color( 0.611765, 0.372549, 0, 1 )
+
+[node name="item37" type="ColorRect" parent="GridContainer/Selector/Baits/Items/VBoxContainer/Items"]
+margin_top = 612.0
+margin_right = 64.0
+margin_bottom = 676.0
+rect_min_size = Vector2( 64, 64 )
+size_flags_horizontal = 6
+size_flags_vertical = 6
+color = Color( 0.611765, 0.372549, 0, 1 )
+
+[node name="item38" type="ColorRect" parent="GridContainer/Selector/Baits/Items/VBoxContainer/Items"]
+margin_left = 68.0
+margin_top = 612.0
+margin_right = 132.0
+margin_bottom = 676.0
+rect_min_size = Vector2( 64, 64 )
+size_flags_horizontal = 6
+size_flags_vertical = 6
+color = Color( 0.611765, 0.372549, 0, 1 )
+
+[node name="item39" type="ColorRect" parent="GridContainer/Selector/Baits/Items/VBoxContainer/Items"]
+margin_left = 136.0
+margin_top = 612.0
+margin_right = 200.0
+margin_bottom = 676.0
+rect_min_size = Vector2( 64, 64 )
+size_flags_horizontal = 6
+size_flags_vertical = 6
+color = Color( 0.611765, 0.372549, 0, 1 )
+
+[node name="item40" type="ColorRect" parent="GridContainer/Selector/Baits/Items/VBoxContainer/Items"]
+margin_left = 204.0
+margin_top = 612.0
+margin_right = 268.0
+margin_bottom = 676.0
+rect_min_size = Vector2( 64, 64 )
+size_flags_horizontal = 6
+size_flags_vertical = 6
+color = Color( 0.611765, 0.372549, 0, 1 )
+
+[node name="item41" type="ColorRect" parent="GridContainer/Selector/Baits/Items/VBoxContainer/Items"]
+margin_top = 680.0
+margin_right = 64.0
+margin_bottom = 744.0
+rect_min_size = Vector2( 64, 64 )
+size_flags_horizontal = 6
+size_flags_vertical = 6
+color = Color( 0.611765, 0.372549, 0, 1 )
+
+[node name="item42" type="ColorRect" parent="GridContainer/Selector/Baits/Items/VBoxContainer/Items"]
+margin_left = 68.0
+margin_top = 680.0
+margin_right = 132.0
+margin_bottom = 744.0
+rect_min_size = Vector2( 64, 64 )
+size_flags_horizontal = 6
+size_flags_vertical = 6
+color = Color( 0.611765, 0.372549, 0, 1 )
+
+[node name="item43" type="ColorRect" parent="GridContainer/Selector/Baits/Items/VBoxContainer/Items"]
+margin_left = 136.0
+margin_top = 680.0
+margin_right = 200.0
+margin_bottom = 744.0
+rect_min_size = Vector2( 64, 64 )
+size_flags_horizontal = 6
+size_flags_vertical = 6
+color = Color( 0.611765, 0.372549, 0, 1 )
+
+[node name="item44" type="ColorRect" parent="GridContainer/Selector/Baits/Items/VBoxContainer/Items"]
+margin_left = 204.0
+margin_top = 680.0
+margin_right = 268.0
+margin_bottom = 744.0
+rect_min_size = Vector2( 64, 64 )
+size_flags_horizontal = 6
+size_flags_vertical = 6
+color = Color( 0.611765, 0.372549, 0, 1 )
+
+[node name="item45" type="ColorRect" parent="GridContainer/Selector/Baits/Items/VBoxContainer/Items"]
+margin_top = 748.0
+margin_right = 64.0
+margin_bottom = 812.0
+rect_min_size = Vector2( 64, 64 )
+size_flags_horizontal = 6
+size_flags_vertical = 6
+color = Color( 0.611765, 0.372549, 0, 1 )
+
+[node name="item46" type="ColorRect" parent="GridContainer/Selector/Baits/Items/VBoxContainer/Items"]
+margin_left = 68.0
+margin_top = 748.0
+margin_right = 132.0
+margin_bottom = 812.0
+rect_min_size = Vector2( 64, 64 )
+size_flags_horizontal = 6
+size_flags_vertical = 6
+color = Color( 0.611765, 0.372549, 0, 1 )
+
+[node name="item47" type="ColorRect" parent="GridContainer/Selector/Baits/Items/VBoxContainer/Items"]
+margin_left = 136.0
+margin_top = 748.0
+margin_right = 200.0
+margin_bottom = 812.0
+rect_min_size = Vector2( 64, 64 )
+size_flags_horizontal = 6
+size_flags_vertical = 6
+color = Color( 0.611765, 0.372549, 0, 1 )
+
+[node name="item48" type="ColorRect" parent="GridContainer/Selector/Baits/Items/VBoxContainer/Items"]
+margin_left = 204.0
+margin_top = 748.0
+margin_right = 268.0
+margin_bottom = 812.0
+rect_min_size = Vector2( 64, 64 )
+size_flags_horizontal = 6
+size_flags_vertical = 6
+color = Color( 0.611765, 0.372549, 0, 1 )
+
+[node name="item49" type="ColorRect" parent="GridContainer/Selector/Baits/Items/VBoxContainer/Items"]
+margin_top = 816.0
+margin_right = 64.0
+margin_bottom = 880.0
+rect_min_size = Vector2( 64, 64 )
+size_flags_horizontal = 6
+size_flags_vertical = 6
+color = Color( 0.611765, 0.372549, 0, 1 )
+
+[node name="item50" type="ColorRect" parent="GridContainer/Selector/Baits/Items/VBoxContainer/Items"]
+margin_left = 68.0
+margin_top = 816.0
+margin_right = 132.0
+margin_bottom = 880.0
+rect_min_size = Vector2( 64, 64 )
+size_flags_horizontal = 6
+size_flags_vertical = 6
+color = Color( 0.611765, 0.372549, 0, 1 )
+
+[node name="item51" type="ColorRect" parent="GridContainer/Selector/Baits/Items/VBoxContainer/Items"]
+margin_left = 136.0
+margin_top = 816.0
+margin_right = 200.0
+margin_bottom = 880.0
+rect_min_size = Vector2( 64, 64 )
+size_flags_horizontal = 6
+size_flags_vertical = 6
+color = Color( 0.611765, 0.372549, 0, 1 )
+
+[node name="item52" type="ColorRect" parent="GridContainer/Selector/Baits/Items/VBoxContainer/Items"]
+margin_left = 204.0
+margin_top = 816.0
+margin_right = 268.0
+margin_bottom = 880.0
+rect_min_size = Vector2( 64, 64 )
+size_flags_horizontal = 6
+size_flags_vertical = 6
+color = Color( 0.611765, 0.372549, 0, 1 )
+
+[node name="item53" type="ColorRect" parent="GridContainer/Selector/Baits/Items/VBoxContainer/Items"]
+margin_top = 884.0
+margin_right = 64.0
+margin_bottom = 948.0
+rect_min_size = Vector2( 64, 64 )
+size_flags_horizontal = 6
+size_flags_vertical = 6
+color = Color( 0.611765, 0.372549, 0, 1 )
+
+[node name="item54" type="ColorRect" parent="GridContainer/Selector/Baits/Items/VBoxContainer/Items"]
+margin_left = 68.0
+margin_top = 884.0
+margin_right = 132.0
+margin_bottom = 948.0
+rect_min_size = Vector2( 64, 64 )
+size_flags_horizontal = 6
+size_flags_vertical = 6
+color = Color( 0.611765, 0.372549, 0, 1 )
+
+[node name="item55" type="ColorRect" parent="GridContainer/Selector/Baits/Items/VBoxContainer/Items"]
+margin_left = 136.0
+margin_top = 884.0
+margin_right = 200.0
+margin_bottom = 948.0
+rect_min_size = Vector2( 64, 64 )
+size_flags_horizontal = 6
+size_flags_vertical = 6
+color = Color( 0.611765, 0.372549, 0, 1 )
+
+[node name="item56" type="ColorRect" parent="GridContainer/Selector/Baits/Items/VBoxContainer/Items"]
+margin_left = 204.0
+margin_top = 884.0
+margin_right = 268.0
+margin_bottom = 948.0
+rect_min_size = Vector2( 64, 64 )
+size_flags_horizontal = 6
+size_flags_vertical = 6
+color = Color( 0.611765, 0.372549, 0, 1 )
+
+[node name="item57" type="ColorRect" parent="GridContainer/Selector/Baits/Items/VBoxContainer/Items"]
+margin_top = 952.0
+margin_right = 64.0
+margin_bottom = 1016.0
+rect_min_size = Vector2( 64, 64 )
+size_flags_horizontal = 6
+size_flags_vertical = 6
+color = Color( 0.611765, 0.372549, 0, 1 )
+
+[node name="item58" type="ColorRect" parent="GridContainer/Selector/Baits/Items/VBoxContainer/Items"]
+margin_left = 68.0
+margin_top = 952.0
+margin_right = 132.0
+margin_bottom = 1016.0
+rect_min_size = Vector2( 64, 64 )
+size_flags_horizontal = 6
+size_flags_vertical = 6
+color = Color( 0.611765, 0.372549, 0, 1 )
+
+[node name="item59" type="ColorRect" parent="GridContainer/Selector/Baits/Items/VBoxContainer/Items"]
+margin_left = 136.0
+margin_top = 952.0
+margin_right = 200.0
+margin_bottom = 1016.0
+rect_min_size = Vector2( 64, 64 )
+size_flags_horizontal = 6
+size_flags_vertical = 6
+color = Color( 0.611765, 0.372549, 0, 1 )
+
+[node name="item60" type="ColorRect" parent="GridContainer/Selector/Baits/Items/VBoxContainer/Items"]
+margin_left = 204.0
+margin_top = 952.0
+margin_right = 268.0
+margin_bottom = 1016.0
+rect_min_size = Vector2( 64, 64 )
+size_flags_horizontal = 6
+size_flags_vertical = 6
+color = Color( 0.611765, 0.372549, 0, 1 )

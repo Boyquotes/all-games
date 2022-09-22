@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Scripts/INVENTORY_SLOT.gd" type="Script" id=1]
+
+[node name="SLOT" type="TextureRect"]
+rect_min_size = Vector2( 64, 64 )
+size_flags_horizontal = 6
+size_flags_vertical = 0
+expand = true
+script = ExtResource( 1 )

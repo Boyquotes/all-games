@@ -1,0 +1,193 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://Scenes/Options.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Images/Others/Autofire.png" type="Texture" id=2]
+[ext_resource path="res://Scripts/InterestellarInfos.gd" type="Script" id=3]
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0.207843, 0.807843, 0.823529, 1 )
+border_color = Color( 0.8, 0.8, 0.8, 0 )
+
+[sub_resource type="StyleBoxFlat" id=2]
+bg_color = Color( 0.235294, 0.235294, 0.235294, 1 )
+border_color = Color( 0.0823529, 0.0823529, 0.0823529, 1 )
+
+[sub_resource type="StyleBoxFlat" id=3]
+bg_color = Color( 0.270588, 0.270588, 0.270588, 1 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 0.0941176, 0.0941176, 0.0941176, 1 )
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id=4]
+bg_color = Color( 0.12549, 0.12549, 0.12549, 1 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 0.0588235, 0.0588235, 0.0588235, 1 )
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id=5]
+bg_color = Color( 0.188235, 0.188235, 0.188235, 1 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 0.0666667, 0.0666667, 0.0666667, 1 )
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[node name="InterestellarInfos" type="Node2D" groups=["INTERESTELLAR_INFOS"]]
+z_index = 200
+script = ExtResource( 3 )
+
+[node name="Progress" type="ProgressBar" parent="."]
+margin_left = -672.0
+margin_top = 360.0
+margin_right = 672.0
+margin_bottom = 376.0
+custom_styles/fg = SubResource( 1 )
+custom_styles/bg = SubResource( 2 )
+max_value = 10.0
+value = 10.0
+percent_visible = false
+
+[node name="ESC" type="Node2D" parent="."]
+visible = false
+z_index = 100
+
+[node name="Options" parent="ESC" instance=ExtResource( 1 )]
+visible = false
+position = Vector2( -704, -360 )
+
+[node name="RESUME" type="Button" parent="ESC"]
+pause_mode = 2
+visible = false
+margin_left = -360.0
+margin_top = -321.0
+margin_right = -180.0
+margin_bottom = -271.0
+rect_min_size = Vector2( 70, 0 )
+rect_scale = Vector2( 4, 4 )
+focus_mode = 0
+size_flags_horizontal = 6
+custom_styles/hover = SubResource( 3 )
+custom_styles/pressed = SubResource( 4 )
+custom_styles/normal = SubResource( 5 )
+enabled_focus_mode = 0
+text = "RESUME"
+
+[node name="Options" type="Button" parent="ESC/RESUME"]
+pause_mode = 2
+margin_left = 20.0
+margin_top = 118.0
+margin_right = 160.0
+margin_bottom = 144.0
+rect_min_size = Vector2( 70, 0 )
+focus_mode = 0
+size_flags_horizontal = 6
+custom_styles/hover = SubResource( 3 )
+custom_styles/pressed = SubResource( 4 )
+custom_styles/normal = SubResource( 5 )
+toggle_mode = true
+enabled_focus_mode = 0
+text = "Configurations"
+
+[node name="INFOS" type="ScrollContainer" parent="ESC"]
+margin_left = -632.0
+margin_top = -344.0
+margin_right = -520.0
+margin_bottom = 344.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ESC/INFOS"]
+margin_right = 112.0
+margin_bottom = 688.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="GridContainer" type="GridContainer" parent="ESC/INFOS/VBoxContainer"]
+margin_right = 112.0
+margin_bottom = 688.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="UPGRADE_AREA" type="ScrollContainer" parent="ESC"]
+pause_mode = 2
+visible = false
+margin_left = -512.0
+margin_top = -320.0
+margin_right = 512.0
+margin_bottom = 320.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ESC/UPGRADE_AREA"]
+pause_mode = 2
+margin_right = 1024.0
+margin_bottom = 640.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="GridContainer" type="GridContainer" parent="ESC/UPGRADE_AREA/HBoxContainer"]
+pause_mode = 2
+margin_right = 1024.0
+margin_bottom = 640.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+columns = 3
+
+[node name="Label" type="Label" parent="ESC"]
+visible = false
+margin_left = -704.0
+margin_top = -336.0
+margin_right = -563.0
+margin_bottom = -320.0
+rect_scale = Vector2( 10, 10 )
+size_flags_horizontal = 6
+size_flags_vertical = 2
+text = "You died"
+align = 1
+valign = 1
+
+[node name="GridContainer" type="GridContainer" parent="ESC"]
+margin_left = -704.0
+margin_top = -120.0
+margin_right = -352.0
+margin_bottom = -28.0
+rect_scale = Vector2( 4, 4 )
+
+[node name="GoToMainMenu" type="Button" parent="ESC/GridContainer"]
+pause_mode = 2
+visible = false
+margin_left = 141.0
+margin_right = 211.0
+margin_bottom = 20.0
+rect_min_size = Vector2( 70, 0 )
+focus_mode = 0
+size_flags_horizontal = 6
+custom_styles/hover = SubResource( 3 )
+custom_styles/pressed = SubResource( 4 )
+custom_styles/normal = SubResource( 5 )
+enabled_focus_mode = 0
+text = "Main menu"
+
+[node name="Autofire" type="Sprite" parent="."]
+visible = false
+position = Vector2( -672, 336 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 2 )
+
+[node name="C" type="Camera2D" parent="."]
+current = true
+
+[connection signal="button_up" from="ESC/RESUME" to="." method="_on_RESUME_button_up"]
+[connection signal="toggled" from="ESC/RESUME/Options" to="." method="_on_Options_toggled"]

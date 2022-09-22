@@ -1,0 +1,46 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://Scripts/Turret.gd" type="Script" id=1]
+[ext_resource path="res://Images/History/Enemies/TurretBase.png" type="Texture" id=2]
+[ext_resource path="res://Scenes/Modules/Visibility_module.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Images/History/Enemies/TurretGun.png" type="Texture" id=4]
+[ext_resource path="res://Scenes/Enemies_projectiles/EnemyProjectile.tscn" type="PackedScene" id=5]
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 31, 31 )
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 32, 32 )
+
+[node name="Turret" type="KinematicBody2D" groups=["ENEMY", "Enemy"]]
+script = ExtResource( 1 )
+BULLET_TYPE = ExtResource( 5 )
+
+[node name="Sprite" type="Sprite" parent="."]
+texture = ExtResource( 2 )
+
+[node name="Area2D" type="Area2D" parent="Sprite"]
+input_pickable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite/Area2D"]
+shape = SubResource( 3 )
+
+[node name="Gun" type="Sprite" parent="Sprite"]
+texture = ExtResource( 4 )
+offset = Vector2( 24, 0 )
+
+[node name="POINT" type="Position2D" parent="Sprite/Gun"]
+position = Vector2( 65, 0 )
+
+[node name="Timer" type="Timer" parent="."]
+autostart = true
+
+[node name="Visibility_module" parent="." instance=ExtResource( 3 )]
+position = Vector2( -1.90735e-06, -1.90735e-06 )
+scale = Vector2( 3.2, 3.2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 4 )
+
+[connection signal="area_entered" from="Sprite/Area2D" to="." method="_on_Area2D_area_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

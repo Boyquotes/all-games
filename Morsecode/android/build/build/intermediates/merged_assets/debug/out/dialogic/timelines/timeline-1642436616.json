@@ -1,0 +1,63 @@
+{
+	"events": [
+		{
+			"action": "join",
+			"character": "character-1642357357.json",
+			"event_id": "dialogic_002",
+			"mirror": false,
+			"portrait": "",
+			"position": {
+				"0": true,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": false
+			}
+		},
+		{
+			"action": "join",
+			"character": "character-1642357363.json",
+			"event_id": "dialogic_002",
+			"mirror": false,
+			"portrait": "",
+			"position": {
+				"0": false,
+				"1": true,
+				"2": false,
+				"3": false,
+				"4": false
+			}
+		},
+		{
+			"character": "character-1642357357.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Captain, did you see the translation I sent? She looks very suspicious, doesn't seem to be from one of our allies"
+		},
+		{
+			"character": "character-1642357363.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Yes, Soldier, I will verify the authenticity of the CW 85 nuclear submarine and let you know, in the meantime, return to your post"
+		},
+		{
+			"character": "character-1642357357.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Yes, Capitain!"
+		},
+		{
+			"emit_signal": "start",
+			"event_id": "dialogic_040"
+		},
+		{
+			"event_id": "dialogic_022",
+			"transition_duration": 1
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.3",
+		"file": "timeline-1642436616.json",
+		"name": "C_6"
+	}
+}

@@ -1,0 +1,40 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Images/Special_bullets/8x8.png" type="Texture" id=1]
+[ext_resource path="res://Scripts/DISPERSOR.gd" type="Script" id=2]
+[ext_resource path="res://Scripts/Projectile.gd" type="Script" id=3]
+
+[sub_resource type="CircleShape2D" id=1]
+radius = 4.5
+
+[node name="DISPERSOR" type="RigidBody2D" groups=["PLAYER_PROJECTILE"]]
+collision_layer = 2
+collision_mask = 2
+gravity_scale = 0.0
+script = ExtResource( 3 )
+
+[node name="Sprite" type="Sprite" parent="."]
+texture = ExtResource( 1 )
+
+[node name="Timer" type="Timer" parent="."]
+
+[node name="DISPERSOR" type="Node2D" parent="."]
+script = ExtResource( 2 )
+
+[node name="6" type="Node2D" parent="DISPERSOR"]
+position = Vector2( 0, 6 )
+
+[node name="2" type="Node2D" parent="DISPERSOR"]
+position = Vector2( 0, -7 )
+
+[node name="Shoot" type="Timer" parent="DISPERSOR"]
+wait_time = 1.5
+autostart = true
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource( 1 )
+
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
+[connection signal="timeout" from="DISPERSOR/Shoot" to="DISPERSOR" method="_on_Shoot_timeout"]

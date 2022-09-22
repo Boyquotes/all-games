@@ -1,0 +1,24 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Scripts/WordModel.gd" type="Script" id=1]
+
+[node name="WordModel" type="ColorRect"]
+margin_right = 40.0
+margin_bottom = 14.0
+rect_min_size = Vector2( 100, 20 )
+rect_pivot_offset = Vector2( 50, 10 )
+size_flags_horizontal = 6
+size_flags_vertical = 6
+color = Color( 0.345098, 0.345098, 0.345098, 1 )
+script = ExtResource( 1 )
+
+[node name="Label" type="Label" parent="."]
+margin_right = 40.0
+margin_bottom = 14.0
+rect_min_size = Vector2( 100, 20 )
+rect_pivot_offset = Vector2( 50, 10 )
+size_flags_horizontal = 6
+size_flags_vertical = 6
+text = "abacaxiabacaxi"
+align = 1
+valign = 1

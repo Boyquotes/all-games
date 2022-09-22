@@ -1,0 +1,20 @@
+[gd_scene format=2]
+
+[node name="LEVEL_UP" type="Node2D"]
+
+[node name="Label" type="Label" parent="."]
+margin_right = 40.0
+margin_bottom = 14.0
+text = "VC UPOU DE NIVEL
+
+
+
+
+
+
+
+e ganhou isso aqui:
+(imagem do item ------------------------- quantidade do item)"
+__meta__ = {
+"_edit_use_anchors_": false
+}

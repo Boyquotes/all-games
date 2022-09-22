@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/CyberTyper_music7.mp3-6311addf2fe87d1de82f48e95d9ab1f4.mp3str"
+
+[deps]
+
+source_file="res://Musics/Musics/CyberTyper_music7.mp3"
+dest_files=[ "res://.import/CyberTyper_music7.mp3-6311addf2fe87d1de82f48e95d9ab1f4.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

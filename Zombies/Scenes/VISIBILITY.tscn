@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Scripts/VISIBILITY.gd" type="Script" id=1]
+
+[node name="VISIBILITY" type="VisibilityNotifier2D"]
+rect = Rect2( -200, -200, 400, 400 )
+script = ExtResource( 1 )
+
+[connection signal="screen_entered" from="." to="." method="_on_VISIBILITY_screen_entered"]
+[connection signal="screen_exited" from="." to="." method="_on_VISIBILITY_screen_exited"]

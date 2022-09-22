@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Shoot_sound_E.wav-a4e87b3f4266104ac25a46679fd3ed4e.sample"
+
+[deps]
+
+source_file="res://Audio/Shoot_sounds/Shoot_sound_E.wav"
+dest_files=[ "res://.import/Shoot_sound_E.wav-a4e87b3f4266104ac25a46679fd3ed4e.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

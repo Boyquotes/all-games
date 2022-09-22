@@ -1,0 +1,1642 @@
+[gd_scene load_steps=23 format=2]
+
+[ext_resource path="res://Scripts/Main_scene.gd" type="Script" id=1]
+[ext_resource path="res://Icons/Bussola.png" type="Texture" id=2]
+[ext_resource path="res://Icons/STAR.png" type="Texture" id=3]
+[ext_resource path="res://Icons/COCKTAILS.png" type="Texture" id=4]
+[ext_resource path="res://Icons/MORE.png" type="Texture" id=5]
+[ext_resource path="res://Icons/REVIRAVOLTAS.png" type="Texture" id=6]
+[ext_resource path="res://Icons/Empty_star.png" type="Texture" id=7]
+[ext_resource path="res://Icons/Filled_star.png" type="Texture" id=8]
+[ext_resource path="res://Scenes/LOADING_ANIMATION.tscn" type="PackedScene" id=9]
+[ext_resource path="res://addons/admob/test/Example.tscn" type="PackedScene" id=10]
+
+[sub_resource type="Animation" id=7]
+resource_name = "NOT_SEE"
+tracks/0/type = "value"
+tracks/0/path = NodePath("SEE:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+tracks/1/type = "bezier"
+tracks/1/path = NodePath("SEE:position:x")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.5, -1.13714, 416, -0.1, 5.67825, 2.7, -556.881 ),
+"times": PoolRealArray( 0, 1 )
+}
+tracks/2/type = "bezier"
+tracks/2/path = NodePath("SEE:position:y")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = false
+tracks/2/keys = {
+"points": PoolRealArray( 96, -0.25, 0, 0.25, 0, 96, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 1 )
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("SEE:z_index")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ 1, 0 ]
+}
+
+[sub_resource type="Animation" id=13]
+resource_name = "NOT_SEE_RICH_DRINK_VIEW"
+tracks/0/type = "bezier"
+tracks/0/path = NodePath("RICH_DRINK_VIEW:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.2, -286.842, -416, -0.2, 1.22726, 0.25, 0 ),
+"times": PoolRealArray( 0, 1 )
+}
+tracks/1/type = "bezier"
+tracks/1/path = NodePath("RICH_DRINK_VIEW:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"points": PoolRealArray( 96, -0.25, 0, 0.25, 0, 96, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 1 )
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("RICH_DRINK_VIEW:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("RICH_DRINK_VIEW:z_index")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ 1, 0 ]
+}
+
+[sub_resource type="Animation" id=5]
+resource_name = "SEE"
+tracks/0/type = "value"
+tracks/0/path = NodePath("SEE:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, true ]
+}
+tracks/1/type = "bezier"
+tracks/1/path = NodePath("SEE:position:x")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"points": PoolRealArray( 416, -0.25, 0, 0.25, 0, 0, -0.4, -1.13714, 0.3, 295.301 ),
+"times": PoolRealArray( 0, 1 )
+}
+tracks/2/type = "bezier"
+tracks/2/path = NodePath("SEE:position:y")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = false
+tracks/2/keys = {
+"points": PoolRealArray( 96, -0.25, 0, 0.25, 0, 96, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 1 )
+}
+
+[sub_resource type="Animation" id=14]
+resource_name = "SEE_RICH_DRINK_VIEW"
+tracks/0/type = "bezier"
+tracks/0/path = NodePath("RICH_DRINK_VIEW:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PoolRealArray( -416, -0.25, 0, 0.2, 428.457, 0, -0.2, -6.1181, 0.1, -198.062 ),
+"times": PoolRealArray( 0, 1 )
+}
+tracks/1/type = "bezier"
+tracks/1/path = NodePath("RICH_DRINK_VIEW:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = false
+tracks/1/keys = {
+"points": PoolRealArray( 96, -0.25, 0, 0.25, 0, 96, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 1 )
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("RICH_DRINK_VIEW:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, true ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("RICH_DRINK_VIEW:z_index")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ 1, 1 ]
+}
+
+[sub_resource type="StyleBoxFlat" id=4]
+bg_color = Color( 0.243137, 0.164706, 0, 1 )
+
+[sub_resource type="StyleBoxEmpty" id=1]
+
+[sub_resource type="StyleBoxEmpty" id=2]
+
+[sub_resource type="StyleBoxFlat" id=3]
+bg_color = Color( 0, 0, 0, 0 )
+
+[sub_resource type="StyleBoxEmpty" id=12]
+
+[sub_resource type="StyleBoxEmpty" id=9]
+
+[sub_resource type="StyleBoxEmpty" id=10]
+
+[sub_resource type="StyleBoxEmpty" id=11]
+
+[node name="Main_scene" type="Node2D" groups=["MAIN"]]
+script = ExtResource( 1 )
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_right = 416.0
+margin_bottom = 736.0
+color = Color( 0.0666667, 0.0313726, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+margin_top = 637.0
+margin_right = 416.0
+margin_bottom = 736.0
+color = Color( 0.141176, 0.0666667, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/NOT_SEE = SubResource( 7 )
+anims/NOT_SEE_RICH_DRINK_VIEW = SubResource( 13 )
+anims/SEE = SubResource( 5 )
+anims/SEE_RICH_DRINK_VIEW = SubResource( 14 )
+
+[node name="ResourcePreloader" type="ResourcePreloader" parent="."]
+
+[node name="MEGA_REQUESTER" type="HTTPRequest" parent="."]
+
+[node name="A10" type="HTTPRequest" parent="."]
+
+[node name="GridContainer" type="GridContainer" parent="."]
+margin_top = 104.0
+margin_right = 520.0
+margin_bottom = 864.0
+rect_scale = Vector2( 0.8, 0.8 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="DISCOVER_TAB" type="ScrollContainer" parent="GridContainer"]
+margin_right = 520.0
+margin_bottom = 672.0
+rect_min_size = Vector2( 0, 672 )
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="GridContainer/DISCOVER_TAB"]
+margin_right = 508.0
+margin_bottom = 1870.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="GridContainer/DISCOVER_TAB/VBoxContainer"]
+margin_right = 508.0
+margin_bottom = 37.0
+size_flags_horizontal = 3
+text = "Random Cocktail"
+align = 1
+valign = 1
+
+[node name="SEE_ANOTHER_RANDOM_COCKTAIL" type="TextureButton" parent="GridContainer/DISCOVER_TAB/VBoxContainer/Label"]
+modulate = Color( 1, 0.796078, 0, 1 )
+margin_left = 370.0
+margin_right = 400.0
+margin_bottom = 30.0
+focus_mode = 0
+enabled_focus_mode = 0
+texture_normal = ExtResource( 6 )
+texture_pressed = ExtResource( 6 )
+texture_hover = ExtResource( 6 )
+expand = true
+stretch_mode = 5
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="THE_RANDOM_COCKTAIL" type="GridContainer" parent="GridContainer/DISCOVER_TAB/VBoxContainer"]
+margin_left = 149.0
+margin_top = 41.0
+margin_right = 359.0
+margin_bottom = 366.0
+rect_min_size = Vector2( 210, 325 )
+size_flags_horizontal = 6
+
+[node name="Alcocholics_group" type="GridContainer" parent="GridContainer/DISCOVER_TAB/VBoxContainer"]
+margin_top = 370.0
+margin_right = 508.0
+margin_bottom = 413.0
+size_flags_horizontal = 3
+columns = 2
+
+[node name="Alcoholics" type="Label" parent="GridContainer/DISCOVER_TAB/VBoxContainer/Alcocholics_group"]
+margin_top = 3.0
+margin_right = 375.0
+margin_bottom = 40.0
+size_flags_horizontal = 3
+text = " Alcoholic drinks"
+valign = 1
+
+[node name="SEE_ALL_ALCOHOLICS" type="Button" parent="GridContainer/DISCOVER_TAB/VBoxContainer/Alcocholics_group"]
+modulate = Color( 1, 0.796078, 0, 1 )
+margin_left = 379.0
+margin_right = 508.0
+margin_bottom = 43.0
+focus_mode = 0
+enabled_focus_mode = 0
+text = "SEE ALL   "
+flat = true
+
+[node name="ALCOHOLICS" type="ScrollContainer" parent="GridContainer/DISCOVER_TAB/VBoxContainer"]
+margin_top = 417.0
+margin_right = 508.0
+margin_bottom = 742.0
+rect_min_size = Vector2( 0, 325 )
+size_flags_horizontal = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="GridContainer/DISCOVER_TAB/VBoxContainer/ALCOHOLICS"]
+margin_right = 508.0
+margin_bottom = 117.0
+size_flags_horizontal = 3
+
+[node name="LOADING_ANIMATION" parent="GridContainer/DISCOVER_TAB/VBoxContainer/ALCOHOLICS/HBoxContainer" instance=ExtResource( 9 )]
+margin_left = 206.0
+margin_right = 302.0
+margin_bottom = 117.0
+
+[node name="Non_Alcocholics_group" type="GridContainer" parent="GridContainer/DISCOVER_TAB/VBoxContainer"]
+margin_top = 746.0
+margin_right = 508.0
+margin_bottom = 789.0
+size_flags_horizontal = 3
+columns = 2
+
+[node name="Non_alcoholics" type="Label" parent="GridContainer/DISCOVER_TAB/VBoxContainer/Non_Alcocholics_group"]
+margin_top = 3.0
+margin_right = 375.0
+margin_bottom = 40.0
+size_flags_horizontal = 3
+text = " Non-alcoholic drinks"
+valign = 1
+
+[node name="SEE_ALL_NON_ALCOHOLICS" type="Button" parent="GridContainer/DISCOVER_TAB/VBoxContainer/Non_Alcocholics_group"]
+modulate = Color( 1, 0.796078, 0, 1 )
+margin_left = 379.0
+margin_right = 508.0
+margin_bottom = 43.0
+focus_mode = 0
+enabled_focus_mode = 0
+text = "SEE ALL   "
+flat = true
+
+[node name="NON_ALCOCHOLICS" type="ScrollContainer" parent="GridContainer/DISCOVER_TAB/VBoxContainer"]
+margin_top = 793.0
+margin_right = 508.0
+margin_bottom = 1118.0
+rect_min_size = Vector2( 0, 325 )
+size_flags_horizontal = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="GridContainer/DISCOVER_TAB/VBoxContainer/NON_ALCOCHOLICS"]
+margin_right = 508.0
+margin_bottom = 117.0
+size_flags_horizontal = 3
+
+[node name="LOADING_ANIMATION" parent="GridContainer/DISCOVER_TAB/VBoxContainer/NON_ALCOCHOLICS/HBoxContainer" instance=ExtResource( 9 )]
+margin_left = 206.0
+margin_right = 302.0
+margin_bottom = 117.0
+
+[node name="Glass_filter" type="GridContainer" parent="GridContainer/DISCOVER_TAB/VBoxContainer"]
+margin_top = 1122.0
+margin_right = 508.0
+margin_bottom = 1165.0
+size_flags_horizontal = 3
+columns = 2
+
+[node name="FILTER_BY_GLASS" type="Label" parent="GridContainer/DISCOVER_TAB/VBoxContainer/Glass_filter"]
+margin_top = 3.0
+margin_right = 375.0
+margin_bottom = 40.0
+size_flags_horizontal = 3
+text = "Drinks by glass"
+valign = 1
+
+[node name="SEE_ALL_GLASS" type="Button" parent="GridContainer/DISCOVER_TAB/VBoxContainer/Glass_filter"]
+modulate = Color( 1, 0.796078, 0, 1 )
+margin_left = 379.0
+margin_right = 508.0
+margin_bottom = 43.0
+focus_mode = 0
+enabled_focus_mode = 0
+text = "SEE ALL   "
+flat = true
+
+[node name="GLASS" type="ScrollContainer" parent="GridContainer/DISCOVER_TAB/VBoxContainer"]
+margin_top = 1169.0
+margin_right = 508.0
+margin_bottom = 1494.0
+rect_min_size = Vector2( 0, 325 )
+size_flags_horizontal = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="GridContainer/DISCOVER_TAB/VBoxContainer/GLASS"]
+margin_right = 508.0
+margin_bottom = 117.0
+size_flags_horizontal = 3
+
+[node name="LOADING_ANIMATION" parent="GridContainer/DISCOVER_TAB/VBoxContainer/GLASS/HBoxContainer" instance=ExtResource( 9 )]
+margin_left = 206.0
+margin_right = 302.0
+margin_bottom = 117.0
+
+[node name="Categories_filter" type="GridContainer" parent="GridContainer/DISCOVER_TAB/VBoxContainer"]
+margin_top = 1498.0
+margin_right = 508.0
+margin_bottom = 1541.0
+size_flags_horizontal = 3
+columns = 2
+
+[node name="FILTER_BY_CATEGORIES" type="Label" parent="GridContainer/DISCOVER_TAB/VBoxContainer/Categories_filter"]
+margin_top = 3.0
+margin_right = 375.0
+margin_bottom = 40.0
+size_flags_horizontal = 3
+text = "Drinks by categories"
+valign = 1
+
+[node name="SEE_ALL_CATEGORIES" type="Button" parent="GridContainer/DISCOVER_TAB/VBoxContainer/Categories_filter"]
+modulate = Color( 1, 0.796078, 0, 1 )
+margin_left = 379.0
+margin_right = 508.0
+margin_bottom = 43.0
+focus_mode = 0
+enabled_focus_mode = 0
+text = "SEE ALL   "
+flat = true
+
+[node name="CATEGORIES" type="ScrollContainer" parent="GridContainer/DISCOVER_TAB/VBoxContainer"]
+margin_top = 1545.0
+margin_right = 508.0
+margin_bottom = 1870.0
+rect_min_size = Vector2( 0, 325 )
+size_flags_horizontal = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="GridContainer/DISCOVER_TAB/VBoxContainer/CATEGORIES"]
+margin_right = 508.0
+margin_bottom = 117.0
+size_flags_horizontal = 3
+
+[node name="LOADING_ANIMATION" parent="GridContainer/DISCOVER_TAB/VBoxContainer/CATEGORIES/HBoxContainer" instance=ExtResource( 9 )]
+margin_left = 206.0
+margin_right = 302.0
+margin_bottom = 117.0
+
+[node name="Searched" type="Label" parent="GridContainer"]
+visible = false
+margin_right = 520.0
+margin_bottom = 37.0
+rect_min_size = Vector2( 0, 30 )
+size_flags_horizontal = 3
+size_flags_vertical = 5
+text = "Drinks"
+align = 1
+valign = 1
+
+[node name="First_letter_searched_view" type="ScrollContainer" parent="GridContainer"]
+visible = false
+margin_top = 41.0
+margin_right = 520.0
+margin_bottom = 588.0
+rect_min_size = Vector2( 0, 547 )
+size_flags_horizontal = 3
+size_flags_vertical = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="GridContainer/First_letter_searched_view"]
+margin_right = 520.0
+margin_bottom = 547.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/separation = 3
+
+[node name="GridContainer" type="GridContainer" parent="GridContainer/First_letter_searched_view/VBoxContainer"]
+margin_right = 520.0
+margin_bottom = 547.0
+size_flags_horizontal = 7
+size_flags_vertical = 7
+custom_constants/vseparation = 3
+custom_constants/hseparation = 3
+columns = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LOADING_ANIMATION" parent="GridContainer/First_letter_searched_view/VBoxContainer/GridContainer" instance=ExtResource( 9 )]
+margin_left = 82.0
+margin_right = 178.0
+margin_bottom = 117.0
+
+[node name="First_letter_selector" type="ScrollContainer" parent="GridContainer"]
+visible = false
+margin_right = 520.0
+margin_bottom = 80.0
+rect_min_size = Vector2( 0, 80 )
+size_flags_horizontal = 3
+custom_styles/bg = SubResource( 4 )
+scroll_vertical_enabled = false
+
+[node name="HBoxContainer" type="HBoxContainer" parent="GridContainer/First_letter_selector"]
+margin_right = 520.0
+margin_bottom = 80.0
+size_flags_horizontal = 7
+size_flags_vertical = 7
+
+[node name="GridContainer" type="GridContainer" parent="GridContainer/First_letter_selector/HBoxContainer"]
+margin_left = 59.0
+margin_right = 460.0
+margin_bottom = 80.0
+size_flags_horizontal = 6
+size_flags_vertical = 7
+columns = 13
+
+[node name="a" type="Button" parent="GridContainer/First_letter_selector/HBoxContainer/GridContainer"]
+margin_left = 1.0
+margin_right = 26.0
+margin_bottom = 38.0
+size_flags_horizontal = 4
+size_flags_vertical = 7
+custom_styles/pressed = SubResource( 1 )
+custom_styles/focus = SubResource( 2 )
+custom_styles/normal = SubResource( 3 )
+text = "A/"
+
+[node name="b" type="Button" parent="GridContainer/First_letter_selector/HBoxContainer/GridContainer"]
+margin_left = 31.0
+margin_right = 60.0
+margin_bottom = 38.0
+size_flags_vertical = 7
+custom_styles/pressed = SubResource( 1 )
+custom_styles/focus = SubResource( 2 )
+custom_styles/normal = SubResource( 3 )
+text = "B/"
+
+[node name="c" type="Button" parent="GridContainer/First_letter_selector/HBoxContainer/GridContainer"]
+margin_left = 64.0
+margin_right = 90.0
+margin_bottom = 38.0
+size_flags_vertical = 7
+custom_styles/pressed = SubResource( 1 )
+custom_styles/focus = SubResource( 2 )
+custom_styles/normal = SubResource( 3 )
+text = "C/"
+
+[node name="d" type="Button" parent="GridContainer/First_letter_selector/HBoxContainer/GridContainer"]
+margin_left = 94.0
+margin_right = 123.0
+margin_bottom = 38.0
+size_flags_vertical = 7
+custom_styles/pressed = SubResource( 1 )
+custom_styles/focus = SubResource( 2 )
+custom_styles/normal = SubResource( 3 )
+text = "D/"
+
+[node name="e" type="Button" parent="GridContainer/First_letter_selector/HBoxContainer/GridContainer"]
+margin_left = 127.0
+margin_right = 151.0
+margin_bottom = 38.0
+size_flags_vertical = 7
+custom_styles/pressed = SubResource( 1 )
+custom_styles/focus = SubResource( 2 )
+custom_styles/normal = SubResource( 3 )
+text = "E/"
+
+[node name="f" type="Button" parent="GridContainer/First_letter_selector/HBoxContainer/GridContainer"]
+margin_left = 155.0
+margin_right = 179.0
+margin_bottom = 38.0
+size_flags_vertical = 7
+custom_styles/pressed = SubResource( 1 )
+custom_styles/focus = SubResource( 2 )
+custom_styles/normal = SubResource( 3 )
+text = "F/"
+
+[node name="g" type="Button" parent="GridContainer/First_letter_selector/HBoxContainer/GridContainer"]
+margin_left = 183.0
+margin_right = 209.0
+margin_bottom = 38.0
+size_flags_vertical = 7
+custom_styles/pressed = SubResource( 1 )
+custom_styles/focus = SubResource( 2 )
+custom_styles/normal = SubResource( 3 )
+text = "G/"
+
+[node name="h" type="Button" parent="GridContainer/First_letter_selector/HBoxContainer/GridContainer"]
+margin_left = 213.0
+margin_right = 240.0
+margin_bottom = 38.0
+size_flags_vertical = 7
+custom_styles/pressed = SubResource( 1 )
+custom_styles/focus = SubResource( 2 )
+custom_styles/normal = SubResource( 3 )
+text = "H/"
+
+[node name="i" type="Button" parent="GridContainer/First_letter_selector/HBoxContainer/GridContainer"]
+margin_left = 244.0
+margin_right = 269.0
+margin_bottom = 38.0
+size_flags_vertical = 7
+custom_styles/pressed = SubResource( 1 )
+custom_styles/focus = SubResource( 2 )
+custom_styles/normal = SubResource( 3 )
+text = "I/"
+
+[node name="j" type="Button" parent="GridContainer/First_letter_selector/HBoxContainer/GridContainer"]
+margin_left = 273.0
+margin_right = 309.0
+margin_bottom = 38.0
+size_flags_vertical = 7
+custom_styles/pressed = SubResource( 1 )
+custom_styles/focus = SubResource( 2 )
+custom_styles/normal = SubResource( 3 )
+text = "J/"
+
+[node name="k" type="Button" parent="GridContainer/First_letter_selector/HBoxContainer/GridContainer"]
+margin_left = 313.0
+margin_right = 338.0
+margin_bottom = 38.0
+size_flags_vertical = 7
+custom_styles/pressed = SubResource( 1 )
+custom_styles/focus = SubResource( 2 )
+custom_styles/normal = SubResource( 3 )
+text = "K/"
+
+[node name="l" type="Button" parent="GridContainer/First_letter_selector/HBoxContainer/GridContainer"]
+margin_left = 342.0
+margin_right = 365.0
+margin_bottom = 38.0
+size_flags_vertical = 7
+custom_styles/pressed = SubResource( 1 )
+custom_styles/focus = SubResource( 2 )
+custom_styles/normal = SubResource( 3 )
+text = "L/"
+
+[node name="m" type="Button" parent="GridContainer/First_letter_selector/HBoxContainer/GridContainer"]
+margin_left = 369.0
+margin_right = 401.0
+margin_bottom = 38.0
+size_flags_vertical = 7
+custom_styles/pressed = SubResource( 1 )
+custom_styles/focus = SubResource( 2 )
+custom_styles/normal = SubResource( 3 )
+text = "M/"
+
+[node name="n" type="Button" parent="GridContainer/First_letter_selector/HBoxContainer/GridContainer"]
+margin_top = 42.0
+margin_right = 27.0
+margin_bottom = 80.0
+size_flags_vertical = 7
+custom_styles/pressed = SubResource( 1 )
+custom_styles/focus = SubResource( 2 )
+custom_styles/normal = SubResource( 3 )
+text = "N/"
+
+[node name="o" type="Button" parent="GridContainer/First_letter_selector/HBoxContainer/GridContainer"]
+margin_left = 31.0
+margin_top = 42.0
+margin_right = 60.0
+margin_bottom = 80.0
+size_flags_vertical = 7
+custom_styles/pressed = SubResource( 1 )
+custom_styles/focus = SubResource( 2 )
+custom_styles/normal = SubResource( 3 )
+text = "O/"
+
+[node name="p" type="Button" parent="GridContainer/First_letter_selector/HBoxContainer/GridContainer"]
+margin_left = 64.0
+margin_top = 42.0
+margin_right = 90.0
+margin_bottom = 80.0
+size_flags_vertical = 7
+custom_styles/pressed = SubResource( 1 )
+custom_styles/focus = SubResource( 2 )
+custom_styles/normal = SubResource( 3 )
+text = "P/"
+
+[node name="q" type="Button" parent="GridContainer/First_letter_selector/HBoxContainer/GridContainer"]
+margin_left = 94.0
+margin_top = 42.0
+margin_right = 123.0
+margin_bottom = 80.0
+size_flags_vertical = 7
+custom_styles/pressed = SubResource( 1 )
+custom_styles/focus = SubResource( 2 )
+custom_styles/normal = SubResource( 3 )
+text = "Q/"
+
+[node name="r" type="Button" parent="GridContainer/First_letter_selector/HBoxContainer/GridContainer"]
+margin_left = 127.0
+margin_top = 42.0
+margin_right = 151.0
+margin_bottom = 80.0
+size_flags_vertical = 7
+custom_styles/pressed = SubResource( 1 )
+custom_styles/focus = SubResource( 2 )
+custom_styles/normal = SubResource( 3 )
+text = "R/"
+
+[node name="s" type="Button" parent="GridContainer/First_letter_selector/HBoxContainer/GridContainer"]
+margin_left = 155.0
+margin_top = 42.0
+margin_right = 179.0
+margin_bottom = 80.0
+size_flags_vertical = 7
+custom_styles/pressed = SubResource( 1 )
+custom_styles/focus = SubResource( 2 )
+custom_styles/normal = SubResource( 3 )
+text = "S/"
+
+[node name="t" type="Button" parent="GridContainer/First_letter_selector/HBoxContainer/GridContainer"]
+margin_left = 183.0
+margin_top = 42.0
+margin_right = 209.0
+margin_bottom = 80.0
+size_flags_vertical = 7
+custom_styles/pressed = SubResource( 1 )
+custom_styles/focus = SubResource( 2 )
+custom_styles/normal = SubResource( 3 )
+text = "T/"
+
+[node name="u" type="Button" parent="GridContainer/First_letter_selector/HBoxContainer/GridContainer"]
+margin_left = 213.0
+margin_top = 42.0
+margin_right = 240.0
+margin_bottom = 80.0
+size_flags_vertical = 7
+custom_styles/pressed = SubResource( 1 )
+custom_styles/focus = SubResource( 2 )
+custom_styles/normal = SubResource( 3 )
+text = "U/"
+
+[node name="v" type="Button" parent="GridContainer/First_letter_selector/HBoxContainer/GridContainer"]
+margin_left = 244.0
+margin_top = 42.0
+margin_right = 269.0
+margin_bottom = 80.0
+size_flags_vertical = 7
+custom_styles/pressed = SubResource( 1 )
+custom_styles/focus = SubResource( 2 )
+custom_styles/normal = SubResource( 3 )
+text = "V/"
+
+[node name="w" type="Button" parent="GridContainer/First_letter_selector/HBoxContainer/GridContainer"]
+margin_left = 273.0
+margin_top = 42.0
+margin_right = 309.0
+margin_bottom = 80.0
+size_flags_vertical = 7
+custom_styles/pressed = SubResource( 1 )
+custom_styles/focus = SubResource( 2 )
+custom_styles/normal = SubResource( 3 )
+text = "W/"
+
+[node name="x" type="Button" parent="GridContainer/First_letter_selector/HBoxContainer/GridContainer"]
+margin_left = 313.0
+margin_top = 42.0
+margin_right = 338.0
+margin_bottom = 80.0
+size_flags_vertical = 7
+custom_styles/pressed = SubResource( 1 )
+custom_styles/focus = SubResource( 2 )
+custom_styles/normal = SubResource( 3 )
+text = "X/"
+
+[node name="y" type="Button" parent="GridContainer/First_letter_selector/HBoxContainer/GridContainer"]
+margin_left = 342.0
+margin_top = 42.0
+margin_right = 365.0
+margin_bottom = 80.0
+size_flags_vertical = 7
+custom_styles/pressed = SubResource( 1 )
+custom_styles/focus = SubResource( 2 )
+custom_styles/normal = SubResource( 3 )
+text = "Y/"
+
+[node name="z" type="Button" parent="GridContainer/First_letter_selector/HBoxContainer/GridContainer"]
+margin_left = 369.0
+margin_top = 42.0
+margin_right = 401.0
+margin_bottom = 80.0
+size_flags_vertical = 7
+custom_styles/pressed = SubResource( 1 )
+custom_styles/focus = SubResource( 2 )
+custom_styles/normal = SubResource( 3 )
+text = "Z/"
+
+[node name="FAVORITES" type="ScrollContainer" parent="GridContainer"]
+visible = false
+margin_top = 676.0
+margin_right = 520.0
+margin_bottom = 1348.0
+rect_min_size = Vector2( 0, 672 )
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="GridContainer/FAVORITES"]
+margin_right = 520.0
+margin_bottom = 672.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="GridContainer/FAVORITES/VBoxContainer"]
+margin_right = 40.0
+margin_bottom = 37.0
+size_flags_horizontal = 7
+text = "Your's favorite drinks"
+align = 1
+valign = 1
+
+[node name="GridContainer" type="GridContainer" parent="GridContainer/FAVORITES/VBoxContainer"]
+margin_right = 520.0
+margin_bottom = 672.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+columns = 2
+
+[node name="LOADING_ANIMATION" parent="GridContainer/FAVORITES/VBoxContainer/GridContainer" instance=ExtResource( 9 )]
+margin_left = 212.0
+margin_right = 308.0
+margin_bottom = 117.0
+
+[node name="MORE" type="ScrollContainer" parent="GridContainer"]
+visible = false
+margin_top = 676.0
+margin_right = 520.0
+margin_bottom = 1348.0
+rect_min_size = Vector2( 0, 672 )
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="GridContainer/MORE"]
+margin_right = 520.0
+margin_bottom = 672.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="GridContainer" type="GridContainer" parent="GridContainer/MORE/VBoxContainer"]
+margin_right = 520.0
+margin_bottom = 672.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="VERSION" type="Label" parent="GridContainer/MORE/VBoxContainer/GridContainer"]
+margin_right = 520.0
+margin_bottom = 37.0
+size_flags_horizontal = 7
+text = "Version: 1.0.0"
+align = 1
+valign = 1
+
+[node name="RATE_THE_APP" type="Button" parent="GridContainer/MORE/VBoxContainer/GridContainer"]
+modulate = Color( 1, 0.796078, 0, 1 )
+margin_left = 176.0
+margin_top = 41.0
+margin_right = 343.0
+margin_bottom = 84.0
+size_flags_horizontal = 6
+text = "Rate the app"
+flat = true
+
+[node name="GridContainer" type="GridContainer" parent="GridContainer/MORE/VBoxContainer/GridContainer"]
+margin_top = 88.0
+margin_right = 520.0
+margin_bottom = 133.0
+size_flags_horizontal = 7
+columns = 2
+
+[node name="MUSIC_OR_NOT" type="Label" parent="GridContainer/MORE/VBoxContainer/GridContainer/GridContainer"]
+margin_top = 4.0
+margin_right = 258.0
+margin_bottom = 41.0
+size_flags_horizontal = 7
+text = "Music"
+align = 1
+valign = 1
+
+[node name="CheckBox" type="CheckBox" parent="GridContainer/MORE/VBoxContainer/GridContainer/GridContainer"]
+margin_left = 262.0
+margin_right = 520.0
+margin_bottom = 45.0
+size_flags_horizontal = 7
+text = "on/off"
+align = 1
+
+[node name="MUSIC_VOLUME" type="Label" parent="GridContainer/MORE/VBoxContainer/GridContainer"]
+margin_top = 137.0
+margin_right = 520.0
+margin_bottom = 174.0
+size_flags_horizontal = 7
+text = "Music volume"
+align = 1
+valign = 1
+
+[node name="GridContainer2" type="GridContainer" parent="GridContainer/MORE/VBoxContainer/GridContainer"]
+margin_top = 178.0
+margin_right = 520.0
+margin_bottom = 221.0
+columns = 3
+
+[node name="minus" type="Button" parent="GridContainer/MORE/VBoxContainer/GridContainer/GridContainer2"]
+modulate = Color( 1, 0.796078, 0, 1 )
+margin_right = 170.0
+margin_bottom = 43.0
+size_flags_horizontal = 7
+text = "-"
+flat = true
+
+[node name="VOLUME_NUM" type="Label" parent="GridContainer/MORE/VBoxContainer/GridContainer/GridContainer2"]
+margin_left = 174.0
+margin_top = 3.0
+margin_right = 344.0
+margin_bottom = 40.0
+size_flags_horizontal = 7
+align = 1
+valign = 1
+
+[node name="plus" type="Button" parent="GridContainer/MORE/VBoxContainer/GridContainer/GridContainer2"]
+modulate = Color( 1, 0.796078, 0, 1 )
+margin_left = 348.0
+margin_right = 518.0
+margin_bottom = 43.0
+size_flags_horizontal = 7
+text = "+"
+flat = true
+
+[node name="THE_FOUR" type="GridContainer" parent="GridContainer"]
+margin_top = 676.0
+margin_right = 520.0
+margin_bottom = 756.0
+rect_min_size = Vector2( 520, 80 )
+size_flags_horizontal = 7
+columns = 4
+
+[node name="DISCOVER" type="TextureButton" parent="GridContainer/THE_FOUR"]
+margin_right = 127.0
+margin_bottom = 80.0
+rect_min_size = Vector2( 64, 64 )
+size_flags_horizontal = 7
+size_flags_vertical = 7
+texture_normal = ExtResource( 2 )
+texture_pressed = ExtResource( 2 )
+texture_hover = ExtResource( 2 )
+texture_focused = ExtResource( 2 )
+expand = true
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="GridContainer/THE_FOUR/DISCOVER"]
+margin_top = 73.2499
+margin_right = 127.0
+margin_bottom = 111.25
+size_flags_horizontal = 7
+size_flags_vertical = 7
+text = "Discover"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="COCKTAILS" type="TextureButton" parent="GridContainer/THE_FOUR"]
+margin_left = 131.0
+margin_right = 258.0
+margin_bottom = 80.0
+size_flags_horizontal = 7
+size_flags_vertical = 7
+texture_normal = ExtResource( 4 )
+texture_pressed = ExtResource( 4 )
+texture_hover = ExtResource( 4 )
+texture_focused = ExtResource( 4 )
+expand = true
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="GridContainer/THE_FOUR/COCKTAILS"]
+margin_left = -1.0
+margin_top = 73.2499
+margin_right = 126.0
+margin_bottom = 111.25
+size_flags_horizontal = 7
+size_flags_vertical = 7
+text = "Cocktails"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ASSISTANT" type="TextureButton" parent="GridContainer/THE_FOUR"]
+margin_left = 262.0
+margin_right = 389.0
+margin_bottom = 80.0
+size_flags_horizontal = 7
+size_flags_vertical = 7
+texture_normal = ExtResource( 3 )
+texture_pressed = ExtResource( 3 )
+texture_hover = ExtResource( 3 )
+texture_focused = ExtResource( 3 )
+expand = true
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="GridContainer/THE_FOUR/ASSISTANT"]
+margin_left = 1.5
+margin_top = 71.9999
+margin_right = 128.5
+margin_bottom = 110.0
+size_flags_horizontal = 7
+size_flags_vertical = 7
+text = "Favorites"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MORE" type="TextureButton" parent="GridContainer/THE_FOUR"]
+margin_left = 393.0
+margin_right = 520.0
+margin_bottom = 80.0
+size_flags_horizontal = 7
+size_flags_vertical = 7
+texture_normal = ExtResource( 5 )
+texture_pressed = ExtResource( 5 )
+texture_hover = ExtResource( 5 )
+texture_focused = ExtResource( 5 )
+expand = true
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="GridContainer/THE_FOUR/MORE"]
+margin_left = -1.0
+margin_top = 71.9999
+margin_right = 126.0
+margin_bottom = 110.0
+size_flags_horizontal = 7
+size_flags_vertical = 7
+text = "More"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SEE" type="Node2D" parent="."]
+visible = false
+position = Vector2( 0, 96 )
+z_index = 1
+
+[node name="A" type="ColorRect" parent="SEE"]
+margin_right = 416.0
+margin_bottom = 544.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+color = Color( 0.227451, 0.192157, 0.109804, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SEE_ALCOHOLIC_DRINKS" type="GridContainer" parent="SEE/A"]
+visible = false
+margin_right = 416.0
+margin_bottom = 544.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RETURN_alcoholic_drinks" type="Button" parent="SEE/A/SEE_ALCOHOLIC_DRINKS"]
+modulate = Color( 1, 0.796078, 0, 1 )
+margin_right = 94.0
+margin_bottom = 43.0
+focus_mode = 0
+size_flags_horizontal = 0
+enabled_focus_mode = 0
+text = "Return"
+flat = true
+
+[node name="ALCOHOLIC" type="Label" parent="SEE/A/SEE_ALCOHOLIC_DRINKS"]
+margin_top = 47.0
+margin_right = 416.0
+margin_bottom = 84.0
+text = "All alcoholic drinks"
+align = 1
+
+[node name="ScrollContainer" type="ScrollContainer" parent="SEE/A/SEE_ALCOHOLIC_DRINKS"]
+margin_top = 47.0
+margin_right = 416.0
+margin_bottom = 544.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="SEE/A/SEE_ALCOHOLIC_DRINKS/ScrollContainer"]
+margin_right = 416.0
+margin_bottom = 497.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="DRINKS" type="GridContainer" parent="SEE/A/SEE_ALCOHOLIC_DRINKS/ScrollContainer/VBoxContainer"]
+margin_top = 230.0
+margin_right = 416.0
+margin_bottom = 456.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+columns = 2
+
+[node name="LOADING_ANIMATION" parent="SEE/A/SEE_ALCOHOLIC_DRINKS/ScrollContainer/VBoxContainer/DRINKS" instance=ExtResource( 9 )]
+
+[node name="SEE_NON_ALCOHOLIC_DRINKS" type="GridContainer" parent="SEE/A"]
+visible = false
+margin_right = 416.0
+margin_bottom = 544.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RETURN_non_alcoholic_drinks" type="Button" parent="SEE/A/SEE_NON_ALCOHOLIC_DRINKS"]
+modulate = Color( 1, 0.796078, 0, 1 )
+margin_right = 94.0
+margin_bottom = 43.0
+focus_mode = 0
+size_flags_horizontal = 0
+enabled_focus_mode = 0
+text = "Return"
+flat = true
+
+[node name="NON_ALCOHOLIC" type="Label" parent="SEE/A/SEE_NON_ALCOHOLIC_DRINKS"]
+margin_top = 47.0
+margin_right = 416.0
+margin_bottom = 84.0
+text = "All non-alcoholic drinks"
+align = 1
+
+[node name="ScrollContainer" type="ScrollContainer" parent="SEE/A/SEE_NON_ALCOHOLIC_DRINKS"]
+margin_top = 47.0
+margin_right = 416.0
+margin_bottom = 544.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="SEE/A/SEE_NON_ALCOHOLIC_DRINKS/ScrollContainer"]
+margin_right = 416.0
+margin_bottom = 497.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="DRINKS" type="GridContainer" parent="SEE/A/SEE_NON_ALCOHOLIC_DRINKS/ScrollContainer/VBoxContainer"]
+margin_top = 230.0
+margin_right = 416.0
+margin_bottom = 456.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+columns = 2
+
+[node name="LOADING_ANIMATION" parent="SEE/A/SEE_NON_ALCOHOLIC_DRINKS/ScrollContainer/VBoxContainer/DRINKS" instance=ExtResource( 9 )]
+
+[node name="SEE_ALL_GLASS" type="GridContainer" parent="SEE/A"]
+visible = false
+margin_right = 416.0
+margin_bottom = 544.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RETURN_glass" type="Button" parent="SEE/A/SEE_ALL_GLASS"]
+modulate = Color( 1, 0.796078, 0, 1 )
+margin_right = 94.0
+margin_bottom = 43.0
+focus_mode = 0
+size_flags_horizontal = 0
+enabled_focus_mode = 0
+text = "Return"
+flat = true
+
+[node name="GLASS" type="Label" parent="SEE/A/SEE_ALL_GLASS"]
+margin_top = 47.0
+margin_right = 416.0
+margin_bottom = 84.0
+text = "All glass"
+align = 1
+
+[node name="ScrollContainer" type="ScrollContainer" parent="SEE/A/SEE_ALL_GLASS"]
+margin_top = 88.0
+margin_right = 416.0
+margin_bottom = 544.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="SEE/A/SEE_ALL_GLASS/ScrollContainer"]
+margin_right = 416.0
+margin_bottom = 456.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="GLASS" type="GridContainer" parent="SEE/A/SEE_ALL_GLASS/ScrollContainer/VBoxContainer"]
+margin_right = 416.0
+margin_bottom = 226.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="LOADING_ANIMATION" parent="SEE/A/SEE_ALL_GLASS/ScrollContainer/VBoxContainer/GLASS" instance=ExtResource( 9 )]
+
+[node name="DRINKS" type="GridContainer" parent="SEE/A/SEE_ALL_GLASS/ScrollContainer/VBoxContainer"]
+visible = false
+margin_top = 230.0
+margin_right = 416.0
+margin_bottom = 456.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+columns = 2
+
+[node name="LOADING_ANIMATION" parent="SEE/A/SEE_ALL_GLASS/ScrollContainer/VBoxContainer/DRINKS" instance=ExtResource( 9 )]
+
+[node name="SEE_ALL_CATEGORIES" type="GridContainer" parent="SEE/A"]
+visible = false
+margin_right = 416.0
+margin_bottom = 544.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RETURN_categories" type="Button" parent="SEE/A/SEE_ALL_CATEGORIES"]
+modulate = Color( 1, 0.796078, 0, 1 )
+margin_right = 94.0
+margin_bottom = 43.0
+focus_mode = 0
+size_flags_horizontal = 0
+enabled_focus_mode = 0
+text = "Return"
+flat = true
+
+[node name="CATEGORIES" type="Label" parent="SEE/A/SEE_ALL_CATEGORIES"]
+margin_top = 47.0
+margin_right = 416.0
+margin_bottom = 84.0
+text = "All categories"
+align = 1
+
+[node name="ScrollContainer" type="ScrollContainer" parent="SEE/A/SEE_ALL_CATEGORIES"]
+margin_top = 88.0
+margin_right = 416.0
+margin_bottom = 544.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="SEE/A/SEE_ALL_CATEGORIES/ScrollContainer"]
+margin_right = 416.0
+margin_bottom = 456.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="CATEGORIES" type="GridContainer" parent="SEE/A/SEE_ALL_CATEGORIES/ScrollContainer/VBoxContainer"]
+margin_right = 416.0
+margin_bottom = 226.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="LOADING_ANIMATION" parent="SEE/A/SEE_ALL_CATEGORIES/ScrollContainer/VBoxContainer/CATEGORIES" instance=ExtResource( 9 )]
+
+[node name="DRINKS" type="GridContainer" parent="SEE/A/SEE_ALL_CATEGORIES/ScrollContainer/VBoxContainer"]
+visible = false
+margin_top = 230.0
+margin_right = 416.0
+margin_bottom = 456.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+columns = 2
+
+[node name="LOADING_ANIMATION" parent="SEE/A/SEE_ALL_CATEGORIES/ScrollContainer/VBoxContainer/DRINKS" instance=ExtResource( 9 )]
+
+[node name="RICH_DRINK_VIEW" type="Node2D" parent="."]
+visible = false
+position = Vector2( 0, 96 )
+z_index = 1
+
+[node name="A" type="ColorRect" parent="RICH_DRINK_VIEW"]
+margin_right = 416.0
+margin_bottom = 544.0
+color = Color( 0.215686, 0.145098, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RETURN_rich_drink_view" type="Button" parent="RICH_DRINK_VIEW/A"]
+modulate = Color( 1, 0.796078, 0, 1 )
+margin_right = 94.0
+margin_bottom = 43.0
+focus_mode = 0
+size_flags_horizontal = 0
+enabled_focus_mode = 0
+text = "Return"
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ScrollContainer" type="ScrollContainer" parent="RICH_DRINK_VIEW/A"]
+margin_top = 40.0
+margin_right = 416.0
+margin_bottom = 544.0
+size_flags_horizontal = 7
+size_flags_vertical = 7
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="RICH_DRINK_VIEW/A/ScrollContainer"]
+margin_right = 416.0
+margin_bottom = 987.0
+size_flags_horizontal = 7
+size_flags_vertical = 7
+
+[node name="RICH_DRINK_INFOS" type="GridContainer" parent="RICH_DRINK_VIEW/A/ScrollContainer/VBoxContainer"]
+margin_right = 404.0
+margin_bottom = 987.0
+size_flags_vertical = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HEADER" type="GridContainer" parent="RICH_DRINK_VIEW/A/ScrollContainer/VBoxContainer/RICH_DRINK_INFOS"]
+margin_right = 404.0
+margin_bottom = 198.0
+size_flags_horizontal = 7
+columns = 2
+
+[node name="IMAGE" type="TextureRect" parent="RICH_DRINK_VIEW/A/ScrollContainer/VBoxContainer/RICH_DRINK_INFOS/HEADER"]
+margin_right = 200.0
+margin_bottom = 198.0
+rect_min_size = Vector2( 198, 198 )
+size_flags_horizontal = 7
+expand = true
+stretch_mode = 6
+
+[node name="PRIMARY_INFOS" type="GridContainer" parent="RICH_DRINK_VIEW/A/ScrollContainer/VBoxContainer/RICH_DRINK_INFOS/HEADER"]
+margin_left = 204.0
+margin_top = 39.0
+margin_right = 404.0
+margin_bottom = 158.0
+size_flags_horizontal = 7
+size_flags_vertical = 6
+
+[node name="FAVORITE" type="TextureButton" parent="RICH_DRINK_VIEW/A/ScrollContainer/VBoxContainer/RICH_DRINK_INFOS/HEADER/PRIMARY_INFOS"]
+margin_right = 200.0
+margin_bottom = 37.0
+rect_min_size = Vector2( 37, 37 )
+toggle_mode = true
+texture_normal = ExtResource( 7 )
+texture_pressed = ExtResource( 8 )
+texture_hover = ExtResource( 7 )
+expand = true
+stretch_mode = 5
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="GridContainer" type="GridContainer" parent="RICH_DRINK_VIEW/A/ScrollContainer/VBoxContainer/RICH_DRINK_INFOS/HEADER/PRIMARY_INFOS"]
+margin_top = 41.0
+margin_right = 200.0
+margin_bottom = 78.0
+rect_pivot_offset = Vector2( -346, -336 )
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="NAME" type="Label" parent="RICH_DRINK_VIEW/A/ScrollContainer/VBoxContainer/RICH_DRINK_INFOS/HEADER/PRIMARY_INFOS/GridContainer"]
+margin_right = 200.0
+margin_bottom = 37.0
+size_flags_horizontal = 7
+size_flags_vertical = 7
+text = "Margarita"
+align = 1
+valign = 1
+autowrap = true
+
+[node name="IS_ALCOHOLIC" type="GridContainer" parent="RICH_DRINK_VIEW/A/ScrollContainer/VBoxContainer/RICH_DRINK_INFOS/HEADER/PRIMARY_INFOS"]
+margin_top = 82.0
+margin_right = 200.0
+margin_bottom = 119.0
+columns = 2
+
+[node name="ALCOHOLIC" type="Label" parent="RICH_DRINK_VIEW/A/ScrollContainer/VBoxContainer/RICH_DRINK_INFOS/HEADER/PRIMARY_INFOS/IS_ALCOHOLIC"]
+margin_right = 108.0
+margin_bottom = 37.0
+size_flags_horizontal = 6
+text = "Alcoholic"
+align = 1
+
+[node name="TextureRect" type="TextureRect" parent="RICH_DRINK_VIEW/A/ScrollContainer/VBoxContainer/RICH_DRINK_INFOS/HEADER/PRIMARY_INFOS/IS_ALCOHOLIC"]
+margin_left = 112.0
+margin_right = 200.0
+margin_bottom = 37.0
+size_flags_horizontal = 7
+expand = true
+stretch_mode = 6
+
+[node name="INGREDIENTS" type="GridContainer" parent="RICH_DRINK_VIEW/A/ScrollContainer/VBoxContainer/RICH_DRINK_INFOS"]
+margin_top = 202.0
+margin_right = 404.0
+margin_bottom = 360.0
+
+[node name="Label" type="Label" parent="RICH_DRINK_VIEW/A/ScrollContainer/VBoxContainer/RICH_DRINK_INFOS/INGREDIENTS"]
+margin_left = 119.0
+margin_right = 284.0
+margin_bottom = 37.0
+size_flags_horizontal = 6
+text = "INGREDIENTS"
+align = 1
+valign = 1
+
+[node name="ALL_INGREDIENTS" type="GridContainer" parent="RICH_DRINK_VIEW/A/ScrollContainer/VBoxContainer/RICH_DRINK_INFOS/INGREDIENTS"]
+margin_top = 41.0
+margin_right = 404.0
+margin_bottom = 158.0
+columns = 3
+
+[node name="LOADING_ANIMATION" parent="RICH_DRINK_VIEW/A/ScrollContainer/VBoxContainer/RICH_DRINK_INFOS/INGREDIENTS/ALL_INGREDIENTS" instance=ExtResource( 9 )]
+margin_left = 19.0
+margin_right = 115.0
+margin_bottom = 117.0
+
+[node name="GLASS" type="GridContainer" parent="RICH_DRINK_VIEW/A/ScrollContainer/VBoxContainer/RICH_DRINK_INFOS"]
+margin_top = 364.0
+margin_right = 404.0
+margin_bottom = 442.0
+
+[node name="GLASS" type="Label" parent="RICH_DRINK_VIEW/A/ScrollContainer/VBoxContainer/RICH_DRINK_INFOS/GLASS"]
+margin_left = 162.0
+margin_right = 242.0
+margin_bottom = 37.0
+size_flags_horizontal = 6
+text = "GLASS"
+
+[node name="Glass_name" type="Label" parent="RICH_DRINK_VIEW/A/ScrollContainer/VBoxContainer/RICH_DRINK_INFOS/GLASS"]
+margin_left = 85.0
+margin_top = 41.0
+margin_right = 318.0
+margin_bottom = 78.0
+size_flags_horizontal = 6
+text = "Old-fashioned glass"
+
+[node name="INSTRUCTIONS" type="GridContainer" parent="RICH_DRINK_VIEW/A/ScrollContainer/VBoxContainer/RICH_DRINK_INFOS"]
+margin_top = 446.0
+margin_right = 404.0
+margin_bottom = 987.0
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="RICH_DRINK_VIEW/A/ScrollContainer/VBoxContainer/RICH_DRINK_INFOS/INSTRUCTIONS"]
+margin_left = 109.0
+margin_right = 295.0
+margin_bottom = 37.0
+size_flags_horizontal = 6
+text = "INSTRUCTIONS"
+align = 1
+valign = 1
+
+[node name="TextEdit" type="TextEdit" parent="RICH_DRINK_VIEW/A/ScrollContainer/VBoxContainer/RICH_DRINK_INFOS/INSTRUCTIONS"]
+margin_top = 41.0
+margin_right = 404.0
+margin_bottom = 541.0
+rect_min_size = Vector2( 0, 500 )
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_colors/line_number_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_readonly = Color( 1, 1, 1, 1 )
+custom_styles/read_only = SubResource( 12 )
+custom_styles/focus = SubResource( 9 )
+custom_styles/normal = SubResource( 10 )
+custom_styles/completion = SubResource( 11 )
+readonly = true
+show_line_numbers = true
+wrap_enabled = true
+
+[node name="RICH_INGREDIENTS_VIEW" type="Node2D" parent="."]
+visible = false
+position = Vector2( 0, 96 )
+
+[node name="A" type="ColorRect" parent="RICH_INGREDIENTS_VIEW"]
+margin_right = 416.0
+margin_bottom = 544.0
+color = Color( 0.215686, 0.145098, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RETURN_rich_ingredient_view" type="Button" parent="RICH_INGREDIENTS_VIEW/A"]
+modulate = Color( 1, 0.796078, 0, 1 )
+margin_right = 94.0
+margin_bottom = 43.0
+focus_mode = 0
+size_flags_horizontal = 0
+enabled_focus_mode = 0
+text = "Return"
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ScrollContainer" type="ScrollContainer" parent="RICH_INGREDIENTS_VIEW/A"]
+margin_top = 40.0
+margin_right = 416.0
+margin_bottom = 544.0
+size_flags_horizontal = 7
+size_flags_vertical = 7
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="RICH_INGREDIENTS_VIEW/A/ScrollContainer"]
+margin_right = 416.0
+margin_bottom = 504.0
+size_flags_horizontal = 7
+size_flags_vertical = 7
+
+[node name="RICH_INGREDIENT_INFOS" type="GridContainer" parent="RICH_INGREDIENTS_VIEW/A/ScrollContainer/VBoxContainer"]
+margin_right = 416.0
+margin_bottom = 504.0
+size_flags_vertical = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HEADER" type="GridContainer" parent="RICH_INGREDIENTS_VIEW/A/ScrollContainer/VBoxContainer/RICH_INGREDIENT_INFOS"]
+margin_left = 109.0
+margin_right = 307.0
+margin_bottom = 239.0
+size_flags_horizontal = 6
+
+[node name="IMAGE" type="TextureRect" parent="RICH_INGREDIENTS_VIEW/A/ScrollContainer/VBoxContainer/RICH_INGREDIENT_INFOS/HEADER"]
+margin_right = 198.0
+margin_bottom = 198.0
+rect_min_size = Vector2( 198, 198 )
+size_flags_horizontal = 7
+expand = true
+stretch_mode = 6
+
+[node name="NAME" type="Label" parent="RICH_INGREDIENTS_VIEW/A/ScrollContainer/VBoxContainer/RICH_INGREDIENT_INFOS/HEADER"]
+margin_top = 202.0
+margin_right = 198.0
+margin_bottom = 239.0
+size_flags_horizontal = 7
+text = "Gin"
+align = 1
+valign = 1
+
+[node name="DRINKS_WITH_THIS_INGREDIENT" type="GridContainer" parent="RICH_INGREDIENTS_VIEW/A/ScrollContainer/VBoxContainer/RICH_INGREDIENT_INFOS"]
+margin_top = 243.0
+margin_right = 416.0
+margin_bottom = 401.0
+
+[node name="Label" type="Label" parent="RICH_INGREDIENTS_VIEW/A/ScrollContainer/VBoxContainer/RICH_INGREDIENT_INFOS/DRINKS_WITH_THIS_INGREDIENT"]
+margin_left = 162.0
+margin_right = 254.0
+margin_bottom = 37.0
+size_flags_horizontal = 6
+text = "DRINKS"
+align = 1
+valign = 1
+
+[node name="ALL_DRINKS_WITH_THIS_INGREDIENT" type="GridContainer" parent="RICH_INGREDIENTS_VIEW/A/ScrollContainer/VBoxContainer/RICH_INGREDIENT_INFOS/DRINKS_WITH_THIS_INGREDIENT"]
+margin_top = 41.0
+margin_right = 416.0
+margin_bottom = 158.0
+columns = 2
+
+[node name="LOADING_ANIMATION" parent="RICH_INGREDIENTS_VIEW/A/ScrollContainer/VBoxContainer/RICH_INGREDIENT_INFOS/DRINKS_WITH_THIS_INGREDIENT/ALL_DRINKS_WITH_THIS_INGREDIENT" instance=ExtResource( 9 )]
+margin_left = 56.0
+margin_right = 152.0
+margin_bottom = 117.0
+
+[node name="Example" parent="." instance=ExtResource( 10 )]
+visible = false
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 300.0
+
+[connection signal="button_up" from="GridContainer/DISCOVER_TAB/VBoxContainer/Label/SEE_ANOTHER_RANDOM_COCKTAIL" to="." method="_on_SEE_ANOTHER_RANDOM_COCKTAIL_button_up"]
+[connection signal="button_up" from="GridContainer/DISCOVER_TAB/VBoxContainer/Alcocholics_group/SEE_ALL_ALCOHOLICS" to="." method="_on_SEE_ALL_ALCOHOLICS_button_up"]
+[connection signal="button_up" from="GridContainer/DISCOVER_TAB/VBoxContainer/Non_Alcocholics_group/SEE_ALL_NON_ALCOHOLICS" to="." method="_on_SEE_ALL_NON_ALCOHOLICS_button_up"]
+[connection signal="button_up" from="GridContainer/DISCOVER_TAB/VBoxContainer/Glass_filter/SEE_ALL_GLASS" to="." method="_on_SEE_ALL_GLASS_button_up"]
+[connection signal="button_up" from="GridContainer/DISCOVER_TAB/VBoxContainer/Categories_filter/SEE_ALL_CATEGORIES" to="." method="_on_SEE_ALL_CATEGORIES_button_up"]
+[connection signal="button_up" from="GridContainer/First_letter_selector/HBoxContainer/GridContainer/a" to="." method="_on_a_button_up"]
+[connection signal="button_up" from="GridContainer/First_letter_selector/HBoxContainer/GridContainer/b" to="." method="_on_b_button_up"]
+[connection signal="button_up" from="GridContainer/First_letter_selector/HBoxContainer/GridContainer/c" to="." method="_on_c_button_up"]
+[connection signal="button_up" from="GridContainer/First_letter_selector/HBoxContainer/GridContainer/d" to="." method="_on_d_button_up"]
+[connection signal="button_up" from="GridContainer/First_letter_selector/HBoxContainer/GridContainer/e" to="." method="_on_e_button_up"]
+[connection signal="button_up" from="GridContainer/First_letter_selector/HBoxContainer/GridContainer/f" to="." method="_on_f_button_up"]
+[connection signal="button_up" from="GridContainer/First_letter_selector/HBoxContainer/GridContainer/g" to="." method="_on_g_button_up"]
+[connection signal="button_up" from="GridContainer/First_letter_selector/HBoxContainer/GridContainer/h" to="." method="_on_h_button_up"]
+[connection signal="button_up" from="GridContainer/First_letter_selector/HBoxContainer/GridContainer/i" to="." method="_on_i_button_up"]
+[connection signal="button_up" from="GridContainer/First_letter_selector/HBoxContainer/GridContainer/j" to="." method="_on_j_button_up"]
+[connection signal="button_up" from="GridContainer/First_letter_selector/HBoxContainer/GridContainer/k" to="." method="_on_k_button_up"]
+[connection signal="button_up" from="GridContainer/First_letter_selector/HBoxContainer/GridContainer/l" to="." method="_on_l_button_up"]
+[connection signal="button_up" from="GridContainer/First_letter_selector/HBoxContainer/GridContainer/m" to="." method="_on_m_button_up"]
+[connection signal="button_up" from="GridContainer/First_letter_selector/HBoxContainer/GridContainer/n" to="." method="_on_n_button_up"]
+[connection signal="button_up" from="GridContainer/First_letter_selector/HBoxContainer/GridContainer/o" to="." method="_on_o_button_up"]
+[connection signal="button_up" from="GridContainer/First_letter_selector/HBoxContainer/GridContainer/p" to="." method="_on_p_button_up"]
+[connection signal="button_up" from="GridContainer/First_letter_selector/HBoxContainer/GridContainer/q" to="." method="_on_q_button_up"]
+[connection signal="button_up" from="GridContainer/First_letter_selector/HBoxContainer/GridContainer/r" to="." method="_on_r_button_up"]
+[connection signal="button_up" from="GridContainer/First_letter_selector/HBoxContainer/GridContainer/s" to="." method="_on_s_button_up"]
+[connection signal="button_up" from="GridContainer/First_letter_selector/HBoxContainer/GridContainer/t" to="." method="_on_t_button_up"]
+[connection signal="button_up" from="GridContainer/First_letter_selector/HBoxContainer/GridContainer/u" to="." method="_on_u_button_up"]
+[connection signal="button_up" from="GridContainer/First_letter_selector/HBoxContainer/GridContainer/v" to="." method="_on_v_button_up"]
+[connection signal="button_up" from="GridContainer/First_letter_selector/HBoxContainer/GridContainer/w" to="." method="_on_w_button_up"]
+[connection signal="button_up" from="GridContainer/First_letter_selector/HBoxContainer/GridContainer/x" to="." method="_on_x_button_up"]
+[connection signal="button_up" from="GridContainer/First_letter_selector/HBoxContainer/GridContainer/y" to="." method="_on_y_button_up"]
+[connection signal="button_up" from="GridContainer/First_letter_selector/HBoxContainer/GridContainer/z" to="." method="_on_z_button_up"]
+[connection signal="toggled" from="GridContainer/MORE/VBoxContainer/GridContainer/GridContainer/CheckBox" to="." method="_on_CheckBox_toggled"]
+[connection signal="button_up" from="GridContainer/MORE/VBoxContainer/GridContainer/GridContainer2/minus" to="." method="_on_minus_button_up"]
+[connection signal="button_up" from="GridContainer/MORE/VBoxContainer/GridContainer/GridContainer2/plus" to="." method="_on_plus_button_up"]
+[connection signal="button_up" from="GridContainer/THE_FOUR/DISCOVER" to="." method="_on_DISCOVER_button_up"]
+[connection signal="button_up" from="GridContainer/THE_FOUR/COCKTAILS" to="." method="_on_COCKTAILS_button_up"]
+[connection signal="button_up" from="GridContainer/THE_FOUR/ASSISTANT" to="." method="_on_ASSISTANT_button_up"]
+[connection signal="button_up" from="GridContainer/THE_FOUR/MORE" to="." method="_on_MORE_button_up"]
+[connection signal="button_up" from="SEE/A/SEE_ALCOHOLIC_DRINKS/RETURN_alcoholic_drinks" to="." method="_on_RETURN_alcoholic_drinks_button_up"]
+[connection signal="button_up" from="SEE/A/SEE_NON_ALCOHOLIC_DRINKS/RETURN_non_alcoholic_drinks" to="." method="_on_RETURN_non_alcoholic_drinks_button_up"]
+[connection signal="button_up" from="SEE/A/SEE_ALL_GLASS/RETURN_glass" to="." method="_on_RETURN_glass_button_up"]
+[connection signal="button_up" from="SEE/A/SEE_ALL_CATEGORIES/RETURN_categories" to="." method="_on_RETURN_categories_button_up"]
+[connection signal="button_up" from="RICH_DRINK_VIEW/A/RETURN_rich_drink_view" to="." method="_on_RETURN_rich_drink_view_button_up"]
+[connection signal="button_up" from="RICH_DRINK_VIEW/A/ScrollContainer/VBoxContainer/RICH_DRINK_INFOS/HEADER/PRIMARY_INFOS/FAVORITE" to="." method="_on_FAVORITE_button_up"]
+[connection signal="button_up" from="RICH_INGREDIENTS_VIEW/A/RETURN_rich_ingredient_view" to="." method="_on_RETURN_rich_ingredient_view_button_up"]
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

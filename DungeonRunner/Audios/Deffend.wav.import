@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Deffend.wav-e988c9bf943ae514d6c4c3e8133dea8c.sample"
+
+[deps]
+
+source_file="res://Audios/Deffend.wav"
+dest_files=[ "res://.import/Deffend.wav-e988c9bf943ae514d6c4c3e8133dea8c.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

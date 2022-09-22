@@ -1,0 +1,76 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Styles/ButtonHover.tres" type="StyleBox" id=1]
+[ext_resource path="res://Styles/ButtonNormal.tres" type="StyleBox" id=2]
+[ext_resource path="res://Styles/ButtonPressed.tres" type="StyleBox" id=3]
+[ext_resource path="res://Styles/ButtonDisabled.tres" type="StyleBox" id=4]
+[ext_resource path="res://Scripts/Menu.gd" type="Script" id=5]
+
+[node name="Menu" type="Node2D"]
+scale = Vector2( 2, 2 )
+script = ExtResource( 5 )
+
+[node name="Continuar" type="Button" parent="."]
+margin_left = 96.0
+margin_top = 72.0
+margin_right = 192.0
+margin_bottom = 104.0
+custom_styles/hover = ExtResource( 1 )
+custom_styles/pressed = ExtResource( 3 )
+custom_styles/disabled = ExtResource( 4 )
+custom_styles/normal = ExtResource( 2 )
+disabled = true
+text = "Continuar"
+
+[node name="NovoJogo" type="Button" parent="."]
+margin_left = 96.0
+margin_top = 108.0
+margin_right = 192.0
+margin_bottom = 140.0
+custom_styles/hover = ExtResource( 1 )
+custom_styles/pressed = ExtResource( 3 )
+custom_styles/disabled = ExtResource( 4 )
+custom_styles/normal = ExtResource( 2 )
+text = "Novo jogo"
+
+[node name="Opcoes" type="Button" parent="."]
+margin_left = 96.0
+margin_top = 144.0
+margin_right = 192.0
+margin_bottom = 176.0
+custom_styles/hover = ExtResource( 1 )
+custom_styles/pressed = ExtResource( 3 )
+custom_styles/disabled = ExtResource( 4 )
+custom_styles/normal = ExtResource( 2 )
+text = "Opções"
+
+[node name="Sair" type="Button" parent="."]
+margin_left = 96.0
+margin_top = 180.0
+margin_right = 192.0
+margin_bottom = 212.0
+custom_styles/hover = ExtResource( 1 )
+custom_styles/pressed = ExtResource( 3 )
+custom_styles/disabled = ExtResource( 4 )
+custom_styles/normal = ExtResource( 2 )
+text = "Sair"
+
+[node name="Achievements" type="Button" parent="."]
+margin_left = 208.0
+margin_top = 264.0
+margin_right = 296.0
+margin_bottom = 296.0
+custom_styles/hover = ExtResource( 1 )
+custom_styles/pressed = ExtResource( 3 )
+custom_styles/disabled = ExtResource( 4 )
+custom_styles/normal = ExtResource( 2 )
+text = "Conquistas"
+
+[node name="Label" type="Label" parent="."]
+margin_top = 24.0
+margin_right = 150.0
+margin_bottom = 40.0
+rect_scale = Vector2( 2, 2 )
+text = "Fishin Frenzy"
+align = 1
+valign = 1
