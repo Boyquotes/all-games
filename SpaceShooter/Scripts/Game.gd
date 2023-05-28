@@ -214,6 +214,7 @@ func _ready():
 		Global.MUSIC_INDEX = 0
 	$AudioStreamPlayer.set_stream(load(Global.ALL_MUSIC_LOOPS[Global.MUSIC_INDEX]))
 	$AudioStreamPlayer.play()
+	Global.SALVAR()
 
 func SPAWN(ORIGIN, MODE, DELAY, AMOUNT, POINTS_AREA=''):
 	SPAWNING = true
@@ -310,6 +311,7 @@ func _process(_delta):
 				Global.actual_wave = 0
 			if Global.actual_wave > Global.HIGHEST_WAVE:
 				Global.HIGHEST_WAVE = Global.actual_wave
+			Global.SALVAR()
 	else:
 		#ACTIVATE THE END
 		pass

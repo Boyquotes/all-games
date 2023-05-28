@@ -1,0 +1,143 @@
+{
+	"events": [
+		{
+			"animation": "1-fade_in.gd",
+			"animation_length": 1,
+			"change_mirror_portrait": false,
+			"change_z_index": false,
+			"character": "character-1684939714.json",
+			"event_id": "dialogic_002",
+			"mirror_portrait": false,
+			"portrait": "Default",
+			"portrait_definition": "",
+			"position": {
+				"0": true,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": false
+			},
+			"type": 0,
+			"z_index": 0
+		},
+		{
+			"character": "character-1684939714.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Como chefe de cibersegurança da Maxwell Tech, minha rotina era sempre cercada por códigos e algoritmos impenetráveis."
+		},
+		{
+			"character": "character-1684939714.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "No entanto, numa noite sombria, minha equipe e eu fomos pegos de surpresa por uma série de mensagens com o título \"$(%]\\/@)”"
+		},
+		{
+			"character": "character-1684939714.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Ficamos alguns dias para entender os sinais enviados, até que enfim deciframos e conseguimos uma resposta, [wave amp=25 freq=1 ]\"$(%]\\/@)”[/wave] era [shake rate=10 level=10][color=#be0d0d]\"Malware\"[/color][/shake]"
+		},
+		{
+			"animation": "instant_in.gd",
+			"animation_length": 0,
+			"change_mirror_portrait": false,
+			"change_z_index": false,
+			"character": "character-1684939835.json",
+			"event_id": "dialogic_002",
+			"mirror_portrait": false,
+			"portrait": "Default",
+			"portrait_definition": "",
+			"position": {
+				"0": true,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": false
+			},
+			"type": 0,
+			"z_index": 0
+		},
+		{
+			"character": "character-1684939835.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Então você conseguiu decifrar minhas [wave amp=20 freq=5]mensagens...[/wave]"
+		},
+		{
+			"character": "character-1684939714.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Consegui, [color=#be0d0d]Malware[/color]! E você não será capaz de conseguir os dados da minha empresa."
+		},
+		{
+			"character": "character-1684939835.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Veremos quantos rounds você irá [wave amp=20 freq=5]aguentar...[/wave] [shake rate=20 level=20][color=#be0d0d]Hahaha[/color][/shake]"
+		},
+		{
+			"audio": "play",
+			"audio_bus": "Effects",
+			"event_id": "dialogic_030",
+			"event_name": "AudioEvent",
+			"file": "res://SoundEffects/EvilLaugh.wav",
+			"volume": 10
+		},
+		{
+			"animation": "5-fade_out_down.gd",
+			"animation_length": 1,
+			"change_mirror_portrait": false,
+			"change_z_index": false,
+			"character": "character-1684939835.json",
+			"event_id": "dialogic_002",
+			"mirror_portrait": false,
+			"portrait": "",
+			"portrait_definition": "",
+			"position": {
+				"0": false,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": false
+			},
+			"type": 1,
+			"z_index": 0
+		},
+		{
+			"character": "character-1684939714.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Os invasores habilidosos conseguiram contornar nossas [color=#24d80e]defesas[/color], desencadeando um caos digital. Minha equipe e eu estamos utilizando diversas habilidades para proteger nossos [wave amp=20 freq=5]dados...[/wave]"
+		},
+		{
+			"animation": "4-fade_out.gd",
+			"animation_length": 1,
+			"change_mirror_portrait": false,
+			"change_z_index": false,
+			"character": "character-1684939714.json",
+			"event_id": "dialogic_002",
+			"mirror_portrait": false,
+			"portrait": "",
+			"portrait_definition": "",
+			"position": {
+				"0": false,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": false
+			},
+			"type": 1,
+			"z_index": 0
+		},
+		{
+			"change_scene": "res://Game/Game.tscn",
+			"event_id": "dialogic_041"
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.4.5",
+		"file": "timeline-1684939953.json",
+		"name": "InnitialConversation"
+	}
+}

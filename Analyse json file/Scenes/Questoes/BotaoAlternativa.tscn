@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Scenes/Questoes/BotaoAlternativa.gd" type="Script" id=1]
+
+[node name="BotaoAlternativa" type="CheckBox"]
+margin_right = 24.0
+margin_bottom = 24.0
+size_flags_horizontal = 10
+size_flags_vertical = 6
+script = ExtResource( 1 )
+
+[connection signal="button_up" from="." to="." method="_on_BotaoAlternativa_button_up"]

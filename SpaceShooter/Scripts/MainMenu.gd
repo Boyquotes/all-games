@@ -2,6 +2,8 @@ extends Node2D
 
 func _ready():
 	Global.set_process_bit(self, false)
+	#Global.CARREGAR()
+	Global.HIGHEST_LEVEL = 28
 	#if Global.HIGHEST_LEVEL > 0:
 	#	$RIGHT.visible = true
 	#	$LEFT.visible = true
@@ -58,7 +60,7 @@ func _on_Book_button_up():
 	$Book.visible = false
 	$PixelPedia.visible = true
 	for z in $PixelPedia/TabContainer/Enemies/Enemies/Vbox/Grid.get_children():
-		if z.get_child(1).text in Global.ENEMIES_DISCOVERED:
+		if z.get_child(1).get_name() in Global.ENEMIES_DISCOVERED:
 			pass
 		else:
 			z.get_child(0).color = Color(0.15, 0.15, 0.15)

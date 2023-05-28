@@ -180,6 +180,7 @@ scale = Vector2( 2, 2 )
 
 [node name="C" type="Camera2D" parent="."]
 current = true
+zoom = Vector2( 0.5, 0.5 )
 
 [connection signal="button_up" from="ESC/RESUME" to="." method="_on_RESUME_button_up"]
 [connection signal="toggled" from="ESC/RESUME/Options" to="." method="_on_Options_toggled"]

@@ -1,0 +1,75 @@
+{
+	"events": [
+		{
+			"animation": "2-fade_in_up.gd",
+			"animation_length": 1,
+			"change_mirror_portrait": false,
+			"change_z_index": false,
+			"character": "character-1684939835.json",
+			"event_id": "dialogic_002",
+			"mirror_portrait": false,
+			"portrait": "Default",
+			"portrait_definition": "",
+			"position": {
+				"0": true,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": false
+			},
+			"type": 0,
+			"z_index": 0
+		},
+		{
+			"character": "character-1684939835.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Desista logo, Maxwell !!!"
+		},
+		{
+			"animation": "1-fade_in.gd",
+			"animation_length": 1,
+			"change_mirror_portrait": false,
+			"change_z_index": false,
+			"character": "character-1684939714.json",
+			"event_id": "dialogic_002",
+			"mirror_portrait": false,
+			"portrait": "Default",
+			"portrait_definition": "",
+			"position": {
+				"0": true,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": false
+			},
+			"type": 0,
+			"z_index": 0
+		},
+		{
+			"character": "character-1684939714.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Nunca, ajudei a construir o legado dessa empresa e valorizo minha equipe"
+		},
+		{
+			"character": "character-1684939835.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Você não sabe a hora de desistir… Hahaha… Te vejo novamente em sua derrota"
+		},
+		{
+			"emit_signal": "ended",
+			"event_id": "dialogic_040"
+		},
+		{
+			"event_id": "dialogic_022",
+			"transition_duration": 0.3
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.4.5",
+		"file": "timeline-1685032272.json",
+		"name": "PartialConversation2"
+	}
+}

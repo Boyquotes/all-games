@@ -216,8 +216,8 @@ margin_bottom = 358.0
 columns = 3
 
 [node name="SHOULDER1" type="TextureRect" parent="GridContainer/PLAYER/UPPER" groups=["SHOULDER1"]]
-margin_left = 16.0
-margin_right = 80.0
+margin_left = 17.0
+margin_right = 81.0
 margin_bottom = 64.0
 size_flags_horizontal = 6
 size_flags_vertical = 6
@@ -225,8 +225,8 @@ texture = ExtResource( 2 )
 script = ExtResource( 3 )
 
 [node name="CHEST" type="TextureRect" parent="GridContainer/PLAYER/UPPER" groups=["CHEST"]]
-margin_left = 117.0
-margin_right = 181.0
+margin_left = 118.0
+margin_right = 182.0
 margin_bottom = 64.0
 size_flags_horizontal = 6
 size_flags_vertical = 6
@@ -234,8 +234,8 @@ texture = ExtResource( 2 )
 script = ExtResource( 3 )
 
 [node name="SHOULDER2" type="TextureRect" parent="GridContainer/PLAYER/UPPER" groups=["SHOULDER2"]]
-margin_left = 218.0
-margin_right = 282.0
+margin_left = 219.0
+margin_right = 283.0
 margin_bottom = 64.0
 size_flags_horizontal = 6
 size_flags_vertical = 6
@@ -249,8 +249,8 @@ margin_bottom = 426.0
 columns = 3
 
 [node name="FOREARM1" type="TextureRect" parent="GridContainer/PLAYER/MIDDLE" groups=["FOREARM1"]]
-margin_left = 16.0
-margin_right = 80.0
+margin_left = 17.0
+margin_right = 81.0
 margin_bottom = 64.0
 size_flags_horizontal = 6
 size_flags_vertical = 6
@@ -258,8 +258,8 @@ texture = ExtResource( 2 )
 script = ExtResource( 3 )
 
 [node name="PANTS" type="TextureRect" parent="GridContainer/PLAYER/MIDDLE" groups=["PANTS"]]
-margin_left = 117.0
-margin_right = 181.0
+margin_left = 118.0
+margin_right = 182.0
 margin_bottom = 64.0
 size_flags_horizontal = 6
 size_flags_vertical = 6
@@ -267,8 +267,8 @@ texture = ExtResource( 2 )
 script = ExtResource( 3 )
 
 [node name="FOREARM2" type="TextureRect" parent="GridContainer/PLAYER/MIDDLE" groups=["FOREARM2"]]
-margin_left = 218.0
-margin_right = 282.0
+margin_left = 219.0
+margin_right = 283.0
 margin_bottom = 64.0
 size_flags_horizontal = 6
 size_flags_vertical = 6

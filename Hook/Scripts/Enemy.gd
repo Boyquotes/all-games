@@ -3,6 +3,7 @@ extends KinematicBody2D
 var MAX_HP = 4
 var HP = 4
 var DMG = 1
+var died = false
 
 var is_moving_left = true
 
@@ -13,24 +14,25 @@ var velocity = Vector2(0, 0)
 
 var speed = 32 # pixels per second
 
+var origin_point: Vector2
+
+onready var HEALTH_MODULE = $HealthModule
+
+# TODO adicionar mecânica de stunar quando tomar dano do chicote, vai ficar stunado por 1 segundo e perder um coração, atacar enquanto ele estiver stunado o acorda imediatamente e o inimigo vira na direção do player atirando
+
 func _ready():
-	#$AnimationPlayer.play("Walk")
-	pass
+	origin_point = global_position
+	HEALTH_MODULE.setup_health_view($GridContainer, MAX_HP)
 
 func _process(_delta):
-	#if $AnimationPlayer.current_animation == "Attack":
-	#	return
-	
 	if player:
 		$Sprite.play("Shoot")
 		var rotats = 0
 		if is_moving_left:
 			rotats = 3.14159
-		Global.ADD_BULLET("res://Scenes/EnemyProjectile.tscn", [$Position2D.global_position, 0, DMG, '', rotats, 800])
-		$Timer.start()
+		Global.ADD_BULLET("res://Scenes/Projectiles/EnemyProjectile.tscn", [$Position2D.global_position, 0, DMG, '', rotats, 350])
+		$ShootDelay.start()
 		set_process(false)
-		yield($Timer, "timeout")
-		set_process(true)
 	else:
 		$Sprite.play("Walk")
 		move_character()
@@ -74,3 +76,26 @@ func _on_Eyes_area_exited(area):
 	area = area.get_parent()
 	if area.is_in_group("PLAYER"):
 		player = false
+
+func _on_ShootDelay_timeout():
+	set_process(true)
+
+func ressurect():
+	if died:
+		Global.spawn('enemy', origin_point, get_parent())
+		queue_free()
+
+func die():
+	set_process(false)
+	visible = false
+	
+	for z in get_children():
+		z.queue_free()
+	
+	died = true
+
+func take_dmg(dmg):
+	HP = HEALTH_MODULE.take_dmg(dmg, $GridContainer, HP, MAX_HP)
+	
+	if HP == 0:
+		die()

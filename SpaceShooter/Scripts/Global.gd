@@ -57,10 +57,14 @@ func _ready():
 
 func SALVAR():
 	var arquivo = File.new()
-	var erro = arquivo.open("res://Save/save.data", File.WRITE)
+	var erro = arquivo.open("user://PixelRageData.data", File.WRITE)
 	var dados = {
 		'HIGHEST_LEVEL': HIGHEST_LEVEL,
 		'HIGHEST_WAVE': HIGHEST_WAVE,
+		'ENEMIES_DISCOVERED': ENEMIES_DISCOVERED,
+		'OBJECTIVES_DISCOVERED': OBJECTIVES_DISCOVERED,
+		'music_volume': CONFIGURATIONS['music_volume'],
+		'DIES': DIES,
 		}
 	if not erro:
 		arquivo.store_var(dados)
@@ -68,11 +72,16 @@ func SALVAR():
 
 func CARREGAR():
 	var arquivo = File.new()
-	var erro = arquivo.open("res://Save/save.data", File.READ)
+	var erro = arquivo.open("user://PixelRageData.data", File.READ)
 	if not erro:
 		var dados_salvos = arquivo.get_var()
+		
 		HIGHEST_LEVEL = dados_salvos['HIGHEST_LEVEL']
 		HIGHEST_WAVE = dados_salvos['HIGHEST_WAVE']
+		ENEMIES_DISCOVERED = dados_salvos['ENEMIES_DISCOVERED']
+		OBJECTIVES_DISCOVERED = dados_salvos['OBJECTIVES_DISCOVERED']
+		CONFIGURATIONS['music_volume'] = dados_salvos['music_volume']
+		DIES = dados_salvos['DIES']
 		actual_level = HIGHEST_LEVEL
 		actual_wave = HIGHEST_WAVE
 	arquivo.close()

@@ -82,7 +82,7 @@ func _on_Button_button_down():
 	set_physics_process(true)
 
 func _on_Button_button_up():
-	#$Handler.visible = false
+	$Handler.visible = false
 	set_physics_process(false)
 	var distances = []
 	for z in get_tree().get_nodes_in_group('TOWERPOINT'):
@@ -96,8 +96,6 @@ func _on_Button_button_up():
 		else:
 			distances.append(99999)
 	global_position = get_tree().get_nodes_in_group("TOWERPOINT")[distances.find(distances.min())].global_position
-	
-	
 
 func _on_RANGE_area_entered(area):
 	area = area.get_parent()

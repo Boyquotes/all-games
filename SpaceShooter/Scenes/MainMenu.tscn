@@ -469,9 +469,6 @@ scale = Vector2( 3, 3 )
 texture = ExtResource( 3 )
 
 [node name="WAVE_LEFT" type="Button" parent="wave_left"]
-anchor_left = -2.5034e-06
-anchor_top = 1.84774e-06
-anchor_bottom = 1.84774e-06
 margin_left = -7.99996
 margin_top = -8.00003
 margin_right = 12.0
@@ -587,18 +584,18 @@ size_flags_horizontal = 3
 columns = 3
 
 [node name="Img" type="ColorRect" parent="PixelPedia/TabContainer/Enemies/Enemies/Vbox/Grid/0"]
-margin_left = 46.0
+margin_left = 47.0
 margin_top = 1.0
-margin_right = 78.0
+margin_right = 79.0
 margin_bottom = 33.0
 rect_min_size = Vector2( 32, 32 )
 size_flags_horizontal = 6
 size_flags_vertical = 6
 color = Color( 1, 0, 0, 1 )
 
-[node name="Name" type="Label" parent="PixelPedia/TabContainer/Enemies/Enemies/Vbox/Grid/0"]
-margin_left = 129.0
-margin_right = 254.0
+[node name="normal" type="Label" parent="PixelPedia/TabContainer/Enemies/Enemies/Vbox/Grid/0"]
+margin_left = 130.0
+margin_right = 255.0
 margin_bottom = 35.0
 size_flags_horizontal = 3
 size_flags_vertical = 7
@@ -607,8 +604,8 @@ align = 1
 valign = 1
 
 [node name="Description" type="Label" parent="PixelPedia/TabContainer/Enemies/Enemies/Vbox/Grid/0"]
-margin_left = 258.0
-margin_right = 383.0
+margin_left = 259.0
+margin_right = 384.0
 margin_bottom = 35.0
 size_flags_horizontal = 3
 size_flags_vertical = 7
@@ -625,18 +622,18 @@ size_flags_horizontal = 3
 columns = 3
 
 [node name="Img" type="ColorRect" parent="PixelPedia/TabContainer/Enemies/Enemies/Vbox/Grid/1"]
-margin_left = 46.0
+margin_left = 47.0
 margin_top = 1.0
-margin_right = 78.0
+margin_right = 79.0
 margin_bottom = 33.0
 rect_min_size = Vector2( 32, 32 )
 size_flags_horizontal = 6
 size_flags_vertical = 6
 color = Color( 0, 1, 0, 1 )
 
-[node name="Name" type="Label" parent="PixelPedia/TabContainer/Enemies/Enemies/Vbox/Grid/1"]
-margin_left = 129.0
-margin_right = 254.0
+[node name="random" type="Label" parent="PixelPedia/TabContainer/Enemies/Enemies/Vbox/Grid/1"]
+margin_left = 130.0
+margin_right = 255.0
 margin_bottom = 35.0
 size_flags_horizontal = 3
 size_flags_vertical = 7
@@ -645,8 +642,8 @@ align = 1
 valign = 1
 
 [node name="Description" type="Label" parent="PixelPedia/TabContainer/Enemies/Enemies/Vbox/Grid/1"]
-margin_left = 258.0
-margin_right = 383.0
+margin_left = 259.0
+margin_right = 384.0
 margin_bottom = 35.0
 size_flags_horizontal = 3
 size_flags_vertical = 7
@@ -663,18 +660,18 @@ size_flags_horizontal = 3
 columns = 3
 
 [node name="Img" type="ColorRect" parent="PixelPedia/TabContainer/Enemies/Enemies/Vbox/Grid/2"]
-margin_left = 46.0
+margin_left = 47.0
 margin_top = 1.0
-margin_right = 78.0
+margin_right = 79.0
 margin_bottom = 33.0
 rect_min_size = Vector2( 32, 32 )
 size_flags_horizontal = 6
 size_flags_vertical = 6
 color = Color( 0.5, 0.5, 0, 1 )
 
-[node name="Name" type="Label" parent="PixelPedia/TabContainer/Enemies/Enemies/Vbox/Grid/2"]
-margin_left = 129.0
-margin_right = 254.0
+[node name="sinuous" type="Label" parent="PixelPedia/TabContainer/Enemies/Enemies/Vbox/Grid/2"]
+margin_left = 130.0
+margin_right = 255.0
 margin_bottom = 35.0
 size_flags_horizontal = 3
 size_flags_vertical = 7
@@ -683,8 +680,8 @@ align = 1
 valign = 1
 
 [node name="Description" type="Label" parent="PixelPedia/TabContainer/Enemies/Enemies/Vbox/Grid/2"]
-margin_left = 258.0
-margin_right = 383.0
+margin_left = 259.0
+margin_right = 384.0
 margin_bottom = 35.0
 size_flags_horizontal = 3
 size_flags_vertical = 7
@@ -701,17 +698,17 @@ size_flags_horizontal = 3
 columns = 3
 
 [node name="Img" type="ColorRect" parent="PixelPedia/TabContainer/Enemies/Enemies/Vbox/Grid/3"]
-margin_left = 46.0
-margin_right = 78.0
+margin_left = 47.0
+margin_right = 79.0
 margin_bottom = 32.0
 rect_min_size = Vector2( 32, 32 )
 size_flags_horizontal = 6
 size_flags_vertical = 6
 color = Color( 1, 0, 1, 1 )
 
-[node name="Name" type="Label" parent="PixelPedia/TabContainer/Enemies/Enemies/Vbox/Grid/3"]
-margin_left = 129.0
-margin_right = 254.0
+[node name="fast" type="Label" parent="PixelPedia/TabContainer/Enemies/Enemies/Vbox/Grid/3"]
+margin_left = 130.0
+margin_right = 255.0
 margin_bottom = 32.0
 size_flags_horizontal = 3
 size_flags_vertical = 7
@@ -720,8 +717,8 @@ align = 1
 valign = 1
 
 [node name="Description" type="Label" parent="PixelPedia/TabContainer/Enemies/Enemies/Vbox/Grid/3"]
-margin_left = 258.0
-margin_right = 383.0
+margin_left = 259.0
+margin_right = 384.0
 margin_bottom = 32.0
 size_flags_horizontal = 3
 size_flags_vertical = 7
@@ -738,18 +735,18 @@ size_flags_horizontal = 3
 columns = 3
 
 [node name="Img" type="ColorRect" parent="PixelPedia/TabContainer/Enemies/Enemies/Vbox/Grid/4"]
-margin_left = 46.0
+margin_left = 47.0
 margin_top = 1.0
-margin_right = 78.0
+margin_right = 79.0
 margin_bottom = 33.0
 rect_min_size = Vector2( 32, 32 )
 size_flags_horizontal = 6
 size_flags_vertical = 6
 color = Color( 0, 0, 1, 1 )
 
-[node name="Name" type="Label" parent="PixelPedia/TabContainer/Enemies/Enemies/Vbox/Grid/4"]
-margin_left = 129.0
-margin_right = 254.0
+[node name="lightspeed" type="Label" parent="PixelPedia/TabContainer/Enemies/Enemies/Vbox/Grid/4"]
+margin_left = 130.0
+margin_right = 255.0
 margin_bottom = 35.0
 size_flags_horizontal = 3
 size_flags_vertical = 7
@@ -758,8 +755,8 @@ align = 1
 valign = 1
 
 [node name="Description" type="Label" parent="PixelPedia/TabContainer/Enemies/Enemies/Vbox/Grid/4"]
-margin_left = 258.0
-margin_right = 383.0
+margin_left = 259.0
+margin_right = 384.0
 margin_bottom = 35.0
 size_flags_horizontal = 3
 size_flags_vertical = 7
@@ -776,17 +773,17 @@ size_flags_horizontal = 3
 columns = 3
 
 [node name="Img" type="ColorRect" parent="PixelPedia/TabContainer/Enemies/Enemies/Vbox/Grid/5"]
-margin_left = 46.0
-margin_right = 78.0
+margin_left = 47.0
+margin_right = 79.0
 margin_bottom = 32.0
 rect_min_size = Vector2( 32, 32 )
 size_flags_horizontal = 6
 size_flags_vertical = 6
 color = Color( 0, 1, 0.5, 1 )
 
-[node name="Name" type="Label" parent="PixelPedia/TabContainer/Enemies/Enemies/Vbox/Grid/5"]
-margin_left = 129.0
-margin_right = 254.0
+[node name="frog" type="Label" parent="PixelPedia/TabContainer/Enemies/Enemies/Vbox/Grid/5"]
+margin_left = 130.0
+margin_right = 255.0
 margin_bottom = 32.0
 size_flags_horizontal = 3
 size_flags_vertical = 7
@@ -795,8 +792,8 @@ align = 1
 valign = 1
 
 [node name="Description" type="Label" parent="PixelPedia/TabContainer/Enemies/Enemies/Vbox/Grid/5"]
-margin_left = 258.0
-margin_right = 383.0
+margin_left = 259.0
+margin_right = 384.0
 margin_bottom = 32.0
 size_flags_horizontal = 3
 size_flags_vertical = 7
@@ -813,18 +810,18 @@ size_flags_horizontal = 3
 columns = 3
 
 [node name="Img" type="ColorRect" parent="PixelPedia/TabContainer/Enemies/Enemies/Vbox/Grid/6"]
-margin_left = 30.0
+margin_left = 31.0
 margin_top = 1.0
-margin_right = 94.0
+margin_right = 95.0
 margin_bottom = 33.0
 rect_min_size = Vector2( 64, 32 )
 size_flags_horizontal = 6
 size_flags_vertical = 6
 color = Color( 1, 0, 0, 1 )
 
-[node name="Name" type="Label" parent="PixelPedia/TabContainer/Enemies/Enemies/Vbox/Grid/6"]
-margin_left = 129.0
-margin_right = 254.0
+[node name="wide" type="Label" parent="PixelPedia/TabContainer/Enemies/Enemies/Vbox/Grid/6"]
+margin_left = 130.0
+margin_right = 255.0
 margin_bottom = 35.0
 size_flags_horizontal = 3
 size_flags_vertical = 7
@@ -833,8 +830,8 @@ align = 1
 valign = 1
 
 [node name="Description" type="Label" parent="PixelPedia/TabContainer/Enemies/Enemies/Vbox/Grid/6"]
-margin_left = 258.0
-margin_right = 383.0
+margin_left = 259.0
+margin_right = 384.0
 margin_bottom = 35.0
 size_flags_horizontal = 3
 size_flags_vertical = 7
@@ -858,7 +855,7 @@ size_flags_horizontal = 6
 size_flags_vertical = 6
 color = Color( 1, 0, 0, 1 )
 
-[node name="Name" type="Label" parent="PixelPedia/TabContainer/Enemies/Enemies/Vbox/Grid/7"]
+[node name="fullwide" type="Label" parent="PixelPedia/TabContainer/Enemies/Enemies/Vbox/Grid/7"]
 margin_left = 132.0
 margin_right = 256.0
 margin_bottom = 32.0

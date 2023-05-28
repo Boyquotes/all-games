@@ -1,10 +1,16 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Test_area.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Scenes/Enemies/Enemy.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Scenes/BaseHistoryScene.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Scenes/Camera.tscn" type="PackedScene" id=5]
+
+[sub_resource type="InputEventAction" id=1]
+action = "ESC"
+
+[sub_resource type="ShortCut" id=2]
+shortcut = SubResource( 1 )
 
 [node name="Test_area" type="Node2D"]
 script = ExtResource( 1 )
@@ -36,3 +42,14 @@ position = Vector2( 440, 480 )
 
 [node name="CameraPadrao" parent="." instance=ExtResource( 5 )]
 position = Vector2( 680, 384 )
+
+[node name="Despause" type="Button" parent="."]
+pause_mode = 2
+margin_left = -1000.0
+margin_top = -1000.0
+margin_right = -988.0
+margin_bottom = -980.0
+shortcut = SubResource( 2 )
+flat = true
+
+[connection signal="button_up" from="Despause" to="." method="_on_Despause_button_up"]

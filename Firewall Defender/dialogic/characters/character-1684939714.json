@@ -1,0 +1,21 @@
+{
+	"color": "#ff60e0dd",
+	"description": "",
+	"display_name": "",
+	"display_name_bool": false,
+	"id": "character-1684939714.json",
+	"mirror_portraits": false,
+	"name": "Maxwell",
+	"nickname": "",
+	"nickname_bool": false,
+	"offset_x": -64,
+	"offset_y": -48,
+	"portraits": [
+		{
+			"name": "Default",
+			"path": "res://Images/Dialogs/Player.png"
+		}
+	],
+	"scale": 300,
+	"theme": ""
+}

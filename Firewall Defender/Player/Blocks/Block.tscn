@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Player/Blocks/Block.gd" type="Script" id=1]
+
+[node name="Block" type="Node2D" groups=["BLOCK"]]
+script = ExtResource( 1 )

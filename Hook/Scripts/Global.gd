@@ -1,5 +1,7 @@
 extends Node2D
 
+# TODO implementar um hook que ele fica suspenso num lugar onde ele encaixar 2 hooks estáticos
+
 var PLAYER_INFOS = {
 	'actual_health': 5,
 	'max_health': 5,
@@ -13,11 +15,54 @@ var PLAYER_INFOS = {
 	'weapons': ['pistol'],# 'rifle', 'shotgun'],
 }
 
-
 var CONFIGURATIONS = {
 	'music_volume': 0,
 	'effects_volume': 0,
 }
+
+# CHECKPOINT = posição relativa à Vector2.ZERO global
+var CHECKPOINT: Vector2 = Vector2(-1192, -854)
+
+func set_checkpotint(pos):
+	CHECKPOINT = pos
+
+func spawn(type, pos, to_node):
+	var node
+	match type:
+		'enemy':
+			node = preload("res://Scenes/Enemies/Enemy.tscn").instance()
+		'visual_effect':
+			node = preload("res://Scenes/VisualEffects/VisualEffect.tscn").instance()
+	node.global_position = pos
+	to_node.call_deferred("add_child", node)
+
+func respawn_at_checkpoint():
+	# TODO loading level (fica tudo preto e dps volta a visão do centro para as extremidades, como um piscar de olhos)
+		# chamar animação
+		# esperar animação
+		# continuar o código
+	
+	# DEPRECATED # TODO sumir com tudo da cena
+	#for z in get_tree().get_root().get_children():
+	#	if z != self and z != sounds and z != hits:
+	#		z.queue_free()
+	
+	# TODO pegar todos os inimigos e chamar o ressurect()
+	for z in get_tree().get_nodes_in_group("ENEMY"):
+		z.ressurect()
+	
+	# TODO teleportar o player para o CHECKPOINT
+	var player = get_tree().get_nodes_in_group("PLAYER")[0]
+	player.global_position = CHECKPOINT
+	player.setup_player()
+	
+	# DEPRECATED # TODO colocar o CHECKPOINT[0] no Vector2.ZERO global
+	#var level = load(CHECKPOINT[0]).instance()
+	#level.global_position = Vector2.ZERO
+	#get_tree().get_root().call_deferred("add_child", level)
+	
+	# DEPRECATED # TODO colocar o player de novo na cena
+	#player = preload("res://Scenes/Player/Player.tscn").instance()
 
 onready var RANDOM = RandomNumberGenerator.new()
 
@@ -55,4 +100,4 @@ func ADD_BULLET(type: String, infos: Array):
 	bullet_instance.DMG = infos[2]
 	bullet_instance.set_linear_velocity(Vector2(infos[5], 0).rotated(infos[4]))
 	#bullet_instance.apply_impulse(Vector2(), Vector2(infos[5], 0).rotated(infos[4]))
-	get_tree().get_nodes_in_group("PLAYER")[0].get_parent().call_deferred('add_child', bullet_instance)
+	get_tree().get_root().call_deferred('add_child', bullet_instance)

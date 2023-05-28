@@ -1,0 +1,439 @@
+[gd_scene load_steps=21 format=2]
+
+[ext_resource path="res://Themes/FightButtons/Disabled.tres" type="StyleBox" id=1]
+[ext_resource path="res://Themes/FightButtons/Pressed.tres" type="StyleBox" id=2]
+[ext_resource path="res://Themes/FightButtons/Normal.tres" type="StyleBox" id=3]
+[ext_resource path="res://Themes/FightButtons/Hover.tres" type="StyleBox" id=4]
+[ext_resource path="res://Textures/Icons/Atk_Fis.png" type="Texture" id=5]
+[ext_resource path="res://Textures/Icons/Atk_Mag.png" type="Texture" id=6]
+[ext_resource path="res://Textures/Icons/Armor.png" type="Texture" id=7]
+[ext_resource path="res://Textures/Icons/Shield.png" type="Texture" id=8]
+[ext_resource path="res://Textures/Icons/Coin.png" type="Texture" id=9]
+[ext_resource path="res://Shop/Shop.gd" type="Script" id=10]
+[ext_resource path="res://Textures/Icons/SnakeLenIcon.png" type="Texture" id=11]
+[ext_resource path="res://Textures/Icons/BlackX.png" type="Texture" id=12]
+
+[sub_resource type="InputEventAction" id=1]
+action = "1"
+
+[sub_resource type="ShortCut" id=8]
+shortcut = SubResource( 1 )
+
+[sub_resource type="InputEventAction" id=3]
+action = "2"
+
+[sub_resource type="ShortCut" id=9]
+shortcut = SubResource( 3 )
+
+[sub_resource type="InputEventAction" id=5]
+action = "3"
+
+[sub_resource type="ShortCut" id=10]
+shortcut = SubResource( 5 )
+
+[sub_resource type="InputEventAction" id=7]
+action = "4"
+
+[sub_resource type="ShortCut" id=11]
+shortcut = SubResource( 7 )
+
+[node name="Shop" type="Node2D"]
+script = ExtResource( 10 )
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -208.0
+margin_top = -208.0
+margin_right = 208.0
+margin_bottom = 224.0
+color = Color( 0.596078, 0.596078, 0.596078, 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="ColorRect2" type="ColorRect" parent="ColorRect"]
+margin_left = 16.0
+margin_top = 16.0
+margin_right = 400.0
+margin_bottom = 416.0
+color = Color( 0.113725, 0.113725, 0.113725, 1 )
+
+[node name="Grid" type="GridContainer" parent="ColorRect/ColorRect2"]
+margin_right = 384.0
+margin_bottom = 400.0
+
+[node name="SHOP" type="Label" parent="ColorRect/ColorRect2/Grid"]
+margin_right = 384.0
+margin_bottom = 31.0
+size_flags_horizontal = 3
+size_flags_vertical = 5
+text = "
+SHOP"
+align = 1
+valign = 1
+
+[node name="Label" type="Label" parent="ColorRect/ColorRect2/Grid"]
+margin_top = 35.0
+margin_right = 384.0
+margin_bottom = 117.0
+size_flags_horizontal = 3
+text = "
+Buy upgrades!
+and
+Reduce Snake Length!
+"
+align = 1
+valign = 1
+
+[node name="GridContainer" type="GridContainer" parent="ColorRect/ColorRect2/Grid"]
+margin_top = 121.0
+margin_right = 384.0
+margin_bottom = 291.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+columns = 4
+
+[node name="Fis" type="Button" parent="ColorRect/ColorRect2/Grid/GridContainer"]
+margin_right = 80.0
+margin_bottom = 83.0
+focus_mode = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_styles/hover = ExtResource( 4 )
+custom_styles/pressed = ExtResource( 2 )
+custom_styles/disabled = ExtResource( 1 )
+custom_styles/normal = ExtResource( 3 )
+enabled_focus_mode = 0
+shortcut = SubResource( 8 )
+icon = ExtResource( 5 )
+icon_align = 1
+expand_icon = true
+
+[node name="BuyInfos" type="GridContainer" parent="ColorRect/ColorRect2/Grid/GridContainer"]
+margin_left = 84.0
+margin_right = 197.0
+margin_bottom = 83.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Info" type="Label" parent="ColorRect/ColorRect2/Grid/GridContainer/BuyInfos"]
+margin_right = 113.0
+margin_bottom = 31.0
+size_flags_horizontal = 3
+size_flags_vertical = 7
+text = "Up Physical by (1)
+"
+align = 1
+valign = 1
+
+[node name="Value" type="GridContainer" parent="ColorRect/ColorRect2/Grid/GridContainer/BuyInfos"]
+margin_top = 35.0
+margin_right = 113.0
+margin_bottom = 83.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+columns = 2
+
+[node name="TextureRect" type="TextureRect" parent="ColorRect/ColorRect2/Grid/GridContainer/BuyInfos/Value"]
+margin_left = 3.0
+margin_right = 51.0
+margin_bottom = 48.0
+rect_min_size = Vector2( 48, 48 )
+size_flags_horizontal = 6
+size_flags_vertical = 2
+texture = ExtResource( 9 )
+expand = true
+
+[node name="Value" type="Label" parent="ColorRect/ColorRect2/Grid/GridContainer/BuyInfos/Value"]
+margin_left = 59.0
+margin_right = 113.0
+margin_bottom = 48.0
+size_flags_horizontal = 3
+size_flags_vertical = 7
+text = "5"
+align = 1
+valign = 1
+
+[node name="Mag" type="Button" parent="ColorRect/ColorRect2/Grid/GridContainer"]
+margin_left = 201.0
+margin_right = 280.0
+margin_bottom = 83.0
+focus_mode = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_styles/hover = ExtResource( 4 )
+custom_styles/pressed = ExtResource( 2 )
+custom_styles/disabled = ExtResource( 1 )
+custom_styles/normal = ExtResource( 3 )
+enabled_focus_mode = 0
+shortcut = SubResource( 9 )
+icon = ExtResource( 6 )
+icon_align = 1
+expand_icon = true
+
+[node name="BuyInfos2" type="GridContainer" parent="ColorRect/ColorRect2/Grid/GridContainer"]
+margin_left = 284.0
+margin_right = 384.0
+margin_bottom = 83.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Info" type="Label" parent="ColorRect/ColorRect2/Grid/GridContainer/BuyInfos2"]
+margin_right = 100.0
+margin_bottom = 31.0
+size_flags_horizontal = 3
+size_flags_vertical = 7
+text = "Up Magic by (1)
+"
+align = 1
+valign = 1
+
+[node name="Value" type="GridContainer" parent="ColorRect/ColorRect2/Grid/GridContainer/BuyInfos2"]
+margin_top = 35.0
+margin_right = 100.0
+margin_bottom = 83.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+columns = 2
+
+[node name="TextureRect" type="TextureRect" parent="ColorRect/ColorRect2/Grid/GridContainer/BuyInfos2/Value"]
+margin_right = 48.0
+margin_bottom = 48.0
+rect_min_size = Vector2( 48, 48 )
+size_flags_horizontal = 6
+size_flags_vertical = 2
+texture = ExtResource( 9 )
+expand = true
+
+[node name="Value" type="Label" parent="ColorRect/ColorRect2/Grid/GridContainer/BuyInfos2/Value"]
+margin_left = 52.0
+margin_right = 100.0
+margin_bottom = 48.0
+size_flags_horizontal = 3
+size_flags_vertical = 7
+text = "5"
+align = 1
+valign = 1
+
+[node name="Armor" type="Button" parent="ColorRect/ColorRect2/Grid/GridContainer"]
+margin_top = 87.0
+margin_right = 80.0
+margin_bottom = 170.0
+focus_mode = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_styles/hover = ExtResource( 4 )
+custom_styles/pressed = ExtResource( 2 )
+custom_styles/disabled = ExtResource( 1 )
+custom_styles/normal = ExtResource( 3 )
+enabled_focus_mode = 0
+shortcut = SubResource( 10 )
+icon = ExtResource( 7 )
+icon_align = 1
+expand_icon = true
+
+[node name="BuyInfos3" type="GridContainer" parent="ColorRect/ColorRect2/Grid/GridContainer"]
+margin_left = 84.0
+margin_top = 87.0
+margin_right = 197.0
+margin_bottom = 170.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Info" type="Label" parent="ColorRect/ColorRect2/Grid/GridContainer/BuyInfos3"]
+margin_right = 113.0
+margin_bottom = 31.0
+size_flags_horizontal = 3
+size_flags_vertical = 7
+text = "Up Armor by (1)
+"
+align = 1
+valign = 1
+
+[node name="Value" type="GridContainer" parent="ColorRect/ColorRect2/Grid/GridContainer/BuyInfos3"]
+margin_top = 35.0
+margin_right = 113.0
+margin_bottom = 83.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+columns = 2
+
+[node name="TextureRect" type="TextureRect" parent="ColorRect/ColorRect2/Grid/GridContainer/BuyInfos3/Value"]
+margin_left = 3.0
+margin_right = 51.0
+margin_bottom = 48.0
+rect_min_size = Vector2( 48, 48 )
+size_flags_horizontal = 6
+size_flags_vertical = 2
+texture = ExtResource( 9 )
+expand = true
+
+[node name="Value" type="Label" parent="ColorRect/ColorRect2/Grid/GridContainer/BuyInfos3/Value"]
+margin_left = 59.0
+margin_right = 113.0
+margin_bottom = 48.0
+size_flags_horizontal = 3
+size_flags_vertical = 7
+text = "5"
+align = 1
+valign = 1
+
+[node name="Shield" type="Button" parent="ColorRect/ColorRect2/Grid/GridContainer"]
+margin_left = 201.0
+margin_top = 87.0
+margin_right = 280.0
+margin_bottom = 170.0
+focus_mode = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_styles/hover = ExtResource( 4 )
+custom_styles/pressed = ExtResource( 2 )
+custom_styles/disabled = ExtResource( 1 )
+custom_styles/normal = ExtResource( 3 )
+enabled_focus_mode = 0
+shortcut = SubResource( 11 )
+icon = ExtResource( 8 )
+icon_align = 1
+expand_icon = true
+
+[node name="BuyInfos4" type="GridContainer" parent="ColorRect/ColorRect2/Grid/GridContainer"]
+margin_left = 284.0
+margin_top = 87.0
+margin_right = 384.0
+margin_bottom = 170.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Info" type="Label" parent="ColorRect/ColorRect2/Grid/GridContainer/BuyInfos4"]
+margin_right = 100.0
+margin_bottom = 31.0
+size_flags_horizontal = 3
+size_flags_vertical = 7
+text = "Up Shield by (1)
+"
+align = 1
+valign = 1
+
+[node name="Value" type="GridContainer" parent="ColorRect/ColorRect2/Grid/GridContainer/BuyInfos4"]
+margin_top = 35.0
+margin_right = 100.0
+margin_bottom = 83.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+columns = 2
+
+[node name="TextureRect" type="TextureRect" parent="ColorRect/ColorRect2/Grid/GridContainer/BuyInfos4/Value"]
+margin_right = 48.0
+margin_bottom = 48.0
+rect_min_size = Vector2( 48, 48 )
+size_flags_horizontal = 6
+size_flags_vertical = 2
+texture = ExtResource( 9 )
+expand = true
+
+[node name="Value" type="Label" parent="ColorRect/ColorRect2/Grid/GridContainer/BuyInfos4/Value"]
+margin_left = 52.0
+margin_right = 100.0
+margin_bottom = 48.0
+size_flags_horizontal = 3
+size_flags_vertical = 7
+text = "5"
+align = 1
+valign = 1
+
+[node name="Choose" type="GridContainer" parent="ColorRect/ColorRect2/Grid"]
+margin_top = 295.0
+margin_right = 384.0
+margin_bottom = 400.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+columns = 2
+
+[node name="SnakeLen" type="Button" parent="ColorRect/ColorRect2/Grid/Choose"]
+margin_right = 190.0
+margin_bottom = 105.0
+focus_mode = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_styles/hover = ExtResource( 4 )
+custom_styles/pressed = ExtResource( 2 )
+custom_styles/disabled = ExtResource( 1 )
+custom_styles/normal = ExtResource( 3 )
+enabled_focus_mode = 0
+shortcut = SubResource( 8 )
+icon = ExtResource( 11 )
+icon_align = 1
+expand_icon = true
+
+[node name="BuyInfos" type="GridContainer" parent="ColorRect/ColorRect2/Grid/Choose"]
+margin_left = 194.0
+margin_right = 384.0
+margin_bottom = 105.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Info" type="Label" parent="ColorRect/ColorRect2/Grid/Choose/BuyInfos"]
+margin_right = 190.0
+margin_bottom = 51.0
+size_flags_horizontal = 3
+size_flags_vertical = 7
+text = "Reduce Snake Length by (1)
+"
+align = 1
+valign = 1
+
+[node name="Value" type="GridContainer" parent="ColorRect/ColorRect2/Grid/Choose/BuyInfos"]
+margin_top = 55.0
+margin_right = 190.0
+margin_bottom = 105.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+columns = 2
+
+[node name="TextureRect" type="TextureRect" parent="ColorRect/ColorRect2/Grid/Choose/BuyInfos/Value"]
+margin_left = 22.0
+margin_right = 70.0
+margin_bottom = 48.0
+rect_min_size = Vector2( 48, 48 )
+size_flags_horizontal = 6
+size_flags_vertical = 2
+texture = ExtResource( 9 )
+expand = true
+
+[node name="Value" type="Label" parent="ColorRect/ColorRect2/Grid/Choose/BuyInfos/Value"]
+margin_left = 97.0
+margin_right = 190.0
+margin_bottom = 50.0
+size_flags_horizontal = 3
+size_flags_vertical = 7
+text = "5"
+align = 1
+valign = 1
+
+[node name="QuitShop" type="Button" parent="ColorRect/ColorRect2"]
+margin_left = 352.0
+margin_top = -32.0
+margin_right = 416.0
+margin_bottom = 32.0
+focus_mode = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_styles/hover = ExtResource( 4 )
+custom_styles/pressed = ExtResource( 2 )
+custom_styles/disabled = ExtResource( 1 )
+custom_styles/normal = ExtResource( 3 )
+enabled_focus_mode = 0
+shortcut = SubResource( 8 )
+icon = ExtResource( 12 )
+icon_align = 1
+expand_icon = true
+
+[connection signal="button_up" from="ColorRect/ColorRect2/Grid/GridContainer/Fis" to="." method="_on_Fis_button_up"]
+[connection signal="button_up" from="ColorRect/ColorRect2/Grid/GridContainer/Mag" to="." method="_on_Mag_button_up"]
+[connection signal="button_up" from="ColorRect/ColorRect2/Grid/GridContainer/Armor" to="." method="_on_Armor_button_up"]
+[connection signal="button_up" from="ColorRect/ColorRect2/Grid/GridContainer/Shield" to="." method="_on_Shield_button_up"]
+[connection signal="button_up" from="ColorRect/ColorRect2/Grid/Choose/SnakeLen" to="." method="_on_SnakeLen_button_up"]
+[connection signal="button_up" from="ColorRect/ColorRect2/QuitShop" to="." method="_on_QuitShop_button_up"]

@@ -1,0 +1,649 @@
+[gd_scene load_steps=29 format=2]
+
+[ext_resource path="res://Fight/Fight.gd" type="Script" id=1]
+[ext_resource path="res://icon.png" type="Texture" id=2]
+[ext_resource path="res://Textures/Icons/Armor.png" type="Texture" id=3]
+[ext_resource path="res://Textures/Icons/WhiteCircle32.png" type="Texture" id=4]
+[ext_resource path="res://Textures/TextureProgress/HealthInFightProgress.png" type="Texture" id=5]
+[ext_resource path="res://Textures/TextureProgress/HealthInFightUnder.png" type="Texture" id=6]
+[ext_resource path="res://Textures/Icons/Atk_Fis.png" type="Texture" id=7]
+[ext_resource path="res://Textures/Icons/Atk_Mag.png" type="Texture" id=8]
+[ext_resource path="res://Textures/Icons/Shield.png" type="Texture" id=9]
+[ext_resource path="res://Themes/FightButtons/Pressed.tres" type="StyleBox" id=10]
+[ext_resource path="res://Themes/FightButtons/Normal.tres" type="StyleBox" id=11]
+[ext_resource path="res://Themes/FightButtons/Hover.tres" type="StyleBox" id=12]
+[ext_resource path="res://Themes/FightButtons/Disabled.tres" type="StyleBox" id=13]
+[ext_resource path="res://Textures/Icons/Level.png" type="Texture" id=14]
+[ext_resource path="res://Textures/Icons/Health.png" type="Texture" id=15]
+[ext_resource path="res://Fonts/Basis33.tres" type="DynamicFont" id=16]
+
+[sub_resource type="InputEventAction" id=17]
+action = "1"
+
+[sub_resource type="ShortCut" id=2]
+shortcut = SubResource( 17 )
+
+[sub_resource type="InputEventAction" id=18]
+action = "2"
+
+[sub_resource type="ShortCut" id=4]
+shortcut = SubResource( 18 )
+
+[sub_resource type="InputEventAction" id=19]
+action = "3"
+
+[sub_resource type="ShortCut" id=6]
+shortcut = SubResource( 19 )
+
+[sub_resource type="InputEventAction" id=20]
+action = "4"
+
+[sub_resource type="ShortCut" id=8]
+shortcut = SubResource( 20 )
+
+[sub_resource type="Animation" id=15]
+resource_name = "DEF-ARMOR"
+length = 1.1
+tracks/0/type = "bezier"
+tracks/0/path = NodePath("EnemyAction:rotation_degrees")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0, -120, -0.25, 0, 0.25, 0, -70, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.6, 1.1 )
+}
+tracks/1/type = "bezier"
+tracks/1/path = NodePath("EnemyAction:position:x")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"points": PoolRealArray( 232, -0.25, 0, 0.25, 0, 200, -0.25, 0, 0.25, 0, 215, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.6, 1.1 )
+}
+tracks/2/type = "bezier"
+tracks/2/path = NodePath("EnemyAction:z_index")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/3/type = "bezier"
+tracks/3/path = NodePath("PlayerAction:rotation_degrees")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0, -15, -0.25, 0, 0.25, 0, -10, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.6, 1.1 )
+}
+tracks/4/type = "bezier"
+tracks/4/path = NodePath("PlayerAction:modulate:a")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.6, 1.1 )
+}
+tracks/5/type = "bezier"
+tracks/5/path = NodePath("EnemyAction:modulate:a")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.6, 1.1 )
+}
+
+[sub_resource type="Animation" id=16]
+resource_name = "DEF-SHIELD"
+length = 1.1
+tracks/0/type = "bezier"
+tracks/0/path = NodePath("EnemyAction:rotation_degrees")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PoolRealArray( 45, -0.25, 0, 0.25, 0, 45, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.6 )
+}
+tracks/1/type = "bezier"
+tracks/1/path = NodePath("EnemyAction:position:x")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"points": PoolRealArray( 232, -0.25, 0, 0.25, 0, 200, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.6 )
+}
+tracks/2/type = "bezier"
+tracks/2/path = NodePath("EnemyAction:modulate:a")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.6, 1.1 )
+}
+tracks/3/type = "bezier"
+tracks/3/path = NodePath("PlayerAction:rotation_degrees")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0, -20, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.6 )
+}
+tracks/4/type = "bezier"
+tracks/4/path = NodePath("PlayerAction:modulate:a")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.6, 1.1 )
+}
+
+[sub_resource type="Animation" id=13]
+resource_name = "FIS-ARMOR"
+length = 1.1
+tracks/0/type = "bezier"
+tracks/0/path = NodePath("PlayerAction:rotation_degrees")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PoolRealArray( -90, -0.25, 0, 0.25, 0, 25, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.6 )
+}
+tracks/1/type = "bezier"
+tracks/1/path = NodePath("EnemyAction:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0, 22, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.6 )
+}
+tracks/2/type = "bezier"
+tracks/2/path = NodePath("PlayerAction:position:x")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"points": PoolRealArray( 152, -0.25, 0, 0.25, 0, 192, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.6 )
+}
+tracks/3/type = "bezier"
+tracks/3/path = NodePath("PlayerAction:z_index")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/4/type = "bezier"
+tracks/4/path = NodePath("PlayerAction:modulate:a")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.6, 1.1 )
+}
+tracks/5/type = "bezier"
+tracks/5/path = NodePath("EnemyAction:modulate:a")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.6, 1.1 )
+}
+
+[sub_resource type="Animation" id=14]
+resource_name = "MAG-SHIELD"
+length = 1.1
+tracks/0/type = "bezier"
+tracks/0/path = NodePath("PlayerAction:rotation_degrees")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PoolRealArray( -135, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/1/type = "bezier"
+tracks/1/path = NodePath("PlayerAction:position:x")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"points": PoolRealArray( 122, -0.25, 0, 0.25, 0, 192, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.6 )
+}
+tracks/2/type = "bezier"
+tracks/2/path = NodePath("PlayerAction:position:y")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"points": PoolRealArray( 192, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/3/type = "bezier"
+tracks/3/path = NodePath("EnemyAction:rotation_degrees")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0, 25, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.6 )
+}
+tracks/4/type = "bezier"
+tracks/4/path = NodePath("PlayerAction:modulate:a")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0.6, 1.1 )
+}
+tracks/5/type = "bezier"
+tracks/5/path = NodePath("EnemyAction:modulate:a")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0.6, 1.1 )
+}
+
+[node name="Fight" type="Node2D"]
+z_index = 1
+script = ExtResource( 1 )
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+margin_left = -208.0
+margin_top = -288.0
+margin_right = 208.0
+margin_bottom = -208.0
+color = Color( 0.596078, 0.596078, 0.596078, 1 )
+
+[node name="ColorRect" type="ColorRect" parent="ColorRect2"]
+margin_left = 16.0
+margin_top = 16.0
+margin_right = 400.0
+margin_bottom = 80.0
+color = Color( 0.113725, 0.113725, 0.113725, 1 )
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -208.0
+margin_top = -208.0
+margin_right = 208.0
+margin_bottom = 208.0
+color = Color( 0.596078, 0.596078, 0.596078, 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="ColorRect2" type="ColorRect" parent="ColorRect"]
+margin_left = 16.0
+margin_top = 16.0
+margin_right = 400.0
+margin_bottom = 400.0
+color = Color( 0.113725, 0.113725, 0.113725, 1 )
+
+[node name="EnemyStats" type="GridContainer" parent="ColorRect/ColorRect2"]
+margin_top = -80.0
+margin_right = 384.0
+margin_bottom = -16.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/vseparation = 0
+columns = 6
+
+[node name="LV" type="TextureRect" parent="ColorRect/ColorRect2/EnemyStats"]
+margin_left = 14.0
+margin_right = 46.0
+margin_bottom = 32.0
+rect_min_size = Vector2( 32, 32 )
+size_flags_horizontal = 6
+size_flags_vertical = 6
+texture = ExtResource( 14 )
+expand = true
+stretch_mode = 6
+
+[node name="HE" type="TextureRect" parent="ColorRect/ColorRect2/EnemyStats"]
+margin_left = 79.0
+margin_right = 111.0
+margin_bottom = 32.0
+rect_min_size = Vector2( 32, 32 )
+size_flags_horizontal = 6
+size_flags_vertical = 6
+texture = ExtResource( 15 )
+expand = true
+stretch_mode = 6
+
+[node name="SH" type="TextureRect" parent="ColorRect/ColorRect2/EnemyStats"]
+margin_left = 144.0
+margin_right = 176.0
+margin_bottom = 32.0
+rect_min_size = Vector2( 32, 32 )
+size_flags_horizontal = 6
+size_flags_vertical = 6
+texture = ExtResource( 9 )
+expand = true
+stretch_mode = 6
+
+[node name="AR" type="TextureRect" parent="ColorRect/ColorRect2/EnemyStats"]
+margin_left = 209.0
+margin_right = 241.0
+margin_bottom = 32.0
+rect_min_size = Vector2( 32, 32 )
+size_flags_horizontal = 6
+size_flags_vertical = 6
+texture = ExtResource( 3 )
+expand = true
+stretch_mode = 6
+
+[node name="DF" type="TextureRect" parent="ColorRect/ColorRect2/EnemyStats"]
+margin_left = 274.0
+margin_right = 306.0
+margin_bottom = 32.0
+rect_min_size = Vector2( 32, 32 )
+size_flags_horizontal = 6
+size_flags_vertical = 6
+texture = ExtResource( 7 )
+expand = true
+stretch_mode = 6
+
+[node name="DM" type="TextureRect" parent="ColorRect/ColorRect2/EnemyStats"]
+margin_left = 338.0
+margin_right = 370.0
+margin_bottom = 32.0
+rect_min_size = Vector2( 32, 32 )
+size_flags_horizontal = 6
+size_flags_vertical = 6
+texture = ExtResource( 8 )
+expand = true
+stretch_mode = 6
+
+[node name="LEVEL" type="Label" parent="ColorRect/ColorRect2/EnemyStats"]
+margin_left = 23.0
+margin_top = 32.0
+margin_right = 37.0
+margin_bottom = 64.0
+size_flags_horizontal = 6
+size_flags_vertical = 6
+custom_fonts/font = ExtResource( 16 )
+text = "0"
+align = 1
+valign = 1
+
+[node name="HEALTH" type="Label" parent="ColorRect/ColorRect2/EnemyStats"]
+margin_left = 88.0
+margin_top = 32.0
+margin_right = 102.0
+margin_bottom = 64.0
+size_flags_horizontal = 6
+size_flags_vertical = 6
+custom_fonts/font = ExtResource( 16 )
+text = "0"
+align = 1
+valign = 1
+
+[node name="SHIELD" type="Label" parent="ColorRect/ColorRect2/EnemyStats"]
+margin_left = 153.0
+margin_top = 32.0
+margin_right = 167.0
+margin_bottom = 64.0
+size_flags_horizontal = 6
+size_flags_vertical = 6
+custom_fonts/font = ExtResource( 16 )
+text = "0"
+align = 1
+valign = 1
+
+[node name="ARMOR" type="Label" parent="ColorRect/ColorRect2/EnemyStats"]
+margin_left = 218.0
+margin_top = 32.0
+margin_right = 232.0
+margin_bottom = 64.0
+size_flags_horizontal = 6
+size_flags_vertical = 6
+custom_fonts/font = ExtResource( 16 )
+text = "0"
+align = 1
+valign = 1
+
+[node name="DMGFIS" type="Label" parent="ColorRect/ColorRect2/EnemyStats"]
+margin_left = 283.0
+margin_top = 32.0
+margin_right = 297.0
+margin_bottom = 64.0
+size_flags_horizontal = 6
+size_flags_vertical = 6
+custom_fonts/font = ExtResource( 16 )
+text = "0"
+align = 1
+valign = 1
+
+[node name="DMGMAG" type="Label" parent="ColorRect/ColorRect2/EnemyStats"]
+margin_left = 347.0
+margin_top = 32.0
+margin_right = 361.0
+margin_bottom = 64.0
+size_flags_horizontal = 6
+size_flags_vertical = 6
+custom_fonts/font = ExtResource( 16 )
+text = "0"
+align = 1
+valign = 1
+
+[node name="EnemyInfos" type="GridContainer" parent="ColorRect/ColorRect2"]
+margin_right = 256.0
+margin_bottom = 128.0
+
+[node name="Health" type="TextureProgress" parent="ColorRect/ColorRect2/EnemyInfos"]
+margin_right = 256.0
+margin_bottom = 60.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+value = 50.0
+texture_under = ExtResource( 6 )
+texture_progress = ExtResource( 5 )
+nine_patch_stretch = true
+
+[node name="GridContainer" type="GridContainer" parent="ColorRect/ColorRect2/EnemyInfos"]
+margin_top = 64.0
+margin_right = 256.0
+margin_bottom = 128.0
+columns = 2
+
+[node name="TextureProgress" type="TextureProgress" parent="ColorRect/ColorRect2/EnemyInfos/GridContainer"]
+margin_left = 31.0
+margin_right = 95.0
+margin_bottom = 64.0
+rect_min_size = Vector2( 64, 64 )
+size_flags_horizontal = 6
+size_flags_vertical = 3
+max_value = 3.0
+step = 0.001
+value = 3.0
+texture_progress = ExtResource( 4 )
+fill_mode = 5
+nine_patch_stretch = true
+
+[node name="NextAction" type="TextureRect" parent="ColorRect/ColorRect2/EnemyInfos/GridContainer"]
+margin_left = 161.0
+margin_right = 225.0
+margin_bottom = 64.0
+rect_min_size = Vector2( 64, 64 )
+size_flags_horizontal = 6
+texture = ExtResource( 3 )
+expand = true
+
+[node name="PlayerInfos" type="GridContainer" parent="ColorRect/ColorRect2"]
+margin_left = 136.0
+margin_top = 264.0
+margin_right = 376.0
+margin_bottom = 376.0
+
+[node name="Health" type="TextureProgress" parent="ColorRect/ColorRect2/PlayerInfos"]
+margin_right = 240.0
+margin_bottom = 54.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+value = 98.0
+texture_under = ExtResource( 6 )
+texture_progress = ExtResource( 5 )
+nine_patch_stretch = true
+
+[node name="Actions" type="GridContainer" parent="ColorRect/ColorRect2/PlayerInfos"]
+margin_top = 58.0
+margin_right = 240.0
+margin_bottom = 112.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+columns = 4
+
+[node name="a1" type="Button" parent="ColorRect/ColorRect2/PlayerInfos/Actions"]
+margin_right = 57.0
+margin_bottom = 54.0
+focus_mode = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_styles/hover = ExtResource( 12 )
+custom_styles/pressed = ExtResource( 10 )
+custom_styles/disabled = ExtResource( 13 )
+custom_styles/normal = ExtResource( 11 )
+enabled_focus_mode = 0
+shortcut = SubResource( 2 )
+icon = ExtResource( 7 )
+icon_align = 1
+expand_icon = true
+
+[node name="a2" type="Button" parent="ColorRect/ColorRect2/PlayerInfos/Actions"]
+margin_left = 61.0
+margin_right = 118.0
+margin_bottom = 54.0
+focus_mode = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_styles/hover = ExtResource( 12 )
+custom_styles/pressed = ExtResource( 10 )
+custom_styles/disabled = ExtResource( 13 )
+custom_styles/normal = ExtResource( 11 )
+enabled_focus_mode = 0
+shortcut = SubResource( 4 )
+icon = ExtResource( 8 )
+icon_align = 1
+expand_icon = true
+
+[node name="a3" type="Button" parent="ColorRect/ColorRect2/PlayerInfos/Actions"]
+margin_left = 122.0
+margin_right = 179.0
+margin_bottom = 54.0
+focus_mode = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_styles/hover = ExtResource( 12 )
+custom_styles/pressed = ExtResource( 10 )
+custom_styles/disabled = ExtResource( 13 )
+custom_styles/normal = ExtResource( 11 )
+enabled_focus_mode = 0
+shortcut = SubResource( 6 )
+icon = ExtResource( 3 )
+icon_align = 1
+expand_icon = true
+
+[node name="a4" type="Button" parent="ColorRect/ColorRect2/PlayerInfos/Actions"]
+margin_left = 183.0
+margin_right = 240.0
+margin_bottom = 54.0
+focus_mode = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_styles/hover = ExtResource( 12 )
+custom_styles/pressed = ExtResource( 10 )
+custom_styles/disabled = ExtResource( 13 )
+custom_styles/normal = ExtResource( 11 )
+enabled_focus_mode = 0
+shortcut = SubResource( 8 )
+icon = ExtResource( 9 )
+icon_align = 1
+expand_icon = true
+
+[node name="Player" type="Sprite" parent="ColorRect/ColorRect2"]
+position = Vector2( 64, 320 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 2 )
+
+[node name="Enemy" type="Sprite" parent="ColorRect/ColorRect2"]
+position = Vector2( 320, 64 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 2 )
+
+[node name="PlayerAction" type="Sprite" parent="ColorRect/ColorRect2"]
+modulate = Color( 1, 1, 1, 0 )
+position = Vector2( 192, 192 )
+rotation = -2.35619
+scale = Vector2( 5, 5 )
+z_index = 1
+texture = ExtResource( 9 )
+
+[node name="EnemyAction" type="Sprite" parent="ColorRect/ColorRect2"]
+modulate = Color( 1, 1, 1, 0 )
+position = Vector2( 232, 192 )
+rotation = 0.436332
+scale = Vector2( 5, 5 )
+z_index = 1
+texture = ExtResource( 8 )
+
+[node name="AnimatedSprite" type="AnimationPlayer" parent="ColorRect/ColorRect2"]
+anims/DEF-ARMOR = SubResource( 15 )
+anims/DEF-SHIELD = SubResource( 16 )
+anims/FIS-ARMOR = SubResource( 13 )
+anims/MAG-SHIELD = SubResource( 14 )
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 2.0
+
+[connection signal="button_up" from="ColorRect/ColorRect2/PlayerInfos/Actions/a1" to="." method="_on_a1_button_up"]
+[connection signal="button_up" from="ColorRect/ColorRect2/PlayerInfos/Actions/a2" to="." method="_on_a2_button_up"]
+[connection signal="button_up" from="ColorRect/ColorRect2/PlayerInfos/Actions/a3" to="." method="_on_a3_button_up"]
+[connection signal="button_up" from="ColorRect/ColorRect2/PlayerInfos/Actions/a4" to="." method="_on_a4_button_up"]
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

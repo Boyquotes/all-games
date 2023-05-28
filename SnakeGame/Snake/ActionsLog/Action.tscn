@@ -1,0 +1,47 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Textures/Icons/Level.png" type="Texture" id=1]
+[ext_resource path="res://Fonts/Basis33.tres" type="DynamicFont" id=2]
+[ext_resource path="res://Textures/Icons/Up.png" type="Texture" id=3]
+[ext_resource path="res://Snake/ActionsLog/Action.gd" type="Script" id=4]
+
+[node name="Action" type="GridContainer"]
+margin_right = 100.0
+margin_bottom = 32.0
+rect_min_size = Vector2( 100, 32 )
+size_flags_horizontal = 0
+size_flags_vertical = 8
+columns = 3
+script = ExtResource( 4 )
+
+[node name="WhatHappened" type="TextureRect" parent="."]
+margin_right = 32.0
+margin_bottom = 32.0
+rect_min_size = Vector2( 32, 32 )
+size_flags_horizontal = 6
+size_flags_vertical = 6
+texture = ExtResource( 3 )
+expand = true
+stretch_mode = 6
+
+[node name="Icon" type="TextureRect" parent="."]
+margin_left = 36.0
+margin_right = 68.0
+margin_bottom = 32.0
+rect_min_size = Vector2( 32, 32 )
+size_flags_horizontal = 6
+size_flags_vertical = 6
+texture = ExtResource( 1 )
+expand = true
+stretch_mode = 6
+
+[node name="Amount" type="Label" parent="."]
+margin_left = 72.0
+margin_right = 100.0
+margin_bottom = 32.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_fonts/font = ExtResource( 2 )
+text = "18"
+align = 1
+valign = 1

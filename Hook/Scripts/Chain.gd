@@ -58,8 +58,7 @@ func _physics_process(_delta: float) -> void:
 			elif $Tip.move_and_collide(direction * SPEED).collider.is_in_group("ENEMY"):
 				for z in get_tree().get_nodes_in_group("ENEMY"):
 					if z==$Tip.move_and_collide(direction * SPEED).collider:
-						z.HP -= 1
-						z.global_position[1] -= 25
+						z.take_dmg(1)
 						if z.is_moving_left == true and get_parent().global_position[0] > z.global_position[0]:
 							z.TurnArround()
 						if z.is_moving_left == false and get_parent().global_position[0] < z.global_position[0]:

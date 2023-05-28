@@ -1,0 +1,62 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Modules/ShopModule.gd" type="Script" id=1]
+[ext_resource path="res://Images/Buttons/HabilityButton/Normal.png" type="Texture" id=2]
+[ext_resource path="res://Images/Buttons/HabilityButton/Pressed.png" type="Texture" id=3]
+[ext_resource path="res://Images/Buttons/HabilityButton/Hover.png" type="Texture" id=4]
+[ext_resource path="res://Images/Buttons/HabilityButton/Disabled.png" type="Texture" id=5]
+[ext_resource path="res://Images/Icons/FirewallPoints.png" type="Texture" id=6]
+
+[node name="ShopModule" type="GridContainer"]
+margin_right = 108.0
+margin_bottom = 64.0
+size_flags_horizontal = 6
+size_flags_vertical = 6
+columns = 2
+script = ExtResource( 1 )
+
+[node name="Button" type="TextureButton" parent="."]
+margin_right = 64.0
+margin_bottom = 64.0
+rect_min_size = Vector2( 64, 64 )
+focus_mode = 0
+enabled_focus_mode = 0
+texture_normal = ExtResource( 2 )
+texture_pressed = ExtResource( 3 )
+texture_hover = ExtResource( 4 )
+texture_disabled = ExtResource( 5 )
+expand = true
+
+[node name="Sprite" type="Sprite" parent="Button"]
+position = Vector2( 32, 32 )
+scale = Vector2( 2.25, 2.25 )
+
+[node name="GridContainer" type="GridContainer" parent="."]
+margin_left = 68.0
+margin_right = 108.0
+margin_bottom = 64.0
+
+[node name="TextureRect" type="TextureRect" parent="GridContainer"]
+margin_left = 5.0
+margin_top = 3.0
+margin_right = 35.0
+margin_bottom = 33.0
+rect_min_size = Vector2( 30, 30 )
+size_flags_horizontal = 6
+size_flags_vertical = 6
+texture = ExtResource( 6 )
+expand = true
+
+[node name="Price" type="Label" parent="GridContainer"]
+margin_top = 41.0
+margin_right = 40.0
+margin_bottom = 64.0
+rect_min_size = Vector2( 40, 0 )
+size_flags_horizontal = 10
+text = "30"
+align = 1
+valign = 1
+
+[connection signal="button_up" from="Button" to="." method="_on_Button_button_up"]
+[connection signal="mouse_entered" from="Button" to="." method="_on_Button_mouse_entered"]
+[connection signal="mouse_exited" from="Button" to="." method="_on_Button_mouse_exited"]

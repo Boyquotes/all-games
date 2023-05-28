@@ -1,0 +1,21 @@
+{
+	"color": "#ffbe0d0d",
+	"description": "",
+	"display_name": "",
+	"display_name_bool": false,
+	"id": "character-1684939835.json",
+	"mirror_portraits": false,
+	"name": "Malware",
+	"nickname": "",
+	"nickname_bool": false,
+	"offset_x": -64,
+	"offset_y": -48,
+	"portraits": [
+		{
+			"name": "Default",
+			"path": "res://Images/Dialogs/Malware.png"
+		}
+	],
+	"scale": 300,
+	"theme": ""
+}

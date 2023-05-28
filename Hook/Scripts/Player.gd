@@ -12,6 +12,26 @@ var chain_velocity := Vector2(0,0)
 
 var CONTROLE = true
 
+onready var HEALTH_MODULE = $HealthModule
+
+var ground = true
+var moving = false
+var can_fire = true
+var anim_states = {
+	'0': [false, false, 'Slow_fall'],#falling
+	'1': [false, true, 'Slow_fall'],#falling
+	'2': [true, false, 'Idle'],#idle
+	'3': [true, true, 'Running'],#running
+}
+var can_play_player_slam_visual_effect = false
+
+func setup_player():
+	Global.PLAYER_INFOS['actual_health'] = Global.PLAYER_INFOS['max_health']
+	HEALTH_MODULE.setup_health_view($Camera2D/GridContainer, Global.PLAYER_INFOS['max_health'])
+
+func _ready():
+	setup_player()
+
 func _input(event: InputEvent) -> void:
 	if event is InputEventMouseButton:
 		match event.get_button_index():
@@ -25,15 +45,11 @@ func _input(event: InputEvent) -> void:
 			2:
 				pass
 
-var ground = true
-var moving = false
-var can_fire = true
-var anim_states = {
-	'0': [false, false, 'Slow_fall'],#falling
-	'1': [false, true, 'Slow_fall'],#falling
-	'2': [true, false, 'Idle'],#idle
-	'3': [true, true, 'Running'],#running
-}
+func take_dmg(DMG):
+	Global.PLAYER_INFOS['actual_health'] = HEALTH_MODULE.take_dmg(DMG, $Camera2D/GridContainer, Global.PLAYER_INFOS['actual_health'], Global.PLAYER_INFOS['max_health'])
+	
+	if Global.PLAYER_INFOS['actual_health'] == 0:
+		Global.respawn_at_checkpoint()
 
 # This function is called every physics frame
 func _physics_process(_delta: float) -> void:
@@ -100,8 +116,15 @@ func _physics_process(_delta: float) -> void:
 		velocity.x *= FRICTION_AIR
 		if velocity.y > 0:
 			velocity.y *= FRICTION_AIR
+	
+	if is_on_floor() and can_play_player_slam_visual_effect == true:
+		can_play_player_slam_visual_effect = false
+		Global.spawn('visual_effect', Vector2(global_position.x, global_position.y + 14), get_parent())
+	
+	if !is_on_floor() and can_play_player_slam_visual_effect == false:
+		can_play_player_slam_visual_effect = true
 
 func _on_Hit_body_entered(body):
 	if body.is_in_group("ENEMY") and global_position[1] < body.global_position[1]:
 		#little jump to player and kill the enemy
-		body.queue_free()
+		body.die()

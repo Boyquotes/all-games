@@ -1,0 +1,263 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://Menus/Configurations.gd" type="Script" id=1]
+[ext_resource path="res://Images/Buttons/HabilityButton/Wide_hover.png" type="Texture" id=2]
+[ext_resource path="res://Images/Buttons/HabilityButton/Wide_pressed.png" type="Texture" id=3]
+[ext_resource path="res://Images/Buttons/HabilityButton/Wide_disabled.png" type="Texture" id=4]
+[ext_resource path="res://Images/Buttons/HabilityButton/Wide_normal.png" type="Texture" id=5]
+[ext_resource path="res://Images/Buttons/HabilityButton/Normal.png" type="Texture" id=6]
+[ext_resource path="res://Images/Buttons/HabilityButton/Disabled.png" type="Texture" id=7]
+[ext_resource path="res://Images/Buttons/HabilityButton/Pressed.png" type="Texture" id=8]
+[ext_resource path="res://Images/Buttons/HabilityButton/Hover.png" type="Texture" id=9]
+[ext_resource path="res://icon.png" type="Texture" id=10]
+[ext_resource path="res://Images/Backgrounds/MainMenuBG.png" type="Texture" id=11]
+
+[node name="Configurations" type="Node2D"]
+z_index = 2
+script = ExtResource( 1 )
+
+[node name="BG" type="Sprite" parent="."]
+position = Vector2( 640, 400 )
+scale = Vector2( 5, 5 )
+z_index = -1
+texture = ExtResource( 11 )
+
+[node name="LOGO" type="Sprite" parent="."]
+position = Vector2( 208, 176 )
+scale = Vector2( 2.5, 2.5 )
+z_index = -1
+texture = ExtResource( 10 )
+
+[node name="Panel" type="Panel" parent="."]
+margin_left = 240.0
+margin_top = 176.0
+margin_right = 1016.0
+margin_bottom = 624.0
+
+[node name="GridContainer" type="GridContainer" parent="."]
+pause_mode = 2
+margin_left = 256.0
+margin_top = 200.0
+margin_right = 644.0
+margin_bottom = 404.0
+rect_scale = Vector2( 2, 2 )
+
+[node name="Label" type="Label" parent="GridContainer"]
+margin_right = 388.0
+margin_bottom = 23.0
+text = "Configurações"
+align = 1
+
+[node name="Fullscreen" type="GridContainer" parent="GridContainer"]
+margin_top = 27.0
+margin_right = 388.0
+margin_bottom = 58.0
+
+[node name="Fullscreen" type="GridContainer" parent="GridContainer/Fullscreen"]
+margin_right = 388.0
+margin_bottom = 31.0
+size_flags_horizontal = 3
+columns = 2
+
+[node name="Text" type="Label" parent="GridContainer/Fullscreen/Fullscreen"]
+margin_top = 4.0
+margin_right = 107.0
+margin_bottom = 27.0
+text = "Tela cheia:"
+
+[node name="Grid" type="GridContainer" parent="GridContainer/Fullscreen/Fullscreen"]
+margin_left = 188.0
+margin_right = 388.0
+margin_bottom = 31.0
+rect_min_size = Vector2( 200, 0 )
+size_flags_horizontal = 14
+
+[node name="CheckBox" type="CheckBox" parent="GridContainer/Fullscreen/Fullscreen/Grid"]
+margin_left = 88.0
+margin_right = 112.0
+margin_bottom = 31.0
+focus_mode = 0
+size_flags_horizontal = 6
+enabled_focus_mode = 0
+
+[node name="Effects" type="GridContainer" parent="GridContainer"]
+margin_top = 62.0
+margin_right = 388.0
+margin_bottom = 94.0
+size_flags_horizontal = 3
+columns = 2
+
+[node name="Text" type="Label" parent="GridContainer/Effects"]
+margin_top = 4.0
+margin_right = 184.0
+margin_bottom = 27.0
+text = "Volume dos efeitos:"
+
+[node name="Grid" type="GridContainer" parent="GridContainer/Effects"]
+margin_left = 188.0
+margin_right = 388.0
+margin_bottom = 32.0
+rect_min_size = Vector2( 200, 0 )
+size_flags_horizontal = 14
+columns = 3
+
+[node name="Minus_e" type="TextureButton" parent="GridContainer/Effects/Grid"]
+margin_left = 29.0
+margin_right = 61.0
+margin_bottom = 32.0
+rect_min_size = Vector2( 32, 32 )
+focus_mode = 0
+size_flags_horizontal = 6
+enabled_focus_mode = 0
+texture_normal = ExtResource( 8 )
+texture_pressed = ExtResource( 6 )
+texture_hover = ExtResource( 9 )
+texture_disabled = ExtResource( 7 )
+expand = true
+
+[node name="Label" type="Label" parent="GridContainer/Effects/Grid/Minus_e"]
+margin_left = 0.5
+margin_right = 21.5
+margin_bottom = 23.0
+rect_scale = Vector2( 1.5, 1.5 )
+text = "-"
+align = 1
+valign = 1
+
+[node name="VALUE_E" type="Label" parent="GridContainer/Effects/Grid"]
+margin_left = 95.0
+margin_top = 4.0
+margin_right = 105.0
+margin_bottom = 27.0
+text = "5"
+
+[node name="Plus_e" type="TextureButton" parent="GridContainer/Effects/Grid"]
+margin_left = 138.0
+margin_right = 170.0
+margin_bottom = 32.0
+rect_min_size = Vector2( 32, 32 )
+focus_mode = 0
+size_flags_horizontal = 6
+enabled_focus_mode = 0
+texture_normal = ExtResource( 8 )
+texture_pressed = ExtResource( 6 )
+texture_hover = ExtResource( 9 )
+texture_disabled = ExtResource( 7 )
+expand = true
+
+[node name="Label" type="Label" parent="GridContainer/Effects/Grid/Plus_e"]
+margin_left = 0.5
+margin_right = 21.5
+margin_bottom = 23.0
+rect_scale = Vector2( 1.5, 1.5 )
+text = "+"
+align = 1
+valign = 1
+
+[node name="Music" type="GridContainer" parent="GridContainer"]
+margin_top = 98.0
+margin_right = 388.0
+margin_bottom = 130.0
+columns = 2
+
+[node name="Text" type="Label" parent="GridContainer/Music"]
+margin_top = 4.0
+margin_right = 166.0
+margin_bottom = 27.0
+text = "Volume da música:"
+
+[node name="Grid" type="GridContainer" parent="GridContainer/Music"]
+margin_left = 188.0
+margin_right = 388.0
+margin_bottom = 32.0
+rect_min_size = Vector2( 200, 0 )
+size_flags_horizontal = 14
+columns = 3
+
+[node name="Minus_m" type="TextureButton" parent="GridContainer/Music/Grid"]
+margin_left = 29.0
+margin_right = 61.0
+margin_bottom = 32.0
+rect_min_size = Vector2( 32, 32 )
+focus_mode = 0
+size_flags_horizontal = 6
+enabled_focus_mode = 0
+texture_normal = ExtResource( 8 )
+texture_pressed = ExtResource( 6 )
+texture_hover = ExtResource( 9 )
+texture_disabled = ExtResource( 7 )
+expand = true
+
+[node name="Label" type="Label" parent="GridContainer/Music/Grid/Minus_m"]
+margin_left = 0.5
+margin_right = 21.5
+margin_bottom = 23.0
+rect_scale = Vector2( 1.5, 1.5 )
+text = "-"
+align = 1
+valign = 1
+
+[node name="VALUE_M" type="Label" parent="GridContainer/Music/Grid"]
+margin_left = 95.0
+margin_top = 4.0
+margin_right = 105.0
+margin_bottom = 27.0
+text = "5"
+
+[node name="Plus_m" type="TextureButton" parent="GridContainer/Music/Grid"]
+margin_left = 138.0
+margin_right = 170.0
+margin_bottom = 32.0
+rect_min_size = Vector2( 32, 32 )
+focus_mode = 0
+size_flags_horizontal = 6
+enabled_focus_mode = 0
+texture_normal = ExtResource( 8 )
+texture_pressed = ExtResource( 6 )
+texture_hover = ExtResource( 9 )
+texture_disabled = ExtResource( 7 )
+expand = true
+
+[node name="Label" type="Label" parent="GridContainer/Music/Grid/Plus_m"]
+margin_left = 0.5
+margin_right = 21.5
+margin_bottom = 23.0
+rect_scale = Vector2( 1.5, 1.5 )
+text = "+"
+align = 1
+valign = 1
+
+[node name="Back" type="TextureButton" parent="GridContainer"]
+pause_mode = 2
+margin_left = 104.0
+margin_top = 139.0
+margin_right = 284.0
+margin_bottom = 199.0
+rect_min_size = Vector2( 180, 60 )
+focus_mode = 0
+size_flags_horizontal = 6
+size_flags_vertical = 6
+enabled_focus_mode = 0
+texture_normal = ExtResource( 3 )
+texture_pressed = ExtResource( 5 )
+texture_hover = ExtResource( 2 )
+texture_disabled = ExtResource( 4 )
+expand = true
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Label" type="Label" parent="GridContainer/Back"]
+margin_right = 121.0
+margin_bottom = 39.0
+rect_scale = Vector2( 1.5, 1.5 )
+text = "Voltar"
+align = 1
+valign = 1
+
+[connection signal="toggled" from="GridContainer/Fullscreen/Fullscreen/Grid/CheckBox" to="." method="_on_CheckBox_toggled"]
+[connection signal="button_up" from="GridContainer/Effects/Grid/Minus_e" to="." method="_on_Minus_e_button_up"]
+[connection signal="button_up" from="GridContainer/Effects/Grid/Plus_e" to="." method="_on_Plus_e_button_up"]
+[connection signal="button_up" from="GridContainer/Music/Grid/Minus_m" to="." method="_on_Minus_m_button_up"]
+[connection signal="button_up" from="GridContainer/Music/Grid/Plus_m" to="." method="_on_Plus_m_button_up"]
+[connection signal="button_up" from="GridContainer/Back" to="." method="_on_Back_button_up"]
