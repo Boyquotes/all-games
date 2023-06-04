@@ -89,6 +89,8 @@ config/windows_native_icon="res://icon.ico"
 [autoload]
 
 Global="*res://Global/Global.gd"
+Enums="*res://Global/Enums.gd"
+Dicts="*res://Global/Dicts.gd"
 
 [display]
 

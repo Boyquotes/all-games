@@ -1,24 +1,24 @@
 extends TextureButton
 
-const TEXTURES = {
-	Global.HABILITIES.SHIELD: "res://Images/Habilities/Shield.png",
-	Global.HABILITIES.WALL: "res://Images/Habilities/Wall.png",
-	Global.HABILITIES.PREVENTION: "res://Images/Habilities/Prevention.png",
-	Global.HABILITIES.WANDERING_FIREWALL: "res://Images/Habilities/Wandering.png",
-	Global.HABILITIES.ENCRYPTED_PIPE: "res://Images/Habilities/Top_pipe.png",
+onready var TEXTURES = {
+	Enums.HABILITIES.SHIELD: "res://Images/Habilities/Shield.png",
+	Enums.HABILITIES.WALL: "res://Images/Habilities/Wall.png",
+	Enums.HABILITIES.PREVENTION: "res://Images/Habilities/Prevention.png",
+	Enums.HABILITIES.WANDERING_FIREWALL: "res://Images/Habilities/Wandering.png",
+	Enums.HABILITIES.ENCRYPTED_PIPE: "res://Images/Habilities/Top_pipe.png",
 }
 
-var HABILITIES = {
-	Global.HABILITIES.SHIELD: 'shield',
-	Global.HABILITIES.WALL: 'wall',
-	Global.HABILITIES.PREVENTION: 'prevention',
-	Global.HABILITIES.WANDERING_FIREWALL: 'wandering_firewall',
-	Global.HABILITIES.ENCRYPTED_PIPE: 'encrypted_pipe',
+onready var HABILITIES = {
+	Enums.HABILITIES.SHIELD: 'shield',
+	Enums.HABILITIES.WALL: 'wall',
+	Enums.HABILITIES.PREVENTION: 'prevention',
+	Enums.HABILITIES.WANDERING_FIREWALL: 'wandering_firewall',
+	Enums.HABILITIES.ENCRYPTED_PIPE: 'encrypted_pipe',
 }
 
 var mega = false
 
-export(Global.HABILITIES) var TYPE
+export(Enums.HABILITIES) var TYPE
 
 onready var sprite = $Sprite
 
@@ -33,15 +33,15 @@ func _on_HabilityButton_button_up():
 func _on_HabilityButton_button_down():
 	pressed = false
 	
-	Global.buy(HABILITIES[TYPE], Global.HABILITIES_COST[TYPE])
+	Global.buy(HABILITIES[TYPE], Dicts.HABILITIES_COST[TYPE])
 	Global.play_sound('button_pressed')
 
-var MEGA_TEXTURES = {
-	Global.HABILITIES.SHIELD: "res://Images/MegaHabilities/Shield.png",
-	Global.HABILITIES.WALL: "res://Images/MegaHabilities/Wall.png",
-	Global.HABILITIES.PREVENTION: "res://Images/MegaHabilities/Prevention.png",
-	Global.HABILITIES.WANDERING_FIREWALL: "res://Images/MegaHabilities/Wandering.png",
-	Global.HABILITIES.ENCRYPTED_PIPE: "res://Images/MegaHabilities/Top_pipe.png"
+onready var MEGA_TEXTURES = {
+	Enums.HABILITIES.SHIELD: "res://Images/MegaHabilities/Shield.png",
+	Enums.HABILITIES.WALL: "res://Images/MegaHabilities/Wall.png",
+	Enums.HABILITIES.PREVENTION: "res://Images/MegaHabilities/Prevention.png",
+	Enums.HABILITIES.WANDERING_FIREWALL: "res://Images/MegaHabilities/Wandering.png",
+	Enums.HABILITIES.ENCRYPTED_PIPE: "res://Images/MegaHabilities/Top_pipe.png"
 }
 
 func _physics_process(_delta):
@@ -51,11 +51,11 @@ func _physics_process(_delta):
 		set_physics_process(false)
 
 func _process(_delta):
-	disabled = !Global.can_buy(Global.HABILITIES_COST[TYPE])
+	disabled = !Global.can_buy(Dicts.HABILITIES_COST[TYPE])
 
 func _on_HabilityButton_mouse_entered():
 	if mega:
-		GAME.show_info(Global.MEGA_BY_HABILITY[TYPE])
+		GAME.show_info(Dicts.MEGA_BY_HABILITY[TYPE])
 	else:
 		GAME.show_info(HABILITIES[TYPE])
 

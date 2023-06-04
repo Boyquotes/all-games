@@ -3,7 +3,7 @@ extends Node2D
 var max_health
 var actual_health
 
-var TYPE = Global.HABILITIES.WALL
+var TYPE = Enums.HABILITIES.WALL
 
 func add_new_block():
 	var block = preload("res://Player/Blocks/Block.tscn").instance()
@@ -15,12 +15,12 @@ func add_new_block():
 	add_child(block)
 
 func _ready():
-	var health = Global.UPGRADES[Global.HABILITIES.WALL][2] + 3
+	var health = Global.UPGRADES[Enums.HABILITIES.WALL][2] + 3
 	
 	max_health = health
 	actual_health = health
 	
-	for _z in range(0, Global.UPGRADES[Global.HABILITIES.WALL][2]-1):
+	for _z in range(0, Global.UPGRADES[Enums.HABILITIES.WALL][2]-1):
 		add_new_block()
 	
 	var int_buffer = 0

@@ -2,7 +2,7 @@ extends Node2D
 
 var remaining_ticks
 
-var TYPE = Global.HABILITIES.PREVENTION
+var TYPE = Enums.HABILITIES.PREVENTION
 
 var mega = false
 
@@ -14,7 +14,7 @@ func die():
 	queue_free()
 
 func update_remaining_ticks():
-	remaining_ticks = Global.PLAYER_INFOS['prevention_shoot_ticks_delay'] - (3 * Global.UPGRADES[Global.HABILITIES.PREVENTION][2])
+	remaining_ticks = Global.PLAYER_INFOS['prevention_shoot_ticks_delay'] - (3 * Global.UPGRADES[Enums.HABILITIES.PREVENTION][2])
 	
 	if mega:
 		remaining_ticks /= 2

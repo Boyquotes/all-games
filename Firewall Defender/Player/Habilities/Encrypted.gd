@@ -1,6 +1,6 @@
 extends Node2D
 
-var TYPE = Global.HABILITIES.ENCRYPTED_PIPE
+var TYPE = Enums.HABILITIES.ENCRYPTED_PIPE
 
 func die():
 	get_child(0).queue_free()
@@ -18,7 +18,7 @@ func add_new_block():
 	add_child(block)
 
 func _ready():
-	for _z in range(0, Global.UPGRADES[Global.HABILITIES.ENCRYPTED_PIPE][2]-1):
+	for _z in range(0, Enums.UPGRADES[Enums.HABILITIES.ENCRYPTED_PIPE][2]-1):
 		add_new_block()
 	
 	var int_buffer = 0

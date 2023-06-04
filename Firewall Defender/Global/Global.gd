@@ -32,25 +32,11 @@ extends Node2D
 #  |-> Faz upgrades nas habilidades: (ainda a definir)
 #  |-> Compra novas habilidades: (ainda a definir)
 
-enum HABILITIES {
-	SHIELD, # Bloco simples 1x1 que para um inimigo -> o shield aguenta 2 inimigos batendo nele / fica rachado quando o primeiro inimigo toca o shield e depois quando o segundo inimigo toca nele o shield some
-	WALL, # Parede 1x3 (altura)x(largura) -> funcionamento igual a 3 shields um do lado do outro / a parede como um todo aguenta largura+1 inimigos / exemplo: se 4 inimigos baterem no mesmo bloco da parede ela quebra, se 4 inimigos baterem em lugares diferentes da parede ela quebra
-	PREVENTION, # Torreta que atira para cima a cada x segundos -> é destruída se um inimigo encostar nela, mas mata o inimigo, o projétil que ela atira trepassa outros blocos colocados pelo player, então dá pra fazer uma defesa de um bloco antes dela
-	WANDERING_FIREWALL, # Bloco aliado que quando posicionado SEMPRE vai até um inimigo, aguenta 6 inimigos
-	ENCRYPTED_PIPE, # Mesma coisa que a parede, mas é vertical 3x1
-}
 
 # Sobre os inimigos
 #  |-> Cada inimigo tem relação direta com um tipo de ataque hacker que existe e deve corresponder a lógica desse ataque
 #  |-> O visual e o que cada inimigo faz ainda está a definir, exceto os que já estão definidos em [Explicação dos inimigos]
 
-enum ENEMIES {
-	BRUTUS, # Ataques de Força Bruta: Nesse tipo de ataque, o hacker tenta adivinhar senhas ou combinações até encontrar a correta. É um método de tentativa e erro usado para quebrar a segurança de sistemas.
-	PHISHING, # Ataques de Phishing: O phishing é uma técnica em que o hacker se passa por uma entidade confiável, como uma empresa ou instituição financeira, e tenta enganar os usuários para obter informações pessoais, como senhas e números de cartão de crédito.
-	SQL, # Ataques de Injeção SQL: Nesse tipo de ataque, o hacker insere instruções SQL maliciosas em um formulário de entrada de dados para manipular um banco de dados, permitindo acesso não autorizado ou obtenção de informações confidenciais.
-	RANSOMWARE, # Ataques de Ransomware: O ransomware é um tipo de malware que criptografa os arquivos de um sistema, tornando-os inacessíveis ao usuário legítimo. O hacker exige um resgate para disponibilizar a chave de descriptografia.
-	SPOOFING, # Ataques de Spoofing: Nesse tipo de ataque, o hacker mascara sua identidade ou finge ser outra pessoa, dispositivo ou entidade para enganar os usuários e obter acesso não autorizado.
-}
 
 # Explicação dos inimigos
 #  |-> Algumas funcionalidades de inimigos já estão definidas mas ainda não atribuídas
@@ -84,12 +70,12 @@ var PLAYER_INFOS = {
 	'wandering_health': 6,
 }
 
-var UPGRADES = { # ['innitial value', 'increment value', 'actual_level'], |-> Max level is 5 => means 5 upgrades
-	HABILITIES.SHIELD:             [15,  5, 1],
-	HABILITIES.WALL:               [20, 10, 0],
-	HABILITIES.PREVENTION:         [30, 15, 0],
-	HABILITIES.ENCRYPTED_PIPE:     [40, 20, 0],
-	HABILITIES.WANDERING_FIREWALL: [50, 25, 0],
+onready var UPGRADES = { # ['innitial value', 'increment value', 'actual_level'], |-> Max level is 5 => means 5 upgrades
+	Enums.HABILITIES.SHIELD:             [15,  5, 1],
+	Enums.HABILITIES.WALL:               [20, 10, 0],
+	Enums.HABILITIES.PREVENTION:         [30, 15, 0],
+	Enums.HABILITIES.ENCRYPTED_PIPE:     [40, 20, 0],
+	Enums.HABILITIES.WANDERING_FIREWALL: [50, 25, 0],
 	
 	'max_health':                  [20, 5, 0],
 	'max_energy':                  [30, 10, 0],
@@ -117,21 +103,6 @@ var BUY_VALUES = {
 var CONFIGURATIONS = {
 	'music_volume': 5,
 	'effects_volume': 5,
-}
-
-var HABILITIES_COST = { # each upgrade in each hability increase the cost by 1
-	HABILITIES.SHIELD: 1,
-	HABILITIES.WALL: 2,
-	HABILITIES.PREVENTION: 3,
-	HABILITIES.WANDERING_FIREWALL: 4,
-	HABILITIES.ENCRYPTED_PIPE: 3,
-}
-
-const WAVE_TO_UNLOCK_ENEMY = {
-	3: 'phishing',
-	6: 'sql',
-	9: 'ransomware',
-	12: 'spoofing',
 }
 
 const X_MIN_LIMIT = 256
@@ -303,56 +274,10 @@ func earn(what, type):
 			PLAYER_INFOS['firewall_points'] += amount
 
 func return_earned_firewall_points_by_enemy(type):
-	return FIREWALL_POINTS_BY_ENEMY[type] + MONEY_BUFFER
+	return Dicts.FIREWALL_POINTS_BY_ENEMY[type] + MONEY_BUFFER
 
 # Mega mecânica para implementar: Compor as habilidades de uma forma específica para gerar uma nova estrutura, exemplo, envolver uma parede com shields cria o megaShield que quando um inimigo toca nele dá o dobro de firewall_points
 #  |-> Debloquear as blueprints das mega Habilidades comprando no SHOP
 #  |-> Um megabloco de 9x9 de paredes cria a megaParede que aguenta 15 inimigos
 
-var HABILITY_BY_NAME = {
-	'shield': HABILITIES.SHIELD,
-	'wall': HABILITIES.WALL,
-	'prevention': HABILITIES.PREVENTION,
-	'encrypted_pipe': HABILITIES.ENCRYPTED_PIPE,
-	'wandering_firewall': HABILITIES.WANDERING_FIREWALL
-}
 
-var NAME_BY_HABILITY = {
-	0: 'shield',
-	1: 'wall',
-	2: 'prevention',
-	3: 'wandering_firewall',
-	4: 'encrypted_pipe'
-}
-
-var NAME_BY_ENEMY = {
-	0: 'brutus',
-	1: 'phishing',
-	2: 'sql',
-	3: 'ransomware',
-	4: 'spoofing',
-}
-
-var FIREWALL_POINTS_BY_ENEMY = {
-	ENEMIES.BRUTUS: 1,
-	ENEMIES.PHISHING: 1,
-	ENEMIES.RANSOMWARE: 3,
-	ENEMIES.SPOOFING: 2,
-	ENEMIES.SQL: 1
-}
-
-var MEGA_BY_HABILITY = {
-	HABILITIES.SHIELD: 'mega_shield',
-	HABILITIES.WALL: 'mega_wall',
-	HABILITIES.PREVENTION: 'mega_prevention',
-	HABILITIES.ENCRYPTED_PIPE: 'mega_encrypted_pipe',
-	HABILITIES.WANDERING_FIREWALL: 'mega_wandering_firewall',
-}
-
-var TEXTURE_BY_MEGA_HABILITY = {
-	MEGA_BY_HABILITY[HABILITIES.SHIELD]: "res://Images/MegaHabilities/Shield.png",
-	MEGA_BY_HABILITY[HABILITIES.WALL]: "res://Images/MegaHabilities/Wall.png",
-	MEGA_BY_HABILITY[HABILITIES.PREVENTION]: "res://Images/MegaHabilities/Prevention.png",
-	MEGA_BY_HABILITY[HABILITIES.ENCRYPTED_PIPE]: "res://Images/MegaHabilities/Pipe.png",
-	MEGA_BY_HABILITY[HABILITIES.WANDERING_FIREWALL]: "res://Images/MegaHabilities/Wandering.png",
-}

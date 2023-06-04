@@ -1,9 +1,9 @@
 extends Node2D
 
-var TYPE = Global.HABILITIES.SHIELD
+var TYPE = Enums.HABILITIES.SHIELD
 
 func _ready():
-	var health = Global.UPGRADES[Global.HABILITIES.SHIELD][2] + 1
+	var health = Global.UPGRADES[Enums.HABILITIES.SHIELD][2] + 1
 	
 	get_child(0).setup_block(health, health, false)
 

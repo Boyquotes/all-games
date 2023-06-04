@@ -2,7 +2,7 @@ extends Node2D
 
 const BLOCKS_GROUP = 'BLOCK'
 
-export(Global.ENEMIES) var TYPE
+export(Enums.ENEMIES) var TYPE
 
 var health = 1
 
@@ -14,17 +14,9 @@ var next_pos = null
 onready var GAME = get_tree().get_nodes_in_group("GAME")[0]
 
 func _ready():
-	var mapa = {
-		Global.ENEMIES.BRUTUS: 1,
-		Global.ENEMIES.PHISHING: 1,
-		Global.ENEMIES.RANSOMWARE: 1,
-		Global.ENEMIES.SPOOFING: 1, 
-		Global.ENEMIES.SQL: 2,
-	}
+	health = Dicts.HEALTH_BY_ENEMY[TYPE]
 	
-	health = mapa[TYPE]
-	
-	Global.show_tutorial(Global.NAME_BY_ENEMY[TYPE])
+	Global.show_tutorial(Dicts.NAME_BY_ENEMY[TYPE])
 
 var change_int_buffer = false
 var change_bool_buffer = false
@@ -55,10 +47,10 @@ func move_to_random_diagonal():
 
 func add_next_pos_preview():
 	match TYPE:
-		Global.ENEMIES.RANSOMWARE:
+		Enums.ENEMIES.RANSOMWARE:
 			next_pos = return_random_side()
 			
-		Global.ENEMIES.SPOOFING:
+		Enums.ENEMIES.SPOOFING:
 			match Global.RANDOM.randi_range(1, 3):
 				1:
 					next_pos = Vector2(0, 16)
@@ -72,24 +64,24 @@ func add_next_pos_preview():
 
 func choose_movement_by_type():
 	match TYPE:
-		Global.ENEMIES.BRUTUS:
+		Enums.ENEMIES.BRUTUS:
 			move(0, 16)
 			
-		Global.ENEMIES.SQL:
+		Enums.ENEMIES.SQL:
 			move(0, 16)
 			
-		Global.ENEMIES.PHISHING:
+		Enums.ENEMIES.PHISHING:
 			move_to_random_diagonal()
 			$Sprite.set_flip_h(!$Sprite.is_flipped_h())
 			
-		Global.ENEMIES.RANSOMWARE:
+		Enums.ENEMIES.RANSOMWARE:
 			if next_pos == null:
 				move_to_random_side()
 			else:
 				move(next_pos.x, next_pos.y)
 			add_next_pos_preview()
 			
-		Global.ENEMIES.SPOOFING:
+		Enums.ENEMIES.SPOOFING:
 			if next_pos == null:
 				match Global.RANDOM.randi_range(1, 3):
 					1:
@@ -129,7 +121,6 @@ func move(x, y):
 		GAME.show_near_firewall_alert()
 
 func die():
-	
 	Global.earn('firewall_points', TYPE)
 	Global.spawn('enemy_dying_effect', Vector2(global_position.x, global_position.y - 16), GAME)
 	

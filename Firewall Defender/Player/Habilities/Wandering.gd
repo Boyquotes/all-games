@@ -1,6 +1,6 @@
 extends Node2D
 
-var TYPE = Global.HABILITIES.WANDERING_FIREWALL
+var TYPE = Enums.HABILITIES.WANDERING_FIREWALL
 
 var nearest
 
@@ -10,7 +10,7 @@ var y_walk = 0
 var mega = false
 
 func _ready():
-	var block_health = Global.PLAYER_INFOS['wandering_health'] - 1 + Global.UPGRADES[Global.HABILITIES.WANDERING_FIREWALL][2]
+	var block_health = Global.PLAYER_INFOS['wandering_health'] - 1 + Global.UPGRADES[Enums.HABILITIES.WANDERING_FIREWALL][2]
 	
 	if get_child(0).has_mega():
 		$Block/Sprite.texture = load(Global.TEXTURE_BY_MEGA_HABILITY[Global.MEGA_BY_HABILITY[TYPE]])

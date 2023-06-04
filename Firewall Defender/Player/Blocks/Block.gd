@@ -16,7 +16,7 @@ func setup_block(max_h, actual_h, multip):
 	self.multiple = multip
 
 func has_mega():
-	return Global.MEGA_BY_HABILITY[HABILITY] in Global.PLAYER_INFOS['mega_habilities']
+	return Dicts.MEGA_BY_HABILITY[HABILITY] in Global.PLAYER_INFOS['mega_habilities']
 
 func take_hit(damage):
 	if multiple == false:
@@ -70,18 +70,18 @@ func on_button_up():
 
 func change_to_mega():
 	match HABILITY:
-		Global.HABILITIES.SHIELD:
+		Enums.HABILITIES.SHIELD:
 			setup_block(actual_health+1, actual_health+1, false)
 			get_parent().BLOCK.get_child(0).texture = preload("res://Images/MegaHabilities/Shield.png")
-		Global.HABILITIES.WALL:
+		Enums.HABILITIES.WALL:
 			setup_block(actual_health+1, actual_health+1, true)
 			
 			for z in get_parent().get_children():
 				z.get_child(0).texture = preload("res://Images/MegaHabilities/Wall.png")
-		Global.HABILITIES.PREVENTION:
+		Enums.HABILITIES.PREVENTION:
 			get_parent().mega = true
 			get_parent().get_child(0).get_child(0).texture = preload("res://Images/MegaHabilities/Prevention.png")
-		Global.HABILITIES.ENCRYPTED_PIPE:
+		Enums.HABILITIES.ENCRYPTED_PIPE:
 			setup_block(actual_health+1, actual_health+1, true)
 			
 			for z in get_parent().get_children():

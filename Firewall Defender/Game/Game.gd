@@ -7,11 +7,11 @@ onready var FIREWALL_POINTS_VIEW = $Status/GridContainer2/GridContainer/FIREWALL
 onready var POSITIONED_DEFENSES = $Status/PositionedDefenses/POSITIONED_DEFENSES
 
 onready var costs = {
-	Global.HABILITIES.SHIELD: $Habilities/SHIELD/GridContainer/Cost,
-	Global.HABILITIES.WALL: $Habilities/WALL/GridContainer/Cost,
-	Global.HABILITIES.PREVENTION: $Habilities/PREVENTION/GridContainer/Cost,
-	Global.HABILITIES.WANDERING_FIREWALL: $Habilities/WANDERING/GridContainer/Cost,
-	Global.HABILITIES.ENCRYPTED_PIPE: $Habilities/ENCRYPTED/GridContainer/Cost
+	Enums.HABILITIES.SHIELD: $Habilities/SHIELD/GridContainer/Cost,
+	Enums.HABILITIES.WALL: $Habilities/WALL/GridContainer/Cost,
+	Enums.HABILITIES.PREVENTION: $Habilities/PREVENTION/GridContainer/Cost,
+	Enums.HABILITIES.WANDERING_FIREWALL: $Habilities/WANDERING/GridContainer/Cost,
+	Enums.HABILITIES.ENCRYPTED_PIPE: $Habilities/ENCRYPTED/GridContainer/Cost
 }
 
 onready var ENERGY_PROGRESS = $Status/ENERGY_PROGRESS
@@ -77,12 +77,12 @@ func show_near_firewall_alert():
 		AudioServer.set_bus_volume_db(AudioServer.get_bus_index("Musics"), Global.musics.get_volume_db()*2)
 
 func show_hability(hability):
-	hability = Global.HABILITY_BY_NAME[hability]
+	hability = Dicts.HABILITY_BY_NAME[hability]
 	
 	costs[hability].get_parent().get_parent().visible = true
 	setup_habilities_cost()
 	
-	Global.show_tutorial(Global.NAME_BY_HABILITY[hability])
+	Global.show_tutorial(Dicts.NAME_BY_HABILITY[hability])
 
 var started_increasing_max_enemies = false
 
@@ -105,9 +105,9 @@ func setup_wave():
 	
 	$WaveStatus/Label.text = str(last_wave)
 	
-	if Global.WAVE_TO_UNLOCK_ENEMY.get(last_wave, null) != null:
-		if !(Global.WAVE_TO_UNLOCK_ENEMY[last_wave] in Global.PLAYER_INFOS['unlocked_enemies']):
-			Global.PLAYER_INFOS['unlocked_enemies'].append(Global.WAVE_TO_UNLOCK_ENEMY[last_wave])
+	if Dicts.WAVE_TO_UNLOCK_ENEMY.get(last_wave, null) != null:
+		if !(Dicts.WAVE_TO_UNLOCK_ENEMY[last_wave] in Global.PLAYER_INFOS['unlocked_enemies']):
+			Global.PLAYER_INFOS['unlocked_enemies'].append(Dicts.WAVE_TO_UNLOCK_ENEMY[last_wave])
 	
 	if last_wave % 10 == 0:
 		Global.MONEY_BUFFER += 1
@@ -147,7 +147,7 @@ func _ready():
 
 func setup_habilities_cost():
 	for z in costs:
-		costs[z].text = str(Global.HABILITIES_COST[z])
+		costs[z].text = str(Dicts.HABILITIES_COST[z])
 	
 	var visibles = 0
 	

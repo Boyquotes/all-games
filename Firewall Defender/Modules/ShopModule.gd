@@ -1,132 +1,104 @@
 extends GridContainer
 
-enum TYPES {
-	UPGRADE_HEALTH,
-	BUY_HEALTH,
+var TEXTURES = {
+	Enums.SHOP_TYPES.UPGRADE_HEALTH: "res://Images/ShopItems/life_up.png",
+	Enums.SHOP_TYPES.BUY_HEALTH: "res://Images/ShopItems/life_buy.png",
 	
-	BUY_WALL,
-	BUY_PREVENTION,
-	BUY_ENCRYPTED,
-	BUY_WANDERING,
+	Enums.SHOP_TYPES.BUY_WALL: "res://Images/ShopItems/wall_buy.png",
+	Enums.SHOP_TYPES.BUY_PREVENTION: "res://Images/ShopItems/turret_buy.png",
+	Enums.SHOP_TYPES.BUY_ENCRYPTED: "res://Images/ShopItems/crypt_buy.png",
+	Enums.SHOP_TYPES.BUY_WANDERING: "res://Images/ShopItems/wandering_buy.png",
 	
-	UPGRADE_SHIELD,
-	UPGRADE_WALL,
-	UPGRADE_PREVENTION,
-	UPGRADE_ENCRYPTED,
-	UPGRADE_WANDERING,
+	Enums.SHOP_TYPES.UPGRADE_SHIELD: "res://Images/ShopItems/shield_up.png",
+	Enums.SHOP_TYPES.UPGRADE_WALL: "res://Images/ShopItems/wall_up.png",
+	Enums.SHOP_TYPES.UPGRADE_PREVENTION: "res://Images/ShopItems/turret_up.png",
+	Enums.SHOP_TYPES.UPGRADE_ENCRYPTED: "res://Images/ShopItems/crypt_up.png",
+	Enums.SHOP_TYPES.UPGRADE_WANDERING: "res://Images/ShopItems/wandering_up.png",
 	
-	BUY_MEGA_SHIELD,
-	BUY_MEGA_WALL,
-	BUY_MEGA_PREVENTION,
-	BUY_MEGA_ENCRYPTED,
-	BUY_MEGA_WANDERING,
+	Enums.SHOP_TYPES.BUY_MEGA_SHIELD: "res://Images/ShopItems/shield_mega.png",
+	Enums.SHOP_TYPES.BUY_MEGA_WALL: "res://Images/ShopItems/wall_mega.png",
+	Enums.SHOP_TYPES.BUY_MEGA_PREVENTION: "res://Images/ShopItems/turret_mega.png",
+	Enums.SHOP_TYPES.BUY_MEGA_ENCRYPTED: "res://Images/ShopItems/crypt_mega.png",
+	Enums.SHOP_TYPES.BUY_MEGA_WANDERING: "res://Images/ShopItems/wandering_mega.png",
 	
-	UPGRADE_ENERGY_PER_TICK,
-	UPGRADE_MAX_ENERGY,
+	Enums.SHOP_TYPES.UPGRADE_ENERGY_PER_TICK: "res://Images/ShopItems/energy_buy.png",
+	Enums.SHOP_TYPES.UPGRADE_MAX_ENERGY: "res://Images/ShopItems/energy_up.png",
 	
-	BUY_HOURGLASS_POWER_UP,
-	BUY_BOMB_POWER_UP
+	Enums.SHOP_TYPES.BUY_HOURGLASS_POWER_UP: "res://Images/Icons/Hourglass.png",
+	Enums.SHOP_TYPES.BUY_BOMB_POWER_UP: "res://Images/Icons/Bomb.png",
 }
 
-const TEXTURES = {
-	TYPES.UPGRADE_HEALTH: "res://Images/ShopItems/life_up.png",
-	TYPES.BUY_HEALTH: "res://Images/ShopItems/life_buy.png",
+onready var UPGRADE_BY_TYPE = {
+	Enums.SHOP_TYPES.UPGRADE_SHIELD: Enums.HABILITIES.SHIELD,
+	Enums.SHOP_TYPES.UPGRADE_WALL: Enums.HABILITIES.WALL,
+	Enums.SHOP_TYPES.UPGRADE_PREVENTION: Enums.HABILITIES.PREVENTION,
+	Enums.SHOP_TYPES.UPGRADE_ENCRYPTED: Enums.HABILITIES.ENCRYPTED_PIPE,
+	Enums.SHOP_TYPES.UPGRADE_WANDERING: Enums.HABILITIES.WANDERING_FIREWALL,
 	
-	TYPES.BUY_WALL: "res://Images/ShopItems/wall_buy.png",
-	TYPES.BUY_PREVENTION: "res://Images/ShopItems/turret_buy.png",
-	TYPES.BUY_ENCRYPTED: "res://Images/ShopItems/crypt_buy.png",
-	TYPES.BUY_WANDERING: "res://Images/ShopItems/wandering_buy.png",
-	
-	TYPES.UPGRADE_SHIELD: "res://Images/ShopItems/shield_up.png",
-	TYPES.UPGRADE_WALL: "res://Images/ShopItems/wall_up.png",
-	TYPES.UPGRADE_PREVENTION: "res://Images/ShopItems/turret_up.png",
-	TYPES.UPGRADE_ENCRYPTED: "res://Images/ShopItems/crypt_up.png",
-	TYPES.UPGRADE_WANDERING: "res://Images/ShopItems/wandering_up.png",
-	
-	TYPES.BUY_MEGA_SHIELD: "res://Images/ShopItems/shield_mega.png",
-	TYPES.BUY_MEGA_WALL: "res://Images/ShopItems/wall_mega.png",
-	TYPES.BUY_MEGA_PREVENTION: "res://Images/ShopItems/turret_mega.png",
-	TYPES.BUY_MEGA_ENCRYPTED: "res://Images/ShopItems/crypt_mega.png",
-	TYPES.BUY_MEGA_WANDERING: "res://Images/ShopItems/wandering_mega.png",
-	
-	TYPES.UPGRADE_ENERGY_PER_TICK: "res://Images/ShopItems/energy_buy.png",
-	TYPES.UPGRADE_MAX_ENERGY: "res://Images/ShopItems/energy_up.png",
-	
-	TYPES.BUY_HOURGLASS_POWER_UP: "res://Images/Icons/Hourglass.png",
-	TYPES.BUY_BOMB_POWER_UP: "res://Images/Icons/Bomb.png",
-}
-
-var UPGRADE_BY_TYPE = {
-	TYPES.UPGRADE_SHIELD: Global.HABILITIES.SHIELD,
-	TYPES.UPGRADE_WALL: Global.HABILITIES.WALL,
-	TYPES.UPGRADE_PREVENTION: Global.HABILITIES.PREVENTION,
-	TYPES.UPGRADE_ENCRYPTED: Global.HABILITIES.ENCRYPTED_PIPE,
-	TYPES.UPGRADE_WANDERING: Global.HABILITIES.WANDERING_FIREWALL,
-	
-	TYPES.UPGRADE_HEALTH: 'max_health',
-	TYPES.UPGRADE_ENERGY_PER_TICK: 'energy_per_tick',
-	TYPES.UPGRADE_MAX_ENERGY: 'max_energy',
+	Enums.SHOP_TYPES.UPGRADE_HEALTH: 'max_health',
+	Enums.SHOP_TYPES.UPGRADE_ENERGY_PER_TICK: 'energy_per_tick',
+	Enums.SHOP_TYPES.UPGRADE_MAX_ENERGY: 'max_energy',
 }
 
 const BUY_BY_TYPE = {
-	TYPES.BUY_HEALTH: 'actual_health',
+	Enums.SHOP_TYPES.BUY_HEALTH: 'actual_health',
 	
-	TYPES.BUY_WALL: 'wall',
-	TYPES.BUY_PREVENTION: 'prevention',
-	TYPES.BUY_ENCRYPTED: 'encrypted_pipe',
-	TYPES.BUY_WANDERING: 'wandering_firewall',
+	Enums.SHOP_TYPES.BUY_WALL: 'wall',
+	Enums.SHOP_TYPES.BUY_PREVENTION: 'prevention',
+	Enums.SHOP_TYPES.BUY_ENCRYPTED: 'encrypted_pipe',
+	Enums.SHOP_TYPES.BUY_WANDERING: 'wandering_firewall',
 	
-	TYPES.BUY_MEGA_SHIELD: 'mega_shield',
-	TYPES.BUY_MEGA_WALL: 'mega_wall',
-	TYPES.BUY_MEGA_PREVENTION: 'mega_prevention',
-	TYPES.BUY_MEGA_ENCRYPTED: 'mega_encrypted_pipe',
-	TYPES.BUY_MEGA_WANDERING: 'mega_wandering_firewall',
+	Enums.SHOP_TYPES.BUY_MEGA_SHIELD: 'mega_shield',
+	Enums.SHOP_TYPES.BUY_MEGA_WALL: 'mega_wall',
+	Enums.SHOP_TYPES.BUY_MEGA_PREVENTION: 'mega_prevention',
+	Enums.SHOP_TYPES.BUY_MEGA_ENCRYPTED: 'mega_encrypted_pipe',
+	Enums.SHOP_TYPES.BUY_MEGA_WANDERING: 'mega_wandering_firewall',
 	
-	TYPES.BUY_HOURGLASS_POWER_UP: 'hourglass_power_up',
-	TYPES.BUY_BOMB_POWER_UP: 'bomb_power_up',
+	Enums.SHOP_TYPES.BUY_HOURGLASS_POWER_UP: 'hourglass_power_up',
+	Enums.SHOP_TYPES.BUY_BOMB_POWER_UP: 'bomb_power_up',
 }
 
 const BUY_TYPES = [
-	TYPES.BUY_HEALTH,
+	Enums.SHOP_TYPES.BUY_HEALTH,
 	
-	TYPES.BUY_WALL,
-	TYPES.BUY_PREVENTION,
-	TYPES.BUY_ENCRYPTED,
-	TYPES.BUY_WANDERING,
+	Enums.SHOP_TYPES.BUY_WALL,
+	Enums.SHOP_TYPES.BUY_PREVENTION,
+	Enums.SHOP_TYPES.BUY_ENCRYPTED,
+	Enums.SHOP_TYPES.BUY_WANDERING,
 	
-	TYPES.BUY_MEGA_SHIELD,
-	TYPES.BUY_MEGA_WALL,
-	TYPES.BUY_MEGA_PREVENTION,
-	TYPES.BUY_MEGA_ENCRYPTED,
-	TYPES.BUY_MEGA_WANDERING,
+	Enums.SHOP_TYPES.BUY_MEGA_SHIELD,
+	Enums.SHOP_TYPES.BUY_MEGA_WALL,
+	Enums.SHOP_TYPES.BUY_MEGA_PREVENTION,
+	Enums.SHOP_TYPES.BUY_MEGA_ENCRYPTED,
+	Enums.SHOP_TYPES.BUY_MEGA_WANDERING,
 	
-	TYPES.BUY_HOURGLASS_POWER_UP,
-	TYPES.BUY_BOMB_POWER_UP,
+	Enums.SHOP_TYPES.BUY_HOURGLASS_POWER_UP,
+	Enums.SHOP_TYPES.BUY_BOMB_POWER_UP,
 ]
 
 const UPGRADE_TYPES = [
-	TYPES.UPGRADE_ENERGY_PER_TICK,
-	TYPES.UPGRADE_MAX_ENERGY,
-	TYPES.UPGRADE_HEALTH,
+	Enums.SHOP_TYPES.UPGRADE_ENERGY_PER_TICK,
+	Enums.SHOP_TYPES.UPGRADE_MAX_ENERGY,
+	Enums.SHOP_TYPES.UPGRADE_HEALTH,
 	
-	TYPES.UPGRADE_SHIELD,
-	TYPES.UPGRADE_WALL,
-	TYPES.UPGRADE_PREVENTION,
-	TYPES.UPGRADE_ENCRYPTED,
-	TYPES.UPGRADE_WANDERING,
+	Enums.SHOP_TYPES.UPGRADE_SHIELD,
+	Enums.SHOP_TYPES.UPGRADE_WALL,
+	Enums.SHOP_TYPES.UPGRADE_PREVENTION,
+	Enums.SHOP_TYPES.UPGRADE_ENCRYPTED,
+	Enums.SHOP_TYPES.UPGRADE_WANDERING,
 ]
 
 const HABILITIES_TYPES = [
-	TYPES.UPGRADE_SHIELD,
-	TYPES.UPGRADE_WALL,
-	TYPES.UPGRADE_PREVENTION,
-	TYPES.UPGRADE_ENCRYPTED,
-	TYPES.UPGRADE_WANDERING,
+	Enums.SHOP_TYPES.UPGRADE_SHIELD,
+	Enums.SHOP_TYPES.UPGRADE_WALL,
+	Enums.SHOP_TYPES.UPGRADE_PREVENTION,
+	Enums.SHOP_TYPES.UPGRADE_ENCRYPTED,
+	Enums.SHOP_TYPES.UPGRADE_WANDERING,
 ]
 
 onready var PRICE_LABEL = $GridContainer/Price
 
-export(TYPES) var TYPE
+export(Enums.SHOP_TYPES) var TYPE
 
 var actual_price
 
@@ -144,36 +116,36 @@ func analyse_self_destruct():
 
 func evolve_type():
 	match TYPE:
-		TYPES.BUY_WALL:
-			TYPE = TYPES.UPGRADE_WALL
-		TYPES.BUY_PREVENTION:
-			TYPE = TYPES.UPGRADE_PREVENTION
-		TYPES.BUY_ENCRYPTED:
-			TYPE = TYPES.UPGRADE_ENCRYPTED
-		TYPES.BUY_WANDERING:
-			TYPE = TYPES.UPGRADE_WANDERING
+		Enums.SHOP_TYPES.BUY_WALL:
+			TYPE = Enums.SHOP_TYPES.UPGRADE_WALL
+		Enums.SHOP_TYPES.BUY_PREVENTION:
+			TYPE = Enums.SHOP_TYPES.UPGRADE_PREVENTION
+		Enums.SHOP_TYPES.BUY_ENCRYPTED:
+			TYPE = Enums.SHOP_TYPES.UPGRADE_ENCRYPTED
+		Enums.SHOP_TYPES.BUY_WANDERING:
+			TYPE = Enums.SHOP_TYPES.UPGRADE_WANDERING
 		
-		TYPES.BUY_MEGA_ENCRYPTED:
+		Enums.SHOP_TYPES.BUY_MEGA_ENCRYPTED:
 			analyse_self_destruct()
-		TYPES.BUY_MEGA_PREVENTION:
+		Enums.SHOP_TYPES.BUY_MEGA_PREVENTION:
 			analyse_self_destruct()
-		TYPES.BUY_MEGA_SHIELD:
+		Enums.SHOP_TYPES.BUY_MEGA_SHIELD:
 			analyse_self_destruct()
-		TYPES.BUY_MEGA_WALL:
+		Enums.SHOP_TYPES.BUY_MEGA_WALL:
 			analyse_self_destruct()
-		TYPES.BUY_MEGA_WANDERING:
+		Enums.SHOP_TYPES.BUY_MEGA_WANDERING:
 			analyse_self_destruct()
 		
-		TYPES.UPGRADE_SHIELD:
-			TYPE = TYPES.BUY_MEGA_SHIELD
-		TYPES.UPGRADE_WALL:
-			TYPE = TYPES.BUY_MEGA_WALL
-		TYPES.UPGRADE_PREVENTION:
-			TYPE = TYPES.BUY_MEGA_PREVENTION
-		TYPES.UPGRADE_ENCRYPTED:
-			TYPE = TYPES.BUY_MEGA_ENCRYPTED
-		TYPES.UPGRADE_WANDERING:
-			TYPE = TYPES.BUY_MEGA_WANDERING
+		Enums.SHOP_TYPES.UPGRADE_SHIELD:
+			TYPE = Enums.SHOP_TYPES.BUY_MEGA_SHIELD
+		Enums.SHOP_TYPES.UPGRADE_WALL:
+			TYPE = Enums.SHOP_TYPES.BUY_MEGA_WALL
+		Enums.SHOP_TYPES.UPGRADE_PREVENTION:
+			TYPE = Enums.SHOP_TYPES.BUY_MEGA_PREVENTION
+		Enums.SHOP_TYPES.UPGRADE_ENCRYPTED:
+			TYPE = Enums.SHOP_TYPES.BUY_MEGA_ENCRYPTED
+		Enums.SHOP_TYPES.UPGRADE_WANDERING:
+			TYPE = Enums.SHOP_TYPES.BUY_MEGA_WANDERING
 		
 	update_infos()
 
@@ -262,7 +234,7 @@ func is_maxed():
 		return false
 
 func _process(_delta):
-	$Button.disabled = !(Global.PLAYER_INFOS['firewall_points'] >= actual_price) or is_maxed() or TYPE in BUY_TYPES and BUY_BY_TYPE[TYPE] in ['actual_health'] and Global.PLAYER_INFOS['actual_health'] == Global.PLAYER_INFOS['max_health'] or TYPE == TYPES.BUY_HOURGLASS_POWER_UP and Engine.time_scale == 0.5 or TYPE == TYPES.BUY_BOMB_POWER_UP and Global.bombed == true
+	$Button.disabled = !(Global.PLAYER_INFOS['firewall_points'] >= actual_price) or is_maxed() or TYPE in BUY_TYPES and BUY_BY_TYPE[TYPE] in ['actual_health'] and Global.PLAYER_INFOS['actual_health'] == Global.PLAYER_INFOS['max_health'] or TYPE == Enums.SHOP_TYPES.BUY_HOURGLASS_POWER_UP and Engine.time_scale == 0.5 or TYPE == Enums.SHOP_TYPES.BUY_BOMB_POWER_UP and Global.bombed == true
 
 
 func _on_Button_button_up():
@@ -289,11 +261,11 @@ func _on_Button_mouse_entered():
 	if TYPE in UPGRADE_TYPES:
 		if TYPE in HABILITIES_TYPES:
 			var CONVERSION_MAP = {
-				Global.HABILITIES.SHIELD: 'up_shield',
-				Global.HABILITIES.WALL: 'up_wall',
-				Global.HABILITIES.PREVENTION: 'up_prevention',
-				Global.HABILITIES.ENCRYPTED_PIPE: 'up_encrypted_pipe',
-				Global.HABILITIES.WANDERING_FIREWALL: 'up_wandering_firewall',
+				Enums.HABILITIES.SHIELD: 'up_shield',
+				Enums.HABILITIES.WALL: 'up_wall',
+				Enums.HABILITIES.PREVENTION: 'up_prevention',
+				Enums.HABILITIES.ENCRYPTED_PIPE: 'up_encrypted_pipe',
+				Enums.HABILITIES.WANDERING_FIREWALL: 'up_wandering_firewall',
 			}
 			GAME.show_info(CONVERSION_MAP[UPGRADE_BY_TYPE[TYPE]])
 		else:
