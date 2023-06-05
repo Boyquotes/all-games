@@ -1,0 +1,24 @@
+[gd_scene load_steps=3 format=3 uid="uid://xyhuskguic3o"]
+
+[ext_resource type="Script" path="res://Player/cooldown_view.gd" id="1_0a6ln"]
+[ext_resource type="Texture2D" uid="uid://cekvs7stnfm0a" path="res://Textures/UI/SuperJump.png" id="1_i6ush"]
+
+[node name="CooldownView" type="TextureRect"]
+custom_minimum_size = Vector2(48, 48)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -1104.0
+offset_bottom = -600.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+texture = ExtResource("1_i6ush")
+script = ExtResource("1_0a6ln")
+
+[node name="Hover" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 48.0
+offset_bottom = 48.0
+color = Color(1, 1, 1, 0.196078)

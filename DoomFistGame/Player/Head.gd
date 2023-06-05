@@ -1,7 +1,5 @@
 extends Node3D
 
-var canSlam = false
-
 @export_node_path("Camera3D") var cam_path := NodePath("Camera")
 @onready var cam: Camera3D = get_node(cam_path)
 
@@ -11,8 +9,18 @@ var mouse_axis := Vector2()
 var rot := Vector3()
 
 @onready var PUNCH_CHARGE = $Camera/PunchCharge
-@onready var SLAM_POINT = $Camera/SlamPoint
 @onready var CROSSHAIR = $Camera/Crosshair
+@onready var SLAM_POINT = $Camera/SlamPoint
+
+func addCooldownView(waitTime, pointingCooldown, parentReference):
+	var node = preload("res://Player/cooldown_view.tscn").instantiate()
+	node.waitTime = waitTime
+	node.pointingCooldown = pointingCooldown
+	node.parentReference = parentReference
+	
+	$Camera/Cooldowns.call_deferred("add_child", node)
+	
+	return node
 
 func setPunchChargeValue(value):
 	PUNCH_CHARGE.value = value
@@ -41,8 +49,6 @@ func _physics_process(delta: float) -> void:
 	if joystick_axis != Vector2.ZERO:
 		mouse_axis = joystick_axis * 1000.0 * delta
 		camera_rotation()
-	
-	canSlam = SLAM_POINT.is_colliding()
 
 
 func camera_rotation() -> void:

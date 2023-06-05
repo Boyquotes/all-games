@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://bbogeu5ek425p"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_spey5"]
+radius = 0.075
+height = 1.0
+
+[sub_resource type="SphereMesh" id="SphereMesh_c6lua"]
+radius = 0.2
+height = 0.4
+
+[node name="Mace" type="Node3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("CapsuleMesh_spey5")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.518962, 0)
+mesh = SubResource("SphereMesh_c6lua")
