@@ -1,0 +1,1 @@
+Toda vez que quizer criar um novo jogo 3d em primeira pessoa pegue esse template: https://github.com/Whimfoome/godot-FirstPersonStarter, ele também tá na pasta em FirstPersonTemplateGodot4
